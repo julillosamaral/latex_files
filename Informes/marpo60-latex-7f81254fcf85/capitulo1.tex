@@ -1,0 +1,72 @@
+\chapter{Introducción}
+\label{capitulo1}
+
+\section{Contexto}
+\label{capitulo1:contexto}
+
+En los últimos tiempos las aplicaciones web han ido evolucionando y se han vuelto cada vez más interactivas y demandantes. En particular, con el furor de los dispositivos móviles el acceso a las mismas por parte de los usuarios ocurre en todo momento.
+Los usuarios de aplicaciones web esperan buenos tiempos de respuesta y más fluidez en el uso de las aplicaciones, por lo cual su performance es un aspecto a tener cuenta durante el desarrollo y mantenimiento de cualquier aplicación, ya que si la performance no es buena, puede tener como resultado la pérdida de usuarios, lo cual significa pérdida de dinero para las empresas detrás de las mismas.
+
+%con el uso masivo o alguna fruta asi
+Debido al uso masivo de las aplicaciones web, es de gran interés analizar la performance de las mismas, y para ello es necesario definir cómo ésta puede medirse, cuál es el estado actual de las aplicaciones y qué técnicas pueden aplicarse para optimizar su performance. 
+En cualquier esfuerzo por optimizar un sistema, es fundamental realizar un análisis sobre el estado actual de la performance para identificar dónde se pueden llevar a cabo
+las mejoras que pueden tener mayor impacto sobre la aplicación. 
+La performance es un concepto muy complejo que puede definirse como el desempeño de la aplicación, existen muchos factores involucrados que afectan al desempeño de una aplicación y esto puede medirse considerando varias métricas que se detallarán a lo largo del informe, siendo una de las más comúnmente consideradas, el tiempo de respuesta de la aplicación.
+
+\emph{Ruby on Rails} es un \emph{framework} \emph{open source} de desarrollo web muy utilizado en los últimos años \cite{rubyonrails}. Ha revolucionado la forma de escribir aplicaciones web, a tal punto de que son muchos los frameworks que han seguido su filosofía. Dentro de las aplicaciones desarrolladas en \emph{Ruby on Rails} se encuentra \emph{Diaspora} una red social descentralizada \emph{open source} que es utilizada por mucha gente a nivel mundial y que se tomará como caso de estudio del proyecto.
+
+
+Dentro del contexto actual de la performance de aplicaciones web, uno de los principios más importantes es \emph{La regla de oro de la performance} \cite{souders2007high}, la cual indica que sólo entre un 10 y un 20\%  
+del tiempo de respuesta de un pedido es utilizado para descargar el documento HTML. Tomando como referencia esta regla, y a partir de la bibliografía relevada en este proyecto, se concentrará en la optimización de la web en la actualidad, y en particular este proyecto se centrará principalmente en analizar e intentar encontrar cómo mejorar la performance en el lado cliente.
+
+\section{Motivación}
+\label{capitulo1:motivacion}
+
+Los usuarios de aplicaciones web demandan buenos tiempos de respuesta y más fluidez, por lo cual nos resulta de interés analizar la performance de las aplicaciones web en general y es la principal motivación del proyecto poder definir métricas para medir la performance e identificar buenas prácticas en relación a la performance de aplicaciones web, generando así una lista de reglas a tener en cuenta en el proceso de desarrollo, que ayuden a obtener mejores resultados de performance.
+
+
+También resulta interesante evaluar la performance y el cumplimiento de las buenas prácticas en una aplicación web existente y utilizada por miles de usuarios, con la posibilidad al ser \emph{open source} de poder proponer mejoras.
+
+\section{Objetivos}
+\label{capitulo1:objetivos}
+
+Los objetivos planteados para este trabajo pueden resumirse de la siguiente manera:
+
+\begin{itemize}
+
+\item Realizar un estudio sobre pruebas de performance en aplicaciones web, adquirir conocimiento teórico sobre este tema, realizar una breve síntesis del mismo, establecer un 
+flujo de trabajo y desarrollar un conjunto de pruebas que serán aplicadas a un caso de estudio.
+
+\item Identificar métricas para analizar la performance de aplicaciones web.
+
+\item Identificar un conjunto de buenas prácticas para el desarrollo de aplicaciones web en términos de performance.
+
+\item Analizar el estado actual de la performance de los sitios más visitados, verificando la aplicación de las buenas prácticas identificadas.
+
+\item Elegir un caso de estudio en particular, y aplicar las buenas prácticas identificadas para mejorar su performance. Por otro lado, se tiene como objetivo generar un conjunto de pruebas de performance que validen las mejoras realizadas.
+
+\end{itemize}
+
+\section{Organización del documento}
+\label{capitulo1:organizacion}
+
+El documento se organiza de la siguiente forma.
+
+En el Capítulo 2 se presentan conceptos generales de la performance para poner en contexto el presente trabajo.
+
+En el Capítulo 3 se presentan aspectos generales de la performance en aplicaciones web y un conjunto de buenas prácticas para el desarrollo de las mismas.
+
+El Capítulo 4 es una introducción a las herramientas que se utilizaron y se indican las funcionalidades que éstas brindan para cumplir con las buenas prácticas identificadas en el capítulo 
+anterior.
+
+En el Capítulo 5 se introduce el caso de estudio. Se comienza por una introducción a la aplicación \emph{Diaspora}, el comportamiento general de la misma y el funcionamiento de la 
+comunidad que la mantiene.
+
+En el Capítulo 6 se presenta un análisis de los problemas encontrados en el caso de estudio, describiendo cada uno de ellos e indicando las posibles mejoras a los mismos y la 
+interacción con la comunidad de \emph{Diaspora} para introducir las mejoras implementadas en producción.
+
+En el Capítulo 7 se presentan las pruebas realizadas sobre el caso de estudio para medir los resultados de las mejoras implementadas.
+
+En el Capítulo 8 se presentan las conclusiones del trabajo y posible trabajo a futuro.
+
+Por último se presenta la bibliografía consultada y los anexos, los cuales son referenciados a lo largo del documento.

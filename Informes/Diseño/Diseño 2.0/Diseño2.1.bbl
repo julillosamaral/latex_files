@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{M12}
+Mitre Corporation.
+\newblock {\em The TAXII HTTP Protocol Binding Specification}.
+\newblock Mitre Corporation, 2013.
+
+\bibitem{M14}
+Mitre Corporation.
+\newblock {\em The TAXII Services Specification}.
+\newblock Mitre Corporation, 2013.
+
+\bibitem{M15}
+Mitre Corporation.
+\newblock {\em The TAXII XML Message Binding Specification}.
+\newblock Mitre Corporation, 2013.
+
+\bibitem{JBH4}
+Sven~Henkel Marko~Jahnke, Michael~Bussmann.
+\newblock {\em Components for Cooperative Intrusion Detection in Dynamic
+  Coalition Enviroments}.
+\newblock RTO IST Symposium on Adaptive Defence in Unclassified Networks, 2004.
+
+\end{thebibliography}

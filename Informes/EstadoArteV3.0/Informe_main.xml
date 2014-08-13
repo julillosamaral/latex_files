@@ -1,0 +1,1839 @@
+<?xml version="1.0"?> 
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook V5.0//EN" 
+"http://www.oasis-open.org/docbook/xml/5.0/docbook.dtd" > 
+ 
+<!--translated from Informe_main.tex, on 2013-08-17 17:53:00,  
+by TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/) xhtml,docbook,html,refcaption --> 
+ <?xtpipes file="docbook.4xt" ?> 
+ <article xmlns="http://docbook.org/ns/docbook"  
+xmlns:xlink="http://www.w3.org/1999/xlink"  
+version="5.0"  
+><title></title> 
+
+<para role="maketitle">
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+<note role="title"><para>Brief Article</para></note>
+<note role="author"><para><personname><othername>Julio Sar&#x00E1;&#x00B4;achaga</othername></personname></para></note>
+<note role="date"><para></para></note>
+   </para>Glosario
+     <itemizedlist>
+     <listitem>
+     <!--l. 2--><para>Botnet: Es una colecci&#x00F3;&#x00B4;on de computadoras comprometidas &#x0028;llamadas
+     computadoras  zombie&#x0029;,  instaladas  generalmente  mediante  gusanos,
+     troyanos y backdoors, controladas remotamente, usualmente con &#xFB01;nes
+     maliciosos, en especial para denegaciones de servicio.
+     </para></listitem>
+     <listitem>
+     <!--l. 6--><para>CSIRT:  Es  una  organizaci&#x00F3;&#x00B4;on  responsable  de  recibir  reportes  de
+     incidentes de seguridad, analizarlos y responder a ellos. &#x005B;CERT/CC&#x005D;
+     </para></listitem>
+     <listitem>
+     <!--l. 7--><para>CVE:  El  CVE  &#x0028;Common  Vulnerabilities  and  Exposures&#x0029;  es  un
+     diccionario de comunes &#x0028;por ejemplo los identi&#xFB01;cadores CVE&#x0029; para
+     publicar informaci&#x00F3;&#x00B4;on conocida de vulnerabilidades de seguridad. El
+     CCE  &#x0028;Common  Con&#xFB01;guration  Enumeration&#x0029;  provee  identi&#xFB01;cadores
+     para  problemas  de  con&#xFB01;guraci&#x00F3;&#x00B4;on  de  seguridad.  Los  identi&#xFB01;cadores
+     hacen m&#x00E1;&#x00B4;as f&#x00E1;&#x00B4;acil compartir informaci&#x00F3;&#x00B4;on a trav&#x00E9;&#x00B4;es de diferentes bases de
+     datos y herramientas de seguridad.
+     </para></listitem>
+     <listitem>
+                                                                     
+
+                                                                     
+     <!--l. 13--><para>Cyber Threat information: Es cualquier informaci&#x00F3;&#x00B4;on representable en
+     STIX. Esto incluye, pero no esta limitado a, Observables, Indicadores,
+     incidentes, TTPs &#x0028;Tactics, Techniques y Procedures&#x0029;, exploit targets,
+     campaigns, threat actors y courses of action.
+     </para></listitem>
+     <listitem>
+     <!--l. 17--><para>TAXII  Data  Feed:  Es  una  colecci&#x00F3;&#x00B4;on  de  cyber  threat  information
+     estructurada expresable en uno o mas documentos STIX que pueden
+     ser intercambiados utilizando TAXII. Cada TAXII Data Feed <emphasis>debe</emphasis>
+     tener un nombre que lo identi&#xFB01;ca de forma &#x00FA;&#x00B4;unica entre el resto de los
+     feeds de un productor dado. Cada elemento de un TAXII data feed
+     debe ser etiquetado con un timestamp y puede tener otras etiquetas a
+     discreci&#x00F3;&#x00B4;on del productor.
+     </para></listitem>
+     <listitem>
+     <!--l. 23--><para>IDS: Intrusion Detection System. Sistema que detecta intrusiones no
+     deseadas en una red o equipo, que no pueden ser detectadas por un
+     &#xFB01;rewall convencional.
+     </para></listitem>
+     <listitem>
+     <!--l. 25--><para>Mensae  TAXII:  Un  bloque  de  informaci&#x00F3;&#x00B4;on  que  es  pasado  de  una
+     entidad a la otra. Un mensaje TAXII representa un pedido o una
+     respuesta.
+     </para></listitem>
+     <listitem>
+     <!--l. 27--><para>Intercambio de mensajes TAXII: Una secuencia de&#xFB01;nida de mensajes
+     TAXII intercambiados entre dos entidades.
+     </para></listitem>
+     <listitem>
+     <!--l. 29--><para>Servicio TAXII: Son funcionalidades albergadas por algunas entidades
+     y  que  es  accedido  o  invocado  usando  uno  o  mas  TAXII  Message
+     Exchange.
+     </para></listitem>
+     <listitem>
+                                                                     
+
+                                                                     
+     <!--l. 31--><para>TAXII Capability: Una actividad de alto nivel soportado por TAXII
+     por medio del uso de uno o mas servicios TAXII.</para></listitem></itemizedlist>
+<!--l. 34--><para>
+                                                                     
+
+                                                                     
+<anchor 
+   xml:id="x1-2r1"  ></anchor>
+</para><!--l. 39--><section 
+role="section"><title><abbrev role="title-mark">1</abbrev><anchor 
+   xml:id="x1-10001"  ></anchor>Introducci&#x00F3;&#x00B4;on</title>
+<!--l. 1--><para>   Hist&#x00F3;&#x00B4;oricamente, se ha visto un aumento en la so&#xFB01;sticaci&#x00F3;&#x00B4;on, velocidad, impacto
+y cantidad de los ataques inform&#x00E1;&#x00B4;aticos. Se ha vuelto necesario que las estrategias
+de defensa se adapten a los nuevos actores y ataques. Para responder a esto, las
+organizaciones han tenido que recurrir al intercambio de informaci&#x00F3;&#x00B4;on de
+amenazas con el &#xFB01;n de tener una visi&#x00F3;&#x00B4;on m&#x00E1;&#x00B4;as amplia de las actividades de sus
+adversarios y as&#x00ED;&#x00B4;&#x0131; ayudar a administrar sus recursos de forma de obtener el mejor
+resultado posible de sus defensas. Hoy en d&#x00ED;&#x00B4;&#x0131;a la informaci&#x00F3;&#x00B4;on se comparte de
+forma manual lo cual consume mucho tiempo o por medio de procesos
+automatizados con grandes limitaciones los cuales se realizan dentro de
+comunidades especi&#xFB01;cas. La capacidad de compartir informaci&#x00F3;&#x00B4;on completa de
+forma autom&#x00E1;&#x00B4;atica con un gran n&#x00FA;&#x00B4;umero de comunidades no existe en la
+actualidad.
+</para><!--l. 13--><para>   Hay m&#x00FA;&#x00B4;ultiples m&#x00E9;&#x00B4;etodos para el intercambio de informaci&#x00F3;&#x00B4;on y estos juegan un
+rol signi&#xFB01;cante en los tipos, vol&#x00FA;&#x00B4;umenes y naturaleza de la informaci&#x00F3;&#x00B4;on compartida
+con la comunidad. Algunos de estos medios de intercambio limitan el tipo de
+contenido que es compartido mientras que otros promueven ciertos tipos de
+intercambio. Los procesos para compartir informaci&#x00F3;&#x00B4;on son manuales, llevan
+mucho tiempo, son repetitivos y en muchos casos requieren que las organizaciones
+re escriban o traduzcan la informaci&#x00F3;&#x00B4;on a una amplia variedad de formatos. Otro
+problema que se presenta cuando se quiere intercambiar informaci&#x00F3;&#x00B4;on
+es la utilizaci&#x00F3;&#x00B4;on de tecnolog&#x00ED;&#x00B4;&#x0131;as y/o formatos propietarios, esto provoca
+la necesidad de desarrollar scripts y m&#x00F3;&#x00B4;odulos para permitir compartir
+informaci&#x00F3;&#x00B4;on por fuera de las comunidades. Para aquellas comunidades con
+alg&#x00FA;&#x00B4;un grado de automatizaci&#x00F3;&#x00B4;on, sus modelos son generalmente bajos en
+prestaciones y usan soluciones propietarias comerciales o adaptadas a su
+comunidad.
+</para><!--l. 27--><para>   La mayor&#x00ED;&#x00B4;&#x0131;a de dichos m&#x00E9;&#x00B4;etodos no permiten el consumo de informaci&#x00F3;&#x00B4;on de
+amenazas de forma autom&#x00E1;&#x00B4;atica, esto hace que rutinariamente las organizaciones
+deban tomar dicha informaci&#x00F3;&#x00B4;on y sintetizarla en sus bases de datos locales. Si
+bien los m&#x00E9;&#x00B4;etodos utilizados en la actualidad han ayudado a mejorar las
+capacidades defensivas de numerosas organizaciones, &#x00E9;&#x00B4;estas no han logrado
+explotar su m&#x00E1;&#x00B4;aximo potencial.
+</para><!--l. 34--><para>   Actualmente, existen varios esfuerzos para generar arquitecturas abiertas,
+est&#x00E1;&#x00B4;andar, basadas en indicadores e informaci&#x00F3;&#x00B4;on de incidente. La realidad es que
+ninguno de estos ha podido convertirse en un est&#x00E1;&#x00B4;andar para el intercambio entre
+comunidades.
+                                                                     
+
+                                                                     
+</para><!--l. 39--><para>   Las aproximaciones tradicionales de seguridad tienen como objetivo entender
+y registrar vulnerabilidades, debilidades y con&#xFB01;guraciones necesarias pero
+insu&#xFB01;cientes. Para defenderse, las organizaciones tienen estrategias de defensa
+que buscan bloquear los ataques y arreglar las vulnerabilidades, &#x00E9;&#x00B4;esta
+estrategia est&#x00E1;&#x00B4;a basada en alertas. Si bien puede ser efectiva contra algunas
+amenazas no logra detener ataques avanzados o proveer informaci&#x00F3;&#x00B4;on sobre las
+actividades de un atacante luego de que ingreso a la red. Una estrategia mas
+adecuada es basarse en <emphasis role="bf">cyber kill-chain</emphasis>, en &#x00E9;&#x00B4;esta estrategia se busca
+descomponer las fases de un ataque con la &#xFB01;nalidad de obtener una mejor
+comprensi&#x00F3;&#x00B4;on del ataque y el atacante as&#x00ED;&#x00B4;&#x0131; como mejorar las posibilidades de
+defensa.
+   </para><figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+<!--l. 53--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/killChain.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-10011"  ></anchor>Figura&#x00A0;1</title><para>Cyber kill-chain <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<!--l. 57--><para>   Como se ve en la &#xFB01;gura 1, los primeros pasos de &#x00E9;&#x00B4;esta estrategia representan
+una oportunidad para detectar y mitigar las amenazas de forma proactiva antes
+de que el adversario realice un acceso no autorizado en los sistemas de la
+organizaci&#x00F3;&#x00B4;on. En los pasos posteriores es donde se realiza la detecci&#x00F3;&#x00B4;on, respuesta
+y aseguramiento de los activos m&#x00E1;&#x00B4;as importantes. Al entender el adversario, se
+puede tener una mejor oportunidad para descubrir sus intenciones y responder al
+ataque. Entender la amenaza permite la toma de mejores decisiones, priorizando
+los recursos y as&#x00ED;&#x00B4;&#x0131; tener una ventaja ante el atacante. El resultado de defensas en
+base a inteligencia es una mejor opci&#x00F3;&#x00B4;on que las respuestas a los ataques dado que
+estos ajustan sus operaciones basandose en el &#x00E9;&#x00B4;exito o falla de sus intentos. En
+un modelo como el de la &#xFB01;gura 1 los intentos del adversario pueden ser
+reconocidos, logrando que los defensores tengan la posibilidad de ajustar
+sus t&#x00E1;&#x00B4;acticas logrando que al adversario le sea m&#x00E1;&#x00B4;as dif&#x00ED;&#x00B4;&#x0131;cil alcanzar sus
+objetivos.
+</para><!--l. 72--><para>   Compartir informaci&#x00F3;&#x00B4;on con socios y comunidades de con&#xFB01;anza le permite a las
+organizaciones tener un conjunto de datos relevante para lograr una identi&#xFB01;caci&#x00F3;&#x00B4;on
+precisa de la amenaza. Por medio de &#x00E9;&#x00B4;este intercambio, cada ente puede entender
+mejor las amenazas, no solo de forma abstracta sino que tambi&#x00E9;&#x00B4;en con evidencias
+especi&#xFB01;cas que indiquen la presencia del atacante. Las tareas de cyber
+inteligencia permiten anticipar y mitigar las amenazas antes de que sean
+dif&#x00ED;&#x00B4;&#x0131;ciles de encontrar y erradicar utilizando los m&#x00E9;&#x00B4;etodos tradicionales de
+detecci&#x00F3;&#x00B4;on y respuesta. Con la informaci&#x00F3;&#x00B4;on recolectada los analistas pueden
+agrupar patrones de actividades similares, atribuir actividades a ciertos
+actores, identi&#xFB01;car e implementar estrategias para mitigar ataques de forma
+r&#x00E1;&#x00B4;apida y anticiparse al lanzamiento de ataques similares en el futuro. Para
+aprovechar de forma adecuada los bene&#xFB01;cios de la cyber inteligencia, las
+organizaciones deben compartir la informaci&#x00F3;&#x00B4;on recolectada con socios de su
+con&#xFB01;anza.
+</para><!--l. 87--><para>   Por medio del an&#x00E1;&#x00B4;alisis del comportamiento de los adversarios en distintos
+objetivos y en un periodo de tiempo adecuado, los defensores son capaces de
+identi&#xFB01;car un conjunto importante de indicadores, t&#x00E1;&#x00B4;acticas, t&#x00E9;&#x00B4;ecnicas y
+procedimientos. De &#x00E9;&#x00B4;esta forma se obtiene informaci&#x00F3;&#x00B4;on de los objetivos y las
+estrategias lo cual permite al defensor predecir el comportamiento del ataque y
+generar defensas din&#x00E1;&#x00B4;amicas. Dada la forma y complejidad con la cual evolucionan
+las amenazas, la velocidad con la cual ocurren los eventos y la basta cantidad de
+datos que se deberian intercambiar, es necesario establecer una forma autom&#x00E1;&#x00B4;atica
+para ayudar a los analistas y tomadores de decisi&#x00F3;&#x00B4;on a llevar a cabo acciones
+defensivas. La automatizaci&#x00F3;&#x00B4;on requiere de informaci&#x00F3;&#x00B4;on de calidad, esto no puede
+ser logrado adecuadamente con los distintos productos y sistemas de hoy en d&#x00ED;&#x00B4;&#x0131;a.
+                                                                     
+
+                                                                     
+Para lograr un nivel adecuado de automatizaci&#x00F3;&#x00B4;on es necesario contar con un
+est&#x00E1;&#x00B4;andar el cual tenga representaciones estructuradas de informaci&#x00F3;&#x00B4;on, de esta
+forma se puede lograr un mejor aprovechamiento de los datos sin saber
+de antemano quien los provee. Dicha informaci&#x00F3;&#x00B4;on debe ser legible por
+un humano y parseable por una m&#x00E1;&#x00B4;aquina. Estos requerimientos tienen
+varias justi&#xFB01;caciones, primero que nada, un analista podr&#x00ED;&#x00B4;&#x0131;a realizar un
+an&#x00E1;&#x00B4;alisis que es inapropiado para ser automatizado o que sea focalizado
+en tomas de decisiones por parte de personas. Tambi&#x00E9;&#x00B4;en podr&#x00ED;&#x00B4;&#x0131;a ser de
+inter&#x00E9;&#x00B4;es que un analista tenga conocimiento de la situaci&#x00F3;&#x00B4;on actual, de la
+&#xFB01;delidad de las fuentes o de los m&#x00E9;&#x00B4;etodos utiliziados para producir la
+informaci&#x00F3;&#x00B4;on. Por lo dicho anteriormente, es necesario la existencia de
+representaciones estructuradas de la informaci&#x00F3;&#x00B4;on, siendo &#x00E9;&#x00B4;esta expresiva, &#xFB02;exible,
+extensible, automatizable y legible. Adem&#x00E1;&#x00B4;as se deben contar con medios para
+permitir el intercambio seguro y con&#xFB01;able de informaci&#x00F3;&#x00B4;on entre distintas
+organizaciones.
+</para><!--l. 113--><para>   Con lo presentado anteriormente se puede ver que una mejor soluci&#x00F3;&#x00B4;on para el
+intercambio de informaci&#x00F3;&#x00B4;on es necesaria, &#x00E9;&#x00B4;esta deber&#x00ED;&#x00B4;&#x0131;a poder ser utilizada
+por diferentes comunidades, permitiendo diferentes modelos, m&#x00E9;&#x00B4;etodos y
+soportando un rango de datos amplio. En particular los objetivos ideal
+son:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 118--><para>Permitir compartir informaci&#x00F3;&#x00B4;on de forma m&#x00E1;&#x00B4;as r&#x00E1;&#x00B4;apida y precisa.
+     </para></listitem>
+     <listitem>
+     <!--l. 119--><para>Reducir  el  an&#x00E1;&#x00B4;alisis  humano  y  liberar  a  los  recursos  humanos  para
+     realizar trabajo de an&#x00E1;&#x00B4;alisis m&#x00E1;&#x00B4;as valioso.
+     </para></listitem>
+     <listitem>
+     <!--l. 121--><para>Permitir  que  las  amenazas  m&#x00E1;&#x00B4;as  conocidas  sean  analizadas  por
+     computadoras.
+     </para></listitem>
+     <listitem>
+     <!--l. 123--><para>Permitir que se comparta de forma autom&#x00E1;&#x00B4;atica un gran n&#x00FA;&#x00B4;umero de
+     datos, siendo estos datos complejos. Esto deber&#x00ED;&#x00B4;&#x0131;a permitir una defensa
+     activa.
+                                                                     
+
+                                                                     
+     </para></listitem>
+     <listitem>
+     <!--l. 125--><para>Proteger la informaci&#x00F3;&#x00B4;on intercambiada.
+     </para></listitem>
+     <listitem>
+     <!--l. 126--><para>Permitir que se agregue informaci&#x00F3;&#x00B4;on a las bases locales con discreci&#x00F3;&#x00B4;on
+     y limitando el n&#x00FA;&#x00B4;umero de analistas que acceden a la informaci&#x00F3;&#x00B4;on. Dicha
+     informaci&#x00F3;&#x00B4;on debe tener datos de contexto.
+     </para></listitem>
+     <listitem>
+     <!--l. 129--><para>Permitir la colaboraci&#x00F3;&#x00B4;on de analistas de distintas organizaciones en los
+     incidentes.</para></listitem></itemizedlist>
+<anchor 
+   xml:id="x1-1002r1"  ></anchor>
+<!--l. 45--><section 
+role="section"><title><abbrev role="title-mark">2</abbrev><anchor 
+   xml:id="x1-20002"  ></anchor>Gesti&#x00F3;&#x00B4;on de incidentes</title>
+<anchor 
+   xml:id="x1-2001r1"  ></anchor>
+<!--l. 46--><section 
+role="subsection"><title><abbrev role="title-mark">2.1</abbrev><anchor 
+   xml:id="x1-30001"  ></anchor>Herramientas</title>
+<anchor 
+   xml:id="x1-3001r4"  ></anchor>
+<!--l. 47--><section 
+role="subsection"><title><abbrev role="title-mark">2.2</abbrev><anchor 
+   xml:id="x1-40002"  ></anchor>Modelos</title>
+<anchor 
+   xml:id="x1-4001r3"  ></anchor>
+<!--l. 49--><section 
+role="section"><title><abbrev role="title-mark">3</abbrev><anchor 
+   xml:id="x1-50003"  ></anchor>Representaci&#x00F3;&#x00B4;on</title>
+<anchor 
+   xml:id="x1-5001r5"  ></anchor>
+<!--l. 50--><section 
+role="subsection"><title><abbrev role="title-mark">3.1</abbrev><anchor 
+   xml:id="x1-60001"  ></anchor>Modelos de datos</title>
+<anchor 
+   xml:id="x1-6001r1"  ></anchor>
+<!--l. 1--><section 
+role="subsubsection"><title><abbrev role="title-mark">3.1.1</abbrev><anchor 
+   xml:id="x1-70001"  ></anchor>IDMEF</title>
+<!--l. 3--><para>   Intrusion Detection Message Exchange Format &#x0028;IDMEF&#x0029; fue especi&#xFB01;cado
+como un protocolo experimental que no especi&#xFB01;ca ning&#x00FA;&#x00B4;un est&#x00E1;&#x00B4;andar. Sin embargo
+Incident Object Description Exchange Format se basa en las especi&#xFB01;caciones de
+las clases de&#xFB01;nidas en IDMEF. El prop&#x00F3;&#x00B4;osito de IDMEF es de&#xFB01;nir formatos de
+datos y procedimientos de intercambio para compartir informaci&#x00F3;&#x00B4;on de inter&#x00E9;&#x00B4;es con
+sistemas de detecci&#x00F3;&#x00B4;on de intrusos y sistemas de respuesta con los sistemas de
+administraci&#x00F3;&#x00B4;on que deben interactuar con estos. El RFC de IDMEF describe el
+modelo de datos para representar informaci&#x00F3;&#x00B4;on tomada de los sistemas de
+                                                                     
+
+                                                                     
+intrusi&#x00F3;&#x00B4;on. Se busca que dicho formato pueda ser utilizado por los Intrusion
+Detection Systems &#x0028;IDSs&#x0029; para reportar alertas sobre eventos que parezcan
+sospechosos.
+</para><!--l. 14--><para>   Por medio de XML digital signature se busca proveer integridad,
+autenticaci&#x00F3;&#x00B4;on de los mensajes y de los servicios. La responsabilidad para la
+integridad y autenticaci&#x00F3;&#x00B4;on de los mensajes es responsabilidad del protocolo de
+comunicaci&#x00F3;&#x00B4;on y no del formato de mensajes. La inclusi&#x00F3;&#x00B4;on de &#xFB01;rmas digitales en
+mensajes IDMEF deber&#x00ED;&#x00B4;&#x0131;a ser realizada en casos en los que &#x00E9;&#x00B4;estas deban ser
+archivadas para su uso posteriores o cuando los mensajes IDMEF son
+intercambiados sobre protocolos poco seguros.
+<anchor 
+   xml:id="x1-7001r1"  ></anchor>
+</para><!--l. 22--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-80001"  ></anchor>Modelo de datos de IDMEF</title>
+<!--l. 23--><para>   El modelo de datos de IDMEF es una representaci&#x00F3;&#x00B4;on orientada a alertas
+enviadas a los administradores desde los sistemas de intrusi&#x00F3;&#x00B4;on. El modelo de
+datos presenta varios problemas referentes a la representaci&#x00F3;&#x00B4;on de los
+datos:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 27--><para>Generalmente, la informaci&#x00F3;&#x00B4;on de las alertas es heterog&#x00E9;&#x00B4;enea. Algunas
+     alertas son de&#xFB01;nidas con poca informaci&#x00F3;&#x00B4;on, otras proveen informaci&#x00F3;&#x00B4;on
+     m&#x00E1;&#x00B4;as detallada. Ejemplos de alertas con poca informaci&#x00F3;&#x00B4;on son aquellas
+     que  solo  presentan  datos  de  origen,  destino,  nombre  u  hora,  estos
+     datos se pueden ver extendidos por alertas detalladas en las cuales
+     se presenta informaci&#x00F3;&#x00B4;on de usuarios, procesos o puertos de servicios.
+     Es necesario que el modelo de datos que represente dicha informaci&#x00F3;&#x00B4;on
+     sea &#xFB02;exible para adaptarse a las distintas necesidades. Un modelo de
+     datos orientado a objetos es extensible por medio de agregaci&#x00F3;&#x00B4;on y
+     sub clases, de esta forma una implementaci&#x00F3;&#x00B4;on que no entienda estas
+     extensiones podr&#x00E1;&#x00B4;a seguir entendiendo el subconjunto de informaci&#x00F3;&#x00B4;on
+     que esta de&#xFB01;nido en el modelo. Estas dos formas de extender el modelo
+     permiten que se mantenga su consistencia.
+     </para></listitem>
+     <listitem>
+     <!--l. 39--><para>Los IDSs son diferentes, algunos de estos detectan ataques analizando
+     el tr&#x00E1;&#x00B4;a&#xFB01;co en la red, otros utilizando los logs de sistemas operativos
+     o aplicaciones que auditan informaci&#x00F3;&#x00B4;on. Las alertas generadas para
+     un  mismo  ataque  pero  por  medio  de  diferentes  herramientas,  no
+     necesariamente  contienen  los  mismos  datos.  El  modelo  de  datos
+                                                                     
+
+                                                                     
+     de&#xFB01;ne clases que soportan las diferencias en las fuentes de los datos.
+     En particular, las nociones de fuente y objetivo para el alerta son
+     representadas por una combinaci&#x00F3;&#x00B4;on de nodo, procesos, servicio y clases
+     de usuario.
+     </para></listitem>
+     <listitem>
+     <!--l. 47--><para>Dependiendo  del  tipo  de  red  o  sistemas  operativos  utilizados,  los
+     ataques ser&#x00E1;&#x00B4;an observados y reportados de manera diferente lo cual lleva
+     a que el modelo de datos deba adaptarse a dichas diferencias.
+     </para></listitem>
+     <listitem>
+     <!--l. 50--><para>Los instrumentos comerciales persiguen objetivos diferentes. Por varias
+     razones, estos desean entregar m&#x00E1;&#x00B4;as o menos informaci&#x00F3;&#x00B4;on sobre ciertos
+     tipos de ataques. El modelo deber permitir la &#xFB02;exibilidad necesaria
+     preservando su integridad.</para></listitem></itemizedlist>
+<!--l. 56--><para>   El dise&#x00F1;&#x02DC;no del modelo de datos busca proveer una representaci&#x00F3;&#x00B4;on est&#x00E1;&#x00B4;andar de
+las alertas de manera que la informaci&#x00F3;&#x00B4;on no sea ambigua y que se describa la
+relaci&#x00F3;&#x00B4;on entre alertas simples y complejas.
+</para><!--l. 60--><para>   El objetivo de dicho modelo es proveer una representaci&#x00F3;&#x00B4;on est&#x00E1;&#x00B4;andar de la
+informaci&#x00F3;&#x00B4;on analizada por un sistema de intrusi&#x00F3;&#x00B4;on cuando es detectado un evento
+inusual. Estas alertas pueden ser simples o complejas dependiendo de las
+capacidades de la herramienta que las creo.
+</para><!--l. 65--><para>   Los nuevos objetos son introducidos para referencias a contenido adicional.
+Esto es importante debido a que la tarea de clasi&#xFB01;car y nombrar vulnerabilidades
+es dif&#x00ED;&#x00B4;&#x0131;cil y sumamente subjetiva. El modelo de datos no debe ser ambiguo, por lo
+que mientras que se permite que los an&#x00E1;&#x00B4;alisis sean mas o menos precisos entre
+ellos, no se debe permitir que estos produzcan informaci&#x00F3;&#x00B4;on contradictoria en dos
+alertas que describen el mismo evento. De todas formas, siempre es posible
+insertar toda la informaci&#x00F3;&#x00B4;on &#x00FA;&#x00B4;util de un evento en campos de extensi&#x00F3;&#x00B4;on del
+alerta en lugar de en los campos a los que estos pertenecen, sin embargo,
+dichas practicas reducen la interoperabilidad y deberian ser evitadas en lo
+posible.
+</para><!--l. 76--><para>   IDMEF fue dise&#x00F1;&#x02DC;nado para cubrir todo el rango de alertas posible, desde las
+simples a las m&#x00E1;&#x00B4;as complejas. Para esto el modelos de datos provee una
+forma de representar alertas complejas que agregan varias alertas simples
+permitiendo identi&#xFB01;car dichas alertas simples entre el contenido de la alerta
+compleja.
+                                                                     
+
+                                                                     
+<anchor 
+   xml:id="x1-8001r8"  ></anchor>
+</para><!--l. 1--><section 
+role="subsubsection"><title><abbrev role="title-mark">3.1.2</abbrev><anchor 
+   xml:id="x1-90002"  ></anchor>IODEF</title>
+<!--l. 3--><para>   IODEF de&#xFB01;ne una representaci&#x00F3;&#x00B4;on de datos que provee un framework para el
+intercambio de informaci&#x00F3;&#x00B4;on entre CSIRTs, dicho tipo de informaci&#x00F3;&#x00B4;on de seguridad
+es com&#x00FA;&#x00B4;unmente intercambiado entre este tipo de organizaciones. IODEF provee
+una representaci&#x00F3;&#x00B4;on en XML para transportar informaci&#x00F3;&#x00B4;on de incidentes entre
+pares en distintos dominios administrativos pero que tienen las responsabilidades
+operacionales de remediar o analizar y establecer advertencias en un dominio
+de&#xFB01;nido. El modelo de datos provisto por IODEF codi&#xFB01;ca la informaci&#x00F3;&#x00B4;on
+referente a hosts, redes y servicios corriendo en estos sistemas; metodolog&#x00ED;&#x00B4;&#x0131;a de
+ataques y evidencia forense asociada; impacto de la actividad realizada y
+aproximaciones a los trabajos realizados.
+</para><!--l. 14--><para>   IODEF deber&#x00ED;&#x00B4;&#x0131;a ser compatible con IDMEF y tener la capacidad de incluir
+mensajes IDMEF. Los actores principales en IODEF son los CSIRTs y no los
+IDSs como ocurre en IDMEF. Se puede ver a IODEF como una interfaz
+orientada a ser utilizada por personas, por ello un mensaje IODEF es parseable
+por una m&#x00E1;&#x00B4;aquina y a su vez le&#x00ED;&#x00B4;&#x0131;ble por humanos. Los objetos IODEF tienen un
+tiempo de vida mayor a IDMEF, en este los mensajes son utilizados
+una sola vez. Los mensajes IODEF consideran informaci&#x00F3;&#x00B4;on referente al
+manejo de incidentes, almacenamiento de dicha informaci&#x00F3;&#x00B4;on o estad&#x00ED;&#x00B4;&#x0131;sticas y
+an&#x00E1;&#x00B4;alisis.
+</para><!--l. 23--><para>   El objetivo primordial de IODEF es mejorar las capacidades operacionales de
+los CSIRTs. La adopci&#x00F3;&#x00B4;on por parte de la comunidad provee una habilidad
+mejorada para resolver los incidentes y transmitir informaci&#x00F3;&#x00B4;on de contexto
+simpli&#xFB01;cando la colaboraci&#x00F3;&#x00B4;on e intercambio de datos. El formato estructurado
+provisto por IODEF permite:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 29--><para>Incrementar la automatizaci&#x00F3;&#x00B4;on en el procesamiento de los datos.
+     </para></listitem>
+     <listitem>
+     <!--l. 30--><para>Bajar  el  esfuerzo  necesario  para  normalizar  datos  similares  de
+     diferentes fuentes.
+     </para></listitem>
+     <listitem>
+     <!--l. 32--><para>Un formato com&#x00FA;&#x00B4;un con el cual construir herramientas interoperables
+     para el manejo de incidentes y an&#x00E1;&#x00B4;alisis subsecuente, espec&#x00ED;&#x00B4;&#x0131;&#xFB01;camente
+                                                                     
+
+                                                                     
+     cuando los datos provienen de dominios distintos.</para></listitem></itemizedlist>
+<!--l. 37--><para>   La coordinaci&#x00F3;&#x00B4;on entre CSIRTs no es un problema estrictamente t&#x00E9;&#x00B4;ecnico. La
+con&#xFB01;anza, los procedimientos y las leyes son consideraciones que pueden impedir
+que las organizaciones intercambien informaci&#x00F3;&#x00B4;on. IODEF no busca evadir dichas
+consideraciones, sin embargo, las implementaciones operacionales de IODEF
+deben considerar este contexto.
+<anchor 
+   xml:id="x1-9001r9"  ></anchor>
+</para><!--l. 43--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-100001"  ></anchor>Modelo de datos de IODEF</title>
+<!--l. 45--><para>   A la hora de dise&#x00F1;&#x02DC;nar IODEF se realizaron ciertas consideraciones de
+dise&#x00F1;&#x02DC;no
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 47--><para>El modelo de datos sirve como formato de transporte, lo que lleva a
+     que su representaci&#x00F3;&#x00B4;on especi&#xFB01;ca no sea optima para almacenamiento
+     en disco, ser archivado por plazos largos o procesamiento en memoria.
+     </para></listitem>
+     <listitem>
+     <!--l. 50--><para>Por medio de la implementaci&#x00F3;&#x00B4;on no se busca establecer un consenso
+     respecto a la de&#xFB01;nici&#x00F3;&#x00B4;on de un incidente, en su lugar se trata de dar un
+     entendimiento amplio que sea lo su&#xFB01;cientemente &#xFB02;exible para abarcar
+     la mayor&#x00ED;&#x00B4;&#x0131;a de las operaciones.
+     </para></listitem>
+     <listitem>
+     <!--l. 54--><para>Describir un incidente para todas las de&#xFB01;niciones requerir&#x00ED;&#x00B4;&#x0131;a un modelo
+     de datos extremadamente complejo. Por ello, IODEF solo busca dar
+     un  marco  para  transmitir  informaci&#x00F3;&#x00B4;on  de  incidentes  com&#x00FA;&#x00B4;unmente
+     intercambiada.  Se  asegura  un  mecanismo  que  pueda  ser  extendido
+     para soportar informaci&#x00F3;&#x00B4;on de la organizaci&#x00F3;&#x00B4;on as&#x00ED;&#x00B4;&#x0131; como t&#x00E9;&#x00B4;ecnicas para
+     referencias informaci&#x00F3;&#x00B4;on mantenida por fuera del modelo de datos.
+     </para></listitem>
+     <listitem>
+     <!--l. 60--><para>El dominio de an&#x00E1;&#x00B4;alisis de seguridad no esta totalmente estandarizado
+     y debe basarse en descripciones textuales. IODEF busca conseguir un
+     balance entre el contenido libre y el procesamiento autom&#x00E1;&#x00B4;atico de la
+     informaci&#x00F3;&#x00B4;on de incidentes.
+                                                                     
+
+                                                                     
+     </para></listitem>
+     <listitem>
+     <!--l. 64--><para>IODEF es una de las representaciones que han sido estandarizadas. El
+     modelo de datos de IDMEF in&#xFB02;uencio el dise&#x00F1;&#x02DC;no de IODEF.</para></listitem></itemizedlist>
+<!--l. 68--><para>   El modelo de datos de IODEF no introduce problemas de seguridad. Este solo
+de&#xFB01;ne una representaci&#x00F3;&#x00B4;on simple para informaci&#x00F3;&#x00B4;on de incidentes. Como los
+datos codi&#xFB01;cados por IODEF pueden ser considerados sensibles por las
+partes que los intercambian se deben tomar precauciones para asegurar la
+con&#xFB01;dencialidad durante el intercambio y el subsecuente procesamiento. El
+primero debe ser resguardado por un formato de mensaje, pero luego se deben
+tener consideraciones de seguridad en el sistema que procesa los datos,
+los almacena y archiva la documentaci&#x00F3;&#x00B4;on y la informaci&#x00F3;&#x00B4;on derivada de
+estos.
+</para><!--l. 77--><para>   El formato de mensajes subyacente y el protocolo utilizado para intercambiar
+datos provee una garant&#x00ED;&#x00B4;&#x0131;a de con&#xFB01;dencialidad, integridad y autenticidad. El uso
+de protocolos de seguridad estandarizados es recomendado. Por ejemplo
+IODEF/RID.
+<anchor 
+   xml:id="x1-10001r10"  ></anchor>
+</para><!--l. 1--><section 
+role="subsubsection"><title><abbrev role="title-mark">3.1.3</abbrev><anchor 
+   xml:id="x1-110003"  ></anchor>STIX</title>
+<!--l. 3--><para>   STIX es un lenguaje para la especi&#xFB01;caci&#x00F3;&#x00B4;on, captura, representaci&#x00F3;&#x00B4;on y
+comunicaci&#x00F3;&#x00B4;on de informaci&#x00F3;&#x00B4;on de seguridad estandarizada. Lo realiza de manera
+estructurada para soportar un mejor manejo de la informaci&#x00F3;&#x00B4;on as&#x00ED;&#x00B4;&#x0131; como para
+permitir procesos automatizados.
+</para><!--l. 8--><para>   Se busca que la informaci&#x00F3;&#x00B4;on sea representada de forma estructurada, a su vez
+se &#x00E9;&#x00B4;esta debe ser expresiva, &#xFB02;exible, extensible, automatizable y legible. Esto se
+presenta como un desaf&#x00ED;&#x00B4;&#x0131;o ya que la informaci&#x00F3;&#x00B4;on intercambiada debe ser
+estructurada para que pueda ser parseada por una m&#x00E1;&#x00B4;aquina pero no se debe
+perder la posibilidad de que un analista la pueda leer y entender. Que sea
+entendible por una persona es necesario para que no se pierda el juicio y control
+que &#x00E9;&#x00B4;esta pueda tener.
+</para><!--l. 16--><para>   Al convertirse STIX en un est&#x00E1;&#x00B4;andar para la comunidad se obtendr&#x00E1;&#x00B4;a informaci&#x00F3;&#x00B4;on
+de mejor calidad la que ser&#x00E1;&#x00B4;a mejor aprovechada y de la cual no se sabr&#x00E1;&#x00B4;a la fuente
+de los datos de antemano.
+<anchor 
+   xml:id="x1-11001r11"  ></anchor>
+</para><!--l. 20--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-120001"  ></anchor>Aproximaciones de la actualidad</title>
+<!--l. 22--><para>   La informaci&#x00F3;&#x00B4;on que se intercambia y utiliza actualmente es at&#x00F3;&#x00B4;omica,
+incosistente y muy limitada en so&#xFB01;sticaci&#x00F3;&#x00B4;on y expresividad. Adem&#x00E1;&#x00B4;as, el uso de
+estructuras estandarizadas se enfoca en una porci&#x00F3;&#x00B4;on del problema y su
+                                                                     
+
+                                                                     
+integraci&#x00F3;&#x00B4;on no se realiza de forma adecuada entre si o carecen de la &#xFB02;exibilidad
+para hacerlo. Generalmente, las actividades de intercambio de indicadores son
+entre humanos, siendo los indicadores desestructurados o semi-estructurados e
+intercambiados por medio de portales web o encriptados y enviados v&#x00ED;&#x00B4;&#x0131;a email.
+Recientemente se ha visto el surgimiento de transferencias entre m&#x00E1;&#x00B4;aquinas, &#x00E9;&#x00B4;estas
+intercambian conjuntos de indicadores simples de modelos de ataques bien
+conocidos.
+</para><!--l. 32--><para>   A diferencia de IODEF, STIX provee una lista de elementos para construir
+indicadores de compromiso y se integra con CAPEC, MAEC o CVE. Adem&#x00E1;&#x00B4;as
+posee soporte para t&#x00E1;&#x00B4;acticas, t&#x00E9;&#x00B4;ecnicas y procedimientos del adversario y tareas
+realizadas por la organizaci&#x00F3;&#x00B4;on. IODEF fue pensado para compartir informaci&#x00F3;&#x00B4;on
+de incidentes y no indicadores de compromiso. STIX permite el intercambio de
+indicadores referentes a amenazas as&#x00ED;&#x00B4;&#x0131; como informaci&#x00F3;&#x00B4;on del contexto en el que
+&#x00E9;&#x00B4;estas se dan. Juntos, permiten tener un conocimiento m&#x00E1;&#x00B4;as rico de las intenciones,
+capacidades, motivaciones y actividades de un adversario y de esta forma
+defenderse de &#x00E9;&#x00B4;el.
+</para><!--l. 42--><para>   STIX busca extender los indicadores para permitir el manejo e intercambio de
+indicadores de forma m&#x00E1;&#x00B4;as expresiva y con un espectro m&#x00E1;&#x00B4;as amplio de
+informaci&#x00F3;&#x00B4;on.
+</para><!--l. 45--><para>   Actualmente, el intercambio y manejo de informaci&#x00F3;&#x00B4;on autom&#x00E1;&#x00B4;atica es visto
+t&#x00ED;&#x00B4;&#x0131;picamente en lineas de productos, servicios ofrecidos o soluciones especi&#xFB01;cas de
+una comunidad. STIX busca permitir el intercambio de informaci&#x00F3;&#x00B4;on de forma
+comprensiva, rica, de alta &#xFB01;delidad entre organizaciones, comunidades, productos
+y servicios ofrecidos.
+</para><!--l. 51--><para>   STIX provee una arquitectura uni&#xFB01;cada con un conjunto amplio de
+informaci&#x00F3;&#x00B4;on para permitir una soluci&#x00F3;&#x00B4;on practica para cualquier caso de uso,
+lenguajes existentes y estandarizados que son utilizados. El conjunto de
+informaci&#x00F3;&#x00B4;on incluye:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 56--><para>Cyber Observables
+     </para></listitem>
+     <listitem>
+     <!--l. 57--><para>Indicadores
+     </para></listitem>
+     <listitem>
+     <!--l. 58--><para>Incidentes
+                                                                     
+
+                                                                     
+     </para></listitem>
+     <listitem>
+     <!--l. 59--><para>T&#x00E1;&#x00B4;acticas, t&#x00E9;&#x00B4;ecnicas y procedimientos de los adversarios
+     </para></listitem>
+     <listitem>
+     <!--l. 60--><para>Objetivos de exploits
+     </para></listitem>
+     <listitem>
+     <!--l. 61--><para>Cursos de acci&#x00F3;&#x00B4;on
+     </para></listitem>
+     <listitem>
+     <!--l. 62--><para>Campa&#x00F1;&#x02DC;nas de ataques
+     </para></listitem>
+     <listitem>
+     <!--l. 63--><para>Actores de ataques</para></listitem></itemizedlist>
+<anchor 
+   xml:id="x1-12001r13"  ></anchor>
+<!--l. 67--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-130002"  ></anchor>Casos de uso</title>
+<!--l. 69--><para>   STIX ha sido desarrollado para soportar varios casos de uso involucrados en
+el manejo de amenazas de seguridad. A continuaci&#x00F3;&#x00B4;on se dan descripciones de esos
+casos de uso.
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 73--><para>An&#x00E1;&#x00B4;alisis  de  Cyber  Amenazas:  Un  analista  de  seguridad  estudia
+     informaci&#x00F3;&#x00B4;on estructurada y no estructurada referente a actividades
+     de   una   amenaza   procedentes   de   varias   fuentes.   El   analista
+     busca  entender  la  naturaleza  de  las  amenazas  m&#x00E1;&#x00B4;as  relevantes,
+     identi&#xFB01;carlas,  y  representarlas  para  poder  expresar  y  actualizar  el
+     conocimiento relevante de la amenaza. La informaci&#x00F3;&#x00B4;on de la amenaza
+     incluye acciones realizadas, comportamientos, capacidades, quienes lo
+     realizaron, etc. De este conocimiento y representaci&#x00F3;&#x00B4;on el analista puede
+     especi&#xFB01;car patrones de la amenaza, sugerir acciones a ser realizadas
+     para responder a sus actividades y/o compartir informaci&#x00F3;&#x00B4;on con socios
+     de su con&#xFB01;anza.
+                                                                     
+
+                                                                     
+     </para></listitem>
+     <listitem>
+     <!--l. 83--><para>Especi&#xFB01;car  patrones  de  amenazas:  Un  analista  especi&#xFB01;ca  patrones
+     para representar las caracter&#x00ED;&#x00B4;&#x0131;sticas de amenazas junto con su contexto
+     y  metadatos  para  interpretar,  manejar  y  aplicar  el  patr&#x00F3;&#x00B4;on  y  sus
+     resultados. Esto puede ser realizado manualmente o con la asistencia
+     de una herramienta autom&#x00E1;&#x00B4;atica.
+     </para></listitem>
+     <listitem>
+     <!--l. 87--><para>Manejo de las actividades de respuesta: Los encargados de tomar decisiones
+     y el personal de operaciones trabajan en conjunto para prevenir o detectar
+     actividades que presenten una amenaza y responder a los incidentes
+     detectados que sean realizados por dichas amenazas. Las acciones
+     preventivas pueden mitigar vulnerabildidades, debilidades o malas
+     con&#xFB01;guraciones que sean objetivos de exploits. Luego de la detecci&#x00F3;&#x00B4;on e
+     investigaci&#x00F3;&#x00B4;on de incidentes espec&#x00ED;&#x00B4;&#x0131;&#xFB01;cos, acciones reactivas pueden
+     ser realizadas. Se pueden desprender tres sub-casos de uso de lo
+     anterior.
+          </para><itemizedlist>
+          <listitem>
+          <!--l. 95--><para>Prevenci&#x00F3;&#x00B4;on  de  amenazas:  Quienes  deben  tomar  las  decisiones
+          eval&#x00FA;&#x00B4;uan acciones preventivas para las amenazas relevantes que
+          sean  identi&#xFB01;cadas  y  seleccionan  acciones  apropiadas  para  su
+          implementaci&#x00F3;&#x00B4;on.  El  personal  de  operaciones  implementa  las
+          acciones seleccionadas para prevenir la ocurrencia de amenazas
+          especi&#xFB01;cas con prevenciones amplias o con objetivos espec&#x00ED;&#x00B4;&#x0131;&#xFB01;cos
+          iniciados por interpretaci&#x00F3;&#x00B4;on de los indicadores.
+          </para></listitem>
+          <listitem>
+          <!--l. 101--><para>Detecci&#x00F3;&#x00B4;on  de  amenazas:  El  personal  de  operaciones  aplica
+          mecanismos &#x0028;autom&#x00E1;&#x00B4;aticos y manuales&#x0029; para monitorear y asistir
+          las  operaciones  con  la  &#xFB01;nalidad  de  detectar  la  ocurrencia  de
+          amenazas espec&#x00ED;&#x00B4;&#x0131;&#xFB01;cas bas&#x00E1;&#x00B4;andose en la evidencia hist&#x00F3;&#x00B4;orica, an&#x00E1;&#x00B4;alisis
+          del  contexto  actual  e  interpretaci&#x00F3;&#x00B4;on  de  los  indicadores  que  se
+          presentan. &#x00C9;&#x00B4;Esta detecci&#x00F3;&#x00B4;on se realiza generalmente por medio de
+          patrones de indicadores.
+          </para></listitem>
+          <listitem>
+                                                                     
+
+                                                                     
+          <!--l. 107--><para>Respuesta a incidentes: El personal de operaciones responde a
+          amenazas detectadas, investiga que ha ocurrido o est&#x00E1;&#x00B4;a ocurriendo,
+          trata de identi&#xFB01;car y representar la naturaleza de las amenazas
+          y lleva a cabo acciones para mitigar sus efectos, tambi&#x00E9;&#x00B4;en puede
+          aplicar  cursos  de  acci&#x00F3;&#x00B4;on  preventivos.  Una  vez  que  los  efectos
+          son entendidos, el personal de operaciones puede implementar
+          acciones acordes para prevenir o llevar a cabo cursos de acci&#x00F3;&#x00B4;on
+          correctivos.</para></listitem></itemizedlist>
+     </listitem>
+     <listitem>
+     <!--l. 115--><para>Intercambio de informaci&#x00F3;&#x00B4;on: Los encargados de tomar las decisiones
+     establecen pol&#x00ED;&#x00B4;&#x0131;ticas respecto a que tipo de informaci&#x00F3;&#x00B4;on ser&#x00E1;&#x00B4;a compartida,
+     adem&#x00E1;&#x00B4;as tomas decisiones respecto a con quienes se comparte y como
+     deber&#x00ED;&#x00B4;&#x0131;a ser manejada bas&#x00E1;&#x00B4;andose en frameworks de con&#xFB01;anza de forma de
+     mantener niveles adecuados de consistencia, contexto y control. Esta
+     pol&#x00ED;&#x00B4;&#x0131;tica es luego implementada para compartir los indicadores de amenazas
+     apropiados y otra informaci&#x00F3;&#x00B4;on de amenazas.</para></listitem></itemizedlist>
+<anchor 
+   xml:id="x1-13001r14"  ></anchor>
+<!--l. 124--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-140003"  ></anchor>Principios de desarrollo de STIX</title>
+<!--l. 125--><para>   En el enfoque dado a STIX se ha buscado implementar un conjunto de
+principios para su desarrollo con el consenso de la comunidad. Esos principios son
+los siguientes:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 128--><para>Expresividad: Con el &#xFB01;n de soportar la diversidad de casos de uso
+     relevantes, STIX apunta a proveer una cobertura expresiva en todos
+     sus casos de uso espec&#x00ED;&#x00B4;&#x0131;&#xFB01;cos en lugar de dirigirse espec&#x00ED;&#x00B4;&#x0131;&#xFB01;camente a
+     alguno de ellos.
+     </para></listitem>
+     <listitem>
+     <!--l. 131--><para>Integraci&#x00F3;&#x00B4;on en lugar de duplicaci&#x00F3;&#x00B4;on: Cuando STIX abarca conceptos de
+     informaci&#x00F3;&#x00B4;on estructurada para los cuales ya existen representaciones
+     estandarizadas  con  el  consenso  adecuado  y  que  se  encuentran
+     disponibles, se busca integrar estas representaciones a la arquitectura
+     STIX en lugar de duplicar esta informaci&#x00F3;&#x00B4;on innecesariamente.
+     </para></listitem>
+                                                                     
+
+                                                                     
+     <listitem>
+     <!--l. 135--><para>Flexibilidad:  Con  el  &#xFB01;n  de  soportar  un  amplio  rango  de  casos
+     e  informaci&#x00F3;&#x00B4;on  variable  con  varios  niveles  de  &#xFB01;delidad,  STIX  esta
+     dise&#x00F1;&#x02DC;nado para ofrecer tanta &#xFB02;exibilidad como sea posible. STIX se
+     adhiere a una pol&#x00ED;&#x00B4;&#x0131;tica de permitir a los usuarios utilizar cualquier
+     porci&#x00F3;&#x00B4;on  de  representaciones  est&#x00E1;&#x00B4;andar  que  sean  relevantes  para  un
+     contexto dado y evita elementos obligatorios siempre que sea posible.
+     </para></listitem>
+     <listitem>
+     <!--l. 140--><para>Extensibilidad: Con la &#xFB01;nalidad de soportar un amplio rango de casos
+     de uso con un potencial diferente de representaci&#x00F3;&#x00B4;on y para facilitar el
+     perfeccionamiento impulsado por la comunidad, se ha dise&#x00F1;&#x02DC;nado STIX
+     para construir mecanismos de extensi&#x00F3;&#x00B4;on para usos espec&#x00ED;&#x00B4;&#x0131;&#xFB01;cos, para
+     usos localizados, para re&#xFB01;namientos del usuario y evoluci&#x00F3;&#x00B4;on y para
+     facilidad de re&#xFB01;namiento y evoluci&#x00F3;&#x00B4;on centralizada.
+     </para></listitem>
+     <listitem>
+     <!--l. 145--><para>Automatizaci&#x00F3;&#x00B4;on:  El  dise&#x00F1;&#x02DC;no  realizado  en  STIX  busca  maximizar  la
+     estructura y la consistencia para soportar m&#x00E9;&#x00B4;etodos de procesamiento
+     autom&#x00E1;&#x00B4;atico por m&#x00E1;&#x00B4;aquinas.
+     </para></listitem>
+     <listitem>
+     <!--l. 147--><para>Lectura: El dise&#x00F1;&#x02DC;no de STIX busca estructuras del contenido para que
+     no sea &#x00FA;&#x00B4;unicamente consumible o procesable por maquinas sino que
+     tambi&#x00E9;&#x00B4;en sea le&#x00ED;&#x00B4;&#x0131;ble por humanos. Esto es necesario para claridad y
+     comprensibilidad durante las primeras etapas de desarrollo y adopci&#x00F3;&#x00B4;on.
+     </para></listitem>
+     <listitem>
+     <!--l. 151--><para>Implementaci&#x00F3;&#x00B4;on:  La  implementaci&#x00F3;&#x00B4;on  inicial  de  STIX  utiliza  XML
+     como un mecanismo portatil, estructurado y que se puede encontrar
+     en  cualquier  parte  para  la  discusi&#x00F3;&#x00B4;on,  colaboraci&#x00F3;&#x00B4;on  y  re&#xFB01;namiento
+     entre las comunidades involucradas. Esta pensado para el desarrollo
+     en  colaboraci&#x00F3;&#x00B4;on  de  un  lenguaje  estructurado  sobre  informaci&#x00F3;&#x00B4;on  de
+     amenazas entre expertos de la comunidad. Se ha pensado que el uso
+     del lenguaje sea estimulado y soportado por medio del desarrollo de
+     varias herramientas como APIs. Solo por medio de niveles adecuados
+                                                                     
+
+                                                                     
+     de colaboraci&#x00F3;&#x00B4;on entre miembros de la comunidad y con la utilizaci&#x00F3;&#x00B4;on
+     de datos reales se puede llegar a que la soluci&#x00F3;&#x00B4;on evolucione.</para></listitem></itemizedlist>
+<anchor 
+   xml:id="x1-14001r7"  ></anchor>
+<!--l. 58--><section 
+role="subsection"><title><abbrev role="title-mark">3.2</abbrev><anchor 
+   xml:id="x1-150002"  ></anchor>Est&#x00E1;&#x00B4;andares</title>
+<anchor 
+   xml:id="x1-15001r6"  ></anchor>
+<!--l. 60--><section 
+role="section"><title><abbrev role="title-mark">4</abbrev><anchor 
+   xml:id="x1-160004"  ></anchor>Intercambio</title>
+<anchor 
+   xml:id="x1-16001r16"  ></anchor>
+<!--l. 61--><section 
+role="subsection"><title><abbrev role="title-mark">4.1</abbrev><anchor 
+   xml:id="x1-170001"  ></anchor>Protocolos</title>
+<anchor 
+   xml:id="x1-17001r12"  ></anchor>
+<!--l. 1--><section 
+role="subsubsection"><title><abbrev role="title-mark">4.1.1</abbrev><anchor 
+   xml:id="x1-180001"  ></anchor>RID</title>
+<!--l. 3--><para>   Real-Time Inter-Network &#x0028;RID&#x0029; es un m&#x00E9;&#x00B4;etodo de comunicaci&#x00F3;&#x00B4;on entre redes
+para facilitar el intercambio de datos de incidentes. A su vez, busca integrar
+mecanismos existentes de detecci&#x00F3;&#x00B4;on, seguimiento, identi&#xFB01;caci&#x00F3;&#x00B4;on de fuentes y
+mitigaci&#x00F3;&#x00B4;on que aporta una soluci&#x00F3;&#x00B4;on al manejo de incidentes. Combinar estas
+capacidades en un sistema de comunicaci&#x00F3;&#x00B4;on permite incrementar el nivel de
+seguridad en la red. Las pol&#x00ED;&#x00B4;&#x0131;ticas para manejar incidentes son recomendadas y
+pueden ser acordadas por un consorcio utilizando recomendaciones y
+consideraciones de seguridad.
+</para><!--l. 12--><para>   RID ha sido ampliamente utilizando en comunidades de investigaci&#x00F3;&#x00B4;on, pero
+no ha sido muy adoptado por otros sectores. Fue desarrollado como un
+mecanismo de comunicaci&#x00F3;&#x00B4;on para facilitar la transferencia de informaci&#x00F3;&#x00B4;on
+entre distintos proveedores de servicios de internet para trazar precisa
+y e&#xFB01;cientemente el &#xFB02;ujo de paquetes nocivos a lo largo de la red. RID
+considera la informaci&#x00F3;&#x00B4;on que necesitan varias implementaciones para seguir
+paquetes dentro de una red y los requerimientos de los proveedores de
+servicios de decidir si se permite trazar el recorrido de un paquete o
+no.
+</para><!--l. 21--><para>   Los datos en RID son representados como documentos XML utilizando
+IODEF. De esta forma se simpli&#xFB01;ca la integraci&#x00F3;&#x00B4;on con otros aspectos del manejo
+de incidentes. Adem&#x00E1;&#x00B4;as las ventajas de la representaci&#x00F3;&#x00B4;on en XML permite
+conservar la privaccidad y tener un buen nivel de aseguramiento.RID
+busca proveer un m&#x00E9;&#x00B4;etodo para comunicar la informaci&#x00F3;&#x00B4;on relevante entre
+CSIRTs manteniendo la compatibilidad con varios sistemas de rastreo y
+respuesta.
+</para><!--l. 28--><para>   Los mensajes RID son encapsulados en otros protocolos para el transporte,
+este procedimiento se de&#xFB01;ne en el RFC 6046. La autenticaci&#x00F3;&#x00B4;on, integridad y
+autorizaci&#x00F3;&#x00B4;on son el resultado de las capacidades de cada capa y son utilizadas
+                                                                     
+
+                                                                     
+para alcanzar un nivel de aseguramiento adecuado.
+</para><!--l. 33--><para>   Los mensajes RID tienen la intenci&#x00F3;&#x00B4;on de ser usados en el manejo coordinado
+de incidentes para localizar la fuente de un ataque y detener o mitigar sus
+efectos. Los objetivos de los ataques incluyen redes o sistemas que se vieron
+comprometidos con ataques como denegaciones de servicio u otro tipo de tr&#x00E1;&#x00B4;a&#xFB01;co
+malicioso en una red. Por medio de RID los CSIRTs tienen la posibilidad de
+reportar ataques que est&#x00E9;&#x00B4;en ocurriendo a otros CSIRTs o pedir informaci&#x00F3;&#x00B4;on a &#x00E9;&#x00B4;estos
+de la detecci&#x00F3;&#x00B4;on de ataques.
+</para><!--l. 41--><para>   Los sistemas comprometidos pueden ser el resultado de otros incidentes de
+seguridad como worms, troyanos o virus. El manejar incidentes es una tarea
+dif&#x00ED;&#x00B4;&#x0131;cil para algunas organizaciones debido al tama&#x00F1;&#x02DC;no de su red y la cantidad de
+recursos disponibles. RID provee el framework necesario para realizar la
+comunicaci&#x00F3;&#x00B4;on entre redes involucradas en el manejo, seguimiento y mitigaci&#x00F3;&#x00B4;on
+de incidentes de seguridad. Distintos tipos de mensajes son necesarios
+para facilitar el manejo de incidentes. Los mensajes que se incluyen son
+<emphasis>Report</emphasis>, <emphasis>IncidentQuery</emphasis>, <emphasis>TraceRequest</emphasis>, <emphasis>RequestAuthorization</emphasis>, <emphasis>Result</emphasis> e
+<emphasis>InvestigationRequest</emphasis>. El mensaje Report es utilizado cuando se ingresa
+un incidente en un sistema RID y no se deben realizar m&#x00E1;&#x00B4;as acciones.
+Un mensaje Incident Request es utilizado para pedir informaci&#x00F3;&#x00B4;on de un
+incidente en particular. Un mensaje Trace Request es utilizando cuando la
+fuente del tra&#xFB01;co puede estar oculta. En ese caso, cada proveedor de
+red que reciba uno de estos mensajes enviara uno a la red anterior en
+el camino del mensaje para obtener la fuente del tra&#xFB01;co. Los mensajes
+Request Authorization y Result son utilizados para comunicar el estado y
+resultado de un mensaje Trace Request o Investigation Request. El mensaje
+Investigation Request solo considera lo sistemas RID en el camino a la fuente del
+tra&#xFB01;co.
+</para><!--l. 61--><para>   En RID se pueden dise&#x00F1;&#x02DC;nar topolog&#x00ED;&#x00B4;&#x0131;as que permitan el intercambio de
+informaci&#x00F3;&#x00B4;on facilitando la comunicaci&#x00F3;&#x00B4;on entre socios. La topolog&#x00ED;&#x00B4;&#x0131;a b&#x00E1;&#x00B4;asica para
+comunicar sistemas RID es la de una comunicaci&#x00F3;&#x00B4;on directa. En una organizaci&#x00F3;&#x00B4;on
+se pueden establecer y utilizar varias topolog&#x00ED;&#x00B4;&#x0131;as. Una podr&#x00ED;&#x00B4;&#x0131;a fortalecer las
+relaciones bilaterales entre socios. Los socios podr&#x00ED;&#x00B4;&#x0131;an re enviar los mensajes RID
+entre ellos. Este enfoque permite un rastreo iterativo en donde la fuente es
+desconocida.
+</para><!--l. 69--><para>   La comunicaci&#x00F3;&#x00B4;on entre los sistemas RID debe ser protegida. RID tiene
+muchas consideraciones de seguridad incluidas en el dise&#x00F1;&#x02DC;no del protocolo. Al
+considerar el transporte de mensajes RID, una red fuera de banda, ya sea f&#x00ED;&#x00B4;&#x0131;sica o
+l&#x00F3;&#x00B4;ogica, puede prevenir ataques externos contra las comunicaciones RID. Se deben
+utilizar conexiones autenticadas y encriptadas entre sistemas RID para proveer
+con&#xFB01;dencialidad, integridad, autenticidad y privacidad de los datos. Las
+                                                                     
+
+                                                                     
+relaciones de con&#xFB01;anza son realizadas por socios y establecen relaciones de
+con&#xFB01;anza por medio de infraestructura de PKI.
+</para><!--l. 78--><para>   El protocolo de transporte utilizado debe proveer encriptaci&#x00F3;&#x00B4;on para dar un
+nivel de seguridad e integridad adicional, mientras se provee autenticaci&#x00F3;&#x00B4;on por
+medio de certi&#xFB01;cados. De todas formas los mensajes RID no utilizan &#x00FA;&#x00B4;unicamente
+la seguridad provista por el protocolo de transporte.
+</para><!--l. 83--><para>   La infraestructura PKI provee la baste para la autenticaci&#x00F3;&#x00B4;on, autorizaci&#x00F3;&#x00B4;on,
+encriptaci&#x00F3;&#x00B4;on y &#xFB01;rmas digitales necesarias para establecer una relaci&#x00F3;&#x00B4;on de
+con&#xFB01;anza entre los miembros de una comunidad RID.
+</para><!--l. 87--><para>   Problemas de privacidad pueden ser de preocupaci&#x00F3;&#x00B4;on cuando se habla de
+compartir informaci&#x00F3;&#x00B4;on y deben ser considerados a la hora de alcanzar la meta de
+detener o mitigar los efectos de un incidente de seguridad. Para ello hay clases
+espec&#x00ED;&#x00B4;&#x0131;&#xFB01;cas para automatizar las pol&#x00ED;&#x00B4;&#x0131;ticas de privacidad.
+</para><!--l. 92--><para>   IODEF de&#xFB01;ne un formato de mensaje, no un protocolo de transporte, esto se
+realiza para permitir a los CSIRTs intercambiar y almacenar los datos de la
+forma que m&#x00E1;&#x00B4;as le conviene a cada organizaci&#x00F3;&#x00B4;on. Sin embargo, RID requiere una
+especi&#xFB01;caci&#x00F3;&#x00B4;on de un protocolo de transporte para asegurar la interoperabilidad
+entre las organizaciones socias. El RFC6046 mencionado anteriormente, especi&#xFB01;ca
+el transporte de mensajes RID sobre HTTPS/TLS. En esta especi&#xFB01;caci&#x00F3;&#x00B4;on, cada
+servidor RID funciona como servidor y cliente. Todos los sistemas RID deben
+estar preparados para aceptar conexiones HTTP/TLS de cualquier socio con la
+&#xFB01;nalidad de soportar llamadas a respuestas tard&#x00ED;&#x00B4;&#x0131;as de pedidos que se
+realizaron.
+<anchor 
+   xml:id="x1-18001r19"  ></anchor>
+</para><!--l. 1--><section 
+role="subsubsection"><title><abbrev role="title-mark">4.1.2</abbrev><anchor 
+   xml:id="x1-190002"  ></anchor>TAXII</title>
+<!--l. 3--><para>   El objetivo que plantea Trusted Automated eXchange of Indicator
+Information &#x0028;TAXII&#x0029; es extender la capacidad de compartir indicadores, siendo
+dichos intercambios robustos, seguros y de gran volumen de datos. A
+su vez, los datos intercambiados deberian ser mas expresivos que en la
+actualidad.
+</para><!--l. 7--><para>   Con TAXII no se busca crear una comunidad para compartir, sino que se le
+da a las organizaciones una herramienta que facilite el intercambio entre ellas.
+TAXII mejora las de&#xFB01;ciencias existentes dando especi&#xFB01;caciones abiertas y
+comunes para transportar los mensajes con informaci&#x00F3;&#x00B4;on. Tambi&#x00E9;&#x00B4;en se provee un
+conjunto de capacidades como encriptaci&#x00F3;&#x00B4;on, autenticaci&#x00F3;&#x00B4;on, direccionamiento,
+alertas y pedidos entre sistemas.
+</para><!--l. 14--><para>   TAXII es un conjunto de especi&#xFB01;caciones t&#x00E9;&#x00B4;ecnicas y de documentaci&#x00F3;&#x00B4;on para
+permitir el intercambio de informaci&#x00F3;&#x00B4;on procesable entre organizaciones.
+Para realizar dichos intercambios, se de&#xFB01;nen protocolos y formatos de
+                                                                     
+
+                                                                     
+datos que permiten intercambiar informaci&#x00F3;&#x00B4;on de forma segura. Ha sido
+dise&#x00F1;&#x02DC;nado para permitir la interoperabilidad de diferentes soluciones en lugar
+de ligarse a una tecnolog&#x00ED;&#x00B4;&#x0131;a o producto en particular. Adem&#x00E1;&#x00B4;as, se busca
+incentivar a los proveedores de tecnolog&#x00ED;&#x00B4;&#x0131;a a incorporar soporte para las
+especi&#xFB01;caciones de TAXII en sus productos. La informaci&#x00F3;&#x00B4;on intercambiada ayuda
+a detectar, prevenir y mitigar amenazas inform&#x00E1;&#x00B4;aticas en tiempo real. Es
+importante recalcar que no se buscan de&#xFB01;nir acuerdos para el intercambio de
+informaci&#x00F3;&#x00B4;on o gobierno. En su lugar, permite a las organizaciones mejorar
+el contexto en el que se encuentran respecto a las nuevas amenazas y
+adem&#x00E1;&#x00B4;as compartir la informaci&#x00F3;&#x00B4;on que ellos elijan con las organizaciones que
+deseen de forma simple y r&#x00E1;&#x00B4;apida aprovechando las relaciones y sistemas
+existentes.
+</para><!--l. 28--><para>   En el desarrollo de TAXII se busc&#x00F3;&#x00B4;o consenso y participaci&#x00F3;&#x00B4;on de la comunidad.
+TAXII permite el intercambio de informaci&#x00F3;&#x00B4;on sobre amenazas de forma e&#xFB01;ciente
+y comprensiva por medio de <emphasis>automatizaci&#x00F3;&#x02CA;on</emphasis> y <emphasis>articulaci&#x00F3;&#x02CA;on</emphasis> de un modelo
+detallado de informaci&#x00F3;&#x00B4;on. Para lograr esto, se utiliza una representaci&#x00F3;&#x00B4;on est&#x00E1;&#x00B4;andar
+de informaci&#x00F3;&#x00B4;on de amenazas y un framework para soportar el intercambio de
+datos. El modelo permite el env&#x00ED;&#x00B4;&#x0131;o y recepci&#x00F3;&#x00B4;on de un conjunto amplio de
+informaci&#x00F3;&#x00B4;on de seguridad para soportar las necesidades referentes al intercambio
+de informaci&#x00F3;&#x00B4;on. Se le da la libertad a los proveedores de determinar como sus
+productos producen, consumen o toman ventaja de los &#xFB02;ujos de informaci&#x00F3;&#x00B4;on
+especi&#xFB01;cados por TAXII.
+   </para><figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<!--l. 42--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/TAXIIArchitecture1.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-190012"  ></anchor>Figura&#x00A0;2</title><para>Arquitectura de TAXII <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<!--l. 47--><para>   PONER ALGO DE LA FIGURA!!!!!!!!!!
+</para><!--l. 49--><para>   TAXII cubre un amplio n&#x00FA;&#x00B4;umero de casos de uso, tecnolog&#x00ED;&#x00B4;&#x0131;as, especi&#xFB01;caciones
+e implementaciones. Los casos de uso son desarrollados de manera secuencial,
+permitiendo un conjunto inicial de casos de usos que permiten el intercambio de
+informaci&#x00F3;&#x00B4;on. TAXII utiliza protocolos y especi&#xFB01;caciones existentes siempre que es
+posible, de esta forma se integra con mecanismos de intercambio de informaci&#x00F3;&#x00B4;on
+para reducir los costos de implementaci&#x00F3;&#x00B4;on y permitir la adopci&#x00F3;&#x00B4;on r&#x00E1;&#x00B4;apida por
+parte de organizaciones ya establecidas y que se encuentran intercambiando
+informaci&#x00F3;&#x00B4;on.
+</para><!--l. 58--><para>   Las motivaciones para tener una mejor soluci&#x00F3;&#x00B4;on que permita intercambiar
+informaci&#x00F3;&#x00B4;on lleva a que en el dise&#x00F1;&#x02DC;no de TAXII se hayan planteado los siguientes
+objetivos:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 62--><para>Permitir el intercambio seguro y r&#x00E1;&#x00B4;apido de informaci&#x00F3;&#x00B4;on referente a
+     amenazas entre comunidades de defensores de seguridad.
+     </para></listitem>
+     <listitem>
+     <!--l. 64--><para>Lograr un est&#x00E1;&#x00B4;andares para permitir compartir indicadores entre otros
+     elementos entre organizaciones.
+     </para></listitem>
+     <listitem>
+     <!--l. 66--><para>Extender  el  intercambio  de  indicadores  para  permitir  intercambios
+     seguros,  robustos  y  de  gran  volumen  que  tengan  una  expresividad
+     mayor a la actual.
+     </para></listitem>
+     <listitem>
+     <!--l. 69--><para>Soportar un amplio n&#x00FA;&#x00B4;umero de casos de uso y practicas comunes a las
+     comunidades.
+     </para></listitem>
+     <listitem>
+     <!--l. 71--><para>Tomar los est&#x00E1;&#x00B4;andares existentes que sean adecuados.
+     </para></listitem>
+     <listitem>
+                                                                     
+
+                                                                     
+     <!--l. 72--><para>Llegar a una adopci&#x00F3;&#x00B4;on por parte de organizaciones internacionales de
+     est&#x00E1;&#x00B4;andares.</para></listitem></itemizedlist>
+<!--l. 76--><para>   Para representar la informaci&#x00F3;&#x00B4;on, TAXII utiliza STIX. STIX es un
+lenguaje desarrollado por la comunidad para la especi&#xFB01;caci&#x00F3;&#x00B4;on, captura,
+representaci&#x00F3;&#x00B4;on y comunicaci&#x00F3;&#x00B4;on de informaci&#x00F3;&#x00B4;on de amenazas cibern&#x00E9;&#x00B4;eticas de forma
+estandarizada.
+</para><!--l. 81--><para>   Para automatizar el intercambio de informaci&#x00F3;&#x00B4;on, es necesario especi&#xFB01;car como
+&#x00E9;&#x00B4;esta es compartida. Para lograr esto, TAXII de&#xFB01;ne especi&#xFB01;caciones t&#x00E9;&#x00B4;ecnicas y
+documentaci&#x00F3;&#x00B4;on de soporte. En particular, las especi&#xFB01;caciones de TAXII de&#xFB01;nen
+un conjunto de capacidades necesarias para el transporte exitoso de mensajes.
+Los mensajes TAXII llevan datos de amenazas inform&#x00E1;&#x00B4;aticas transformadas a
+formato STIX. El conjunto completo de los mensajes incluyen mensajes con
+datos y de control.
+</para><!--l. 89--><para>   TAXII utiliza protocolos y especi&#xFB01;caciones existentes siempre que sea
+posible y los integra con los mecanismos actuales para reducir los costos de
+implementaci&#x00F3;&#x00B4;on y permitir una adopci&#x00F3;&#x00B4;on r&#x00E1;&#x00B4;apida por parte de las organizaciones
+ya establecidas y que ya comparten informaci&#x00F3;&#x00B4;on. TAXII ha sido desarrollado de
+forma modular para soportar una variedad de mecanismos y formatos de datos
+para ser intercambiados.
+<anchor 
+   xml:id="x1-19002r15"  ></anchor>
+</para><!--l. 96--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-200001"  ></anchor>Casos de uso</title>
+<!--l. 98--><para>   TAXII ha sido desarrollado para soportar casos de uso comunes para el
+intercambio de informaci&#x00F3;&#x00B4;on. A continuaci&#x00F3;&#x00B4;on se detallan los casos de uso
+desarrollados.
+<anchor 
+   xml:id="x1-20001r1"  ></anchor>
+    4.1.2.1.1.   Alertas o Advertencias p&#x00FA;&#x00B4;ublicas   Estas son advertencias
+al publico en general o a varios miembros de CSIRTs, son enviadas a todos
+los subscriptores. Estas alertas son de una naturaleza muy amplia, por
+ello no necesitan ser encriptadas o tener autorizaciones especiales. Sin
+embargo es importante asegurar la autenticidad del emisor. Las entidades u
+organizaciones deben ser especi&#xFB01;cadas para identi&#xFB01;car la fuente de la
+alerta.
+<anchor 
+   xml:id="x1-20002r2"  ></anchor>
+    4.1.2.1.2.   Alertas y reportes privados   Las alertas privadas son
+similares a las p&#x00FA;&#x00B4;ublicas, la diferencia radica en que en que la informaci&#x00F3;&#x00B4;on
+compartida es sensible y restringida a los socios que comparten datos. Los
+                                                                     
+
+                                                                     
+mecanismos para enviar datos deber&#x00ED;&#x00B4;&#x0131;an ser similares a los de las alertas p&#x00FA;&#x00B4;ublicas.
+Como las alertas y reportes se suponen sensibles y no para el uso general, es
+importante que TAXII soporte formas adecuadas de encriptaci&#x00F3;&#x00B4;on, autenticaci&#x00F3;&#x00B4;on,
+autorizaci&#x00F3;&#x00B4;on e identi&#xFB01;caci&#x00F3;&#x00B4;on de datos. Dependiendo en la naturaleza de
+las comunicaciones, podr&#x00ED;&#x00B4;&#x0131;a requerirse un manejo expl&#x00ED;&#x00B4;&#x0131;cito de marcas o
+restricciones.
+   Las alertas son generalmente cortas, teniendo mensajes est&#x00E1;&#x00B4;andar con
+indicadores muy espec&#x00ED;&#x00B4;&#x0131;&#xFB01;cos o acciones especi&#xFB01;cadas. Los reportes tienden a ser
+mas largos y pueden incluir reportes de incidentes, an&#x00E1;&#x00B4;alisis de malware o
+amenazas as&#x00ED;&#x00B4;&#x0131; como otras observaciones.
+<anchor 
+   xml:id="x1-20003r3"  ></anchor>
+    4.1.2.1.3.   Soporte para Queries   Es com&#x00FA;&#x00B4;un que los analistas busquen
+informaci&#x00F3;&#x00B4;on entre sus comunidades as&#x00ED;&#x00B4;&#x0131; como por fuera de ellas. Para esto se
+soportan dos tipos de mensajes:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 131--><para>Request For Information &#x0028;RFI&#x0029;: es un mensaje simple que se espera
+     sea manejado de forma manual y que permite que se pida informaci&#x00F3;&#x00B4;on
+     a otra organizaci&#x00F3;&#x00B4;on.
+     </para></listitem>
+     <listitem>
+     <!--l. 134--><para>Repository  Search:  Para  este  tipo  de  query,  es  esperado  que  una
+     organizaci&#x00F3;&#x00B4;on  ofrezca  repositorios  en  los  cuales  buscar,  los  cuales
+     podr&#x00ED;&#x00B4;&#x0131;an ser compatibles con TAXII o STIX.</para></listitem></itemizedlist>
+<anchor 
+   xml:id="x1-20004r4"  ></anchor>
+    4.1.2.1.4.   Transferencia    Varias organizaciones que trans&#xFB01;eren
+informaci&#x00F3;&#x00B4;on necesitan en algunas instancias agregar miembros. El nuevo miembro
+necesita obtener los datos del repositorio de alguna organizaci&#x00F3;&#x00B4;on. Por ello se
+desea un caso de uso para realizar un intercambio de un gran vol&#x00FA;&#x00B4;umen de
+datos.
+<anchor 
+   xml:id="x1-20005r22"  ></anchor>
+<!--l. 146--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-210002"  ></anchor>Componentes de TAXII</title>
+<!--l. 148--><para>   Como se dijo anteriormente, TAXII es un conjunto de especi&#xFB01;caciones
+t&#x00E9;&#x00B4;ecnicas y documentaci&#x00F3;&#x00B4;on para el intercambio de informaci&#x00F3;&#x00B4;on. A continuaci&#x00F3;&#x00B4;on se
+                                                                     
+
+                                                                     
+enumeran los distintos componentes de TAXII.
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 153--><para>Especi&#xFB01;caci&#x00F3;&#x00B4;on de TAXII: De&#xFB01;ne la especi&#xFB01;caci&#x00F3;&#x00B4;on de los componentes
+     y provee una gu&#x00ED;&#x00B4;&#x0131;a y requerimientos sobre como dichas especi&#xFB01;caciones
+     interactuan en TAXII.
+     </para></listitem>
+     <listitem>
+     <!--l. 156--><para>Especi&#xFB01;caci&#x00F3;&#x00B4;on de servicios TAXII: De&#xFB01;ne una serie de servicios que
+     deben ser implementados para ser compatible con TAXII. Describe
+     la  informaci&#x00F3;&#x00B4;on  intercambiada  en  alto  nivel  y  no  se  limita  ning&#x00FA;&#x00B4;un
+     mecanismo de intercambio en especial.
+     </para></listitem>
+     <listitem>
+     <!--l. 160--><para>Implementaci&#x00F3;&#x00B4;on  de  servicios:  Se  realiza  una  implementaci&#x00F3;&#x00B4;on  de
+     los  servicios  TAXII  para  un  mecanismo  de  intercambio.  Cada
+     implementaci&#x00F3;&#x00B4;on de servicios provee una gu&#x00ED;&#x00B4;&#x0131;a t&#x00E9;&#x00B4;ecnica y requerimientos
+     para implementar la especi&#xFB01;caci&#x00F3;&#x00B4;on de los mecanismos de intercambio.
+     </para></listitem>
+     <listitem>
+     <!--l. 164--><para>Modelo  de  datos  de  mensajes:  Se  de&#xFB01;ne  una  estructura  para  los
+     mensajes TAXII, incluyendo cabezales, datos del mensaje, control y
+     mensajes de datos. Los mensajes de datos utilizan STIX como carga
+     de los mensajes TAXII.
+     </para></listitem>
+     <listitem>
+     <!--l. 167--><para>Implementaci&#x00F3;&#x00B4;on  de  los  mensajes  de  datos:  Es  una  implementaci&#x00F3;&#x00B4;on
+     del modelo de datos de mensajes, incluyendo la carga STIX. Cada
+     implementaci&#x00F3;&#x00B4;on de mensajes de&#xFB01;ne una gu&#x00ED;&#x00B4;&#x0131;a t&#x00E9;&#x00B4;ecnica y requerimientos
+     para  utilizar  un  formato  de  mensajes  particular  para  expresar  el
+     modelo de datos de mensaje.</para></listitem></itemizedlist>
+<anchor 
+   xml:id="x1-21001r1"  ></anchor>
+    4.1.2.2.1.   TAXII Toolkit   Es provisto para soportar la adopci&#x00F3;&#x00B4;on de
+TAXII y asistir en el desarrollo de capacidades compatibles. El toolkit provee una
+colecci&#x00F3;&#x00B4;on de implementaciones de referencia, un conjunto de herramientas y una
+                                                                     
+
+                                                                     
+colecci&#x00F3;&#x00B4;on de librer&#x00ED;&#x00B4;&#x0131;as e interfaces.
+   TAXII est&#x00E1;&#x00B4;a de&#xFB01;nido por m&#x00FA;&#x00B4;ultiples especi&#xFB01;caciones relacionadas. Esta secci&#x00F3;&#x00B4;on
+describe las especi&#xFB01;caciones de&#xFB01;nidas en TAXII.
+     <itemizedlist>
+     <listitem>
+     <!--l. 184--><para>Especi&#xFB01;caci&#x00F3;&#x00B4;on de servicios: Provee los requerimientos por los cuales
+     se de&#xFB01;nen los servicios e intercambios de TAXII. No provee detalles
+     respecto  al  formato  de  los  datos  o  como  los  mensajes  TAXII  son
+     transportados por la red. Dichos detalles y requerimientos pueden ser
+     encontrados en la especi&#xFB01;caci&#x00F3;&#x00B4;on de los protocolos de enlace y en la
+     especi&#xFB01;caci&#x00F3;&#x00B4;on de mensajes de enlace.
+     </para></listitem>
+     <listitem>
+     <!--l. 189--><para>Especi&#xFB01;caci&#x00F3;&#x00B4;on  de  protocolos  de  enlace:  De&#xFB01;ne  los  requerimientos
+     para  transportar  mensajes  TAXII  por  la  red.  Puede  haber  varias
+     especi&#xFB01;caciones  creadas  para  TAXII.  Cada  especi&#xFB01;caci&#x00F3;&#x00B4;on  de&#xFB01;ne
+     requerimientos  para  el  transporte  de  mensajes  TAXII  utilizando
+     protocolos de red y se proveen requerimientos respecto a como los
+     servicios TAXII son soportados por los protocolos de red.
+     </para></listitem>
+     <listitem>
+     <!--l. 195--><para>Especi&#xFB01;caci&#x00F3;&#x00B4;on de mensajes de enlace: Se de&#xFB01;nen requerimientos para
+     representar mensajes TAXII en un formato particular. Puede haber
+     m&#x00FA;&#x00B4;ultiples especi&#xFB01;caciones para dichos mensajes. Se provee informaci&#x00F3;&#x00B4;on
+     detallada sobre como las especi&#xFB01;caciones de&#xFB01;nidas en la especi&#xFB01;caci&#x00F3;&#x00B4;on
+     de servicios son expresadas en los mensajes.</para></listitem></itemizedlist>
+   <figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<!--l. 204--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/TAXIIEspecification.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-210023"  ></anchor>Figura&#x00A0;3</title><para>Relaci&#x00F3;&#x00B4;on de las especi&#xFB01;caciones de TAXII <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<!--l. 208--><para>   Para dar &#xFB02;exibilidad en el proceso evolutivo de TAXII, se han separado las
+especi&#xFB01;caciones de servicios, de los protocolos de enlace y de los mensajes de
+enlace. Lo dicho anteriormente es expresado en la &#xFB01;gura 3. Debido a que las
+organizaciones generalmente tienen restricciones respecto a los protocolos que
+soportan, TAXII busca no ligarse a un &#x00FA;&#x00B4;unico protocolo que excluya a una parte
+de la comunidad. Cuando se ve que la comunidad expresa inter&#x00E9;&#x00B4;es en un nuevo
+protocolo o tipo de mensaje, TAXII puede dar soporte para ellos sin cambiar los
+componentes centrales.
+</para><!--l. 217--><para>   Dos grupos que usen el mismo protocolo de red y formato de mensajes ser&#x00E1;&#x00B4;an
+capaces de intercambios de informaci&#x00F3;&#x00B4;on estructurada de forma autom&#x00E1;&#x00B4;atica. Las
+pol&#x00ED;&#x00B4;&#x0131;ticas de intercambio de los participantes pueden limitar estos intercambios si
+es necesario, pero el uso de servicios compatibles con TAXII asegura que se
+puede intercambiar cualquier informaci&#x00F3;&#x00B4;on con los mecanismos de&#xFB01;nidos
+por TAXII. Los grupos que usen diferentes protocolos o formatos de
+mensajes no ser&#x00E1;&#x00B4;an capaces de comunicarse directamente, pero como est&#x00E1;&#x00B4;an
+utilizando mensajes y servicios en el n&#x00FA;&#x00B4;ucleo de las comunicaciones de sus
+comunidades signi&#xFB01;ca que es posible establecer caminos para que ocurra la
+interacci&#x00F3;&#x00B4;on.
+<anchor 
+   xml:id="x1-21003r2"  ></anchor>
+    4.1.2.2.2.   Especi&#xFB01;caci&#x00F3;&#x00B4;on de Servicios   &#x00C9;&#x00B4;Esta especi&#xFB01;caci&#x00F3;&#x00B4;on provee
+normativas respecto a los servicios, mensajes e intercambio de mensajes en
+TAXII. No provee detalles respecto a como los mensajes son transportados,
+dejando eso a la especi&#xFB01;caci&#x00F3;&#x00B4;on de los protocolos de enlace. Se da informaci&#x00F3;&#x00B4;on
+respecto a los datos presentes en los mensajes TAXII y no a como los mensajes
+son expresados.
+   Las unidades funcionales de TAXII representan conjuntos discretos de
+actividades requeridas para soportar TAXII. Una unidad funcional representa
+alg&#x00FA;&#x00B4;un componente con un rol bien de&#xFB01;nido en TAXII.
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 240--><para>TAXII Transfer Agent &#x0028;TTA&#x0029;: Es una unidad funcional conectada a
+     la red que env&#x00ED;&#x00B4;&#x0131;a o recibe mensajes TAXII. Una TTA interact&#x00FA;&#x00B4;ua con
+     otras TTAs por medio de la red y maneja los requerimientos de una
+     o m&#x00E1;&#x00B4;as de las especi&#xFB01;caciones de los protocolos de enlace. Una TTA
+     provee un mensaje TAXII a un TAXII Message Handler permitiendo
+     que &#x00E9;&#x00B4;este &#x00FA;&#x00B4;ultimo sea independiente del protocolo de red utilizado. De
+                                                                     
+
+                                                                     
+     la misma forma, el TTA puede ser independiente del contenido de
+     los mensajes TAXII, dejando el manejo de la informaci&#x00F3;&#x00B4;on al TAXII
+     Message Handler.
+     </para></listitem>
+     <listitem>
+     <!--l. 248--><para>TAXII  Messsage  Handler  &#x0028;TMH&#x0029;:  Es  una  unidad  funcional  que
+     produce  y  consume  mensajes  TAXII.  EL  TMH  es  responsable  de
+     parsear y construir mensajes con el formato especi&#xFB01;cado en uno o m&#x00E1;&#x00B4;as
+     TAXII Message Binding Speci&#xFB01;cations. Un TMH interact&#x00FA;&#x00B4;ua con un
+     TTA, el cual maneja los detalles necesarios para transmitir mensajes
+     por la red. El Backend TAXII interact&#x00FA;&#x00B4;ua con el TMH para convertir
+     su contenido en mensajes TAXII y llevar a cabo actividades basadas
+     en los mensajes TAXII que son recibidos por el TMH.
+     </para></listitem>
+     <listitem>
+     <!--l. 255--><para>TAXII Backend: Cubre todas las unidades funcionales distintas al TTA
+     y al TMH. Las especi&#xFB01;caciones de TAXII no proveen requerimientos
+     sobre como son implementadas las capacidades en un backend m&#x00E1;&#x00B4;as
+     all&#x00E1;&#x00B4;a  de  como  debe  interactuar  con  el  TMH.  Las  organizaciones  o
+     implementadores pueden decidir que capacidades implementar seg&#x00FA;&#x00B4;un
+     los servicios TAXII que deseen soportar o seg&#x00FA;&#x00B4;un como quieran dar ese
+     soporte.
+     </para></listitem>
+     <listitem>
+     <!--l. 261--><para>Arquitectura TAXII: Cubre los aspectos de las unidades funcionales
+     de la infraestructura de productor o consumidor que provee o utiliza
+     servicios TAXII. Una arquitectura TAXII incluye una TTA, un TMH
+     y un backend TAXII.</para></listitem></itemizedlist>
+   <figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<!--l. 268--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/TAXIIArchitecture.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-210044"  ></anchor>Figura&#x00A0;4</title><para>Unidades funcionales de TAXII <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<anchor 
+   xml:id="x1-21005r23"  ></anchor>
+<!--l. 272--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-220003"  ></anchor>Capacidades</title>
+<!--l. 274--><para>   TAXII provee capacidades especi&#xFB01;cas para aquellos que desean compartir
+informaci&#x00F3;&#x00B4;on de amenazas cibern&#x00E9;&#x00B4;eticas. Las capacidades TAXII son el nivel m&#x00E1;&#x00B4;as
+alto en el cual se pueden expresar las acciones de TAXII. Hay tres capacidades
+que soporta la actual versi&#x00F3;&#x00B4;on de TAXII, estas son: push messaging, pull
+messaging y discovery.
+</para><!--l. 280--><para>   En push messaging la informaci&#x00F3;&#x00B4;on puede ser enviada de un productor a un
+consumidor. Esto puede re&#xFB02;ejar una relaci&#x00F3;&#x00B4;on pre-existente entre el productor y el
+consumidor en la que el consumidor a pedido que se le env&#x00ED;&#x00B4;&#x0131;en datos desde el
+productor. Tambi&#x00E9;&#x00B4;en puede usarse en caso de que el consumidor desee aceptar
+contribuciones de cualquier productor, y estos le env&#x00ED;&#x00B4;&#x0131;en datos en cualquier
+momento.
+</para><!--l. 287--><para>   Pull messaging permite a un consumidor requerir informaci&#x00F3;&#x00B4;on de
+un productor. Esto no solo le permite al consumidor el control sobre el
+momento en el que recibe los datos sino que tambi&#x00E9;&#x00B4;en le permite hacerlo sin
+tener que aceptar conexiones entrantes. As&#x00ED;&#x00B4;&#x0131; como en push messaging, el
+productor y consumidor pueden tener acuerdos pre-existentes para que el
+consumidor tenga acceso a los datos del productor. De forma alternativa, un
+productor puede hacer su informaci&#x00F3;&#x00B4;on p&#x00FA;&#x00B4;ublica de forma que cualquier
+consumidor pueda obtenerla. La versi&#x00F3;&#x00B4;on actual de pull messaging limita a los
+consumidores a hacer pedidos por medio de las organizaciones productoras de los
+datos en lugar de por los datos en si. Toda la informaci&#x00F3;&#x00B4;on provista por
+un productor debe estar organizada en grupos llamados &#x201D;TAXII Data
+Feeds&#x201D;. Cada elemento en un TAXII data feed es etiquetado utilizando
+timestamps. El productor tiene total dominio sobre como el contenido
+se mapea en TAXII data feeds y en el signi&#xFB01;cado de los timestamps.
+La capacidad de pull messaging est&#x00E1;&#x00B4;a atada a entender el contenido del
+productor.
+</para><!--l. 302--><para>   Para facilitar las comunicaciones automatizadas, TAXII soporta capacidades
+para descubrir los servicios espec&#x00ED;&#x00B4;&#x0131;&#xFB01;cos que ofrece un servidor o grupo de
+servidores, as&#x00ED;&#x00B4;&#x0131; como los protocolos o mensajes que este servidor ofrece. Esto no
+quita la necesidad de que personas est&#x00E9;&#x00B4;en involucradas para establecer
+acuerdos de cooperaci&#x00F3;&#x00B4;on lo cual esta por fuera del objetivo de TAXII. Sin
+embargo, permite el intercambio de informaci&#x00F3;&#x00B4;on respecto a las capacidades
+que un productor soporta y cuales son los mecanismos que utiliza para
+hacerlo.
+                                                                     
+
+                                                                     
+<anchor 
+   xml:id="x1-22001r26"  ></anchor>
+</para><!--l. 310--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-230004"  ></anchor>Servicios TAXII</title>
+<!--l. 312--><para>   Los servicios TAXII representan un conjunto de mecanismos necesarios para
+soportar capacidades TAXII. Una implementaci&#x00F3;&#x00B4;on TAXII pudiera implementar
+alguno, todos o incluso ninguno de los servicios de&#xFB01;nidos. TAXII de&#xFB01;ne los
+siguientes servicios:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 317--><para>Servicio de descubrimiento: Es utilizado para recibir y responder a
+     mensajes que requieren informaci&#x00F3;&#x00B4;on sobre los servicios ofrecidos.
+     </para></listitem>
+     <listitem>
+     <!--l. 319--><para>Feed  Managment  Service:  Es  utilizado  para  recibir  o  responder  a
+     mensajes utilizados para el manejo de subscripciones a TAXII Data
+     Feed.
+     </para></listitem>
+     <listitem>
+     <!--l. 321--><para>Inbox  Service:  Es  utilizado  para  recibir  informaci&#x00F3;&#x00B4;on  de  amenazas
+     cibern&#x00E9;&#x00B4;eticas por medio de intercambios iniciados por el productor en
+     intervalos dictados por este.
+     </para></listitem>
+     <listitem>
+     <!--l. 324--><para>Poll Service: Es utilizado para recibir y responder a mensajes de pedido
+     a el TAXII Data Feed iniciados por el consumidor.</para></listitem></itemizedlist>
+<!--l. 328--><para>   A continuaci&#x00F3;&#x00B4;on se describen los distintos servicios.
+<anchor 
+   xml:id="x1-23001r1"  ></anchor>
+    4.1.2.4.1.   Discovery Service   Es un mecanismo para comunicar
+informaci&#x00F3;&#x00B4;on referente al uso de servicios TAXII y a su disponibilidad. Para un
+pedido al servicio, se retorna una lista de los servicios TAXII y como estos
+pueden ser invocados. Un solo servicio de descubrimiento puede reportar servicios
+TAXII en diferentes equipos &#xFB01;nales o incluso en m&#x00FA;&#x00B4;ultiples organizaciones, los
+propietarios del servicio pueden de&#xFB01;nir su alcance a gusto. Un servicio de
+descubrimiento puede utilizar varios factores para determinar cuales servicios
+revelar ante una petici&#x00F3;&#x00B4;on, incluyendo, pero no limitado a la entidad del cliente
+TAXII. El servicio de descubrimiento debe soportar &#x201D;Discovery Message
+Exchange&#x201D;.
+                                                                     
+
+                                                                     
+<anchor 
+   xml:id="x1-23002r2"  ></anchor>
+    4.1.2.4.2.   Feed Managment Service   Es el mecanismo con el cual un
+consumidor pide informaci&#x00F3;&#x00B4;on referente a TAXII Data Feeds, pidiendo
+subscripciones a estos, o modi&#xFB01;cando las existentes. &#x00C9;&#x00B4;Este servicio facilita el
+intercambio de mensajes para manejar las subscripciones. No se entrega
+contenido de los TAXII Data Feed, en su lugar se envia contenido del TAXII
+Data Feed al servicio de Inbox de un consumidor en intercambios iniciados por
+un productor o en respuesta directa a un pedido del consumidor al servicio de
+poll. Dicho servicio debe implementar soporte para subscription managment
+exchange. Dicho servicio podr&#x00ED;&#x00B4;&#x0131;a implementar soporte de feed information
+exchange.
+<anchor 
+   xml:id="x1-23003r3"  ></anchor>
+    4.1.2.4.3.   Inbox service   &#x00C9;&#x00B4;Este servicio es el mecanismo con el cual un
+consumidor acepta los mensajes en un intercambio iniciado por el productor. Un
+consumidor puede implementarlo para recibir datos del TAXII Data
+Feed. El servicio de inbox debe implementar soporte para Data Push
+Exchange.
+<anchor 
+   xml:id="x1-23004r4"  ></anchor>
+    4.1.2.4.4.   Poll service   Es provisto por un productor para permitir
+pedidos al TAXII Data Feed iniciados por el consumidor. Un consumidor
+contacta a &#x00E9;&#x00B4;este servicio expl&#x00ED;&#x00B4;&#x0131;citamente pidiendo el contenido del TAXII Data
+Feed. Los productores podr&#x00ED;&#x00B4;&#x0131;an ofrecer Data Feeds combinando envios al Inbox
+service del consumidor o por medio de pedidos al servicio de poll de
+productor. Un implementaci&#x00F3;&#x00B4;on de &#x00E9;&#x00B4;este servicio debe dar soporte a Data Poll
+Exchange.
+<anchor 
+   xml:id="x1-23005r27"  ></anchor>
+</para><!--l. 368--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-240005"  ></anchor>Intercambio de mensajes TAXII</title>
+<!--l. 370--><para>   Esta secci&#x00F3;&#x00B4;on describe los mensajes de intercambio TAXII necesarios para
+soportar los servicios TAXII de&#xFB01;nidos antes. Estos intercambios solo consideran
+mensajes TAXII y son independientes a los protocolos sobre los cuales viajan los
+mensajes TAXII. En particular, esos protocolos podr&#x00ED;&#x00B4;&#x0131;an requerir intercambios de
+red adicionales antes de transmitir mensajes TAXII o romper un mensaje TAXII
+en m&#x00FA;&#x00B4;ultiples mensajes del protocolo subyacente que son transmitidos
+independientemente. Los siguientes diagramas representan conceptualmente
+la secuencia en la cual los mensajes TAXII son transmitidos y como
+                                                                     
+
+                                                                     
+act&#x00FA;&#x00B4;uan.
+<anchor 
+   xml:id="x1-24001r1"  ></anchor>
+    4.1.2.5.1.   Data Push Exchange   En &#x00E9;&#x00B4;este intercambio, un mensaje
+STIX es transmitido desde un cliente a un servidor Inbox que est&#x00E1;&#x00B4;a esperando. El
+mensaje STIX puede ser solicitado o no solicitado. El servidor inbox puede ser
+capaz de &#xFB01;ltrar mensaje seg&#x00FA;&#x00B4;un la autenticidad del emisor. Los mensajes enviados
+en este intercambio no deberian tener un campo &#x2019;In Response to&#x2019; en su
+header.
+   </para><figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<inlinemediaobject><imageobject><imagedata 
+fileref="./images/DataPushExchange.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-240025"  ></anchor>Figura&#x00A0;5</title><para>Mensajes intercambiados en un Data Push Exchange <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </blockquote></figure>
+   El cliente TAXII envia un mensaje STIX al inbox server. El inbox server
+podr&#x00ED;&#x00B4;&#x0131;a descartar el mensaje o pasar el mensaje STIX junto con cualquier
+informaci&#x00F3;&#x00B4;on de la entidad autenticada al Back-end TAXII. El cliente TAXII no
+recibe respuesta del servidor de inbox y no sabra si el mensaje ha sido aceptado o
+descartado por el servidor, aunque el protocolo con&#xFB01;able de la capa inferior puede
+asegurar que el mensaje fue entregado a la TTA del servidor de inbox. El inbox
+server no enviar&#x00E1;&#x00B4;a un mensaje de error TAXII si hay alg&#x00FA;&#x00B4;un problema con el
+mensaje TAXII.
+<anchor 
+   xml:id="x1-24003r2"  ></anchor>
+    4.1.2.5.2.   Discovery Exchange   Un cliente TAXII pide informaci&#x00F3;&#x00B4;on
+sobre el servicio TAXII ofrecido por un productor. El discovery server del
+productor responde con una lista de servicios. Si bien el cliente puede ser
+informado de la existencia de un servicio, este no necesariamente tendr&#x00E1;&#x00B4;a acceso
+inmediato al servicio.
+   <figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<inlinemediaobject><imageobject><imagedata 
+fileref="./images/DiscoveryExchange.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-240046"  ></anchor>Figura&#x00A0;6</title><para>Mensajes intercambiados en un Discovery Exchange <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </blockquote></figure>
+   El cliente TAXII envia un pedido de descubrimiento al servidor. Cuando el
+servidor recibe el pedido puede retornar un mensaje de error o pasar la
+informaci&#x00F3;&#x00B4;on al Backend TAXII. Informaci&#x00F3;&#x00B4;on relevante incluye la identidad
+autenticada si &#x00E9;&#x00B4;esta fue provista. El Backend TAXII podr&#x00ED;&#x00B4;&#x0131;a utilizar esta
+informaci&#x00F3;&#x00B4;on junto a su propia pol&#x00ED;&#x00B4;&#x0131;tica de control de acceso para crear una lista de
+servicios a ser retornada. Esto podr&#x00ED;&#x00B4;&#x0131;a ser empaquetado en una respuesta de
+discovery lo cuales podr&#x00ED;&#x00B4;&#x0131;an ser enviados al cliente TAXII. El cliente TAXII recibe
+esa respuesta y la pasa la informaci&#x00F3;&#x00B4;on del servicio a su propio Back-End para ser
+procesado.
+<anchor 
+   xml:id="x1-24005r18"  ></anchor>
+<!--l. 423--><section 
+role="subsection"><title><abbrev role="title-mark">4.2</abbrev><anchor 
+   xml:id="x1-250002"  ></anchor>Feed Information Exchange</title>
+<!--l. 425--><para>   En &#x00E9;&#x00B4;este intercambio un cliente TAXII pide informaci&#x00F3;&#x00B4;on sobre fuentes de datos
+disponibles en un Feed Server. El servidor responde con una lista de fuentes
+de datos disponibles. Dicha respuesta es realizada por el backend y en
+ella se pueden considerar decisiones de control de acceso para realizar la
+respuesta.
+   </para><figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<!--l. 432--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/FeedInformationExchange.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-250017"  ></anchor>Figura&#x00A0;7</title><para>Mensajes intercambiados en un Feed Information Exchange <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<!--l. 436--><para>   El cliente TAXII envia el Feed Information Request al servidor. Cuando el
+servidor recibe la request podr&#x00ED;&#x00B4;&#x0131;a retornar un mensaje de error o pasar la
+informaci&#x00F3;&#x00B4;on relevante al TAXII backend. Entre la informaci&#x00F3;&#x00B4;on relevante se podr&#x00ED;&#x00B4;&#x0131;a
+incluir la identidad. El backend podr&#x00ED;&#x00B4;&#x0131;a utilizar esta informaci&#x00F3;&#x00B4;on junto con sus
+pol&#x00ED;&#x00B4;&#x0131;ticas de control de acceso para crear una lista de fuentes de datos para ser
+enviadas al cliente. Esta lista es empaquetada en una Feed Information Response.
+El cliente recibe este mensaje y pasa el Feed a su propio backend para ser
+procesado.
+<anchor 
+   xml:id="x1-25002r31"  ></anchor>
+</para><!--l. 445--><section 
+role="subsection"><title><abbrev role="title-mark">4.3</abbrev><anchor 
+   xml:id="x1-260003"  ></anchor>Subscription Managment Exchange</title>
+<!--l. 447--><para>   En este un cliente intenta establecer, borrar, pausar, resumir o modi&#xFB01;car una
+subscripci&#x00F3;&#x00B4;on a un TAXII Data Feed conocido enviando un mensaje subscription
+managment request al servidor. El servidor pasa la request al TAXII
+Back-end el cual determina la respuesta. Esta respuesta es luego enviada al
+cliente.
+   </para><figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<!--l. 454--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/SubscriptionManagmentExchange.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-260018"  ></anchor>Figura&#x00A0;8</title><para>Mensajes intercambiados en un Subscription Managment Exchange
+<citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<!--l. 458--><para>   El cliente TAXII envia una Manage Feed Subscription Request al servidor.
+&#x00C9;&#x00B4;Este podr&#x00ED;&#x00B4;&#x0131;a retornar un mensaje de error TAXII o pasar la informaci&#x00F3;&#x00B4;on relevante
+al TAXII backend. La informaci&#x00F3;&#x00B4;on relevante podr&#x00ED;&#x00B4;&#x0131;a incluir la identidad,
+par&#x00E1;&#x00B4;ametros que identi&#xFB01;quen la subscripci&#x00F3;&#x00B4;on a ser modi&#xFB01;cada o creada, y la acci&#x00F3;&#x00B4;on
+realizada. El backend TAXII puede usar dicha informaci&#x00F3;&#x00B4;on junto con sus pol&#x00ED;&#x00B4;&#x0131;ticas
+de control de acceso y las funcionalidades que posea para determinar si la acci&#x00F3;&#x00B4;on
+est&#x00E1;&#x00B4;a permitida o no. Dependiendo en la respuesta, el servidor podr&#x00ED;&#x00B4;&#x0131;a retornar un
+mensaje de error TAXII o enviar una respuesta Manage Feed Successful
+Response.
+<anchor 
+   xml:id="x1-26002r33"  ></anchor>
+</para><!--l. 468--><section 
+role="subsection"><title><abbrev role="title-mark">4.4</abbrev><anchor 
+   xml:id="x1-270004"  ></anchor>Feed Poll Exchange</title>
+<!--l. 470--><para>   Es utilizado por un consumidor para pedir contenido de un productor de
+datos. El TAXII Data Feed content es enviado al consumidor en el mismo
+intercambio. &#x00C9;&#x00B4;Esto permite a un consumidor devolver el Data Feed Content en su
+propia tabla de tiempo y sin necesidad de utilizar un Inbox Server o aceptar
+conexiones entrantes.
+   </para><figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<!--l. 478--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/FeedPollExchange.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-270019"  ></anchor>Figura&#x00A0;9</title><para>Mensajes intercambiados en un Feed Poll Exchange <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<!--l. 482--><para>   El cliente consumidor inicia el intercambio enviando un mensaje Poll Request
+al servidor de Poll del productor. El servidor puede enviar un mensaje de error
+inmediatamente o pasar la informaci&#x00F3;&#x00B4;on relevante al TAXII backend. Informaci&#x00F3;&#x00B4;on
+relevante incluye el nombre de la fuente, los par&#x00E1;&#x00B4;ametros de subscripci&#x00F3;&#x00B4;on,
+timestamps indicando el intervalo de tiempo de la informaci&#x00F3;&#x00B4;on que pide el
+consumidor y la identidad del consumidor. El backend TAXII eval&#x00FA;&#x00B4;ua
+&#x00E9;&#x00B4;esta informaci&#x00F3;&#x00B4;on para determinar la respuesta. Hay tipos de respuesta
+posibles:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 490--><para>El pedido de informaci&#x00F3;&#x00B4;on podr&#x00ED;&#x00B4;&#x0131;a ser denegado. En este caso el servidor
+     de poll crea un error TAXII
+     </para></listitem>
+     <listitem>
+     <!--l. 492--><para>Un conjunto de contenido TAXII Data Feed podr&#x00ED;&#x00B4;&#x0131;a ser provisto. En
+     este caso, el servidor de Poll construira y enviara un mensaje de Poll
+     Response. Este mensaje indica el intervalo de tiempo que cubre el
+     TAXII Data Feed que es transmitido y los cuerpos de mensajes STIX
+     que forman el contenido del TAXII Data Feed.</para></listitem></itemizedlist>
+<!--l. 498--><para>En todos los casos, el cliente TAXII recibe el mensaje apropiado y pasa esta
+informaci&#x00F3;&#x00B4;on al Backend TAXII para ser procesado.
+<anchor 
+   xml:id="x1-27002r35"  ></anchor>
+</para><!--l. 65--><section 
+role="subsection"><title><abbrev role="title-mark">4.5</abbrev><anchor 
+   xml:id="x1-280005"  ></anchor>Modelos</title>
+<anchor 
+   xml:id="x1-28001r20"  ></anchor>
+<!--l. 1--><section 
+role="subsubsection"><title><abbrev role="title-mark">4.5.1</abbrev><anchor 
+   xml:id="x1-290001"  ></anchor>Comunidades</title>
+<!--l. 2--><para>   Actualmente el n&#x00FA;&#x00B4;umero de organizaciones que buscan compartir informaci&#x00F3;&#x00B4;on
+de amenazas es creciente. Esto lleva a que el n&#x00FA;&#x00B4;umero y tipo de comunidades que
+busca hacerlo tambi&#x00E9;&#x00B4;en se incremente. En la actualidad se identi&#xFB01;can tres tipos de
+comunidades:
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 6--><para>Peers
+     </para></listitem>
+     <listitem>
+                                                                     
+
+                                                                     
+     <!--l. 7--><para>Comerciales
+     </para></listitem>
+     <listitem>
+     <!--l. 8--><para>Gubernamentales</para></listitem></itemizedlist>
+<!--l. 11--><para>   Para que se pueda compartir informaci&#x00F3;&#x00B4;on entre dichas organizaciones es
+necesario cierto nivel de con&#xFB01;anza dado que compartir informaci&#x00F3;&#x00B4;on sensible
+podr&#x00ED;&#x00B4;&#x0131;a exponer a las organizaciones a da&#x00F1;&#x02DC;nos en su reputaci&#x00F3;&#x00B4;on, demandas o
+advertir a un atacante de la investigaci&#x00F3;&#x00B4;on que se lleva a cabo haciendo que el
+trabajo realizado haya sido in&#x00FA;&#x00B4;util. Se deben de&#xFB01;nir medidas para la protecci&#x00F3;&#x00B4;on de
+los datos como restricciones en su manejo, sanitizaci&#x00F3;&#x00B4;on y el establecimiento de
+con&#xFB01;anza entre las dos organizaciones. Lo mencionado anteriormente es
+particularmente importante cuando las organizaciones forman parte de varias
+comunidades que intercambian informaci&#x00F3;&#x00B4;on, se encuentran casos en los que
+datos compartidos con una organizaci&#x00F3;&#x00B4;on no deber&#x00ED;&#x00B4;&#x0131;an ser compartidos con
+otra.
+</para><!--l. 22--><para>   Las comunidades entre peers son las m&#x00E1;&#x00B4;as comunes, estas organizaciones o
+individuos tienen el prop&#x00F3;&#x00B4;osito com&#x00FA;&#x00B4;un de mejorar las defensas colectivas
+contra adversarios que tienen en com&#x00FA;&#x00B4;un. La informaci&#x00F3;&#x00B4;on compartida por
+dichas organizaciones es m&#x00E1;&#x00B4;as especi&#xFB01;ca que la provista por organizaciones
+comerciales.
+</para><!--l. 27--><para>   Las comunidades comerciales son an&#x00F3;&#x00B4;onimas y los miembros poseen alg&#x00FA;&#x00B4;un tipo
+de acuerdo com&#x00FA;&#x00B4;un, por ejemplo el pago de cuotas para pertenecer a la
+comunidad. La organizaci&#x00F3;&#x00B4;on comercial maneja la informaci&#x00F3;&#x00B4;on de forma
+centralizada y la distribuye entre los miembros de la organizaci&#x00F3;&#x00B4;on. El
+acceso a la informaci&#x00F3;&#x00B4;on por parte de los socios es r&#x00E1;&#x00B4;apido teniendo la
+posibilidad de que dicha informaci&#x00F3;&#x00B4;on sea m&#x00E1;&#x00B4;as amplia que la compartida
+por peers y que adem&#x00E1;&#x00B4;as no siempre sea aplicable a las necesidades de la
+organizaci&#x00F3;&#x00B4;on.
+</para><!--l. 35--><para>   Las comunidades gubernamentales son establecidas y manejadas por el
+gobierno, son voluntarias u obligatorias e incluyen participantes tanto del
+gobierno como de la industria privada. En ellas el gobierno controla la
+informaci&#x00F3;&#x00B4;on y la distribuci&#x00F3;&#x00B4;on de esta. As&#x00ED;&#x00B4;&#x0131; como en las comunidades comerciales,
+la informaci&#x00F3;&#x00B4;on y los participantes son altamente con&#xFB01;denciales.
+<anchor 
+   xml:id="x1-29001r38"  ></anchor>
+</para><!--l. 41--><section 
+role="subsubsection"><title><abbrev role="title-mark">4.5.2</abbrev><anchor 
+   xml:id="x1-300002"  ></anchor>Modelos</title>
+<!--l. 43--><para>   Se pueden identi&#xFB01;car tres modelos para el intercambio de informaci&#x00F3;&#x00B4;on entre
+organizaciones:
+                                                                     
+
+                                                                     
+     </para><itemizedlist>
+     <listitem>
+     <!--l. 46--><para>Hub and Spoke
+     </para></listitem>
+     <listitem>
+     <!--l. 47--><para>Peer to peer
+     </para></listitem>
+     <listitem>
+     <!--l. 48--><para>Source/subscriber</para></listitem></itemizedlist>
+<!--l. 51--><para>   En el m&#x00E9;&#x00B4;etodo hub and spoke, la entidad hub controla la recepci&#x00F3;&#x00B4;on y
+diseminaci&#x00F3;&#x00B4;on de los datos, adem&#x00E1;&#x00B4;as se encarga de mantener an&#x00F3;&#x00B4;onimos y proveer un
+an&#x00E1;&#x00B4;alisis adicional de los datos recolectados para luego diseminarlos entre los
+participantes. Este modelo es com&#x00FA;&#x00B4;unmente visto en comunidades de gobierno o
+comerciales.
+</para><!--l. 56--><para>   En el modelo peer to peer, los participantes intercambian y reciben
+informaci&#x00F3;&#x00B4;on directamente de los otros participantes. La informaci&#x00F3;&#x00B4;on es
+compartida entre todos los miembros de la comunidad por igual y la fuente
+est&#x00E1;&#x00B4;a claramente identi&#xFB01;cada.
+</para><!--l. 61--><para>   El modelo faltante es el source/subscriber, este modelo es utilizado por las
+comunidades comerciales que proveen de informaci&#x00F3;&#x00B4;on. El proveedor de
+informaci&#x00F3;&#x00B4;on env&#x00ED;&#x00B4;&#x0131;a regularmente informaci&#x00F3;&#x00B4;on a todos los subscriptores y estos
+podr&#x00ED;&#x00B4;&#x0131;an eventualmente enviarle informaci&#x00F3;&#x00B4;on a la fuente. Generalmente, la
+informaci&#x00F3;&#x00B4;on se codi&#xFB01;ca de una manera propietaria y puede faltar informaci&#x00F3;&#x00B4;on
+esencial sobre algunos intentos de irrupci&#x00F3;&#x00B4;on. Presenta la ventaja de que se tiene
+acceso r&#x00E1;&#x00B4;apido a un conjunto de datos amplio y es &#x00FA;&#x00B4;util para organizaciones con
+recursos limitados.
+<anchor 
+   xml:id="x1-30001r39"  ></anchor>
+</para><!--l. 70--><section 
+role="subsubsection"><title><abbrev role="title-mark">4.5.3</abbrev><anchor 
+   xml:id="x1-310003"  ></anchor>Implementaci&#x00F3;&#x00B4;on de Modelos en TAXII</title>
+<!--l. 72--><para>   A continuaci&#x00F3;&#x00B4;on se muestra como los servicios TAXII pueden ser utilizados
+para la implementaci&#x00F3;&#x00B4;on de los modelos para el intercambio de informaci&#x00F3;&#x00B4;on.
+<anchor 
+   xml:id="x1-31001r28"  ></anchor>
+</para><!--l. 75--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-320001"  ></anchor>Source/Suscriber</title>
+<!--l. 77--><para>   En este modelo una entidad es la fuente de informaci&#x00F3;&#x00B4;on y algunos
+subscriptores tienen acuerdos con dicha entidad para recibir informaci&#x00F3;&#x00B4;on
+peri&#x00F3;&#x00B4;odicamente. Se busca que los subscriptores no se conozcan entre si, para
+ello la entidad fuente realiza acuerdos con cada uno de ellos. En este
+                                                                     
+
+                                                                     
+modelo, la fuente es un productor TAXII mientras que los subscriptores son
+consumidores.
+</para><!--l. 83--><para>   TAXII soporta este tipo de modelo para el intercambio con el uso de los
+servicios de Discovery, Feed Management, Inbox y Poll. Una organizaci&#x00F3;&#x00B4;on que
+desee subscribirse al TAXII Data Feed de la fuente necesita conocer los servicios
+TAXII que la fuente ofrece y como contactar con ellos. Si bien esto podr&#x00ED;&#x00B4;&#x0131;a ser
+realizado por una mecanismo fuera de banda &#x0028;e.g. publicando la informaci&#x00F3;&#x00B4;on en
+otro medio&#x0029; tambi&#x00E9;&#x00B4;en podr&#x00ED;&#x00B4;&#x0131;a ser logrado contactando al Discovery Service de la
+fuente. Desde este punto, el subscriptor podr&#x00ED;&#x00B4;&#x0131;a contactar al servicio de Feed
+Managment identi&#xFB01;cado para aprender que fuentes ofrece el productor y que
+restricciones podr&#x00ED;&#x00B4;&#x0131;a tener su acceso.
+</para><!--l. 93--><para>   Si el contenido del TAXII Data Feed es restringido solo a algunas entidades
+autorizadas y el productor ha determinado que el subscriptor tiene permitido
+recibir el contenido, la fuente y el subscriptor necesitan acordar en como el
+subscriptor se autenticara. Dependiendo en el protocolo que soporta la fuente,
+esto se puede realizar por medio de una contrase&#x00F1;&#x02DC;na, un certi&#xFB01;cado u otro m&#x00E9;&#x00B4;etodo.
+Si el contenido de un TAXII Data Feed es abierto y no requiere autenticaci&#x00F3;&#x00B4;on,
+&#x00E9;&#x00B4;este paso es innecesario cuando se establecen las subscripciones al TAXII Data
+Feed.
+</para><!--l. 102--><para>   Luego de la autenticaci&#x00F3;&#x00B4;on,el subscriptor puede contactar al Feed Managment
+Service del productor y pedir subscripciones a sus fuentes. La entidad fuente
+puede comparar dichos pedidos con su propio entendimiento de lo que
+el subscriptor puede recibir y permitir o denegar dichos pedidos seg&#x00FA;&#x00B4;un
+corresponda. La fuente puede enviar contenido al subscriptor al Inbox
+Service de &#x00E9;&#x00B4;este en el intervalo apropiado. Alternativamente, el subscriptor
+podr&#x00ED;&#x00B4;&#x0131;a contactar al Poll service de la fuente para descargar el contenido
+deseado.
+   </para><figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<!--l. 112--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/SourceSuscriberModel.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-3200110"  ></anchor>Figura&#x00A0;10</title><para>Flujo de informaci&#x00F3;&#x00B4;on en modelo Source/Subscriber <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<!--l. 116--><para>   La &#xFB01;gura 1 muestra como el modelo Source/Subscriber puede ser soportado
+por los servicios TAXII. Tambi&#x00E9;&#x00B4;en se ven los mensajes TAXII intercambiados
+entre la fuente y el subscriptor. Con los intercambios que est&#x00E1;&#x00B4;an por encima de la
+l&#x00ED;&#x00B4;&#x0131;nea punteada se establece la subscripci&#x00F3;&#x00B4;on. Los intercambios pueden ser
+realizados repetidamente sin la necesidad de realizar el proceso de subscripci&#x00F3;&#x00B4;on
+nuevamente.
+</para><!--l. 123--><para>
+                                                                     
+
+                                                                     
+<anchor 
+   xml:id="x1-32002r41"  ></anchor>
+</para><!--l. 125--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-330002"  ></anchor>Peer-to-peer</title>
+<!--l. 127--><para>   En un modelo Peer-to-peer, los pares de organizaciones entran en un acuerdo
+mutuo para compartir informaci&#x00F3;&#x00B4;on entre si. En este modelo, cada Peer puede
+operar como productor y consumidor. Los socios en este intercambio podr&#x00ED;&#x00B4;&#x0131;an
+establecer fuentes utilizando un procedimiento similar al establecido en el modelo
+Source/Subscriber. Alternativamente, podr&#x00ED;&#x00B4;&#x0131;an acordar subir o descargar
+contenido sin ninguna subscripci&#x00F3;&#x00B4;on formal. No tener una subscripci&#x00F3;&#x00B4;on formal
+permite a un Peer albergar un Inbox Service sin necesidad de un Feed
+Managment Service.
+</para><!--l. 136--><para>   El modelo Peer-to-Peer tiene dos variantes: acuerdos para el intercambio
+entre comunidades y acuerdos para el intercambio ad-hoc. En el primero la
+comunidad constituye acuerdos entre pares en los que todos los miembros
+acuerdan una &#x00FA;&#x00B4;unica pol&#x00ED;&#x00B4;&#x0131;tica la cual ser&#x00E1;&#x00B4;a respetada por todos. A diferencia de los
+otros dos modelos que tienen un punto central desde el cual la informaci&#x00F3;&#x00B4;on es
+diseminada, todo el intercambio ocurre puntualmente entre dos pares. Si los peers
+A y B desean recibir informaci&#x00F3;&#x00B4;on del peer C directamente, ambos necesitaran
+establecer un acuerdo apropiado con el peer C para que &#x00E9;&#x00B4;este les env&#x00ED;&#x00B4;&#x0131;e la
+informaci&#x00F3;&#x00B4;on que desean.
+</para><!--l. 146--><para>   Alternativamente, el intercambio entre pares puede ser realizado de
+forma individual con intercambios ad-hoc. Esto podr&#x00ED;&#x00B4;&#x0131;a ocurrir si dos
+compa&#x00F1;&#x02DC;n&#x00ED;&#x00B4;&#x0131;as hacen acuerdos individuales para compartir entre ellas. En este
+caso, los acuerdos sobre que compartir son espec&#x00ED;&#x00B4;&#x0131;&#xFB01;cos para las partes.
+Una sola entidad podr&#x00ED;&#x00B4;&#x0131;a participar en ambas variantes, perteneciendo a
+una o mas comunidades en las cuales los miembros comparten entre si
+siguiendo un acuerdo com&#x00FA;&#x00B4;un entre los miembros y a su vez negocian acuerdos
+individuales con otras entidades. Alguna informaci&#x00F3;&#x00B4;on recibida por medio
+de un acuerdo no siempre deber&#x00ED;&#x00B4;&#x0131;a ser compartida con otros peers que
+no son parte del acuerdo. De esta forma un participante deber&#x00ED;&#x00B4;&#x0131;a hacer
+un seguimiento de quien fue el proveedor de la informaci&#x00F3;&#x00B4;on recibida,
+como se realiza ese seguimiento esta por fuera de la especi&#xFB01;caci&#x00F3;&#x00B4;on de
+TAXII.
+   </para><figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+<!--l. 161--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/PeerToPeerModel.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-3300111"  ></anchor>Figura&#x00A0;11</title><para>Flujo de informaci&#x00F3;&#x00B4;on en modelo Peer to Peer <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<!--l. 165--><para>   La &#xFB01;gura 2 muestra como el modelo Peer to peer puede ser realizado por
+medio de los servicios TAXII. En este diagrama se ve que dos peers se contactan
+para pedir subscripciones para obtener informaci&#x00F3;&#x00B4;on. Se asume que ambos peers
+tienen un Feed Managment Service que es utilizado para manejar todos los
+pedidos de subscripci&#x00F3;&#x00B4;on.
+                                                                     
+
+                                                                     
+<anchor 
+   xml:id="x1-33002r43"  ></anchor>
+</para><!--l. 172--><section 
+role="paragraph"><title><anchor 
+   xml:id="x1-340003"  ></anchor>Hub and Spoke</title>
+<!--l. 174--><para>   En un modelo Hub and Spoke, la entidad Hub es un consumidor de
+informaci&#x00F3;&#x00B4;on que le proveen las entidades Spoke, pero a su vez se comporta como
+un productor que brinda informaci&#x00F3;&#x00B4;on a entidades Spoke. Una entidad Spoke
+podr&#x00ED;&#x00B4;&#x0131;a ser un productor, dando informaci&#x00F3;&#x00B4;on al Hub, un consumidor que reciba
+actualizaciones del Hub o ambas. El Hub puede utilizar un Inbox Service
+para recibir informaci&#x00F3;&#x00B4;on de cualquiera que desee enviar informaci&#x00F3;&#x00B4;on de
+forma voluntaria y/o podr&#x00ED;&#x00B4;&#x0131;a requerir informaci&#x00F3;&#x00B4;on de ciertas fuentes para
+guardar la informaci&#x00F3;&#x00B4;on en una &#x00FA;&#x00B4;unica ubicaci&#x00F3;&#x00B4;on. Desde este punto, el Hub
+puede funcionar como una entidad Source del modelo Source/Subscriber
+mientras que los Spoke ser&#x00ED;&#x00B4;&#x0131;an Subscribers de dicho modelo. El Hub puede
+adoptar cualquier pol&#x00ED;&#x00B4;&#x0131;tica respecto de la informaci&#x00F3;&#x00B4;on que recibe, desde
+pasar toda la informaci&#x00F3;&#x00B4;on autom&#x00E1;&#x00B4;aticamente a solo pasar informaci&#x00F3;&#x00B4;on de
+socios reconocidos, o realizar ediciones y an&#x00E1;&#x00B4;alisis antes de re enviar la
+informaci&#x00F3;&#x00B4;on.
+   </para><figure><title/><blockquote>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+<!--l. 190--><para><inlinemediaobject><imageobject><imagedata 
+fileref="./images/HubAndSpokeModel.png" 
+\a:Gin-dim ></imagedata></imageobject></inlinemediaobject>
+<blockquote role="caption"><title role="caption"><anchor 
+   xml:id="x1-3400112"  ></anchor>Figura&#x00A0;12</title><para>Flujo de informaci&#x00F3;&#x00B4;on en modelo Hub and Spoke <citation>&#x005B;<xref 
+  linkend="Xb1"  />2&#x005D;</citation></para></blockquote>
+                                                                     
+
+                                                                     
+   </para></blockquote></figure>
+<!--l. 194--><para>   La &#xFB01;gura 3 se muestra como se puede implementar el modelo Hub and Spoke
+utilizando los servicios provistos por TAXII. En este modelo algunas entidades
+Spoke podr&#x00ED;&#x00B4;&#x0131;an ser consumidores, otras productores y en algunos casos ambas. El
+diagrama muestra los intercambios que podr&#x00ED;&#x00B4;&#x0131;an ser utilizados por el Spoke que
+act&#x00FA;&#x00B4;ua como productor y consumidor. Si este desea actuar de una sola forma solo
+los intercambios necesarios ser&#x00ED;&#x00B4;&#x0131;an relevantes. Independientemente del rol que
+tome el Spoke, es necesario que este conozca los servicios relevantes en
+el Hub. Esto se realiza utilizando el Discovery Service provisto por el
+Hub, de todas formas esto podr&#x00ED;&#x00B4;&#x0131;a realizarse con mecanismos fuera de
+banda.
+</para><!--l. 69--><para>
+                                                                     
+
+                                                                     
+<anchor 
+   xml:id="Q1-1-47"  ></anchor>
+</para><!--l. 1--><section 
+role="likesection"><title><anchor 
+   xml:id="x1-350003"  ></anchor>Referencias</title>
+    <simplelist role="bibliography"><member><!--l. 3--><abbrev role="biblioentry">
+  &#x005B;1&#x005D;</abbrev><anchor 
+   xml:id="Xb3"  ></anchor>Mitre  Corporation.     Active  Defense  Strategy  for  Cyber.     Mitre
+    Corporation, 2012.
+    </member><member><!--l. 8--><abbrev role="biblioentry">
+  &#x005B;2&#x005D;</abbrev><anchor 
+   xml:id="Xb1"  ></anchor>Mitre Corporation.  Cyber Information-Sharing Models: An Overview.
+    Mitre Corporation, 2012.
+    </member><member><!--l. 13--><abbrev role="biblioentry">
+  &#x005B;3&#x005D;</abbrev><anchor 
+   xml:id="Xb2"  ></anchor>Mitre Corporation. A New Cyber Defense Playbook. Mitre Corporation,
+    2012.
+    </member><member><!--l. 18--><abbrev role="biblioentry">
+  &#x005B;4&#x005D;</abbrev><anchor 
+   xml:id="Xstix"  ></anchor>Mitre Corporation. STIX Whitepaper. Mitre Corporation, 2012.
+    </member><member><!--l. 23--><abbrev role="biblioentry">
+  &#x005B;5&#x005D;</abbrev><anchor 
+   xml:id="Xlockhead"  ></anchor>M.J.&#x00A0;Cloppert      E.M.&#x00A0;Hutchins      and      R.M&#x00A0;Amin      PH.D.
+    Intelligence-Driven Computer Network Defense Informed by Analysis
+    of Adversary Campaigns and Intrusion Kill Chains. Lockhead Martin,
+    2012.
+    </member><member><!--l. 29--><abbrev role="biblioentry">
+  &#x005B;6&#x005D;</abbrev><anchor 
+   xml:id="Xidmef"  ></anchor>D.&#x00A0;Curry H.&#x00A0;Debar and B.&#x00A0;Feinstein.  RFC 4765 - IDMEF.  IETF,
+    2007.
+    </member><member><!--l. 34--><abbrev role="biblioentry">
+  &#x005B;7&#x005D;</abbrev><anchor 
+   xml:id="Xtaxii"  ></anchor>M.&#x00A0;Richard  J.&#x00A0;Connolly,  M.&#x00A0;Davidson  and  C.&#x00A0;Skorupka.    TAXII
+    Whitepaper. Mitre Corporation, 2012.
+    </member><member><!--l. 39--><abbrev role="biblioentry">
+  &#x005B;8&#x005D;</abbrev><anchor 
+   xml:id="XRTEssentials"  ></anchor>D.&#x00A0;Rolsky D.&#x00A0;Chamberlain J.&#x00A0;Vincent, R.&#x00A0;Spier and R.&#x00A0;Foley.   RT
+    Essentials. A. Randal and T. Apandy, 2005.
+    </member><member><!--l. 44--><abbrev role="biblioentry">
+  &#x005B;9&#x005D;</abbrev><anchor 
+   xml:id="Xrid1"  ></anchor>K.&#x00A0;Moriarty and B.&#x00A0;Trammell.  RFC 6546 - RID Messages.  IETF,
+    2010.
+    </member><member><!--l. 49--><abbrev role="biblioentry">
+ &#x005B;10&#x005D;</abbrev><anchor 
+   xml:id="Xiodef"  ></anchor>J.&#x00A0;Meijer R.&#x00A0;Danyliw and Y.&#x00A0;Demchenko. RFC 5070 - IODEF. IETF,
+    2007.
+                                                                     
+
+                                                                     
+    </member><member><!--l. 54--><abbrev role="biblioentry">
+ &#x005B;11&#x005D;</abbrev><anchor 
+   xml:id="Xrid"  ></anchor>B.&#x00A0;Trammell.      RFC  6546  -  Transport  of  RID  messages  over
+    HTTP/TLS. IETF, 2012.
+    </member></simplelist>
+   </section><!--end likesection--></section><!--end paragraph--></section><!--end paragraph--></section><!--end paragraph--></section><!--end subsubsection--></section><!--end subsubsection--></section><!--end subsubsection--></section><!--end subsection--></section><!--end subsection--></section><!--end subsection--></section><!--end subsection--></section><!--end paragraph--></section><!--end paragraph--></section><!--end paragraph--></section><!--end paragraph--></section><!--end paragraph--></section><!--end subsubsection--></section><!--end subsubsection--></section><!--end subsection--></section><!--end section--></section><!--end subsection--></section><!--end paragraph--></section><!--end paragraph--></section><!--end paragraph--></section><!--end subsubsection--></section><!--end paragraph--></section><!--end subsubsection--></section><!--end paragraph--></section><!--end subsubsection--></section><!--end subsection--></section><!--end section--></section><!--end subsection--></section><!--end subsection--></section><!--end section--></section><!--end section--></article>
+                                                                     
+
+

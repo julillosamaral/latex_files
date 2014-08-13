@@ -1,0 +1,74 @@
+% This file was created with JabRef 2.7.2.
+% Encoding: MacRoman
+
+@TECHREPORT{rfc1950,
+  author = {P. Deutsch and J-l. Gailly},
+  title = {{ZLIB} Compressed Data Format Specification version {3.3}},
+  institution = {Internet Engineering Task Force},
+  year = {1996},
+  type = {RFC},
+  number = {1950},
+  month = may,
+  abstract = {This specification defines a lossless compressed data format. The
+	data can be produced or consumed, even for an arbitrarily long sequentially
+	presented input data stream, using only an a priori bounded amount
+	of intermediate storage. The format presently uses the DEFLATE compression
+	method but can be easily extended to use other compression methods.
+	It can be implemented readily in a manner not covered by patents.
+	This specification also defines the ADLER-32 checksum (an extension
+	and improvement of the Fletcher checksum), used for detection of
+	data corruption, and provides an algorithm for computing it.},
+  days = {15},
+  pages = {11},
+  url = {http://www.rfc-editor.org/rfc/rfc1950.txt}
+}
+
+@TECHREPORT{rfc2616,
+  author = {R. Fielding and J. Gettys and J. C. Mogul and H. Frystyk and L. Masinter
+	and P. J. Leach and T. Berners-Lee},
+  title = {Hypertext Transfer Protocol {--} {HTTP/1.1}},
+  institution = {Internet Engineering Task Force},
+  year = {1999},
+  type = {RFC"},
+  number = {2616},
+  month = jun,
+  abstract = {The Hypertext Transfer Protocol (HTTP) is an application-level protocol
+	for distributed, collaborative, hypermedia information systems. It
+	is a generic, stateless, protocol which can be used for many tasks
+	beyond its use for hypertext, such as name servers and distributed
+	object management systems, through extension of its request methods,
+	error codes and headers. A feature of HTTP is the typing and negotiation
+	of data representation, allowing systems to be built independently
+	of the data being transferred.},
+  days = {15},
+  pages = {176},
+  url = {http://www.rfc-editor.org/rfc/rfc2616.txt}
+}
+
+@TECHREPORT{rfc2397,
+  author = {L. Masinter},
+  title = {The {"}data{"} {URL} scheme},
+  institution = {Internet Engineering Task Force},
+  year = {1998},
+  type = {RFC},
+  number = {2397},
+  month = aug,
+  abstract = {A new URL scheme, {"}data{"}, is defined. It allows inclusion of small
+	data items as {"}immediate{"} data, as if it had been included externally.},
+  days = {15},
+  owner = {fabian},
+  pages = {5},
+  timestamp = {2012.05.04},
+  url = {http://www.rfc-editor.org/rfc/rfc2397.txt}
+}
+
+@comment{jabref-meta: selector_review:}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+

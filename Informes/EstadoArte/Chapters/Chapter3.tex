@@ -1,0 +1,209 @@
+% Chapter Template
+
+\chapter{STIX} 
+\label{Chapter3}
+\lheader{Chapter 3. \emph{STIX}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Background}
+
+Las aproximaciones tradicionales para la seguridad, se focalizan en entender y 
+registrar las vulnerabildes, debilidades y configuraciones necesarias pero 
+insuficientes. Las defensas efectivas contra las amenazas actuales y futuras 
+también requiere la adición sobre el comportamiento, capacidades e intenciones 
+del atacante. Entendiendo al adversario y a nosotros podemos entender lo 
+suficiente respecto a la naturaleza de las amenazas a las que se enfrenta la 
+organización para tener decisiones para una defensa efectiva. El comportamiento 
+de los adversarios no esta solamente focalizado de forma extendida en 
+actividades destructivas, sino que también se focaliza en  objetivos de mas bajo 
+nivel que apuntan a conseguir objetivos tacticos y establecer puntos de entrada 
+a las organizaciones. 
+//ACA SE PUEDE UNIR CON KILL CHAIN QUE ESTA EN TAXII
+La cyber inteligencia busca entendenr y caracterizas las acciones que un 
+atacante puede o podria realizar, como estas pueden ser detectadas y 
+reconocidas, como pueden ser mitigadas y cuales son los actores relevantes, etc.
+Un entendimiento de la amenaza que implica el adversario permite la realización 
+de decisiones mas efectivas, la priorización de recursos y llegar a tener una 
+oportunidad de tomar la ventaja ante el adversario. El efecto de las defensas en 
+base a inteligencia es una mejor postura respecto a las respuestas dado que los 
+atacantes ajustan sus operaciones basandose en el exito o falla de sus intentos. 
+En un modelo de kill chain los intentos que realiza un adversario pueden ser 
+reconocidos y logrando asi que los defensores tengan la posiblidad de ajustar 
+sus tacticas para una mejor respuesta. Esto hace que al adversario le sea mas 
+dificil alcanzar sus objetivos.
+En esto se presenta un desafio dado que ninguna organizacion por si sola tiene 
+acceso a un conjunto de información relevante para tener una identificación 
+precisa de una amenaza. La forma de sobrepasar esta limitación es por medio del 
+intercambio de información relevante sobre las amenazas con socios y comunidades 
+de confianza. Por medio del intercambio de información, cada ente puede alcanzar 
+un nivel mas alto de entendimiento del panorama de las amenazas, no solamente de 
+forma abstracta sino que también que cosas especificas indican la presencia de 
+una atacante.
+Dada la forma en la complejidad con la que evoluciona el panorama de amenazas, 
+la velocidad a la cual ocurren los eventos, y la basta cantidad de datos que se 
+deberian intercambiar, es necesario establecer una forma automatica para ayudar 
+a los humanos o para ejecutar acciones defensivas para que esta aproximación sea 
+efectiva.
+La automatizacion requiere de información de calidad y las mayoria de las 
+capacidades defensivas son construidas con arquitecturas heterogeneas. La 
+combinación de estos factores requiere estandarización, representaciones 
+estructuradas de información y un aprovechamiento de la información sin saber de 
+antemano quien va a proveer que información.
+Un desafio que tienen las organizaciones a la hora de realizar intercambio de 
+información es el de tener la habilidad de estructurar la información sin perder 
+el juicio y control que puede tener un humano. La información intercambiada 
+tiene que ser leible por un humano y parseable por una maquina. Este 
+requerimiento es utilizado por porgramas de intercambio de información en los 
+cuales las organizaciones no solo consumen los datos sino que también los 
+evaluan como parte del proceso de inteligencia. Este proceso es llevado a cabo 
+por analistas que se focalizan en tipos de analisis que son inapropiados para 
+ser automatizados o focalizados en tomas de decisiones por parte de humanos en 
+donde el analista lee la información para obtener información de la situación. 
+Además, el analista esta constantemente evaluando la fidelidad de las fuentes y 
+los métodos utilizados para producir la información.
+Dados estos factores, es necesaria la existencia de representaciones 
+estructuradas de la información y que esta información sea expresiva, flexible, 
+extensible, automatizable y que se pueda leer. En este punto es donde surge STIX 
+como una solución al problema presentado.
+
+\section{Aproximaciones de la actualidad}
+La información que se intercambia y utiliza hoy en día es atómica, 
+inconsistente y muy limitada en sofisticación y expresividad. En donde se 
+utilizan estructuras estandarizadas, estas son tipicamente focalizadas en una 
+porción del problema. Además no se integran de forma adecuada entre si o carecen 
+de flexibildiad. Las actividades de intercambio de indicadores son entre 
+humanos, siendo los indicadores desestructurados o semi-estructurados 
+intercambiados por portales web o encriptados via email. Más recientemente se 
+ha visto el surgimiento de transferencias entre maquinas de conjutnso de 
+indicadores simples de modelos de ataques bien conocidos.
+STIX busca extender los indicadores para permitir el manejo e intercambio de 
+indicadores de forma más expresiva así como de un espectro más amplio de 
+información.
+Actualmente, el intercambio y manejo de información de forma automatica de 
+información es visto tipicamente en lineas de productos, servicios ofrecidos o 
+soluciones especificas de una comunidad. STIX busca permitir el intercambio de 
+información de forma comprensiva, rica, de alta fidelidad entre organizaciones, 
+comunidades, productos y servicios ofrecidos. STIX es un lenguaje para la 
+especificación, captura, caracterización y comunicación de información de 
+seguridad estandar. Lo hace de forma estructurada para soportar un mejor manejo 
+de la información y la aplicación de automatización. Una variedad de casos de 
+uso para dicha información son realizados.
+\begin{itemize}
+  \item Analisis de las amenazas
+  \item Especificación de patrones de indicadores para la amenaza.
+  \item Manejo de las actividades de respuesta
+  \item Intercambiar información
+\end{itemize}
+
+STIX provee un mecanismo común para hacer frente a estos casos de uso dando 
+consistencia, eficiencia, interoperabildiad y conciencia global de la situación.
+
+STIX provee una arquitectura unificada juntando un conjunto amplio de 
+información incluyendo:
+\begin{itemize}
+  \item Cyber Observables
+  \item Indicadores
+  \item Incidentes
+  \item Tacticas, tecnicas y procedimientos de los adversarios
+  \item Objetivos de exploits
+  \item Cursos de acción
+  \item Capañas de ataques
+  \item Actores de ataques
+\end{itemize}
+
+Para permitir que dicha solución sea practica para cualquier caso de uso, 
+lenguajes existentes y estandarizados son utilizados.
+
+\section{Casos de uso}
+\subsection{Analisis de amenazas}
+Un analista revisa información estructurada y no estructurada respecto a 
+actividades de amenazas de una variedad de fuentes de entrada manuales o 
+automaticas. El analista buscan entender la naturaleza de las amenazas 
+relevantes, identificarlas y caracterizarlas totalmente para que todo el 
+conocimiento relevante de la amenaza sea totalmente expresado y evolucionado a 
+traves del tiempo. Este conocimiento relevante incluye acciones relacionadas con 
+la amenaza, comportamientos, capacidades, intenciones, actores atribuidos, etc. 
+Por medio del entendimiento y la caracterización, el analista puede especificar 
+patrones de indicadores relevantes, sugerir acciones para las actividades de 
+respuesta y compartir la información con miembros de la comunidad.
+
+\subsection{Especificación de patrones de indicadores}
+Un analista especifica patrones medibles representando las características 
+observables de una amenaza junto con su contexto y metadata para ser 
+interpretadas, manejadas y aplicar el patrón y sus resultados. Esto puede ser 
+realizado de forma manual o con la asistencia de una herramienta automatizada.
+
+\subsection{Manejo de las actividades de respuesta}
+Los tomadores de decision y el personal de operaciones trabajan en conjunto para 
+prevenir o detectar actividades amenasantes y responder a los incidentes 
+detectados que sean realizados por dichas amenazas. Las acciones preventivas 
+pueden mitigar vulnerabilidades, debilidades, o malas configuraciones que sean 
+que sean objetivos de los exploits. Luego de la detección e investigación de 
+incidentes específicos, acciones reactivas pueden ser realizadas.
+\emph{Prevención de amenazas} //REPASAR ESTO
+Los tomadores de decisiones evaluan acciones preventivas para amenazas 
+relevantes que sean identificadas y seleccionan acciones apropiadas para su 
+implementación. El personal de operaciones implementa las acciones seleccionadas 
+para prevenir la ocurrencia de amenazas especificas aplicando mitigaciones 
+amplias o con objetivos especificos iniciados por intepretación de los 
+indicadores.
+\emph{Detección de amenazas} //REPASAR ESTO
+El personal de operaciones aplica mecanismos (automaticos y manuales) para 
+monitorear y asistir las operaciones con la finalidad de detectar la ocurrencia 
+de amenazas especificas basandose en la evidencia historica, analisis del 
+contexto actual, interpretación de los indicadores que se presentan. Esta 
+detección se realiza generalmente por medio de patrones de indicadores.
+
+\emph{Respuesta a incidentes}
+El personal de operaciones responde a amenazas detectadas, investiga que ha 
+ocurrido o esta ocurriendo, trata de identificar y caracterizar la naturaleza de 
+las amenazas y lleva a cabo la mitigación o lleva a cabo cursos de acción 
+preventivos. Una vez que los efectos son entendidos, el personal de operaciones 
+puede implementar mitigaciones acordes o llevar a cabo cursos de acción 
+correctivos.
+
+\subsection{Compartir información de amenazas}
+Los tomadores de decisión establecen políticas respecto a que tipo de 
+información será compartida, además toman decisiones respecto a con quienes se 
+comparte y como debería ser manejada basandose en frameworks de confianza de 
+forma de mantener niveles adecuados de consistencia, contexto y control. Esta 
+politica es luego implementada para compartir los indicadores de amenazas 
+apropiados y otra información de amenazas.
+
+\section{Principios de guia}
+En el enfoque dado a STIX se ha buscado implementar un conjunto de principios 
+con el consenso de la comunidad. Esos principios son los siguientes:
+\subsection{Expresividad}
+Con el fin de soportar la diversidad de casos de uso relevantes, STIX apunta a 
+proveer una cobertura expresiva en todos sus casos de uso especificos en lugar 
+de dirigirse especificamente a alguno de ellos.
+\subsection{Integración en lugar de duplicación}
+Cuando STIX abarca conceptos de información estructurada para los cuales ya 
+existen representaciones estandarizadas con el consenso adecuado y que se 
+encuentran disponibles, se busca integrar estas representaciones a la 
+arquitectura STIX en lugar de duplicar esta información innecesariamente.
+\subsection{Flexibildiad}
+Con el fin de soportar un amplio rango de casos e información variable con 
+varios niveles de fidelidad, STIX esta diseñado para ofrecer tanta flexibilidad 
+como sea posible. STIX se adhiere a una politica de permitir a los usuarios 
+utilizar cualquier porcion de representaciones estandar que sean relevantes para 
+un contexto dado y evita elementos obligatorios siempre que sea posible.
+
+\subsection{Extensibildiad} //REVISAR
+Con la finalidad de soportar un amplio rango de casos de uso con un potencial 
+diferente de representación y para asegurar la facilitar el perfeccionamiento 
+impulsado por la comunidad, se ha diseñado STIX para construir mecanismos de 
+extensión para uso específicos, para usos localizados, para refinamientos del 
+usuario y evolución y para facilidad de refinamiento y evolución centralizada.
+
+\subsection{Automatización}
+El diseño de STIX busca estructuras del contenido para que nos ea únicamente 
+consumible o procesable por maquinas sino que también sea leíble por humanos. 
+Esto es necesario para claridad y comprensibilidad durante las primeras etapas 
+de desarrollo y adopción y para el uso sostenido en diversos ambientes,
+
+\section{Arquitectura}
+

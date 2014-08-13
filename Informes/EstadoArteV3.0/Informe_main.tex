@@ -1,0 +1,112 @@
+
+\documentclass[11pt]{article}
+\usepackage{titlesec}
+\usepackage{pbox}
+\usepackage{longtable}
+\usepackage{ifpdf}
+\ifpdf 
+    \usepackage[pdftex]{graphicx}   % to include graphics
+    \pdfcompresslevel=9 
+    \usepackage[pdftex,     % sets up hyperref to use pdftex driver
+            plainpages=false,   % allows page i and 1 to exist in the same document
+            breaklinks=true,    % link texts can be broken at the end of line
+            colorlinks=true,
+            pdftitle=My Document
+            pdfauthor=My Good Self
+           ]{hyperref} 
+    \usepackage{thumbpdf}
+\else 
+    \usepackage{graphicx}       % to include graphics
+    \usepackage{hyperref}       % to simplify the use of \href
+\fi 
+\RequirePackage[spanish]{babel}
+\RequirePackage[utf8]{inputenc}
+\title{Brief Article}
+\author{Julio Saráchaga}
+\date{}
+\setcounter{secnumdepth}{5}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+
+\begin{document}
+  
+  \begin{titlepage}
+
+\begin{center}
+\vspace*{-1in}
+
+FACULTAD DE INGENIERIA\\
+\vspace*{0.15in}
+UNIVERSIDAD DE LA REPUBLICA \\
+\vspace*{0.6in}
+\vspace*{0.2in}
+\begin{Large}
+\textbf{Advanced Threats Information Sharing and Collaboration} \\
+\end{Large}
+\vspace*{0.3in}
+\end{center}
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Autor:}\\
+Julio Saráchaga\\
+\bigskip
+\emph{Contraparte del cliente:}\\
+Ing. Fernanda Molina
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisor:} \\
+Dr. Gustavo Betarte\\
+\bigskip
+\emph{Supervisor alterno:} \\
+Ing. Marcelo Rodríguez
+\end{flushright}
+\end{minipage}\\[3cm]
+
+\end{titlepage}
+  
+\maketitle{Glosario}
+\input{./glosario/Glosario}
+\section{Introducción}
+
+\input{./secciones/Introduccion}
+
+\section{Gestión de incidentes}
+\subsection{Herramientas}
+\input{./secciones/RTIR}
+
+\section{Representación}
+\subsection{Modelos de datos}
+%Aca se podria poner algo de openIOC
+
+  \input{./secciones/IDMEF}
+  \input{./secciones/IODEF}
+  %\input{./secciones/OPENIOC}
+  \input{./secciones/STIX}
+  \input{./secciones/tablaComparativa}
+\subsection{Estándares}
+
+\section{Intercambio}
+\subsection{Protocolos}
+%En este punto hay que poner algo de cybex, no es un protocolo sino un framework
+\input{./secciones/RID} 
+\input{./secciones/TAXII} 
+\subsection{Modelos}
+    \input{./secciones/Modelos} 
+
+
+\newpage
+\nocite{*}
+\bibliographystyle{plain} 
+\bibliography{bibliography}
+
+
+
+\end{document}  

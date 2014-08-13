@@ -1,0 +1,43 @@
+
+\section{Herramientas analizadas.}
+\label{capitulo3:herramientas}
+Para poder medir y comparar las métricas definidas para la aplicación existen diferentes herramientas que pueden ser utilizadas. A continuación se presentan las herramientas analizadas.
+
+\begin{comment}
+\subsection{JMeter}
+JMeter es una herramienta de escritorio desarrollada en Java y auspiciada por la Apache Software Foundation. Con este software libre, se pueden definir plantillas para programar baterías de test donde se simulen accesos concurrentes y medir de esta forma los tiempos de respuesta y el rendimiento global del sistema.
+Esta herramienta puede ser utilizada como una herramienta de prueba de carga para analizar y medir el desempeño de una variedad de servicios, con énfasis en aplicaciones web.
+JMeter puede ser usado como una herramienta de pruebas unitarias para conexiones de bases de datos con JDBC, FTP, LDAP, Servicios web, JMS, HTTP y conexiones TCP genéricas. 
+JMeter puede utilizarse para evaluar la performance de recursos estáticos o dinámicos (archivos, servlets, objetos Java, bases de datos y queries, Servidores FTP, entre muchos otros). Se utiliza para simular una carga pesada sobre un servidor, red u objeto para analizar la performance total bajo diferentes tipos de carga. La herramienta puede utilizarse también para obtener análisis gráficos de la performance de la aplicación evaluada o testear el comportamiento de un servidor, script u objeto bajo grandes cargas concurrentes.
+JMeter brinda muchas posibilidades y es por ello que es una de las herramientas más utilizadas en el mercado.
+La herramienta permite realizar pruebas de carga y performance de diferentes tipos de servidores(Web, HTTP, HTTPS, SOAP. Database via JDBC, Mail-SMTP, POP3,IMAP). Además, es totalmente portable y está desarrollado en un 100\% en java. Además, brinda un framework para el manejo de múltiples hilos permitiendo una muestra concurrente mediante la ejecución de múltiples hilos y permitiendo una prueba simultanea por funcionalidad al definir diferentes grupos de hilos. Además, existen funciones para permitir el ingreso dinámico de datos a una prueba y la posibilidad de manipular dichos datos.
+JMeter realiza muchas de las funcionalidades de un navegador al ejecutar una prueba, pero no todas. En particular, JMeter no ejecuta el Javascript que pueda encontrarse en las páginas HTML y tampoco renderiza dichos archivos HTML como lo haría un navegador.
+\end{comment}
+
+\subsection{\emph{New Relic}}
+\emph{New Relic} \cite{new_relic} es una herramienta para aplicaciones web que permite analizar la performance desde la experiencia del usuario, los servidores y hasta en el código de la aplicación. 
+Es una herramienta muy completa que permite entre otras cosas monitorear la experiencia del usuario en tiempo real, analizando los tiempos de carga por aplicación, red y 
+renderizado de la página. Además, analiza los tiempos de carga según el navegador y la ubicación geográfica, analiza métricas de performance por página web, entre otras cosas. 
+Tiene un mecanismo de alarmas y notificaciones para detectar a tiempo los problemas de performance de la aplicación y genera reportes de errores y disponibilidad del sitio web.
+
+\subsection{\emph{YSlow} y \emph{Page Speed}}
+YSlow \cite{yslow} es una herramienta de \emph{Yahoo!} que analiza las páginas web y sugiere formas de mejorar su rendimiento sobre la base de un conjunto de reglas creadas para mejorar sus prestaciones. Sus características más importantes son:
+\begin{itemize}
+\item
+Sugerencias para mejorar el rendimiento de la página.
+\item
+Resumen de los componentes de la página.
+\item
+Muestra información sobre la página.
+\end{itemize}
+Google \emph{Page Speed} \cite{page_speed} es un conjunto de herramientas creadas para ayudar a optimizar el rendimiento de un sitio web. Es una herramienta muy similar a \emph{YSlow}, tomando las mismas métricas y ayudando a analizar e identificar las mejores prácticas para aumentar el desempeño de un sitio web en base a las mismas reglas creadas para mejorar sus prestaciones. Las herramientas de optimización \emph{Page Speed} ayudan a automatizar este proceso.
+Estas herramientas son muy similares entre sí, y ambas se basan en la investigación realizada por Steve Souders, experto en el área que trabajó en \emph{Yahoo!} y creó la herramienta \emph{YSlow} y actualmente se encuentra trabajando en Google en la misma área.
+
+
+Ambas herramientas realizan un \emph{benchmark} de la página web y analizan los componentes para brindar una lista de elementos que pueden ser mejorados para mejorar el tiempo de carga y la velocidad de renderizado. Al utilizar las mismas reglas para realizar sus análisis, su funcionalidad general es muy similar pero presenta algunas diferencias en cuanto a funcionalidades adicionales, como por ejemplo que
+\emph{Page Speed} se centra más en el CSS analizando y sugiriendo el uso de selectores, e \emph{YSlow} permite el uso de diferentes perfiles para separar las necesidades de sitios web con mucho tráfico de las de sitios más pequeños.
+
+\subsection{\emph{WebPageTest}}
+\emph{WebPageTest} es un proyecto de código abierto que está siendo desarrollado por Google en sus esfuerzos de hacer que la web sea más rápida. Es una herramienta creada inicialmente por AOL para uso interno y que a partir del año 2008 pasó a ser de código abierto.
+En su versión online la infraestructura de pruebas es brindada por varias compañías en todas partes del mundo.
+La herramienta es similar a las herramientas \emph{YSlow} y \emph{Page Speed}.

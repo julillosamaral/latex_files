@@ -1,0 +1,38 @@
+
+\section{ Métricas de performance. }
+
+En la siguiente sección se definirán las métricas relevantes para las pruebas de performance del proyecto. Estas métricas serán la base para tomar mediciones y compararlas entre 
+distintos sitios. Dada la arquitectura típica de una aplicación web, a continuación se presenta una lista de métricas de interés del lado cliente. Estas métricas son producto de
+de la investigación del equipo, algunas de ellas están basadas en las herramientas utilizadas posteriormente para realizar las pruebas.
+
+\begin{itemize}
+	\item
+	\textbf{Tiempo de carga.} Se define como el tiempo desde el pedido inicial hasta la ocurrencia del evento \emph{window load event} o también conocido como \emph{onload}.
+	Básicamente se trata del tiempo entre que el usuario realiza un pedido a un sitio y éste carga completamente. Es importante destacar que esta métrica involucra muchos elementos
+	de complejidad alta, como AJAX, carga de contenido de terceros y CDNs.
+	\item
+	\textbf{Tiempo hasta el primer byte recibido.} Se refiere al tiempo transcurrido desde que el navegador utilizado por el usuario realiza un pedido al servidor, hasta que el
+	navegador recibe el primer byte de la respuesta del mismo. Vale la pena aclarar que las respuestas con código HTTP de redirección por parte del servidor web no cuentan como
+	respuestas al pedido del cliente. Esta métrica sirve como indicador de la capacidad de respuesta de un servidor web u otros recursos de la red.
+	\item
+	\textbf{Cantidad de pedidos HTTP.} Cantidad de pedidos HTTP necesarios para descargar todos los elementos de un sitio luego del primer pedido realizado. En este punto es
+	importante mencionar la regla de oro de la performance del lado cliente ``realizar la menor cantidad de pedidos HTTP posible''. La idea de obtener mediciones sobre esta métrica es
+	comparar el comportamiento del sitio en el caso de un usuario que lo visita por primera vez, y luego vuelve a accederlo. En este segundo acceso vale la pena volver a medir
+	la cantidad de pedidos para evaluar la efectividad del \emph{caching} del sitio.
+	\item
+	\textbf{Uso de conexiones persistentes.} Porcentaje de utilización de la directiva \emph{keep-alive} del protocolo HTTP en caso de que sea necesario descargar varios elementos de
+	un mismo \emph{host}. Sin la directiva, se estaría cayendo en una penalización fija de tiempo producida por el tiempo de establecimiento de conexión TCP, el cual consta de un
+	costo fijo de tiempo por conexión.
+	\item
+	\textbf{Porcentaje de uso de compresión}. Porcentaje de respuestas del servidor de tipo texto a las cuales se les aplica algún tipo de compresión por parte del servidor. Mientras
+	menos pesada sea la respuesta del servidor, más rápido llegará al navegador cliente.
+	\item
+	\textbf{Uso eficiente de hojas de estilo y javascripts.} Consta en verificar que se utilice solo una hoja de estilos y un archivo de javascripts. Tener un archivo solo para cada tipo de
+	recurso ahorra cantidad de pedidos HTTP.
+	\item
+	\textbf{Cantidad de redirecciones.} Cantidad de redirecciones hasta el pedido final. Según Steve Souders, las redirecciones son muy ineficientes, ya que implican el paso de un RTT
+	para cada uno de los pedidos redireccionados, empeorando la experiencia del usuario final.
+	\item
+	\textbf{Cantidad de \emph{kilobytes} transferidos}. Cantidad de \emph{kilobytes} transferidos por la red, esta métrica puede medirse por pedido HTTP realizado, o evaluando
+	por caso de uso de usuario completo.
+\end{itemize}

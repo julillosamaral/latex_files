@@ -1,0 +1,368 @@
+% Chapter Template
+
+\chapter{Métodos actuales} % Main chapter title
+
+\lheader{IDMEF e IODEF} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+\lfoot{Chapter 1. \emph{Protocolos actuales}}
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{IDMEF}
+IDMEF (Intrusion Detection Message Exchange Format) fue especificado como un protocolo experimental que no especifica ningún 
+estándar. Sin embargo IODEF se basa en las especificaciones de las clases 
+definidas en IDMEF. El propósito de IDMEF es definir formatos de datos y 
+procedimientos de intercambio para compartir información de interés con sistemas 
+de detección de intrusos y sistemas de respuesta con los sistemas de 
+administración que podrían necesitar interactuar con estos. El RFC de IDMEF 
+describe el modelo de datos para representar información tomada de los sistemas 
+de intrusión y explica la razón de usar este modelo. IDMEF busca ser un formato 
+que pueda ser utilizado por los IDSs para reportar alertas sobre eventos que 
+parecen sospechosos. Se puede proveer interoperabilidad entre sistemas 
+comerciales, open source y sistemas de investigación.%, permitir a los usuarios 
+%esta mezcla de sistemas ayuda a obtener una implementación óptima de sus sistemas.
+
+
+Se utiliza XML digital signature para proveer integridad, 
+autenticación de los mensajes y  de los servicios del firmante para 
+datos de cualquier tipo, sean estos localizados en el XML que incluye la firma o 
+en otro lugar. La responsabilidad para la integridad y autenticación de  los 
+mensajes es responsabilidad del protocolo de comunicación y no del formato de 
+mensaje. Sin embargo en situaciones en que los mensajes IDMEF son intercambiados 
+sobre protocolos poco seguros, o en casos en que las firmas digitales deban ser 
+archivadas para uso posterior, la inclusión de firmas digitales en mensajes 
+IDMEF debería ser realizada.
+
+\subsection{Modelo de datos de IDMEF}
+El modelo de datos de IDMEF es una representación orientada a objetos de las 
+alertas enviados a los administradores desde los sistemas de intrusión.
+El modelo de datos presenta varios problemas referentes a la representación de 
+los datos:
+\begin{itemize}
+  \item La información de las alertas es mayormente heterogénea. Algunas alertas son 
+  definidas con muy poca información, como orígenes, destinos, nombre u hora del 
+  evento. Otras alertas proveen mucha mas información, como puertos de 
+  servicios, procesos, información de usuarios, etc. El modelo de datos que debe 
+  representar dicha información debe ser flexible para adaptarse a las distintas 
+  necesidades. Un modelo orientado a objetos es extensible por medio de 
+  agregación y sub clases. Si una implementación del modelo de datos extiende 
+  con una nueva clase, por medio de agregación o subclases, una implementación 
+  que no entienda estas extensiones podrá seguir entendiendo el subconjunto de 
+  información que esta definido en el modelo. Estas dos formas de extender el 
+  modelo permiten que se mantenga la consistencia del modelo.
+  \item Los IDS son diferentes, algunos analizadores detectan ataques analizando 
+  el trafico en la red, otros utilizando los logs de sistemas operativos o 
+  aplicaciones que auditan información. Alertas para el mismo ataque enviadas 
+  por analizadores con diferentes fuentes de información, no contendran los 
+  mismos datos.
+  El modelo de datos define clases que soportan las diferencias en las fuentes 
+  de los datos. En particular, las nociones de fuente y objetivo para el alerta 
+  son representadas por una combinación de nodo, procesos, servicio y clase de 
+  usuario.
+  \item Los ambientes operacionales son diferentes. Dependiendo de el tipo de 
+  red o sistemas operativos utilizados, los ataques serán observados y 
+  reportados con diferentes características. El modelo de datos se 
+  adapta a estas diferencias.
+  \item Los instrumentos comerciales persiguen objetivos diferentes. Por varias 
+  razones, estos desean entregar mas o menos información sobre ciertos tipos de 
+  ataques. El modelo orientado a objetos permite la flexibilidad necesaria 
+  preservando la integridad del modelo.
+\end{itemize}
+
+\subsection{El diseño del modelo de datos}
+
+El modelo de datos fue diseñado para proveer una representación estándar de las 
+alertas de una manera que la información no sea ambigua. Además busca permitir 
+describir la relación entre alertas simples y complejas.
+
+\subsubsection{Representación de eventos}
+El objetivo del modelo de datos es proveer una representación estándar de la 
+información que el analizador de un sistema de intrusión reporta cuando detecta 
+la ocurrencia de eventos inusuales. Estas alertas pueden ser simples o complejas 
+dependiendo de las capacidades del analizador que la creo.
+
+\subsubsection{Enfocada al contenido}
+
+El diseño del modelo de datos es enfocado al contenido. Lo cual significa que 
+los nuevos objetos son introducidos para referenciar a contenido adicional. Esto 
+es importante debido a que la tarea de clasificar y nombrar vulnerabilidades es difícil y sumamente subjetiva. El modelo de datos no debe ser 
+ambiguo, esto significa que mientras se permite que los analizadores sean mas o 
+menos precisos entre ellos, no se debe permitir que estos produzcan información 
+contradictoria en dos alertas describiendo el mismo evento. De todas formas, 
+siempre es posible insertar toda la información ''interesante'' de un evento en 
+campos de extensión de la alerta en lugar de a los campos a los que estos 
+pertenecen, sin embargo, dichas practicas reducen la interoperabilidad y 
+deberian ser evitadas en lo posible.
+
+\subsubsection{Relación entre alertas}
+
+IDMEF busca cubrir todo el rango de alertas posibles, desde las simples a las 
+más complejas. Para esto el modelo de datos debe proveer una forma de 
+representar alertas complejas que agregan muchas alertas simples y que se 
+permitan identificar dichas alertas simples en el contenido de la alerta 
+compleja.
+
+\section{IODEF}
+
+Las organizaciones deben colaborar entre ellas para mitigar las actividades 
+maliciosas que atacan sus redes así como para ganar conocimiento de posibles 
+amenazas. Esta coordinación puede requerir coordinación con ISPs, sitios remotos 
+o intercambiar datos con socios.
+
+IODEF son las siglas para Incident Object Description Exchange Format, este 
+define una representación de datos que provee un framework para el intercambio 
+de información entre CSIRTs, dicho tipo de información es intercambiado 
+comúnmente por CSIRTs y es referente a incidentes de seguridad. IODEF provee una 
+representación en XML para transportar información de incidentes entre dominios 
+administrativos entre pares que tienen una responsabilidad operacional de 
+remediar o de analizar y establecer advertencias en un dominio definido. El 
+modelo de datos provisto en IODEF codifica la información referente a hosts, 
+redes y servicios corriendo en estos sistemas; metedologia de ataques y 
+evidencia forense asociada; impacto de la actividad realizada; aproximaciones 
+limitadas para documentar el flujo.
+
+IODEF debería ser compatible con IDMEF y ser capaz de user e incluir mensajes 
+IDMEF. Los actores principales de en IODEF son lo CSIRTs y no los IDs como 
+sucede en IDMEF. Se puede ver IODEF como una interfaz orientada ser utilizada 
+por personas, para ello un mensaje IODEF es parseable por una maquina pero 
+leíble por humanos. Los objetos de IODEF tienen un tiempo de vida mayor a IDMEF, 
+en este los mensajes son utilizados una sola vez. Los mensajes IODEF consideran 
+información referente a manejo de incidentes, el almacenamiento de dicha de 
+información o estadísticas y análisis.
+
+El objetivo primordial de IODEF es mejorar las capacidades operacionales de los 
+CSIRTs. La adopción por parte de la comunidad provee una habilidad mejorada para 
+resolver los incidentes y transmitir el contexto  simplificando la colaboración 
+e intercambio de datos. El formato estructurado provisto por IODEF permite:
+\begin{itemize}
+  \item Incrementar la automatización en el procesamiento de los datos, ya que 
+  los recursos de los analistas de seguridad de parsear documentos se verá 
+  reducido.
+  \item Bajar el esfuerzo necesario para normalizar datos similares de 
+  diferentes fuentes.
+  \item Un formato común con el cual construir herramientas interoperables para 
+  el manejo de incidentes y análisis subsecuente, específicamente cuando los 
+  datos provienen de dominios distintos.
+\end{itemize}
+
+La coordinación entre CSIRTs no es un problema estrictamente técnico. Hay muchas 
+consideraciones: procedimientos, confianza, legales, las cuales pueden ocasionar 
+que las organizaciones intercambien información. IODEF no busca evadir dichas 
+consideraciones, sin embargo, las implementaciones operacionales de IODEF deben 
+considerar este contexto.
+
+\subsection{Modelo de datos de IODEF}
+A la hora de diseñar IODEF se realizaron ciertas consideraciones de diseño
+\begin{itemize}
+  \item El modelo de datos sirve como formato de transporte. Por ello, su 
+  representación especifica no es optima para almacenamiento en disco, 
+  archivamiento a largo plazo o procesamiento en memoria.
+  \item Por medio de la implementación no se busca establecer un consenso 
+  respecto a la definición de un incidente. Se busca en su lugar un 
+  entendimiento amplio que sea lo suficientemente flexible como para abarcar la 
+  mayoría de las operaciones.
+  \item Describir un incidente para todas las definiciones requeriría un modelo 
+  de datos extremadamente complejo. Por ello, IODEF solo busca dar un marco para 
+  transmitir información de incidentes comúnmente intercambiada. Se asegura un 
+  mecanismo amplio para ser extendido para soportar información propia de la 
+  organización, y técnicas para referenciar información mantenida por fuera del 
+  modelo de datos.
+  \item El dominio del análisis de seguridad no esta totalmente estandarizado y 
+  debe basarse en descripciones textuales libres. IODEF busca conseguir un 
+  balance entre el contenido libre y el procesamiento automático 
+  de la información de los incidentes.
+  \item IODEF es solo una de las representaciones que han sido estandarizadas. 
+  El modelo de datos de IDMEF influencio el diseño de IODEF.
+\end{itemize}
+
+\subsection{Implementaciones de IODEF}
+Las implementaciones del protocolo se especifican como un esquema XML. 
+Implementar IODEF en XML provee varias ventajas. Que sea extensible lo hace 
+ideal para especificar codificación de datos que soporta varias codificaciones 
+de caracteres. Es mas simple la manipulación debido a la presencia de varias 
+tecnologías para ello. Aunque fundamentalmente XML es una representación de 
+texto, lo cual lo hace ineficiente cuando se deben embeber datos binarios o 
+grandes volúmenes de datos deben ser intercambiados.
+
+\subsection{Internacionalización}
+Internacionalización y localización son de interés para IODEF, dado que solo por 
+medio de colaboración (a menudo con barreras idiomáticas) son resueltos ciertos 
+incidentes. IODEF soporta esto dependiendo de las construcciones de XML, y por 
+medio de diseño explícito en el modelo de datos.
+
+Como IODEF es implementado como un esquema XML, este soporta las diferentes 
+codificaciones de caracteres. Además, los documentos IODEF deben especificar el 
+lenguaje en el cual sus contenidos son codificados. 
+
+\subsection{Consideraciones de Seguridad}
+El modelo de datos de IODEF no introduce problemas de seguridad. Este solo 
+define una representación simple para información de incidentes. Como los datos 
+codificados por IODEF pueden ser considerados sensibles por las partes que los 
+intercambian o por los descritos por los datos, se deben tomar precauciones para 
+asegurar la confidencialidad durante el intercambio y el subsecuente 
+procesamiento. El primero debe ser resguardado por un formato de mensaje, pero 
+luego se deben tener consideraciones de seguridad por el sistema que procesa los 
+datos, los almacena y archiva la documentación y la información derivada de 
+estos.
+
+El contenido de un documento IODEF puede incluir un pedido de acción o un parser 
+puede independientemente tener lógica para realizar cierta acción basandose en 
+información que encuentra. Por esta razón, se debe tener cuidado de autenticar 
+apropiadamente el beneficiario del documento y atribuir un nivel de 
+confidencialidad apropiado a los datos antes de realizar la acción.
+El formato de mensaje subyacente  y el protocolo utilizado para intercambiar 
+datos provee una garantía de confidencialidad, integridad  y autenticidad. El 
+uso de protocolos de seguridad estandarizados es recomendado. Por ejemplo el uso 
+de IODEF/RID.
+
+Con el fin de sugerir buenas practicas en el  procesamiento y manejo de los 
+datos codificados, IODEF  permite a un emisor de documentos transmitir una 
+política de privacidad utilizando un atributo de restricción. Las distintas 
+instancias de este atributo permite a los distintos elementos del documento 
+tener las mismas políticas. Esto sirve como una guía para el receptor, pero este 
+podría decidir ignorarlo, este problema no es un reto técnico.
+
+\section{Protocolo RID}
+
+Real-time Inter-Network Defense (RID) es un método de comunicación entre redes 
+para facilitar el intercambio de datos de incidentes y a su vez integrando 
+mecanismos existentes de detección, seguimiento, identificación de fuentes y 
+mitigación que aporta una solución al manejo de incidentes. Combinar estas 
+capacidad en un sistema de comunicación provee una forma de alcanzar un nivel de 
+seguridad en la red. Las políticas para manejar incidentes son recomendadas y 
+pueden ser acordadas por un consorcio utilizando recomendaciones y 
+consideraciones de seguridad.
+
+RID ha sido ampliamente utilizado en comunidades de investigación, pero no ha 
+sido muy adoptado en otros sectores.
+
+RID fue desarrollado como un mecanismo de comunicación para facilitar la 
+transferencia de información entre distintos proveedores de servicios de 
+internet para trazar precisa y eficientemente el flujo que llevan paquetes 
+nocivos a lo largo de la red. RID considera la información que necesitan 
+varias implementaciones para seguir paquetes dentro de una red y los 
+requerimientos de los proveedores de servicios de decidir si se permite trazar el 
+recorrido de un paquete o no.
+
+Los datos en RID son representados como documentos XML utilizando el formato de 
+IODEF. De esta forma se simplifica la integración con otros aspectos del manejo 
+de incidentes. RID busca proveer un método para comunicar la información 
+relevante entre CSIRTs manteniendo la compatibilidad con varios sistemas de 
+rastreo y respuesta.
+
+Para conservar la privacidad y tener un buen nivel de seguridad, los mensajes 
+RID toman ventaja de los mecanismos provistos por XML. El esquema RID funciona 
+como un mecanismo de transporte para soportar la comunicación de documentos 
+IODEF para intercambiar y realizar un seguimiento de incidentes de seguridad. 
+Los mensajes RID son encapsulados para el transporte, este procedimiento se 
+define en el RFC 6046. La autenticación, integridad y autorización son el 
+resultado de las capacidades de cada capa y son utilizadas para alcanzar un 
+buen nivel de aseguramiento.
+
+Los mensajes RID tienen la intención de ser usados en el manejo coordinado de 
+incidentes para localizar la fuente de un ataque y detener o mitigar sus 
+efectos. Los tipos de ataque incluyen redes o sistemas que se vieron 
+comprometidos, denegaciones de servicio o cualquier otro tipo de tráfico 
+malicioso en una red. RID es esencialmente un sistemas de mensaje para coordinar 
+la detección de ataques, los mecanismos de rastreo, y el manejo de incidentes. 
+Los CSIRTs tienen la posibilidad de reportar ataques que estén ocurriendo a 
+otros CSIRTs o pedir información a estos de si también detectaron el ataque. 
+Para esto se utiliza el \emph{Report message} para indicar que un reporte a 
+sucedido. Con un mensaje de \emph{IncidentQuery} se le puede preguntar a otro 
+CSIRT si este ha detectado el ataque.
+
+Los sistemas comprometidos pueden resultar de otros incidentes de seguridad como 
+worms, troyanos o virus. %Puede suceder que un incidente no sea reportado incluso 
+%cuando la dirección de origen del ataque sea valida y este disponible debido a 
+%que sea difícil realizar una acción para mitigar o detener un ataque. 
+El manejar 
+incidentes es una tarea difícil para un proveedor de internet o en algunos 
+clientes debido al tamaño de la red o los recursos disponibles.
+RID provee el framework necesario para realizar la comunicación entre redes 
+involucradas en el manejo, seguimiento y mitigación de incidentes de seguridad. 
+Distintos tipos de mensajes son necesarios para facilitar el manejo de 
+incidentes. Los mensajes que se incluyen son \emph{Report}, \emph{Incident Query} 
+\emph{TraceRequest}, \emph{RequestAuthorization}, \emph{Result} e 
+\emph{Investigation Request message}. El mensaje de \emph{Report} es utilizado 
+cuando se ingresa un incidente en un sistema RID y no se deben realizar más 
+acciones. Un mensaje \emph{Incident Request} es utilizado para pedir información 
+de un incidente en particular. Un mensaje \emph{Trace Request} es utilizado 
+cuando la fuente del trafico puede estar oculta. En ese caso, cada proveedor de 
+red que reciba uno de estos mensajes enviara uno a la red anterior en el camino 
+del mensaje para obtener la fuente del trafico. Los mensajes \emph{Request 
+Authorization} y \emph{Result} son utilizados para comunicar el estado y 
+resultado de un mensaje \emph{Trace Request} o \emph{Investigation Request}. El 
+mensaje \emph{Investigation Request} solo considera los sistemas RID en el 
+camino a la fuente del trafico y no el uso de las redes de los sistemas de seguimiento. 
+Un mensaje enviado entre sistemas RID para \emph{Trace Request} o 
+\emph{Investigation Request} para detener trafico en una fuente por fuera de una 
+red debería requerir la siguiente información:
+\begin{itemize}
+  \item Suficiente información para permitir  a los administradores de la red 
+  tomar una decisión sobre la importancia de continuar con el seguimiento.
+  \item El incidente o información del paquete IP necesarias para realizar el 
+  seguimiento.
+  \item Información de contacto o el origen de la comunicación RID. 
+  \item Información del camino de la red para prevenir loops en el rutado a 
+  través de la red. Si un sistema RID recibe un mensaje de \emph{Trace Request} 
+  conteniendo su propia información en el camino el sistema RID debería emitir 
+  una alerta.
+  \item Un identificador único para cada ataque. Este identificador debería ser 
+  utilizado para correlacionar los seguimiento en múltiples fuentes en un 
+  ataque DDoS.
+\end{itemize}
+
+Es responsabilidad de cada participante adherirse a las reglas establecidas en 
+las políticas globales de uso para este sistema y las establecidas en cada 
+acuerdo para los acuerdos bilaterales o acordes a las reglas del consorcio. El 
+objetivo de dichas políticas es evitar el abuso del sistema.
+
+En RID se pueden diseñar topologías que permitan el intercambio de información 
+facilitando la comunicación entre socios. La topología más básica para comunicar sistemas RID es una comunicación directa. 
+En una organización se pueden establecer y utilizar varias topologías. Una podría 
+fortalecer las relaciones bilaterales con socios. Los socios podrían enrutar los 
+mensajes RID entre ellos. Este enfoque permite un rastreo iterativo en donde 
+la fuente es desconocida.
+
+La comunicación entre los sistemas RID debe ser protegida. RID tiene muchas 
+consideraciones de seguridad incluidas en el diseño del protocolo. Al considerar 
+el transporte de mensajes RID, una red fuera de banda, ya sea física o lógica, 
+puede prevenir ataques externos contra las comunicaciones RID. Se deben utilizar 
+conexiones autenticadas y encriptadas entre sistemas RID para proveer 
+confidencialidad, integridad, autenticidad y privacidad de los datos. Las 
+relaciones de confianza son realizados por socios y establecen relaciones de 
+confianza por medio de infraestructuras de PKI.
+
+El protocolo de transporte utilizado debe proveer encriptación para dar un nivel 
+de seguridad e integridad adicional, mientras se provee autenticación por medio 
+de certificados. De todas formas los mensajes RID no confían únicamente en la 
+seguridad provista por el protocolo de transporte.
+
+La infraestructura PKI provee la base para la autenticación, autorización, 
+encriptación y firmas digitales necesarias para establecer una relación de 
+confianza entre los miembros de una comunidad RID. 
+
+Problemas de privacidad pueden ser de preocupación cuando se habla de compartir 
+información y se deben considerar a la hora de alcanzar la meta de detener o 
+mitigar los efectos de un incidente de seguridad. Para ello hay clases 
+específicas para automatizar las políticas de privacidad.
+
+Como se explico anteriormente, IODEF describe un formato de documentos XML con 
+la finalidad de intercambiar información de seguridad entre CSIRTs u otras 
+organizaciones. El formato establecido le permite a los CSIRTs intercambiar 
+información que sea fácilmente parseable.
+
+IODEF define un formato de mensaje, no un protocolo de transporte, esto se 
+realiza para permitir a los CSIRTs intercambiar y almacenar los datos de la 
+forma que más le conviene a cada una de las organizaciones. Sin embargo, RID 
+requiere una especificación de un protocolo de transporte para asegurar la 
+interoperabilidad entre las organizaciones socias. En el RFC6046, se especifica 
+el transporte de mensajes RID sobre HTTP/TLS. En esta especificación, cada 
+servidor RID funciona como servidor y cliente. Todos los sistemas RID deben 
+estar preparados para aceptar conexiones HTTP/TLS de cualquier socio con la 
+finalidad de soportar llamadas en respuestas tardías a pedidos que se realizaron.
+
+
+
+

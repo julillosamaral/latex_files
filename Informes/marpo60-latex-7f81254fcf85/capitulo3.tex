@@ -1,0 +1,465 @@
+\chapter{Performance en aplicaciones web}
+
+En el capítulo anterior se definieron los conceptos básicos sobre la performance, las definiciones de métricas, metas y requerimientos de performance, los diferentes tipos
+de pruebas y las actividades en las que las pruebas de performance pueden dividirse. En este capítulo nos centraremos en las aplicaciones web y se procederá a
+detallar las métricas de performance pertinentes a la hora de analizar qué tan buena es la performance de una aplicación web.
+
+\input{metricas}
+
+\section{Reglas para mejorar la performance en sitios web}
+\label{capitulo3:reglas}
+
+En esta sección se presenta un conjunto de reglas para evaluar la performance de aplicaciones web, que generan un conjunto de buenas prácticas relacionadas con apegarse a las reglas. \cite{souders2007high}.
+
+\subsection{La regla de oro de la performance}
+
+En cualquier esfuerzo por optimizar un sistema, es fundamental realizar un análisis sobre el estado actual de la performance para identificar dónde se pueden llevar a cabo
+las mejoras que pueden tener mayor impacto sobre la aplicación.
+
+Al analizar los principales sitios de Estados Unidos, se puede ver la incidencia de la capa de presentación en la performance, su gran potencial para mejoras y la necesidad de centrarse en ella a la hora de optimizar.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.3]{figuras/hpws/tiempos_top10.png}
+	\caption{Porcentaje de tiempo utilizado para descargar documento HTML.}
+    \label{fig.tiempostopdiez}
+\end{figure}
+
+Como se puede apreciar en \ref{fig.tiempostopdiez} solo entre un 10 y un 20\% del tiempo de respuesta es utilizado en descargar el documento HTML, el resto
+del tiempo es consumido en la capa de presentación.
+
+Mientras que reduciendo el tiempo de respuesta del \emph{backend} a la mitad, el tiempo de respuesta del usuario se reduciría entre un 5 y un 10\%, si se aumenta la performance de la capa de presentación en un 50\%, el tiempo de respuesta del usuario se reduciría entre un 40 y 45\%.
+
+Adicionalmente, realizar mejoras en la capa de presentación típicamente requiere menos tiempo y recursos. Generalmente mejorar el \emph{backend} involucra rediseñar la arquitectura de la aplicación, optimizar secciones críticas del código, incorporar hardware, distribuir bases de datos, etc. Estos proyectos pueden tardar semanas, incluso meses, en cambio la
+mayoría de las mejoras que se pueden implementar para mejorar la performance de la capa de presentación, se pueden realizar en días.
+
+A partir de este análisis realizado sobre el estado de los principales sitios web se define la regla de oro de la performance, que indica que solamente entre un 10 y un 20\% 
+del tiempo de respuesta del usuario es utilizado al descargar un documento HTML. El restante porcentaje del tiempo es utilizado en descargar los restantes componentes
+en la página.
+
+\subsection{Realizar menos pedidos HTTP}
+\label{cap3:reglas:menos_pedidos}
+
+Según la \emph{Regla de oro de la performance} entre el 80 y 90\% del tiempo es utilizado para realizar pedidos HTTP de todos
+los componentes referenciados en el documento HTML, desplegar imágenes y ejecutar \emph{scripts}. Por lo tanto reduciendo el número de pedidos HTTP se puede reducir el tiempo
+de respuesta.
+
+Cada pedido realizado al servidor implica un \emph{round-trip-time}, que sin importar el ancho de banda entre el usuario y el servidor es una de las penalizaciones más importantes
+en la performance de las aplicaciones web, como se puede ver en los resultados obtenidos por Mike Belshe \cite{mike_belshe}. El \emph{round-trip-time} o RTT es el tiempo que
+tarda un paquete enviado por un emisor en llegar al receptor más el tiempo que tarda en llegarle un mensaje de confirmación de recepción por parte del receptor.
+
+En base a los datos obtenidos en los experimentos se puede concluir que si un usuario duplica su ancho de banda sin reducir en forma significativa el RTT, la mejora
+que percibirá el usuario en la navegación por la web no será muy notoria. Por otro lado, disminuir el RTT sin importar el ancho de banda que se tenga siempre beneficia
+la navegación.
+
+A continuación se nombran algunas técnicas para reducir el número de pedidos HTTP sin comprometer el diseño (cantidad de componentes) del sitio.
+El empleo de las mismas reduce el tiempo de respuesta para todos los usuarios, pero en particular para aquellos que ingresan por primera vez al sitio y no tienen contenido en la
+memoria \emph{cache} del navegador.
+
+\begin{itemize}
+\item
+Image Maps: Un \emph{image map} permite asociar varias URLs a una sola imagen. La URL de destino es elegida en base a la zona de la imagen donde el usuario realiza un \emph{click}. En lugar de realizar un pedido HTTP por imagen, se realiza uno solo para obtener el \emph{image map}.
+\item
+CSS Sprites: Esta técnica permite combinar varias imágenes en una sola, de forma más flexible que los \emph{image maps}, ya que no existe la restricción de que las imágenes sean contiguas. Al combinar las imágenes a utilizar en una única imagen se reduce la cantidad de pedidos HTTP, lo que representa una mejora en el tiempo de respuesta.
+\item
+Inline Images: La técnica \emph{Inline Images} permite incluir imágenes directamente en el sitio sin realizar ningún pedido HTTP adicional al del documento HTML, pero como contrapartida aumenta el tamaño del mismo.
+\item
+Combinar \emph{Scripts} y hojas de estilo: Una forma de reducir el número de pedidos HTTP consiste en minimizar el número de archivos que se descargan. Combinar todos los \emph{scripts} en un sólo archivo y
+todos los CSS en una hoja de estilo reduce de manera considerable el tiempo de respuesta.
+\end{itemize}
+
+\subsection{Usar una red de Distribución de Contenido (CDN)}
+
+Una red de distribución de contenido es una colección de servidores web distribuidos en diversos
+lugares para entregar de forma más eficiente el contenido a los usuarios.
+Los CDNs son utilizados para entregar contenido estático, imágenes, \emph{scripts}, hojas de estilo y contenido \emph{Flash}.
+
+La elección del servidor para hacer entrega del contenido a un usuario específico se basa en la proximidad del usuario a la red. La proximidad de los usuarios al servidor web que contiene la aplicación reduce el tiempo de respuesta de cada pedido HTTP que se realiza al servidor. Si los servidores web que contienen los componentes de la página están próximos al usuario, los tiempos de respuesta de muchos pedidos HTTP pueden ser mejorados.
+
+Por lo tanto, en lugar de rediseñar la aplicación distribuyendo los servidores web que contienen la aplicación, un primer paso más sencillo sería distribuir los servidores
+que contienen los componentes de la página, ya que así no solo se obtiene una reducción en los tiempos de respuesta, sino que también el costo y el esfuerzo que esto implica es menor debido a que es muy simple de implementar utilizando redes de distribución de contenido.
+
+\subsection{Agregar el encabezado \emph{Expires}}
+\label{cap3:reglas:expires}
+
+Los sitios web contienen una gran cantidad de componentes, por lo que un usuario que visite el sitio por primera vez tendrá que realizar una gran cantidad de pedidos HTTP.
+Asignando el encabezado \emph{Expires} especificado en el rfc 2616 \cite{rfc2616} sección 14.21, estos contenidos pueden ser almacenados en la memoria \emph{cache}
+de los navegadores, lo que permite ahorrar pedidos HTTP en subsiguientes visitas al sitio.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{figuras/hpws/expires.jpg}
+  \caption{Ejemplo de respuesta HTTP con encabezado \emph{Expires}.}
+    \label{fig.expires}
+\end{figure}
+
+Los servidores web utilizan el encabezado \emph{Expires} para indicarle al cliente web que puede utilizar la copia actual de un elemento hasta el tiempo especificado por este encabezado, como se puede apreciar en \ref{fig.expires}.
+La especificación de HTTP resume este encabezado como \emph{``la fecha o tiempo después del cual es considerado como obsoleto''}.
+
+\subsubsection{\emph{Max-Age} y \emph{mod\_expires}}
+
+Una alternativa para superar las limitaciones que tiene el encabezado \emph{Expires}, es el uso del encabezado \emph{Cache-Control} definido en el rfc 2616 \cite{rfc2616} sección 14.9, el cual
+fue introducido en HTTP/1.1. El principal problema con \emph{Expires} es que utiliza
+una fecha específica, lo cual requiere una estricta sincronización de relojes entre el servidor y el cliente.
+
+Por otro lado, \emph{Cache-Control} utiliza la directiva \emph{max-age} para especificar cuánto tiempo un componente puede ser almacenado en \emph{cache}.
+Define la ventana de validez del componente en la \emph{cache} en segundos. Si desde que el componente fue pedido por primera vez transcurrieron menos de \emph{max-age}
+segundos, el navegador utilizará la versión del componente que tiene en su \emph{cache}, evitando de esta forma realizar un nuevo pedido HTTP.
+El módulo \emph{mod\_expires} de Apache permite utilizar el encabezado \emph{Expires} de forma similar a \emph{max-age}, expresando la fecha de expiración en términos de
+años, meses, semanas, días, minutos o segundos.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{figuras/hpws/cache-control.jpg}
+  \caption{Ejemplo de respuesta HTTP con encabezado \emph{Cache-Control}.}
+    \label{fig.cache-control}
+\end{figure}
+
+Es posible tener ambos encabezados en una respuesta ya que algunos navegadores no soportan HTTP/1.1. Si los dos encabezados están presentes, la especificación
+de HTTP dicta que la directiva \emph{max-age} tiene mayor precedencia que el encabezado \emph{Expires}.
+
+Aunque esta práctica debería aplicarse a la mayoría de los componentes de un sitio, actualmente sólo es
+común la aplicación del encabezado \emph{Expires} en imágenes. En particular, debería aplicarse el
+encabezado a cualquier componente que no tenga cambios frecuentes, incluyendo \emph{scripts}, hojas de estilo y componentes Flash.
+
+\subsubsection{Renombrar archivos}
+
+Cuando se recibe una respuesta con un encabezado \emph{Expires}, el navegador utilizará la versión del componente que contiene en su \emph{cache} hasta
+la fecha de expiración. Es por este motivo que el uso de este cabezal reduce enormemente los tiempos de respuesta. En consecuencia, por más que uno actualice un componente
+en su servidor, los usuarios que ya visitaron el sitio y tienen el componente en su \emph{cache}, no obtendrán la nueva versión del mismo.
+
+Para asegurar que los usuarios obtengan la última versión de un componente, es necesario cambiar el nombre del archivo del componente. Esta práctica es muy
+sencilla si uno genera sus sitios dinámicamente utilizando lenguajes como RoR, Perl, PHP, etc. Es recomendable aplicar esta técnica como parte del proceso de liberación,
+agregando el número de liberación a los nombres de los archivos.
+
+
+\subsection{Comprimir componentes}
+\label{cap3:reglas:compresion}
+
+Esta técnica permite reducir los tiempos de respuesta al generar una respuesta HTTP de menor tamaño. De esta forma, el tiempo de transferencia se ve disminuido, ya que se envía
+una menor cantidad de paquetes desde el servidor hacia el cliente.
+
+\subsubsection{Funcionamiento}
+
+Desde que surgió HTTP/1.1, los navegadores que soportan compresión indican al servidor los tipos de compresión que soportan mediante la inclusión del encabezado
+\emph{Accept-Encoding} en el pedido HTTP. Dicho encabezado se encuentra definido en el rfc 2616 \cite{rfc2616} sección 14.3.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{figuras/hpws/accept-encoding.jpg}
+  \caption{Ejemplo de un encabezado \emph{Accept-Encoding}.}
+    \label{fig.gzip-request}
+\end{figure}
+
+Cuando el servidor web recibe un pedido con el encabezado \emph{Accept-Encoding}, puede comprimir la respuesta (en caso de soportarlo) utilizando alguno de los métodos listados
+por el cliente en el pedido. El servidor notifica al cliente web que la respuesta esta comprimida agregando el encabezado \emph{Content-Encoding} especificado en el rfc 2616
+\cite{rfc2616} sección 14.11 a la respuesta HTTP.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{figuras/hpws/content-encoding.jpg}
+  \caption{Ejemplo de un encabezado \emph{Content-Encoding}.}
+    \label{fig.gzip-respuest}
+\end{figure}
+
+La especificación de HTTP/1.1 especifica tres métodos de compresión: \emph{Gzip}, \emph{deflate} y \emph{compress}. Gzip es el más popular y efectivo, es
+desarrollado por el \emph{GNU project} y se encuentra estandarizado en el rfc 1952 \cite{rfc1952}. \emph{Deflate} y
+\emph{Compress} especificados en el rfc 1950 \cite{rfc1950} son un poco menos efectivos y no son soportados por todos los navegadores.
+
+\subsubsection{¿Qué comprimir?}
+
+Muchos sitios comprimen los documentos HTML, pero es conveniente comprimir también los \emph{scripts} y las hojas de estilo.
+
+La compresión tiene un costo asociado: requiere un uso adicional del CPU del lado del servidor para llevar a cabo la compresión y también del lado del cliente
+para descomprimir los archivos que recibe. Para determinar si los beneficios superan a los costos de aplicar ésta técnica, es necesario considerar el tamaño de la respuesta, el
+ancho de banda de la conexión y la distancia entre el cliente web y el servidor.
+
+\subsection{\emph{Progressive Rendering}}
+
+Jakib Nielsen deja claro en \cite{Nielsen:1993} la importancia del uso de indicadores de progreso para ayudar a la percepción del
+usuario sobre los tiempos de respuesta de una aplicación.
+
+En el caso de los sitios web, la descarga del documento HTML es el indicador de progreso. Los desarrolladores pretenden que el sitio se cargue de forma progresiva, es decir, que el
+navegador despliegue contenido lo antes posible, mejorando de esta forma la experiencia de usuario. La ubicación de las hojas de estilo en el documento HTML no afecta
+los tiempos de descarga, pero sí los tiempos en que el navegador despliega los elementos en la página.
+
+Los indicadores de progreso brindan información al usuario sobre los tiempos de respuesta de la aplicación. El uso de los mismos ofrece al menos tres ventajas. La primera
+ventaja es asegurar que el usuario note que el sistema está en funcionamiento. También indican aproximadamente cuánto tiempo el usuario debe esperar y por último, indican
+que la espera sea menos aburrida proporcionando algo para ver.
+
+\subsection{Ubicar las hojas de estilo al comienzo}
+
+El problema de posicionar las hojas de estilo al final del documento HTML es que prohíbe que los navegadores desplieguen progresivamente los componentes del sitio.
+En este caso, los navegadores no despliegan elementos para evitar tener que volverlos a desplegar si su estilo cambia debido a una regla de estilo que está definida al final del documento.
+
+En Internet Explorer, colocar las hojas de estilo al final del documento causa el efecto ``Blank White Screen''. Cuando esto ocurre, la página permanece completamente
+en blanco hasta que en un momento todo el contenido es desplegado al unísono. Esto significa una mala experiencia de usuario, ya que no se recibe ningún
+indicador de que el pedido está siendo atendido de forma correcta.
+Para evitar este efecto, es recomendable ubicar las hojas de estilo al comienzo del documento HTML, en la sección \emph{Head} del mismo, de esta forma, los componentes
+de la página se desplegarán a medida que son descargados, ya que las reglas de estilo de los mismos ya se encuentran definidas.
+
+\subsection{Ubicar los \emph{scripts} al final del documento HTML}
+
+Con los \emph{scripts} existe un problema similar al que se tiene con las hojas de estilo, pero la solución es opuesta; es mejor posicionarlos al final del documento HTML.
+De esta forma los navegadores no solo pueden desplegar progresivamente los componentes del sitio,
+sino que también pueden realizar más descargas en paralelo.
+El principal problema generado por la descarga de los \emph{scripts} está dado por la limitación de las descargas en paralelo. El mayor impacto en el tiempo de respuesta de un sitio
+web está determinado por el número de componentes que tenga, debido a que el navegador debe realizar un pedido HTTP por cada uno de ellos. Cuando la memoria \emph{cache}
+del navegador se encuentra vacía, la obtención de cada componente genera un pedido HTTP. La especificación de HTTP/1.1 (rfc 2616 \cite{rfc2616} sección 8.4)
+sugiere que los navegadores pueden realizar hasta dos descargas por nombre de \emph{host} en paralelo.
+
+Sin embargo, las descargas en paralelo se deshabilitan cuando el navegador se encuentra descargando un
+\emph{script}, en particular el navegador no iniciará nuevas descargas, ni siquiera desde distintos
+\emph{hosts}. Una de las razones de este comportamiento es que el \emph{script} puede utilizar la
+función \emph{document.write} para alterar el contenido de la página, por lo que el navegador decide esperar para asegurarse de que la página este presentada correctamente.
+
+Otra de las razones por las cuales las descargas en paralelo son bloqueadas mientras se descarga un \emph{script} es para garantizar que los \emph{scripts} sean
+ejecutados en el orden correcto. Si varios \emph{scripts} son descargados en paralelo, no existen garantías de que las respuestas de los pedidos lleguen en el
+orden especificado.
+
+Si los \emph{scripts} son ubicados al inicio del documento HTML, todo el contenido debajo de ellos no es renderizado y los componentes del sitio no son descargados hasta que los
+\emph{scripts} son cargados. Desplegar los componentes del sitio de forma progresiva es fundamental para la experiencia del
+usuario, pero los \emph{scripts} lentos y el bloqueo de las descargas en paralelo generan una demora en la respuesta visual que el usuario recibe.
+
+Es por esto, que para mejorar la experiencia del usuario, el mejor lugar para ubicar los \emph{scripts}
+es al final del documento HTML. De esta forma no se bloquea la visualización del contenido del sitio y
+los elementos que son desplegables son descargados lo más temprano posible.
+
+En algunos casos no es posible ubicar los \emph{scripts} al final del documento, ya que pueden utilizar
+la función \emph{document.write} para insertar parte del contenido de la página o por problemas de
+\emph{scope}. Una alternativa es utilizar \emph{deferred scripts}. El atributo \emph{DEFFER} indica que
+el \emph{script} no realiza una invocación a \emph{document.write}, y por lo tanto los navegadores pueden continuar desplegando y descargando componentes.
+
+
+\subsection{Evitar \emph{CSS Expressions}}
+
+Las \emph{CSS Expresions} son una forma de definir propiedades de CSS dinámicamente. Eran soportadas por Internet Explorer cinco, seis y siete, pero fueron deprecadas a
+partir de Internet Explorer 8. Permiten asignar propiedades CSS como resultado de evaluaciones de código Javascript.
+
+El problema con las \emph{expressions} es que son evaluadas más frecuentemente de lo que la gente espera. No sólo son evaluadas cuando la página es desplegada o
+redimensionada, sino también cuando se avanza en la página e incluso cuando el usuario mueve el cursor sobre la misma.
+
+\subsection{Utilizar Javascript y CSS externos}
+
+La utilización de archivos externos de Javascript y CSS, en lugar de posicionarlos \emph{inline} generalmente produce sitios más rápidos. Esto se debe a que los navegadores
+pueden almacenar en \emph{cache} los archivos. En caso de que los documentos HTML tengan contenido dinámico, el Javascript y el CSS \emph{inline} es descargado
+cada vez que el documento HTML es pedido. En cambio, si el Javascript y el CSS se encuentran en archivos externos que se encuentran en la \emph{cache} del navegador,
+el tamaño del documento HTML disminuye sin incrementar la cantidad de pedidos HTTP. El factor más importante a tener en cuenta, es la frecuencia con la cual los
+archivos externos son almacenados en \emph{cache} en relación al número de documentos HTML pedidos.
+
+Este factor aunque es difícil de cuantificar, puede ser medido utilizando las siguientes métricas.
+
+\subsubsection{Visitas de páginas}
+
+A menor cantidad de visitas por usuario, mayor la ventaja de utilizar \emph{inline} Javascript y CSS, ya que entre visitas, cualquier archivo externo almacenado en \emph{cache}
+puede haber sido borrado de la misma. Por el contrario, si el usuario típico realiza muchas visitas, es más probable que el navegador tenga los componentes externos en su
+\emph{cache}. A medida que aumentan las visitas del usuario por mes o por sesión, aumenta el beneficio de utilizar archivos externos de Javascript y CSS.
+
+\subsubsection{Reutilización de componentes}
+
+El uso de archivos externos permite tener una elevada tasa de reutilización de los mismos si varias páginas de un mismo sitio utilizan el mismo Javascript y CSS externo.
+En caso que ninguna página comparta el mismo Javascript o CSS, la tasa de reutilización sería más baja, por lo tanto es necesario un análisis de cada sitio en
+particular. Si se logra encontrar un balance que resulte en una alta tasa de reutilización, es conveniente utilizar archivos externos, en caso contrario una mejor alternativa
+es tener Javascript y CSS \emph{inline}.
+
+El único caso donde es preferible utilizar Javascript y CSS \emph{inline} es en las páginas principales de los sitios. Esto se debe a que estas páginas
+tienen un alto número de visitas, menos elementos en el \emph{cache} del navegador y una tasa de reutilización baja. Otro factor que influye en esta decisión, es la
+necesidad de que el tiempo de respuesta de estas páginas sea muy reducido para captar la atención del usuario en su primer contacto con el sitio.
+
+\subsubsection{Descargas \emph{Post-Onload}}
+
+Para las páginas principales que derivan en visitas a otras páginas del sitio, se debe utilizar Javascript y CSS \emph{inline} y precargar los archivos externos correspondientes
+para las páginas secundarias. Esto se logra descargando dinámicamente los componentes externos una vez que haya terminado de cargar la página principal mediante
+el evento \emph{onload}. Esto hace que el navegador agregue en su \emph{cache} los archivos externos anticipando visitas del usuario a otras páginas para reducir el tiempo
+de respuesta de las mismas.
+
+\subsubsection{\emph{Dynamic Inlining}}
+
+Si un servidor pudiera saber si un componente se encuentra en el \emph{cache} del navegador, podría decidir si utilizar archivos externos es una estrategia mejor
+a incluir las hojas de estilo y el código Javascript \emph{inline} o viceversa.
+Retornando una \emph{cookie} que almacena la sesión con el componente buscado, el servidor puede tomar
+una decisión sobre qué estrategia tomar en base a la presencia o no de la
+misma. En caso de que no se encuentre la \emph{cookie}, se debe utlizar Javascript y CSS \emph{inline} y
+en caso contrario, se utiliza el componente externo que se encuentra en la \emph{cache} del navegador.
+
+\subsection{Reducir las búsquedas DNS}
+
+El \emph{Domain Name System (DNS)} traduce nombres de \emph{hosts} a direcciones IP. El navegador no puede descargar elementos desde un \emph{host}
+hasta que se complete la búsqueda. Las búsquedas \emph{DNS} tienen un costo, habitualmente toma entre veinte y ciento veinte milisegundos realizar la búsqueda de la
+dirección IP de un \emph{host}. El tiempo que toma resolver la consulta depende de la proximidad que se tenga al servidor DNS, la carga que tenga el mismo y el ancho de banda del que se disponga.
+
+\subsubsection{\emph{DNS Caching} y {time to live}}
+
+Los resultados de las búsquedas de \emph{DNS} pueden ser almacenados en \emph{cache} para mejorar la performance. Una vez que un usuario solicita la dirección IP de un \emph{host}
+el resultado de la búsqueda permanece en la memoria \emph{cache} del sistema operativo, por lo que los siguientes pedidos al mismo \emph{host} no requieren de una nueva búsqueda.
+Por otro lado los navegadores tienen su propia \emph{cache} separada del sistema operativo en la cual almacenan los resultados de las búsquedas \emph{DNS}.
+Mientras el navegador mantenga en su \emph{cache} el registro \emph{DNS} no consulta al sistema operativo por dicho registro y de esta forma se reduce el tiempo de búsqueda.
+Si el registro no se encuentra en su \emph{cache}, solicita el mismo al sistema operativo, el cual retorna el registro de su \emph{cache} (en caso de tenerlo almacenado) o
+se encarga de realizar la consulta a un servidor remoto.
+
+\subsubsection{Factores que afectan el \emph{cache DNS}}
+
+El servidor es el encargado de determinar cuánto tiempo deben ser almacenados en \emph{cache} los registros \emph{DNS} mediante el valor del encabezado \emph{time to live (TTL)}.
+Los navegadores por su parte, limitan el número de registros \emph{DNS} que
+mantienen en \emph{cache}, independientemente del tiempo que tengan en el mismo.
+Esto se debe a que en caso de que el usuario visite muchos sitios en distintos \emph{hosts} en un período corto, los registros \emph{DNS} que se encuentran en \emph{cache}
+por más tiempo son descartados para hacer lugar a los nuevos. El impacto que tiene realizar nuevamente la búsqueda de uno de los valores borrados, no es tan importante
+ya que existe la posibilidad de que el sistema operativo mantenga el registro en su \emph{cache}.
+
+Cuando el \emph{cache} del cliente (navegador y sistema operativo) no contiene registros \emph{DNS}, la cantidad de búsquedas \emph{DNS} es igual a la cantidad de nombres de \emph{host}
+únicos en la página, esto incluye los nombres de \emph{host} en la \emph{URL} de la página, imágenes, \emph{scripts}, hojas de estilo, etc. Reducir el número de nombres de \emph{host}
+únicos, reduce la cantidad de búsquedas \emph{DNS}, reduciendo de esta forma el tiempo de espera del usuario.
+Potencialmente esto puede reducir la cantidad de descargas en paralelo que se pueden llevar a cabo, por
+lo tanto es necesario encontrar un balance entre la cantidad de nombres de \emph{host} utilizados para
+maximizar la cantidad de descargas en paralelo y la cantidad de búsquedas \emph{DNS} que esto tiene
+como consecuencia.
+
+
+\subsection{Minimizar Javascript}
+
+\emph{Minification} es una técnica que consiste en remover caracteres innecesarios (comentarios,
+espacios en blanco, saltos de línea) del código para reducir su tamaño y mejorar así el tiempo de carga,
+debido a que el tiempo de descarga de los archivos es menor. A medida que el uso y el tamaño de los
+\emph{scripts} y hojas de estilo aumenta, también lo hacen las ganancias obtenidas al utilizar la técnica \emph{minification}.
+
+La ofuscación es una alternativa a \emph{minification} que, no sólo remueve comentarios y
+espacios en blanco, sino que también altera el código, reduciendo nombres de funciones y variables para que el código sea más compacto.
+
+Mientras que la técnica \emph{Minification} es segura y sencilla, la ofuscación es bastante más compleja. Existen tres principales desventajas al ofuscar el código Javascript:
+\begin{itemize}
+\item \emph{Bugs}
+Como la ofuscación altera el código, existe la posibilidad de introducir errores como resultado del proceso.
+\item Mantenimiento
+Cualquier símbolo que no debe ser modificado (nombres de funciones pertenecientes a una API) debe ser etiquetado para evitar su alteración.
+\item \emph{Debugging}
+Debido a que el código ofuscado es muy difícil de leer, resulta complicado depurar el código Javascript en el ambiente de producción.
+\end{itemize}
+
+\subsection{Evitar \emph{redirects}}
+\label{cap3:reglas:redirects}
+
+Un \emph{redirect} especificado en el rfc 2616 de HTTP\\1.1 \cite{rfc2616} sección 10.3, se utiliza para redirigir usuarios de una URL a otra. Existen diferentes motivos para realizarlo,
+entre ellos: redirigir a los usuarios a la nueva versión del sitio, rastrear el flujo de tráfico y crear
+URLs que sean fáciles de recordar para el usuario.
+
+Los mensajes HTTP del tipo \emph{redirect} tienen un código de estado en el rango de los 3xx. En la especificación de HTTP 1.1, se incorporaron los códigos 303 \emph{See Other}
+y 307 \emph{Temporary Redirect} para clarificar el uso del estado 302 \emph{Found}, pero el uso de éstos últimos es casi inexistente.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{figuras/hpws/redirect.jpg}
+	\caption{Ejemplo de una respuesta con código de estado 301.}
+    \label{fig.redirect}
+\end{figure}
+
+El navegador, al recibir un \emph{redirect} como respuesta dirige automáticamente al usuario a la URL especificada en el encabezado \emph{Location}
+especificado en el rfc \cite{rfc2616} sección 14.30. Toda la información necesaria para llevar a cabo el \emph{redirect} se encuentra en los encabezados de la respuesta
+y el cuerpo de la misma generalmente está vacío. Si los encabezados \emph{Expires}
+o \emph{Cache-Control} están presentes en una respuesta con código 301 o 302, la misma será almacenada en el \emph{cache} del navegador.
+
+Existen además otras formas para redirigir a los usuarios a otra URL. La etiqueta \emph{refresh}
+incluida en la sección \emph{head} del documento HTML redirige al usuario después de un número de
+segundos especificado en el atributo \emph{content} de la misma.
+Javascript también es utilizado para realizar \emph{redirects}, en este caso asignando la URL deseada al atributo \emph{document.location}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{figuras/hpws/meta-refresh.jpg}
+	\caption{Ejemplo de una etiqueta refresh.}
+    \label{fig.redirect}
+\end{figure}
+
+En caso de que sea necesario realizar un \emph{redirect}, la técnica recomendada por \emph{www.w3.org} es utilizar los códigos de estado 3xx de HTTP ya que esto garantiza que el
+comportamiento del botón \emph{Atrás} del navegador siga funcionando correctamente.
+
+\subsubsection{Alternativas a los \emph{redirects}}
+
+Uno de los \emph{redirects} más simples de evitar es el que ocurre cuando falta una retrobarra (/) al final de una URL que la requiere. La acción de varios servidores web,
+incluyendo Apache, es enviar un \emph{redirect} cuando falta una retrobarra al final de una URL. Una forma de evitar este comportamiento en Apache es utilizar la directiva
+\emph{Alias} o el módulo mod\_rewrite.
+
+Otro caso común donde se realizan \emph{redirects} que pueden evitarse es al modificar el \emph{backend}
+de un sitio web, ya que las URLs de la nueva implementación pueden variar respecto a las originales. Una
+forma de dirigir a los usuarios a la nueva URL es mediante el uso de \emph{redirects}.
+A pesar de que la utilización de \emph{redirects} reduce la complejidad para los desarrolladores, como
+se mencionó previamente, el uso de esta técnica degrada la experiencia de usuario.
+
+Las siguientes alternativas para integrar dos \emph{backends} agregan más trabajo a los desarrolladores, pero no afectan negativamente la experiencia de usuario.
+\begin{itemize}
+\item
+Uso de \emph{Alias}, mod\_rewrite y \emph{DirectorySlash}.
+\item
+Si los dos \emph{backends} se encuentran en el mismo servidor, el código mismo puede ser relacionado.
+\item
+En caso de que el dominio cambie, se puede utilizar un \emph{CNAME} (tipo registro de DNS)  para hacer
+que los dos \emph{hosts} referencien a los mismos servidores.
+\end{itemize}
+
+\subsection{Eliminar \emph{scripts} duplicados}
+
+Existen dos motivos por los cuales incluir más de una vez el mismo \emph{script} afecta negativamente la performance: se realizan pedidos HTTP innecesarios
+y se ejecuta código \emph{Javascript} innecesariamente.
+
+Internet Explorer realiza pedidos HTTP innecesarios cuando se incluye más de una vez un \emph{script} en
+un documento HTML y el mismo no está especificado para ser almacenado en \emph{cache}. El navegador realiza un pedido por cada vez que esté incluido el \emph{script} en la página.
+En caso de que el \emph{script} este especificado para ser almacenado en \emph{cache}, al recargar la página se realizan dos pedidos HTTP del tipo \emph{Conditional-Get} para
+confirmar que la versión del elemento almacenada en el \emph{cache} sigue siendo válida.
+
+La ejecución redundante de código Javascript sucede en todos los navegadores, independientemente de si el \emph{script} está especificado para ser almacenado
+en \emph{cache} o no, teniendo como consecuencia el uso innecesario de CPU y memoria.
+
+Una técnica para evitar incluir el mismo \emph{script} más de una vez es implementar un módulo de administración de \emph{scripts}. Este módulo se encarga de incluir
+\emph{scripts} y sus dependencias solamente si no fueron incluidos previamente.
+
+\subsection{Configurar \emph{ETags}}
+
+\subsubsection{\emph{Entity Tags (ETags)}}
+Las \emph{ETags} especificadas en el rfc \cite{rfc2616} seccion14.19, son un mecanismo utilizado por los servidores y navegadores web para verificar la validez de los componentes
+que se mantienen en \emph{cache}. Una \emph{ETag} es un string que identifica una versión específica de un componente, con la restricción de que el \emph{string} debe empezar
+y finalizar con comillas.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{figuras/hpws/etags.jpg}
+	\caption{Ejemplo de uso de Etags.}
+    \label{fig.redirect}
+\end{figure}
+
+El servidor web incluye el encabezado \emph{ETag} en la respuesta con el \emph{string} que identifica la versión del componente solicitado. Cuando el navegador realiza la
+validación de la versión del componente que tiene es su \emph{cache}, envía en el pedido el encabezado \emph{If-None-Match} con el \emph{ETag} del componente. En caso de que
+los \emph{ETags} coincidan, el servidor responde con un mensaje con código 304 y status \emph{Not Modified}, en caso contrario, responde con un mensaje con código 200
+y status \emph{OK} incluyendo la nueva versión del componente. Los \emph{ETags} son útiles en caso de tener que validar componentes en base a una condición diferente
+a la última fecha de modificación.
+
+Uno de los principales problemas con las \emph{ETags} es que son específicas para el servidor en el cual fueron creadas. En caso de utilizar un \emph{clúster} de servidores para
+balancear la carga de pedidos, si el navegador obtiene el componente de un servidor y después realiza un pedido condicional que es atendido por otro servidor, las
+\emph{ETags} no coincidirán y por lo tanto la segunda respuesta tendrá código 200 y contiene al componente.
+En caso de tener \emph{n} servidores en un \emph{clúster} con una rotación del estilo \emph{round-robin}, la probabilidad de que una \emph{ETag} de un componente en la memoria
+\emph{cache} del usuario coincida con la \emph{ETag} correspondiente al componente en el servidor al cual se realiza el nuevo pedido es \emph{1/n}.
+
+Las \emph{ETags} también degradan la efectividad de los \emph{proxy caches}. La \emph{ETag} de un componente que mantiene un usuario en su \emph{cache} detrás de un
+\emph{proxy}, generalmente no coincide con la \emph{Etag} que mantiene en su \emph{cache} el \emph{proxy}, teniendo como consecuencia pedidos innecesarios al servidor
+original. Por lo tanto, en lugar de obtener una respuesta con código 304 entre el usuario y el \emph{proxy}, se generan dos respuestas con código 200, una entre el
+servidor original y el proxy, y otra entre el \emph{proxy} y el usuario.
+
+Otra de las desventajas de utilizar \emph{ETags} es que el encabezado \emph{If-None-Match} tiene precedencia sobre el encabezado \emph{If-Modified-Since}. En caso de que
+se encuentren los dos encabezados en una respuesta, el servidor sólo responde con un mensaje con código 304 si todos los encabezados condicionales son válidos.
+
+\subsection{Almacenar pedidos Ajax en \emph{cache}}
+
+Uno de los principales beneficios de Ajax es que al realizar  los pedidos al servidor web de forma
+asincrónica, provee la posibilidad de indicarle al usuario que el sistema está activo sin bloquear la
+interfaz de usuario y permitiéndole seguir trabajando.
+Sin embargo, en muchas aplicaciones el tiempo de espera del usuario se ve afectado por la forma en que se utiliza Ajax. Un factor clave que influye en el tiempo de espera del usuario, es si
+los pedidos Ajax son activos o pasivos.
+
+Los pedidos pasivos se realizan para anticipar una necesidad futura del usuario. Por ejemplo, en un cliente de correo en la web es común realizar un pedido pasivo para
+obtener los contactos del usuario, para asegurar que se encuentren en el \emph{cache} para tenerlos disponibles cuando el usuario necesite escribir un correo.
+Por otro lado, los pedidos activos se basan en acciones del usuario. Por ejemplo listar los mensajes que cumplen con un criterio de búsqueda.
+
+Los pedidos activos son los que tienen mayor prioridad al optimizar debido a que el usuario debe esperar a que finalicen, pero esto no significa que las optimizaciones a realizar no deban realizarse también para los pedidos pasivos. La principal mejora que se puede realizar es configurar que estos pedidos sean almacenados en \emph{cache} por el navegador, también se pueden
+aplicar algunas de las técnicas ya nombradas como comprimir las respuestas, reducir las búsquedas DNS, etc.
+
+\input{herramientas}
+\input{lado_cliente}
+

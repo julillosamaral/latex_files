@@ -1,0 +1,9 @@
+ 
+/* start css.sty */
+.cmr-10x-x-109{font-size:109%;}
+.cmr-17{font-size:170%;}
+.cmr-12{font-size:120%;}
+.cmti-10x-x-109{font-size:109%; font-style: italic;}
+.cmbx-10x-x-109{font-size:109%; font-weight: bold;}
+/* end css.sty */
+

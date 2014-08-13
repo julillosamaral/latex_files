@@ -1,0 +1,176 @@
+% Chapter Template
+
+\chapter{STIX} 
+\label{Chapter4}
+\lheader{Chapter 4. \emph{IODEF}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{IODEF}
+
+Las organizaciones deben colaborar entre ellas para mitigar las actividades 
+maliciosas que atacan sus redes así como para ganar conocimiento de posibles 
+amenazas. Esta coordinación puede requerir coordinación con ISPs, sitios remotos 
+o intercambiar datos con socios. 
+IODEF son las siglas para Incident Object Description Exchange Format, este 
+define una representación de datos que provee un framework para el intercambio 
+de información entre CSIRTs, dicho tipo de información es intercambiado 
+comúnmente por CSIRTs y es referente a incidentes de seguridad. IODEF provee una 
+representación en XML para transportar información de incidentes entre dominios 
+administrativos entre pares que tienen una responsabilidad operacional de 
+remediar o de analizar y establecer advertencias en un dominio definido. El 
+modelo de datos provisto en IODEF codifica la información referente a hosts, 
+redes y servicios corriendo en estos sistemas; metedologia de ataques y 
+evidencia forense asociada; impacto de la actividad realizada; aproximaciones 
+limitadas para documentar el flujo.
+El objetivo primordial de IODEF es mejorar las capacidades operacionales de los 
+CSIRTs. La adopción por parte de la comunidad provee una habilidad mejorada para 
+resolver los incidentes y transmitir el contexto  simplificando la colaboración 
+e intercambio de datos. El formato estructurado provisto por IODEF permite:
+\begin{itemize}
+  \item Incrementar la automatización en el procesamiento de los datos, ya que 
+  los recursos de los analistas de seguridad de parsear documentos se verá 
+  reducido.
+  \item Bajar el esfuerzo necesario para normalizar datos similares de 
+  diferentes fuentes.
+  \item Un formato común con el cual construir herramientas interoperables para 
+  el manejo de incidentes y análisis subsecuente, específicamente cuando los 
+  datos provienen de dominios distintos.
+\end{itemize}
+La coordinación entre CSIRTs no es un problema estrictamente técnico. Hay muchas 
+consideraciones: procedimientos, confianza, legales, las cuales pueden ocasionar 
+que las organizaciones intercambien información. IODEF no busca evadir dichas 
+consideraciones, sin embargo, las implementaciones operacionales de IODEF deben 
+considerar este contexto.
+
+\subsection{Modelo de datos de IODEF}
+A la hora de diseñar IODEF se realizaron ciertas consideraciones de diseño
+\begin{itemize}
+  \item El modelo de datos sirve como formato de transporte. Por ello, su 
+  representación especifica no es optima para almacenamiento en disco, 
+  archivamiento a largo plazo o procesamiento en memoria.
+  \item Por medio de la implementación no se busca establecer un consenso 
+  respecto a la definición de un incidente. Se busca en su lugar un 
+  entendimiento amplio que sea lo suficientemente flexible como para abarcar la 
+  mayoría de las operaciones.
+  \item Describir un incidente para todas las definiciones requeriría un modelo 
+  de datos extremadamente complejo. Por ello, IODEF solo busca dar un marco para 
+  transmitir información de incidentes comúnmente intercambiada. Se asegura un 
+  mecanismo amplio para ser extendido para soportar información propia de la 
+  organización, y técnicas para referenciar información mantenida por fuera del 
+  modelo de datos.
+  \item El dominio del análisis de seguridad no esta totalmente estandarizado y 
+  debe basarse en descripciones textuales libres. IODEF busca conseguir un 
+  balance entre el contenido libre, pero permitiendo el procesamiento automático 
+  de la información de los incidentes.
+  \item IODEF es solo una de las representaciones que han sido estandarizadas. 
+  El modelo de datos de IDMEF influencio el diseño de IODEF.
+\end{itemize}
+
+\subsection{Implementaciones de IODEF}
+Las implementaciones del protocolo se especifican como un esquema XML. 
+Implementar IODEF en XML provee varias ventajas. Que sea extensible lo hace 
+ideal para especificar codificación de datos que soporta varias codificaciones 
+de caracteres. Es mas simple la manipulación debido a la presencia de varias 
+tecnologías para ello. Aunque fundamentalmente XML es una representación de 
+texto, lo cual lo hace ineficiente cuando se deben embeber datos binarios o 
+grandes volúmenes de datos deben ser intercambiados.
+
+\subsection{Internacionalización}
+Internacionalización y localización son de interés para IODEF, dado que solo por 
+medio de colaboración (a menudo con barreras idiomáticas) son resueltos ciertos 
+incidentes. IODEF soporta esto dependiendo de las construcciones de XML, y por 
+medio de diseño explícito en el modelo de datos.
+Como IODEF es implementado como un esquema XML, este soporta las diferentes 
+codificaciones de caracteres. Además, los documentos IODEF deben especificar el 
+lenguaje en el cual sus contenidos son codificados. 
+
+\subsection{Consideraciones de Seguridad}
+El modelo de datos de IODEF no introduce problemas de seguridad. Este solo 
+define una representación simple para información de incidentes. Como los datos 
+codificados por IODEF pueden ser considerados sensibles por las partes que los 
+intercambian o por los descritos por los datos, se deben tomar precauciones para 
+asegurar la confidencialidad durante el intercambio y el subsecuente 
+procesamiento. El primero debe ser resguardado por un formato de mensaje, pero 
+luego se deben tener consideraciones de seguridad por el sistema que procesa los 
+datos, los almacena y archiva la documentación y la información derivada de 
+estos.
+El contenido de un documento IODEF puede incluir un pedido de acción o un parser 
+puede independientemente tener lógica para realizar cierta acción basandose en 
+información que encuentra. Por esta razón, se debe tener cuidado de autenticar 
+apropiadamente el beneficiario del documento y atribuir un nivel de 
+confidencialidad apropiado a los datos antes de realizar la acción.
+El formato de mensaje subyacente  y el protocolo utilizado para intercambiar 
+datos provee una garantía de confidencialidad, integridad  y autenticidad. El 
+uso de protocolos de seguridad estandarizados es recomendado. Por ejemplo el uso 
+de IODEF/RID.
+Con el fin de sugerir buenas practicas en el  procesamiento y manejo de los 
+datos codificados, IODEF  permite a un emisor de documentos transmitir una 
+política de privacidad utilizando un atributo de restricción. Las distintas 
+instancias de este atributo permite a los distintos elementos del documento 
+tener las mismas políticas. Esto sirve como una guía para el receptor, pero este 
+podría decidir ignorarlo, este problema no es un reto técnico.
+
+\section{IDMEF}
+IDMEF es un protocolo experimental que no especifica ningún estándar. Sin 
+embargo IODEF se basa en algunas de las cosas definidas por este para su 
+definición. El propósito de IDMEF es definir formatos de datos y procedimientos 
+de intercambio para compartir información de interés con sistemas de detección 
+de intrusos y sistemas de respuesta con los sistemas de administración que 
+podrían necesitar interactuar con estos.
+El rfc de IDMEF describe el modelo de datos para representar información tomada 
+de los sistemas de intrusión y explica la razón de usar este modelo.
+IDMEF busca ser un formato de datos estándar el cual pueda ser utilizado por los 
+IDSs para reportar alertas sobre eventos que parecen sospechosos. Se puede 
+proveer interoperabildiad entre sistemas comerciales, open source y sistemas de 
+investigación, permitir a los usuarios esta mezcla de sistemas ayuda a obtener 
+una implementación óptima de sus sistemas.
+
+\subsection{Modelo de datos de IDMEF}
+El modelo de datos de IDMEF es una representación orientada a objetos de los 
+datos del alerta enviados a los administradores de los sistemas de intrusión.
+El modelo de datos presenta varios problemas referentes a la representación de 
+los datos:
+\begin{itemize}
+  \item La información de alertas es mayormente heterogénea. Algunas alertas son 
+  definidas con muy poca información, como orígenes, destinos, nombre u hora del 
+  evento. Otras alertas proveen mucha mas información, como puertos de 
+  servicios, procesos, información de usuarios, etc. El modelo de datos que debe 
+  representar dicha información debe ser flexible para adaptarse a las distintas 
+  necesidades. Un modelo orientado a objetos es extensible por medio de 
+  agregación y sub clases. Si una implementación del modelo de datos extiende 
+  con una nueva clase, por medio de agregación o subclases, una implementación 
+  que no entienda estas extensiones podrá seguir entendiendo el subconjunto de 
+  información que esta definido en el modelo. Estas dos formas de extender el 
+  modelo permiten que se mantenga la consistencia del modelo.
+  \item Los IDS son diferentes, algunos analizadores detectan ataques analizando 
+  el trafico en la red, otros utilizando los logs de sistemas operativos o 
+  aplicaciones que auditan información. Alertas para el mismo ataque enviadas 
+  por analizadores con diferentes fuentes de información, no contendran los 
+  mismos datos.
+  El modelo de datos define clases que soportan las diferencias en las fuentes 
+  de los datos. En particular, las nociones de fuente y objetivo para el alerta 
+  son representadas por una combinación de nodo, procesos, servicio y clase de 
+  usuario.
+  \item Las capacidades de los analizadores son diferentes. Por ello el modelo 
+  de datos debe permitir la conversión de formatos utilizados por herramientas 
+  distintas a IDSs con el propósito de mayor procesamiento de la información.
+  \item Los ambientes operacionales son diferentes. Dependiendo en el tipo de 
+  red o sistemas operativos utilizados, los ataques serán observados y 
+  reportados con diferentes características. El modelo de datos se 
+  adapta a estas diferencias.
+  \item Los instrumentos comerciales persiguen objetivos diferentes. Por varias 
+  razones, estos desean entregar mas o menos información sobre ciertos tipos de 
+  ataques. El modelo orientado a objetos permite la flexibilidad necesaria 
+  preservando la integridad del modelo.
+\end{itemize}
+
+\subsection{El diseño del modelo de datos}
+Representación de eventos
+El objetivo del modelo de datos es proveer una representación estándar de la 
+información que el analizador de un sistema de intrusión reporta cuando detecta 
+la ocurrencia de eventos inusuales. Estas alertas pueden ser simples o complejas 
+dependiendo de las capacidades del analizador que la creo.
+

@@ -1,0 +1,47 @@
+
+\documentclass[11pt]{article}
+
+\usepackage{ifpdf}
+\ifpdf 
+    \usepackage[pdftex]{graphicx}   % to include graphics
+    \pdfcompresslevel=9 
+    \usepackage[pdftex,     % sets up hyperref to use pdftex driver
+            plainpages=false,   % allows page i and 1 to exist in the same document
+            breaklinks=true,    % link texts can be broken at the end of line
+            colorlinks=true,
+            pdftitle=Actas
+            pdfauthor=Julio Saráchaga           ]{hyperref} 
+    \usepackage{thumbpdf}
+\else 
+    \usepackage{graphicx}       % to include graphics
+    \usepackage{hyperref}       % to simplify the use of \href
+\fi 
+\RequirePackage[spanish]{babel}
+\RequirePackage[utf8]{inputenc}
+\title{Acta reunión 11 de Noviembre 2013}
+\author{Julio Saráchaga}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{itemize}
+  \item Pensar en la completitud de los casos de uso en la especificación.
+  \item Porque la organización decidió utilizar RTIR.
+	  \subitem - La organización ya lo usa, esta instalada y funcionando adecuadamente
+	  \subitem - Decir que se pueda integrar pero no casarse con el RTIR.
+	  \subitem - Mejorar
+ \item Porque la utilización del modelo.
+	\subitem - No es una organización de gobierno
+	\subitem - Tampoco es una organización coordinadora de esfuerzos.
+	\subitem - Enfocar contacto directo con otros CSIRTs y es una organización de investigación.
+	\subitem - Mejorar
+  \item Armar una matriz de excel, poner requerimientos y casos de uso y cuales contribuyen a satisfacer los requerimientos.
+  \item Respecto a los requerimientos:
+    \subitem - En el requerimiento funcional no tienen porque ser solo los intercambiados.
+  \item Poner el alta de las políticas y modificación como caso de uso.
+  \item Poner las políticas de sanitización en el diagrama de secuencia.
+  \item Empezar a trabajar con el diseño.
+\end{itemize}
+
+\end{document}  

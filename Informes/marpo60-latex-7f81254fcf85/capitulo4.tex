@@ -1,0 +1,55 @@
+\chapter{Marco técnico}
+
+\section{Ruby}
+
+\emph{Ruby} \cite{ruby} es un lenguaje de programación interpretado, reflexivo, orientado a objetos y de código abierto creado por el programador japonés Yukihiro ``Matz'' Matsumoto, quien comenzó a trabajar en él en 1993, y lo presentó públicamente en 1995. Combina una sintaxis inspirada en Python y Perl con características de programación orientada a objetos similares a Smalltalk. Comparte también funcionalidad con otros lenguajes de programación como Lisp, Lua, Dylan y CLU. 
+
+\emph{Ruby} ha sido descrito como un lenguaje de programación multiparadigma: permite programación procedural (definiendo funciones y variables fuera de las clases haciéndolas parte del objeto raíz Object), con orientación a objetos, (todo es un objeto) o funcionalmente (tiene funciones anónimas, clausuras o closures, y continuations; todas las sentencias tienen valores, y las funciones devuelven la última evaluación). Soporta introspección, reflexión y metaprogramación, además de soporte para hilos de ejecución gestionados por el intérprete. \emph{Ruby} tiene tipado dinámico, y soporta polimorfismo de tipos (permite tratar a subclases utilizando la interfaz de la clase padre).
+
+\section{Ruby on Rails}
+\emph{Ruby on Rails} \cite{rubyonrails}, es un framework para desarrollo de aplicaciones web de código abierto escrito en el lenguaje de programación \emph{Ruby}, siguiendo el paradigma de la arquitectura Modelo Vista Controlador (MVC). Fue diseñado para hacer la programación de aplicaciones web más simple, tratando de combinar la simplicidad con la posibilidad de desarrollar aplicaciones del mundo real escribiendo menos código que con otros frameworks y lenguajes de programación y manteniendo también un mínimo de configuración. El lenguaje de programación \emph{Ruby} permite la metaprogramación, de la cual Rails hace uso, lo que resulta en una sintaxis que muchos de sus usuarios encuentran muy legible.
+\emph{Rails} supone que existe una ``mejor'' forma de hacer las cosas y está diseñado para fomentar al programador a hacerlas de esa forma, intentando así un aumento en la productividad.
+La filosofía de \emph{Rails} fomenta los siguientes principios:
+\begin{itemize}
+\item
+\textbf{DRY} El principio DRY (``Don't Repeat Yourself'' o ``No te repitas a ti mismo'') indica que es una buena práctica evitar repetir código de manera innecesaria.
+\item
+\textbf{Convención sobre configuración} implica que el desarrollador sólo debe especificar aspectos no convencionales de la aplicación. Rails propone un conjunto de convenciones a seguir que facilitan el desarrollo y permiten evitar tener archivos de configuración.
+
+\end{itemize}
+
+\subsection{Gemfile}
+
+El archivo Gemfile.rb es el  lugar donde se listan las dependencias (gemas) de un proyecto \emph{Ruby on Rails}. En el mismo se debe incluir el nombre de la gema y es opcional incluir la
+versión de la misma que se desea utilizar. Para instalar las mismas es necesario tener instalado \emph{bundler}. Una vez disponible este comando, instalar las dependencias es tan 
+sencillo como ejecutar el siguiente comando desde una terminal \emph{bundle install}.
+
+\subsection{La arquitectura MVC}
+En el núcleo de \emph{Rails} se encuentra la arquitectura Modelo-Vista-Controlador (MVC). Algunos de los beneficios que brinda la arquitectura MVC incluyen la separación de la lógica de negocio de la interfaz, facilita el mantenimiento del código DRY, indica claramente dónde ubicar diferentes tipos de código para facilitar posteriormente el mantenimiento de la aplicación.
+\subsubsection{Modelos}
+Un modelo representa la información de la aplicación y las reglas para manejar esos datos. En el caso de \emph{Rails} los modelos son utilizados principalmente para manejar las reglas de interacción con la tabla correspondiente en una base de datos. En la mayoría de los casos, cada tabla en la base de datos se corresponderá a un modelo en la aplicación. La mayor cantidad de lógica de negocio de la aplicación debería concentrarse en los modelos.
+\subsubsection{Vistas}
+Las vistas representan la interfaz de usuario de la aplicación. En \emph{Rails}, las vistas son habitualmente archivos HTML con código \emph{Ruby} embebido que realiza únicamente tareas relacionadas con la presentación de los datos. Las vistas manejan el trabajo de proveer información al navegador o la herramienta utilizada para hacer pedidos desde la aplicación.
+\subsubsection{Controladores}
+Los controladores realizan la unión entre modelos y vistas. En \emph{Rails}, los controladores son responsables de procesar los pedidos provenientes del navegador, realizando los pedidos necesarios a los modelos para obtener la información y pasarla a las vistas para que sea presentada.
+
+\subsection{Backbone}
+
+Backbone.js \cite{backbone} es una librería Javascript que permite implementar el patrón de desarrollo MVC (Modelo-Vista-Controlador) del lado del cliente. \emph{Backbone} brinda estructura al 
+código Javascript al proveer modelos con asociaciones del tipo clave-valor, colecciones y vistas con manejo declarativo de eventos, y permite conectar todo esto con el 
+\emph{backend} mediante una interfaz \emph{JSON RESTful}.
+
+Los Modelos de \emph{Backbone} pueden ser creados, validados, destruidos y enviados al servidor para persistirlos. Cuando una acción en la interfaz de 
+usuario genera un cambio en un atributo del modelo,  éste último dispara un evento de cambio.  Las vistas encargadas de desplegar el estado del modelo pueden ser notificadas de 
+este cambio, responder de manera acorde, y volver a \emph{renderizarse} con la nueva información.
+
+
+\input{reglas_rails}
+\begin{comment}
+\section{Buenas prácticas}
+En estas secciones se presentan buenas prácticas para el trabajo con javascript, css y el mejor aprovechamiento del cache del protocolo HTTP.
+\input{jstips}
+\input{http_cache}
+\input{css_selector}
+\end{comment}
+

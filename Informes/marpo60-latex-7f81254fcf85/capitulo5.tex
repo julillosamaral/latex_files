@@ -1,0 +1,48 @@
+\chapter{Caso de estudio}
+
+Para poder aplicar lo presentado en capítulos anteriores, se decidió trabajar con la aplicación \emph{Diaspora}. En este Capítulo se describe la aplicación y su arquitectura básica, los motivos por los cuáles fue elegida como caso de estudio y una descripción sobre la comunidad que la mantiene.
+
+\section{Diaspora}
+\label{capitulo5:diaspora}
+\emph{Diaspora} es una red social descentralizada donde la información de los  usuarios no es almacenada en un sólo lugar. La información de los usuarios se encuentra dispersa en los diferentes servidores que corren la aplicación conocidos como \emph{pods}, el usuario tiene la opción de seleccionar el lugar usado para el almacenamiento de su información.
+La ventaja de este sistema es clara, el usuario tiene el control sobre su información, nadie tiene la capacidad de capturar la información de todos los usuarios, ya que la misma se encuentra dispersa por todo el mundo. Al ser una red social orientada a la privacidad de los usuarios, \emph{Diaspora} permite que el usuario seleccione el servidor en el cual se registra, realice el \emph{deploy} de su propio servidor para mantener la privacidad de sus datos, decida quién tiene acceso a sus \emph{posts}, separando a sus contactos en grupos llamados \emph{aspects}. 
+
+\emph{Diaspora} esta implementada en \emph{Ruby on Rails} y utiliza \emph{Backbone} \cite{backbone} para implementar la funcionalidad del lado del cliente y desplegar la página. Su código CSS está escrito en SASS, que genera el código a partir del \emph{asset pipeline} de \emph{Rails}.
+Esta red social distribuida permite al usuario publicar textos, imágenes y videos en la red, insertar \emph{hashtags} para categorizarlos y nombrar a otros usuarios para que los vean. También permite comentar, indicar ``Me gusta'' sobre las publicaciones y compartir publicaciones de otros usuarios.
+La arquitectura distribuida de \emph{Diaspora} introduce también una gran cantidad de mensajes en la red, mucha comunicación entre \emph{pods} generando más tráfico y haciéndola más pesada que una arquitectura centralizada.
+Se decidió tomar esta aplicación como caso de estudio porque era una aplicación \emph{Ruby on Rails} en producción, con miles de usuarios alrededor del mundo y con una arquitectura distribuída y una comunidad de gran tamaño aportando a su desarrollo. Al ser una aplicación \emph{open source} brindaba también la posibilidad de aportar soluciones.
+
+A continuación se presentará información sobre los principales modelos de la aplicación, cómo interactúa la comunidad de \emph{Diaspora} y las herramientas que son utilizadas para este fin.
+
+\subsection{Modelos}
+En esta sección se presentará una descripción de los principales modelos que utiliza \emph{Diaspora}.
+
+\textbf{User:} Un \emph{User} representa la información privada y habilidades de un usuario en determinado servidor. El objeto \emph{User} es capaz de agregar una amistad, actualizar su perfil y publicar actualizaciones. Un \emph{User} tiene asociado un objeto del tipo \emph{Person}. 
+
+\textbf{Contact:} Es un objeto que funciona de ``proxy'' para cada persona con la cual un \emph{User} tiene una amistad.
+
+\textbf{Person:} El objeto \emph{Person} es un \emph{User} visto desde el exterior. Cuando un usuario establece una amistad con otro usuario, se genera una asociación entre el objeto \emph{User} y un objeto \emph{Person} que representa al usuario con el cual se generó la amistad.
+ Un objeto \emph{Person} tiene muchos \emph{Posts}, un \emph{Profile} y es donde se almacena la clave pública de un \emph{User}.
+
+\textbf{Profile:} Contiene información sobe el objeto \emph{Person}. Actualmente, un \emph{Profile} se ve igual para todo el que lo mire.
+
+\textbf{Aspect:} Contiene una lista de objetos \emph{Person} y \emph{Post}. Los \emph{Aspects} son privados para los \emph{Users}. 
+
+\textbf{Post:} Un \emph{Post} pertenece a un objeto del tipo \emph{Person}, contiene un conjunto de \emph{Comments} y de \emph{Tags}.
+
+\textbf{Comment:} un \emph{Comment} pertenece a un \emph{Post}. Y representa un comentario de un usuario a un \emph{Post}.
+
+\textbf{Tag}: Pertenece a un \emph{Post}. Permite a los usuarios etiquetar \emph{Posts}.
+
+\subsection{Comunidad y open source}
+
+\emph{Diaspora} es un proyecto \emph{open-source} bajo la licencia \emph{Affero General Public License version 3} \cite{agpl}. Una explicación más detallada sobre la licencia de cada componente del proyecto se puede encontrar en \cite{copyright}
+
+El proyecto de \emph{Diaspora} comenzó en el año 2010 y contó desde sus comienzos con un gran apoyo por parte de los usuarios que creían en darle al usuario el control y la propiedad sobre su información. Esa visión evolucionó y se expandió por todo el mundo a medida que el proyecto crecía. La recepción por parte de la comunidad fue tan buena que hoy en día la red ha llegado a ser instalada por todo el mundo y utilizada por miles de personas.
+
+\emph{Diaspora} desde Agosto de 2012 está bajo el control de la comunidad \cite{diasp_comunidad}. Siendo un código administrado por una comunidad de desarrolladores, al analizar la aplicación encontramos varios puntos a mejorar de la aplicación. Debido a esto y al ser una aplicación desarrollada en \emph{Ruby on Rails}, con una arquitectura compleja y un gran volumen de usuarios, que de acuerdo a las últimas estadísticas del sitio \cite{diasp_stats} actualmente llega a alrededor de 369960 usuarios distribuidos en diferentes \emph{pods} alrededor del mundo, se decidió utilizar \emph{Diaspora} como caso de estudio del proyecto.
+
+Actualmente, hay cientos de \emph{pods} administrados por miembros de la comunidad y el proyecto es uno de los más grandes proyectos de GitHub a la fecha. La aplicación se encuentra traducida a cincuenta idiomas, con cientos de desarrolladores alrededor del mundo colaborando con el proyecto.
+
+\input{comunidad}
+

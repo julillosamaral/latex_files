@@ -1,0 +1,75 @@
+\subsubsection{IDMEF}
+
+Intrusion Detection Message Exchange Format (IDMEF) fue especificado como un 
+protocolo experimental que no especifica ningún estándar. El propósito de 
+IDMEF es definir formatos de datos y procedimientos de intercambio para 
+compartir información de interés con sistemas de detección de intrusos y 
+sistemas de respuesta con los sistemas de administración que deben 
+interactuar con estos. El RFC de IDMEF describe el modelo de datos para 
+representar información tomada de los sistemas de intrusión. Se busca que dicho 
+formato pueda ser utilizado por los Intrusion Detection Systems (IDSs) para 
+reportar alertas sobre eventos que parezcan sospechosos.
+
+Por medio de la firma digital de XML se busca proveer integridad, autenticidad de 
+los mensajes y de los servicios. La responsabilidad para la integridad y 
+autenticación de los mensajes es responsabilidad del protocolo de comunicación y 
+no del formato de mensajes. La inclusión de firmas digitales en mensajes IDMEF 
+debería ser realizada en casos en los que éstas deban ser archivadas para su uso 
+posterior o cuando los mensajes IDMEF son intercambiados sobre protocolos poco 
+seguros.
+
+\paragraph{Modelo de datos de IDMEF}
+El modelo de datos de IDMEF es una representación orientada a alertas enviadas a 
+los administradores desde los sistemas de intrusión. El modelo de datos presenta 
+varios problemas referentes a la representación de los datos:
+\begin{itemize}
+  \item Generalmente, la información de las alertas es heterogénea. Algunas 
+  alertas son definidas con poca información, otras proveen información más 
+  detallada. Ejemplos de alertas con poca información son aquellas que solo 
+  presentan datos de origen, destino, nombre u hora, estos datos pueden set 
+  extendidos por alertas detalladas en las cuales se presenta información de 
+  usuarios, procesos o puertos de servicios. Es necesario que el modelo de datos 
+  que represente dicha información sea flexible para adaptarse a las distintas 
+  necesidades. Un modelo de datos orientado a objetos es extensible por medio de 
+  agregación y sub clases, de esta forma una implementación que no entienda 
+  estas extensiones podrá seguir entendiendo el subconjunto de información que 
+  está definido en el modelo. Estas dos formas de extender el modelo permiten 
+  que se mantenga su consistencia.
+  \item Los IDSs son diferentes, algunos de estos detectan ataques analizando el 
+  tráfico en la red, otros utilizando los logs de sistemas operativos o 
+  aplicaciones que auditan información. Las alertas generadas para un mismo 
+  ataque pero por medio de diferentes herramientas, no necesariamente contienen 
+  los mismos datos. El modelo de datos define clases que soportan las 
+  diferencias en las fuentes de los datos. En particular, las nociones de 
+  fuente y objetivo para la alerta son representadas por una combinación de 
+  nodo, procesos, servicio y clases de usuario.
+  \item Dependiendo del tipo de red o sistema operativo utilizado, los 
+  ataques serán observados y reportados de manera diferente lo cual lleva a que 
+  el modelo de datos deba adaptarse a dichas diferencias.
+  \item Los instrumentos comerciales persiguen objetivos diferentes. Por varias 
+  razones, estos desean entregar más o menos información sobre ciertos tipos de 
+  ataques. El modelo debe permitir la flexibilidad necesaria preservando su 
+  integridad.
+\end{itemize}
+
+El diseño del modelo de datos busca proveer una representación estándar de las 
+alertas de manera que la información no sea ambigua y que se describa la 
+relación entre alertas simples y complejas.
+
+El objetivo de dicho modelo es proveer una representación estándar de la 
+información analizada por un sistema de intrusión cuando es detectado 
+un evento inusual. Estas alertas pueden ser simples o complejas 
+dependiendo de las capacidades de la herramienta que las creo.
+
+Los nuevos objetos son introducidos para referenciar contenido adicional. Esto 
+es importante debido a que la tarea de clasificar y nombrar vulnerabilidades es 
+difícil y sumamente subjetiva. El modelo de datos no debe ser ambiguo, por lo 
+que mientras que se permite que los análisis sean más o menos precisos 
+entre ellos, no se debe permitir que estos produzcan información contradictoria  
+en dos alertas que describen el mismo evento. De todas formas, siempre es 
+posible insertar toda la información útil de un evento en campos de extensión 
+de la alerta en lugar de en los campos a los que estos pertenecen, sin embargo, 
+dichas prácticas reducen la interoperabilidad y deberían ser evitadas en lo 
+posible.
+
+

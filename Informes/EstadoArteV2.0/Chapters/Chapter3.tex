@@ -1,0 +1,199 @@
+% Chapter Template
+
+\chapter{STIX} 
+\label{Chapter3}
+\lheader{Chapter 3. \emph{STIX}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Background}
+
+STIX busca dar una representación estructurada de la información y que a su vez 
+está sea expresiva, flexible, extensible, automatizable y legible. Esto se 
+presenta como un desafío ya que la información intercambiada debe ser 
+estructurada para que pueda ser parseada por una maquina pero no se debe perder 
+la posibilidad de que una persona la pueda leer y entender así de esta forma no se 
+pierde el juicio y control que esta puede tener.
+
+También se busca que STIX se transforme en un estándar para la comunidad para 
+obtener información de calidad que de un aprovechamiento mejor de esta y sin 
+saber de antemano la fuente de los datos provistos.
+
+El desarrollo de una herramienta de este tipo se ha vuelto urgente dado la 
+velocidad y complejidad con la cual evolucionan las amenazas también teniendo 
+consideración de la basta cantidad de datos que se deben intercambiar. Por ello 
+es necesario establecer una forma automática para ayudar a los analistas a 
+ejecutar acciones defensivas con un conjunto de datos mas grande del que podrían 
+obtener si trabajaran aisladamente.
+
+\section{Aproximaciones de la actualidad}
+La información que se intercambia y utiliza hoy en día es atómica, 
+inconsistente y muy limitada en sofisticación y expresividad. En donde se 
+utilizan estructuras estandarizadas, estas son tipicamente focalizadas en una 
+porción del problema. Además no se integran de forma adecuada entre si o carecen 
+de flexibilidad. Las actividades de intercambio de indicadores son entre 
+humanos, siendo los indicadores desestructurados o semi-estructurados 
+intercambiados por portales web o encriptados vía email. Más recientemente se 
+ha visto el surgimiento de transferencias entre maquinas de conjuntos de 
+indicadores simples de modelos de ataques bien conocidos.
+
+A diferencia de IODEF, STIX posee una lista de elementos para construir 
+indicadores de compromiso y se integra con CAPEC, MAEC o CVE. Además posee 
+soporte para tácticas, técnicas y procedimientos del adversario y campañas 
+realizadas por la organización. IODEF fue pensado para compartir información de 
+incidentes y no indicadores de compromiso. STIX permite el intercambio de 
+indicadores referentes a amenazas así como información de contexto. Juntos, 
+permiten tener un conjunto más completo de las intenciones, capacidades, 
+motivaciones y actividades de un adversario y de esa forma defenderse de él.
+
+STIX busca extender los indicadores para permitir el manejo e intercambio de 
+indicadores de forma más expresiva así como de un espectro más amplio de 
+información.
+
+Actualmente, el intercambio y manejo de información de forma automática de 
+información es visto típicamente en lineas de productos, servicios ofrecidos o 
+soluciones especificas de una comunidad. STIX busca permitir el intercambio de 
+información de forma comprensiva, rica, de alta fidelidad entre organizaciones, 
+comunidades, productos y servicios ofrecidos. STIX es un lenguaje para la 
+especificación, captura, caracterización y comunicación de información de 
+seguridad estándar. Lo hace de forma estructurada para soportar un mejor manejo 
+de la información y la aplicación de automatización. Una variedad de casos de 
+uso para dicha información son realizados.
+\begin{itemize}
+  \item Análisis de las amenazas
+  \item Especificación de patrones de indicadores para la amenaza.
+  \item Manejo de las actividades de respuesta
+  \item Intercambiar información
+\end{itemize}
+
+STIX provee un mecanismo común para hacer frente a estos casos de uso dando 
+consistencia, eficiencia, interoperabildiad y conciencia global de la situación.
+
+STIX provee una arquitectura unificada juntando un conjunto amplio de 
+información incluyendo:
+\begin{itemize}
+  \item Cyber Observables
+  \item Indicadores
+  \item Incidentes
+  \item Tácticas, técnicas y procedimientos de los adversarios
+  \item Objetivos de exploits
+  \item Cursos de acción
+  \item Campañas de ataques
+  \item Actores de ataques
+\end{itemize}
+
+Para permitir que dicha solución sea practica para cualquier caso de uso, 
+lenguajes existentes y estandarizados son utilizados.
+
+\section{Casos de uso}
+\subsection{Análisis de amenazas}
+Un analista revisa información estructurada y no estructurada respecto a 
+actividades de amenazas de una variedad de fuentes de entradas manuales o 
+automáticas. El analista busca entender la naturaleza de las amenazas 
+relevantes, identificarlas y caracterizarlas totalmente para que todo el 
+conocimiento relevante de la amenaza sea totalmente expresado y evolucionado a 
+traves del tiempo. Este conocimiento relevante incluye acciones relacionadas con 
+la amenaza, comportamientos, capacidades, intenciones, actores atribuidos, etc. 
+Por medio del entendimiento y la caracterización, el analista puede especificar 
+patrones de indicadores relevantes, sugerir acciones para las actividades de 
+respuesta y compartir la información con miembros de la comunidad.
+
+\subsection{Especificación de patrones de indicadores}
+Un analista especifica patrones medibles representando las características 
+observables de una amenaza junto con su contexto y metadata para ser 
+interpretadas, manejadas y aplicar el patrón y sus resultados. Esto puede ser 
+realizado de forma manual o con la asistencia de una herramienta automatizada.
+
+\subsection{Manejo de las actividades de respuesta}
+Los tomadores de decisión y el personal de operaciones trabajan en conjunto para 
+prevenir o detectar actividades amenazantes y responder a los incidentes 
+detectados que sean realizados por dichas amenazas. Las acciones preventivas 
+pueden mitigar vulnerabilidades, debilidades, o malas configuraciones que sean 
+que sean objetivos de los exploits. Luego de la detección e investigación de 
+incidentes específicos, acciones reactivas pueden ser realizadas.
+
+\subsubsection{Prevención de amenazas}
+
+Los tomadores de decisiones evalúan acciones preventivas para amenazas 
+relevantes que sean identificadas y seleccionan acciones apropiadas para su 
+implementación. El personal de operaciones implementa las acciones seleccionadas 
+para prevenir la ocurrencia de amenazas especificas aplicando mitigaciones 
+amplias o con objetivos específicos iniciados por interpretación de los 
+indicadores.
+
+\subsubsection{Detección de amenazas}
+
+El personal de operaciones aplica mecanismos (automáticos y manuales) para 
+monitorear y asistir las operaciones con la finalidad de detectar la ocurrencia 
+de amenazas específicas basándose en la evidencia histórica, análisis del 
+contexto actual, interpretación de los indicadores que se presentan. Esta 
+detección se realiza generalmente por medio de patrones de indicadores.
+
+\subsubsection{Respuesta a incidentes}
+
+El personal de operaciones responde a amenazas detectadas, investiga que ha 
+ocurrido o está ocurriendo, trata de identificar y caracterizar la naturaleza de 
+las amenazas y lleva a cabo la mitigación o lleva a cabo cursos de acción 
+preventivos. Una vez que los efectos son entendidos, el personal de operaciones 
+puede implementar mitigaciones acordes o llevar a cabo cursos de acción 
+correctivos.
+
+\subsection{Compartir información de amenazas}
+Los tomadores de decisión establecen políticas respecto a que tipo de 
+información será compartida, además toman decisiones respecto a con quienes se 
+comparte y como debería ser manejada basándose en frameworks de confianza de 
+forma de mantener niveles adecuados de consistencia, contexto y control. Esta 
+política es luego implementada para compartir los indicadores de amenazas 
+apropiados y otra información de amenazas.
+
+\section{Principios de guía}
+En el enfoque dado a STIX se ha buscado implementar un conjunto de principios 
+con el consenso de la comunidad. Esos principios son los siguientes:
+\subsection{Expresividad}
+Con el fin de soportar la diversidad de casos de uso relevantes, STIX apunta a 
+proveer una cobertura expresiva en todos sus casos de uso específicos en lugar 
+de dirigirse específicamente a alguno de ellos.
+\subsection{Integración en lugar de duplicación}
+Cuando STIX abarca conceptos de información estructurada para los cuales ya 
+existen representaciones estandarizadas con el consenso adecuado y que se 
+encuentran disponibles, se busca integrar estas representaciones a la 
+arquitectura STIX en lugar de duplicar esta información innecesariamente.
+\subsection{Flexibilidad}
+Con el fin de soportar un amplio rango de casos e información variable con 
+varios niveles de fidelidad, STIX esta diseñado para ofrecer tanta flexibilidad 
+como sea posible. STIX se adhiere a una política de permitir a los usuarios 
+utilizar cualquier porción de representaciones estándar que sean relevantes para 
+un contexto dado y evita elementos obligatorios siempre que sea posible.
+
+\subsection{Extensibilidad}
+Con la finalidad de soportar un amplio rango de casos de uso con un potencial 
+diferente de representación y para facilitar el perfeccionamiento 
+impulsado por la comunidad, se ha diseñado STIX para construir mecanismos de 
+extensión para usos específicos, para usos localizados, para refinamientos del 
+usuario y evolución y para facilidad de refinamiento y evolución centralizada.
+
+\subsection{Automatización}
+El diseño realizado en STIX busca maximizar la estructura y la consistencia para 
+soportar métodos de procesamiento automático por máquinas.
+
+\subsection{Lectura}
+El diseño de STIX busca estructuras del contenido para que no sea únicamente 
+consumible o procesable por maquinas sino que también sea leíble por humanos. 
+Esto es necesario para claridad y comprensibilidad durante las primeras etapas 
+de desarrollo y adopción.
+
+\section{Implementación}
+La implementación inicial de STIX utiliza XML como un mecanismo portable, 
+estructurado y que se puede encontrar en cualquier parte para la discusión, 
+colaboración y refinamiento entre las comunidades involucradas. Esta pensado 
+para el desarrollo colaborativo de un lenguaje estructurado sobre información de 
+amenazas entre expertos de la comunidad. Se ha pensado que el uso del lenguaje 
+es incentivado y soportado por medio del desarrollo de varias herramientas como 
+APIs. Solo por medio de niveles adecuados de colaboración entre miembros de la 
+comunidad y con la utilización de datos reales se puede llegar a que la solución 
+evolucione.
+
+
+

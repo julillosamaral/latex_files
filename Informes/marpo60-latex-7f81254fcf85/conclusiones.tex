@@ -1,0 +1,100 @@
+\chapter{Conclusiones}
+
+% performance: materia difícil
+% necesidad de herramientas más precisas para el comportamiento
+% Conclusiones de las mejoras
+% Vigencia de las reglas souders
+% Conclusiones del trabajo en la comunidad
+% Trabajo a futuro
+
+\section{Resultados}
+
+Durante el desarrollo de este proyecto se logró identificar un conjunto de buenas prácticas para el desarrollo de aplicaciones web, las mismas se encuentran definidas en la sección 
+\ref{capitulo3:reglas}. En la sección \ref{capitulo3:sitios_visitados} se realizó un estudio, en el cual se verificó si los sitios más visitados en la actualidad según \cite{alexa} cumplen 
+con éstas reglas. Por otro lado, concluimos que si bien varias de las reglas presentadas en la Sección \ref{capitulo3:reglas} datan del 2007, hoy en día siguen existiendo aplicaciones que no las cumplen. Otro resultado de la investigación realizada es que la herramienta \emph{Ruby on Rails} adopta por defecto muchas de las buenas practicas recomendadas,
+simplificando el desarrollo de aplicaciones web que cumplen con las mismas.
+
+Se analizó el cumplimiento de las reglas definidas en \ref{capitulo3:reglas} sobre una aplicación real construida con \emph{Ruby on Rails} y se encontraron varios aspectos a mejorar. Se 
+describió cada problema encontrado y se realizaron mejoras que en algunos casos fueron incluidas en el repositorio oficial de la aplicación.
+
+Aplicando los conocimientos presentados en el Capítulo \ref{capitulo2} se realizó un conjunto de pruebas de performance para validar los cambios en el caso de estudio y se
+ejecutaron. Finalmente se presentó un análisis exhaustivo de los resultados de cada caso de prueba y a partir de los mismos fue posible concluir que las mejoras presentadas efectivamente mejoraron la performance de la aplicación. Al verificar que el impacto de los cambios fue positivo, se puede afirmar que las prácticas investigadas en este informe
+se pueden aplicar para resolver problemas en aplicaciones reales.
+
+\section{Conclusiones}
+
+\subsection{Dificultades al evaluar la performance}
+
+Una de las conclusiones principales de este proyecto, es que la dificultad en la medición y mejora de la performance de una aplicación web es muy alta. En particular, la reproducción del
+comportamiento de los usuarios, determinar qué casos de uso son relevantes, y qué elementos medir de los mismos, forman parte de un proceso complejo que debe realizarse con mucho cuidado. Tomar malas mediciones, o asumir que ciertas métricas indican que el rendimiento de la aplicación y la percepción de los usuarios mejorará cuando no lo hacen, pueden resultar
+en implementaciones de supuestas mejoras que pueden tener resultados contraproducentes. En el desarrollo del proyecto, a la hora de realizar pruebas y ejecutarlas, existieron
+varias dificultades desde el punto de vista técnico de las mejoras realizadas y la implementación de las pruebas. Constatamos que es sencillo cometer errores simples, que 
+generan resultados incorrectos, por ejemplo tener datos inválidos en la base de datos de prueba, errores en la configuración del servidor de pruebas, correr las pruebas sin considerar todas las 
+optimizaciones que se desean medir, entre otras. Estos errores se traducen en un costo muy alto de re ejecución que debe ser considerado. Para que las pruebas tengan sentido, en general es necesario simular una cantidad importante de usuarios lo que causa que cada ejecución pueda rondar un tiempo de decenas de minutos o hasta un par de horas.
+
+Otra dificultad encontrada durante el proyecto, es que ningún miembro del equipo tenía experiencia en el desarrollo de pruebas de performance. Esto implicó un desafío técnico y teórico,
+donde cada miembro del equipo debió incorporar conocimiento de performance web desde el nivel más básico. También fue necesario aprender a identificar escenarios de uso
+enfocados en la performance, y a utilizar herramientas específicas para poder plasmarlos. 
+Representó un desafío importante para el equipo planificar pruebas de performance enfocadas en una aplicación web del mundo real como lo es \emph{Diaspora},
+que es utilizada por miles de usuarios a diario.
+Otra dificultad a la que se enfrentó el equipo fue intentar recrear situaciones de la realidad lo más fielmente posible. Una gran cantidad de problemas de performance en aplicaciones web
+de la vida real sólo suceden en determinadas situaciones especiales, como por ejemplo horas pico o días especiales del año. 
+También pudimos constatar que no es sencillo reproducir el estado de los datos de una aplicación en producción, y en el caso de este proyecto no se pudieron conseguir de la base de datos
+de la realidad debido a cuestiones de privacidad de los usuarios.
+Sin embargo, aplicando el conocimiento teórico adquirido se logró definir un ambiente de pruebas para la ejecución del plan de pruebas diseñado. 
+De esta forma fue posible comparar mediciones realizadas previa y posteriormente a la implementación de los cambios.
+
+\subsection{Necesidad de mejores herramientas}
+Las herramientas de performance actuales no se adaptan a evaluar la performance del lado del cliente. Esto
+genera inconvenientes a la hora de generar planes de pruebas, ya que emular la realidad del usuario se vuelve más complejo. Por otro lado, cada uno de los navegadores más
+utilizados realizan heurísticas en paralelo a la implementación del protocolo HTTP para brindar una mejor experiencia de usuario. Sin embargo, este comportamiento
+no es fácilmente reproducible al realizar pruebas, lo que produce una diferencia entre los resultados de las pruebas y la realidad que viven los usuarios.
+
+Al día de hoy no existe una herramienta de pruebas de performance web que ejecute \emph{javascript} o que realice el análisis de la respuesta HTTP con el documento HTML encargándose de seguir los mismos patrones que los navegadores para realizar los pedidos siguientes. Si bien existen herramientas, como por ejemplo \emph{JMeter} que se encargan de sobrecargar a la aplicación para evaluar su comportamiento, estas no simulan correctamente el comportamiento de los usuarios, y no están enfocadas en detectar como es la experiencia de los mismos, un factor fundamental a la hora de medir performance. Las herramientas del lado cliente como
+\emph{Page Speed} o \emph{YSlow}, se ven influenciadas por elementos externos a la aplicación que se desea medir, por ejemplo, la presencia de imágenes externas a la aplicación influyen en la evaluación de las herramientas sobre un sitio web.
+
+\subsection{Aportes y trabajo con la comunidad}
+Consideramos que la posibilidad de participar de un proyecto \emph{open source} le agregó valor al proyecto. Para llevar adelante esta tarea tuvimos la necesidad de relacionarnos con la comunidad, intercambiando conocimiento y código. Se mantuvieron sesiones regulares en el canal
+\emph{IRC} de \emph{Diaspora} hablando en inglés y en algunos casos alemán, lo cual planteó un desafío extra en las discusiones técnicas. 
+La respuesta de la comunidad a las mejoras planteadas por los miembros del equipo fue bien recibida, a tal punto de que el \emph{Core Team} de \emph{Diaspora}
+decidió incorporar a uno de los integrantes del grupo como uno de los encargados del mantenimiento del repositorio oficial, debido a la calidad de los aportes brindados \cite{loomio_fabian}. 
+
+Además de las mejoras directamente relacionadas con la performance de la aplicación, se realizaron aportes de otro tipo, como la eliminación de código no utilizado y la implementación de nuevas
+funcionalidades. Dado el conocimiento ganado sobre la aplicación y el relacionamiento generado con la comunidad de \emph{Diaspora}, es probable que el equipo continúe aportando código a la aplicación una vez terminado el proyecto de grado. 
+
+\subsection{Mejoras implementadas}
+
+Al finalizar el proyecto, el equipo propuso un conjunto de mejoras a la comunidad de \emph{Diaspora}. Todas las propuestas a excepción de una, fueron aceptadas y se encuentran en el sitio oficial en producción actualmente, o en la rama principal de desarrollo próxima a liberarse.
+Para sorpresa del equipo, las mejoras con menos complejidad técnica fueron las que más impactaron en la performance del sitio. 
+Esto evidencia la validez de las reglas, ya que los resultados corroboran que siguiendo un conjunto de buenas prácticas ya establecidas, pero que generalmente
+no se siguen por falta de conocimiento, puede obtenerse una mejora en la performance.
+
+%La mayoría de las mejoras realizadas fueron del lado cliente de la aplicación, esto no quiere decir que no haya lugar a la mejora en el lado servidor. Es posible realizar mejoras
+%del lado servidor, pero se cree que con los resultados obtenidos, y por la regla del ochenta veinte, era más indicado enfocarse en esta área.
+Otro resultado que se desprende del proyecto es que \emph{Ruby on Rails} como herramienta de desarrollo web permite seguir las buenas prácticas para la performance de forma simple, sin mayor complejidad.
+Muchas de las reglas de performance del lado cliente pueden cumplirse por el simple hecho de seguir las convenciones establecidas por la herramienta. Sin embargo, se pudo comprobar que en aplicaciones de gran porte, que realizan un uso intenso del procesamiento del lado cliente, pueden existir diversos problemas como los detallados en el Capítulo \ref{capitulo6}. 
+Para permitir seguir las buenas prácticas que escapan de las opciones brindadas por \emph{Ruby on Rails}, existen paquetes que pueden ser incluidos de forma sencilla y simplifican así de gran forma la tarea del desarrollador. 
+Un ejemplo de esto, aplicado en este proyecto de grado, es la utilización de \emph{compass} como generador de \emph{CSS sprites}, con el que se implementó la mejora en \emph{Diaspora}. 
+
+En los resultados de las pruebas realizadas sobre la aplicación con las mejoras implementadas, se puede ver que a pesar de que las primeras reglas de Souders datan del año 2007, la vigencia
+de las mismas aún continúa, en particular la regla de oro. Gran parte de las mejoras realizas apuntaron a cumplir con esta regla, y fue en este punto donde se logró un fuerte impacto, reduciendo la cantidad de pedidos realizados por la aplicación de forma considerable.
+
+
+\section{Trabajo a futuro}
+
+Una línea de trabajo a futuro es seguir en comunicación con la comunidad de \emph{Diaspora} y la posibilidad de participar en otros proyectos \emph{open source}.
+En el caso particular de \emph{Diaspora}, el siguiente paso es realizar mejoras en el procesamiento del lado servidor. En el transcurso del proyecto se logró
+identificar varios puntos débiles, como por ejemplo consultas que no tenían buena performance a nivel de base de datos y requerían reestructuras de la aplicación y un mayor tiempo de trabajo, representando un proyecto en sí mismo y escapando entonces del alcance del presente proyecto. Además, para lograr algunas mejoras del lado cliente que no pudieron realizarse en su totalidad, fue señalado por los encargados de mantenimiento del sitio la necesidad de reestructurar secciones completas de código, como por ejemplo las hojas de estilo y el código \emph{javascript} para poder así luego lograr su unificación.
+
+Por otro lado, sería de gran valor generar un conjunto de pruebas de performance para medir el desempeño de cada liberación de \emph{Diaspora}. De esta forma podrían tomarse métricas
+comparativas e identificar posibles problemas con funcionalidades nuevas antes de incorporarlas en producción. Para esto sería necesario incluir el conjunto de pruebas en el repositorio oficial y desarrollar una forma sencilla de ejecutarlas
+una vez que se introducen cambios en la rama principal de desarrollo.
+
+Otra rama de trabajo a futuro es el desarrollo de herramientas más apropiadas para realizar pruebas de performance para aplicaciones web con procesamiento intensivo del lado cliente.
+Dentro de esta rama, una posibilidad es aportar nuevas funcionalidades a proyectos como \emph{JMeter}, el cual también es \emph{open source}, e incluir por ejemplo algún
+motor de ejecución de código \emph{javascript}, o una simulación más real del comportamiento de los navegadores.
+
+Por último, sería de interés que el ambiente de pruebas que se utilizó para medir las mejoras fuera integrado a la red de \emph{pods} de \emph{Diaspora}, ya que de esta forma se podrían utilizar los registros de pedidos
+de datos reales para posteriormente realizar simulaciones con tráfico similar al de la realidad. A partir de los registros sería posible verificar qué funcionalidades tienen más uso, para 
+darles prioridad a la hora de realizar optimizaciones. También sería una buena forma de obtener datos reales en la base de datos, aportando más valor a los casos de prueba 
+construidos.

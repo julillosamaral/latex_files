@@ -1,0 +1,63 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{longtable}
+\usepackage[spanish,english]{babel}
+\usepackage{natbib}
+\usepackage{comment}
+\usepackage{url} 
+\usepackage{hyperref}
+\usepackage{slashbox}
+
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{pbox}
+\usepackage{hhline}
+\usepackage{titlesec}
+
+
+\newcommand\arraybslash{\let\\\@arraycr}
+
+\newcommand {\makerow}[2]{
+   \textbf{#1} & #2 \\ \hline
+}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+%\usepackage[pdftex]{graphicx}
+
+%hyperref no color
+\hypersetup{
+  colorlinks,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=black,%
+  urlcolor=black
+}
+
+  
+\begin{document}
+
+\include{front}
+\pagestyle{plain}
+\pagenumbering{arabic} 
+\tableofcontents
+
+\newpage
+
+\paragraph{\LARGE Glosario}
+\input{./glosario/Glosario}
+
+\include{capitulo1}
+\include{capitulo2}
+\include{capitulo3}
+\include{capitulo4}
+\include{capitulo5}
+\include{conclusiones}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{biblio}
+\include{back}
+\include{anexo}
+\end{document}

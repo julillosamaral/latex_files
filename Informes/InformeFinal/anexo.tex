@@ -1,0 +1,111 @@
+\chapter{Anexo}
+\label{anexo}
+	
+	\begin{center}
+		\begin{tabular}{|l|}
+			\hline
+			def inbox\_service(request, inbox\_name): \\
+			"""Handles TAXII Inbox Service requests.""" \\ \\
+			
+			def poll\_service(request):\ \\
+			"""Handles TAXII Poll Service requests.""" \\ \\
+			
+			def feed\_managment\_service(request): \\
+			"""Handles TAXII Feed Managment Service requests.""" \\ \\
+			
+			def subscription\_service(request):\ \\
+			"""Handles TAXII Subscription Service requests.""" \\
+			\hline
+		\end{tabular}
+	\end{center}\ \\
+	
+	A continuación se muestra la firma de la API desarrollada.
+	\begin{center}
+		\begin{tabular}{|l|}
+			\hline
+			class UserViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates users.\\ \\
+			
+			class ProtocolBindingIdViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates ProtocolBindingIds\\ \\
+			
+			class ContentBindingIdViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates ContentBindingIds\\ \\
+			
+			class MessageBindingIdViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates MessageBindingIds\\ \\
+			
+			class DataFeedPushMethodViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates DataFeedPushMethods\\ \\
+			
+			class DataFeedPollInformationViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates DataFeedPollInformations\\ \\
+			
+			class RemoteDataFeedPollInformationViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates RemoteDataFeedPollInformations\\ \\
+			
+			class DataFeedSubscriptionMethodViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates DataFeedSubscriptionMethods\\ \\
+			
+			class ContentBlockViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates ContentBlocks\\ \\
+			
+			class DataFeedViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates DataFeeds\\ \\
+			
+			class RemoteDataFeedViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates RemoteDataFeeds\\ \\
+			
+			class DataFeedSubscriptionViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates SubscriptionFeeds\\
+			
+			\hline
+		\end{tabular}
+	\end{center}
+	\newpage
+	\begin{center}
+		\begin{longtable}{|l|}
+			\hline
+			
+			class InboxViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates Inboxes\\ \\
+			
+			class RemoteInboxViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates RemoteInboxes\\ \\
+			
+			class ContentBlockRTIRViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates ContentBlockRTIRs\\ \\
+			
+			class TAXIIServicesViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates TAXIIServices\\ \\
+			
+			class FeedManagmentServicesViewSet(viewsets.ModelViewSet):\\
+			\#Gets, lists, creates or updates FeedManagementServices\\ \\
+			
+			
+			def get\_remote\_data\_feeds(request):\\
+			\#Given the id of a TAXII Service we make a FeedInformation request to\\ that service address.\\
+			\#The response is a list of the feed names of the TAXII client and\\ a list of all protocol bindings,\\ content binding and message binding.\\ \\
+			
+			def register\_remote\_data\_feeds(request):\\
+			\#Given the id of a TAXII service we get the data feeds of the TAXII Client and\\ copy them to the current system.\\ \\
+			
+			def create\_information(request):\\
+			\#When in GET method return all the Content Blocks.\\
+			\#When in POST method, given a content binding id, a title, description and content\\ we create a Content Block.\\ \\
+			
+			def send\_information\_to\_inbox(request):\\
+			\#Given the id of a DataFeed Subscription we get the Data Feeds and send it to\\ send it to the inbox service of the organization of the subscription service.\\ \\
+			
+			def poll\_information(request):\\
+			\#Given the id of a remote data feed,\\ we get the poll service instances and for each make a poll request.\\ \\
+			
+			def get\_data\_feed\_subscriptions(request):\\
+			\#We get all the date feed subsctiptions and\\ return the id, adress and data feed name of each.\\ \\
+			
+			def subscription\_to\_data\_feed(request):\\
+			\#Given the id of a TAXII Service and the id of a Data Feed and\\ the service id we make a Manage Feed Subscription request for that Data Feed.\\		
+			
+			\hline
+		\end{longtable}
+	\end{center}

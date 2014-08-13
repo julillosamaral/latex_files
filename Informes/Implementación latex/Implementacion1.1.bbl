@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{Celery}
+Celery.
+\newblock \url{http://www.celeryproject.org/}.
+
+\bibitem{Django}
+Django.
+\newblock \url{https://www.djangoproject.com/}.
+
+\bibitem{pythonstixdoc}
+Documentation of pythonstix.
+\newblock \url{http://stix.readthedocs.org/en/latest/}.
+
+\bibitem{pythonstixgit}
+Git of pythonstix.
+\newblock \url{https://github.com/STIXProject/python-stix}.
+
+\bibitem{libtaxii}
+libtaxii.
+\newblock \url{https://github.com/TAXIIProject/libtaxii}.
+
+\bibitem{rest_framework}
+Rest framework.
+\newblock \url{http://www.django-rest-framework.org/}.
+
+\bibitem{yeti}
+Yeti.
+\newblock \url{https://github.com/TAXIIProject/yeti}.
+
+\end{thebibliography}
