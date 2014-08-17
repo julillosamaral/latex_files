@@ -1,6 +1,6 @@
 \subsubsection{IODEF}
 
-Incident Object Description Exchange Format (IODEF) define una representación de datos que provee un framework para el 
+\textit{Incident Object Description Exchange Format} (IODEF) define una representación de datos que provee un framework para el 
 intercambio de información entre CSIRTs, dicho tipo de información de seguridad 
 es comúnmente intercambiado entre este tipo de organizaciones. IODEF provee una 
 representación en XML para transportar información de incidentes entre pares en 
@@ -9,7 +9,7 @@ operacionales de remediar o analizar y establecer advertencias en un dominio
 definido. El modelo de datos provisto por IODEF codifica la información 
 referente a hosts, redes y servicios corriendo en estos sistemas; metodología 
 de ataques y evidencia forense asociada; impacto de la actividad realizada y
-aproximaciones a los trabajos realizados.
+aproximaciones a los trabajos realizados.\\
 
 IODEF debería ser compatible con IDMEF y tener la capacidad de incluir mensajes 
 IDMEF. Los actores principales en IODEF son los CSIRTs y no los IDSs como ocurre 
@@ -18,7 +18,7 @@ personas, por ello un mensaje IODEF es parseable por una máquina y a su vez
 leíble por humanos. Los objetos IODEF tienen un tiempo de vida mayor a IDMEF, 
 en éste último los mensajes son utilizados una sola vez. Los mensajes IODEF consideran 
 información referente al manejo de incidentes, almacenamiento de dicha 
-información o estadísticas y análisis.
+información o estadísticas y análisis.\\
 
 El objetivo primordial de IODEF es mejorar las capacidades operacionales de los 
 CSIRTs. La adopción por parte de la comunidad provee una habilidad mejorada para 
@@ -40,9 +40,9 @@ que las organizaciones intercambien información. IODEF no busca evadir dichas
 consideraciones, sin embargo, las implementaciones operacionales de IODEF deben 
 considerar este contexto.
 
-\paragraph{Modelo de datos de IODEF}
+\paragraph{Modelo de datos de IODEF}\ \\
 
-A la hora de diseñar IODEF se realizaron ciertas consideraciones de diseño
+A la hora de diseñar IODEF se realizaron ciertas consideraciones de diseño:
 \begin{itemize}
   \item El modelo de datos sirve como formato de transporte, lo que lleva a que 
   su representación específica no sea óptima para almacenamiento en disco, 
@@ -73,25 +73,25 @@ intercambian se deben tomar precauciones para asegurar la confidencialidad
 durante el intercambio y el subsecuente procesamiento. El primero debe ser 
 resguardado por un formato de mensaje, pero luego se deben tener consideraciones 
 de seguridad en el sistema que procesa los datos, los almacena y archiva la 
-documentación y la información derivada de éstos.
+documentación y la información derivada de éstos.\\
 
 El formato de mensajes subyacente y el protocolo utilizado para intercambiar 
 datos provee una garantía de confidencialidad, integridad y autenticidad. El uso 
-de protocolos de seguridad estandarizados es recomendado. Por ejemplo 
+de protocolos de seguridad estandarizados es recomendado, por ejemplo 
 IODEF/RID.
 
-\paragraph{Trabajo de MILE}
+\paragraph{Trabajo de MILE}\ \\
 
-Managed Incident Lightweight Exchange (MILE) es un grupo de trabajo del IETF que 
+\textit{Managed Incident Lightweight Exchange} (MILE) es un grupo de trabajo del IETF que 
 enfoca sus esfuerzos en dos áreas. La primera es el formato de datos y 
 extensiones para representar incidentes y datos de indicadores con IODEF. La segunda área 
-es el protocolo RID.
+es el protocolo RID.\\
 
 Respecto a IODEF se busca revisar el RFC para incorporar mejoras y extensiones 
 basándose en la experiencia que ha sido obtenida de su utilización. Se busca poder extender IODEF para 
-soportar extensiones especificas necesarias por la industria y permitir utilizar 
-contenido especifico. Además MILE busca proveer guías en la implementación y uso 
-de IODEF para ayudar a los implementadores en el desarrollo de sistemas.
+soportar extensiones específicas necesarias por la industria y permitir utilizar 
+contenido específico. Además MILE busca proveer guías en la implementación y uso 
+de IODEF para ayudar a los implementadores en el desarrollo de sistemas.\\
 
 Respecto a RID se busca definir una aproximación orientada a los recursos que 
 permita a los CSIRTs ser más dinámicos y ágiles a la hora de colaborar. También 

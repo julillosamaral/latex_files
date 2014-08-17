@@ -3,7 +3,7 @@
 \section{Aspectos Generales}
 En esta sección se presentan las herramientas y metodologías elegidas para realizar la implementación de la herramienta.
 
-\subsection{Entornode desarrollo}
+\subsection{Entorno de desarrollo}
 El entorno desarrollado durante la implementación del sistema y desarrollo del caso de estudio:
 
 \begin{itemize}
@@ -21,10 +21,10 @@ El entorno desarrollado durante la implementación del sistema y desarrollo del 
 
 \subsection{Metodología}
 Para la implementación de la herramienta se debió utilizar el lenguaje de programación PERL para el desarrollo de un plugin para la herramienta RT.\\
-
-Se utilizó el framework web Django por permitir desarrollar aplicaciones web de forma rápida y con la escritura de poco código. Además busca automatizar parte del desarrollo al basarse en el principio DRY (Don’t Repeat Yourself). Presenta la ventaja de utilizar el patrón de arquitectura MVC (Model View Controller). La ventaja de utilizar este patrón es que divide la aplicación en tres partes interconectadas y da una base inicial con la cual desarrollar el trabajo. A su vez, utilizar un patrón MVC presenta la ventaja de que se tiene experiencia desarrollando aplicaciones utilizando dicho patrón lo cual facilita el trabajo.
+	\bigskip
+Se utilizó el framework web Django por permitir desarrollar aplicaciones web de forma rápida y con la escritura de poco código. Además busca automatizar parte del desarrollo al basarse en el principio DRY (\textit{Don’t Repeat Yourself}). Presenta la ventaja de utilizar el patrón de arquitectura MVC (\textit{Model View Controller}). La ventaja de utilizar este patrón es que divide la aplicación en tres partes interconectadas y da una base inicial con la cual desarrollar el trabajo. A su vez, utilizar un patrón MVC presenta la ventaja de que se tiene experiencia desarrollando aplicaciones utilizando dicho patrón lo cual facilita el trabajo.
 Además de los expresados anteriormente influyó en la utilización de Django la existencia de librerías implementadas en Python para trabajar con STIX y TAXII, así como de una implementación de referencia con la cual se puede testear el desarrollo realizado.\\
-
+	\bigskip
 La metodología utilizada fue la de un desarrollo incremental, esto permitió realizar una validación de la arquitectura propuesta. Luego de realizar dicha validación se siguió implementando la herramienta propuesta.
 
 \subsection{Librerias utilizadas}
@@ -40,7 +40,7 @@ Con esta librería se realizan los pedidos que se hacen a la componente  libTAXI
 \subsubsection{Celery}
 Celery es un sistema distribuido de código abierto, simple, flexible y confiable para procesar grandes cantidades de mensajes mientras provee operaciones con las herramientas necesarias para mantener dicho sistema. 
 Permite realizar planificación de tareas, estas se pueden ejecutar simultáneamente en un único o varios servidores de trabajo utilizando multiprocesamiento. Estas tareas se pueden ejecutar de forma asincrónica (en un segundo plano) o sincrónicas (se espera hasta que está listo).\\
-
+	\bigskip
 Se utilizó para realizar de forma asincrónica el intercambio de datos con otras organizaciones. Esto permite que cuando se intercambian grandes cantidades de datos el usuario no tenga que esperar a que estos terminen para continuar con su trabajo.
 
 \subsubsection{libTAXII}
@@ -76,7 +76,7 @@ Se incluyó en el menú de RTIR una nueva sección en la que se especifican las 
 Cada una de estas acciones invoca a un script desarrollado en PERL que presenta el formulario al usuario.
 Luego de que el usuario ingresa la información deseada y realiza el envío de la información. El sistema invoca a la API Rest provista por TAXII App.
 Es necesario que se configure la dirección del host en la que se encuentra ejecutando TAXIIApp.
-La estructura de directorios de RT-TAXII es la que se muestra en la figura 1.\\
+La estructura de directorios de RT-TAXII es la que se muestra en la figura \ref{fig.rt_taxii}.\\
 
 \begin{figure}[h!]
 	\centering
@@ -84,7 +84,7 @@ La estructura de directorios de RT-TAXII es la que se muestra en la figura 1.\\
 	\caption{Estructura de directorios de plugin RT-TAXII}
 	\label{fig.rt_taxii}
 \end{figure}
-
+	\bigskip
 El archivo RTTAXII\_Config.pm es utilizado para guardar las configuraciones del plugin. Dentro de dichas configuraciones se encuentran parámetros necesarios para el funcionamiento del sistema.
 En el archivo Privileged se realiza la configuración del menú que contiene las funcionalidades del sistema.
 Los archivos incluidos en el directorio RTTAXII son los encargados de presentar los formularios y realizar la lógica correspondiente a las llamadas a TAXIIApp. Dichos archivos están implementados en PERL y contienen HTML para realizar la presentación al usuario.\\
@@ -94,7 +94,7 @@ Para extender la herramienta con nuevas funcionalidades es necesario crear un nu
 \subsubsection{TAXIIApp}
 A continuación se describirán los componentes implementados y como estos interactúan con las librerías utilizadas.
 También se mencionarán las consideraciones que se deben tener para expandir la herramienta.
-En la figura 2 se ven los distintos módulos implementados durante el proyecto. 
+En la figura \ref{fig.taxii_app} se ven los distintos módulos implementados durante el proyecto. 
 
 \begin{figure}
 	\centering
@@ -117,6 +117,6 @@ En el anexo se pueden ver las firmas de los servicios implementados.
 \paragraph{REST API}\ \\
 La API Rest desarrollada provee las funcionalidades necesarias para que RT-TAXII interactúe con TAXII App. Dentro de dichas interacciones se permite el manejo de cualquiera de los elementos del modelo en TAXIICore. Además se crearon métodos específicos para el uso de TAXII. Se permite el envío y poll de información, obtención de data feeds así como la subscripción a estos.\\
 
-Para la implementación se utilizo la librería auxiliar Django Rest framework que simplifica el desarrollo de la API.
+Para la implementación se utilizo la librería auxiliar \textit{Django Rest framework} que simplifica el desarrollo de la API.
 Si bien se implementaron todos los elementos necesarios para realizar la interacción con la base de datos, si existiera un cambio en esta (i.e: se crea una nueva entidad) sería necesario extender esta API para poder realizar la interacción entre los sistemas. A su vez si se crea un nuevo servicio TAXII y se desea proveer una interfaz en RTIR para que los usuarios interactúen con esta sería necesario agregar los métodos necesarios en esta API.
 En el anexo se puede ver la firma de la API desarrollada.

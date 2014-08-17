@@ -8,7 +8,6 @@
 \chapter{Análisis}
 \label{capitulo2}
 	
-\section{Introducción}
 {\selectlanguage{spanish}
 	A continuación se presentan los aspectos más importantes que se tuvieron en cuenta para el desarrollo del proyecto. Se
 	presentan características deseadas en un sistema de intercambio de información de seguridad entre organizaciones.}
@@ -289,25 +288,23 @@
 \bigskip
 
 {\selectlanguage{spanish}
-	Es importante mencionar que STIX ha tenido un fuerte apoyo de comunidad y busca convertirse en un estándar. Actualmente
-	existen esfuerzos para crear herramientas que utilicen el lenguaje STIX y se realice un intercambio \ de información
+	Es importante mencionar que STIX ha tenido un fuerte apoyo de la comunidad y busca convertirse en un estándar. Actualmente
+	existen esfuerzos para crear herramientas que utilicen el lenguaje STIX y que realice un intercambio \ de información
 	por medio de TAXII. }
 
 \begin{figure}
 	\centering
 	\includegraphics[width=1.9673in,height=1.7811in]{Analisis22-img/Analisis22-img016.png}
+	\caption{Diagrama de Bloques del sistema}
+	\label{fig.diagramabloques}
 \end{figure}
-{\centering\selectlanguage{english}\bfseries
-	\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ -
-	}\foreignlanguage{spanish}{Diagrama de bloques del sistema}
-	\par}
 
 
 
 \bigskip
 
 {\selectlanguage{spanish}
-	Con las herramientas mencionadas anteriormente podemos ver un diagrama de bloques como el de la figura 1. En la figura
+	Con las herramientas mencionadas anteriormente podemos ver un diagrama de bloques como el de la figura \ref{fig.diagramabloques}. En la figura
 	se puede ver que se cuenta con una instalación de la herramienta RTIR que será la encargada de la gestión de incidentes
 	y por medio de la cual se dará de alta la información en el sistema. Además en el bloque ``TAXII App'' realiza el
 	intercambio de información con otras organizaciones por medio de TAXII y representa la información utilizando STIX.
@@ -386,44 +383,42 @@
 \bigskip
 
 
-\begin{center}
+\begin{figure}[ht!]
+	\centering
 	\includegraphics[width=5.7638in,height=2.3575in]{Analisis22-img/Analisis22-img017.png} 
-\end{center}
-{\centering\selectlanguage{english}\bfseries
-	\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ -
-	}\foreignlanguage{spanish}{Caso de uso }\foreignlanguage{spanish}{alta políticas de sanitización}
-	\par}
+	\caption{Caso de Uso alta políticas de sanitización}
+	\label{fig.altasanitizacion}
+\end{figure}
 {\selectlanguage{spanish}
 	\bigskip
-	En la figura 2 se especifica el caso de uso, en este un analista ingresa a RTIR y da de alta en el sistema una política
+	En la figura \ref{fig.altasanitizacion} se especifica el caso de uso, en este un analista ingresa a RTIR y da de alta en el sistema una política
 	de sanitización. Dicha política es utilizada para realizar la sanitización de la información intercambiada por la
 	organización. Las políticas son registradas en TAXII App.}
-\begin{center}
+\begin{figure}[ht!]
+	\centering
 	\includegraphics[width=5.7638in,height=2.9146in]{Analisis22-img/Analisis22-img018.png} 
-\end{center}
-{\centering\selectlanguage{english}\bfseries
-	\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - \ Caso de uso borrado
-		políticas de sanitización}
-	\par}
+	\caption{Caso de uso borrado políticas de sanitización}
+	\label{fig.borradosanitizacion}
+\end{figure}
+
 \bigskip
 
 {\selectlanguage{spanish}
-	En la figura 3 se especifica el caso de uso de borrado de políticas de sanitización, en este un analista ingresa a RTIR
+	En la figura \ref{fig.borradosanitizacion} se especifica el caso de uso de borrado de políticas de sanitización, en este un analista ingresa a RTIR
 	y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea dar de baja para luego
 	borrarla.}
 
 
 \newpage
-\begin{center}
+\begin{figure}[ht!]
+	\centering
 	\includegraphics[width=5.7638in,height=2.9256in]{Analisis22-img/Analisis22-img019.png} 
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - Caso de uso modificación
-			de políticas de sanitización}
-		\par}
-\end{center}
+	\caption{Caso de uso modificación de políticas de sanitización}
+	\label{fig.modificacionsanitizacion}
+\end{figure}
 \bigskip
 {\selectlanguage{spanish}
-	En la figura 4 se especifica el caso de uso de modificación de políticas de sanitización, en este un analista ingresa a
+	En la figura \ref{fig.modificacionsanitizacion} se especifica el caso de uso de modificación de políticas de sanitización, en este un analista ingresa a
 	RTIR y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea modificar.}
 \newpage
 \subsubsection[ABM de Políticas de Correlación]{\foreignlanguage{spanish}{ABM de Políticas de Correlación}}
@@ -445,15 +440,13 @@
 \end{flushleft}
 
 \bigskip
-\begin{center}
-	\includegraphics[width=5.7634in,height=2.898in]{Analisis22-img/Analisis22-img020.png} 
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - Caso de uso borrado
-			políticas de correlación}
-		\par}
-\end{center}
+\begin{figure}[ht!]
+	\includegraphics[width=5.7634in,height=2.898in]{Analisis22-img/Analisis22-img020.png}
+	\caption{Caso de uso borrado políticas de correlación} 
+	\label{fig.borradocorrelacion}
+\end{figure}
 {\selectlanguage{spanish}
-	En la figura 5 se especifica el caso de uso de borrado de políticas de correlación, en este un analista ingresa a RTIR y
+	En la figura \ref{fig.borradocorrelacion} se especifica el caso de uso de borrado de políticas de correlación, en este un analista ingresa a RTIR y
 	lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea dar de baja para luego
 	borrarla.}
 
@@ -462,34 +455,31 @@
 
 
 \bigskip
-\begin{center}
+\begin{figure}[ht!]
+	\centering
 	\includegraphics[width=5.7638in,height=2.9256in]{Analisis22-img/Analisis22-img021.png} 
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - Caso de uso modificación
-			políticas de correlación}
-		\par}
-\end{center}
+	\caption{Caso de uso modificación políticas de correlación}
+	\label{fig.modificacioncorrelacion}
+\end{figure}
 {\selectlanguage{spanish}
-	En la figura 6 se especifica el caso de uso de modificación de políticas de correlación, en este un analista ingresa a
+	En la figura \ref{fig.modificacioncorrelacion} se especifica el caso de uso de modificación de políticas de correlación, en este un analista ingresa a
 	RTIR y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea modificar.}
 
 
 \bigskip
-\begin{center}
+\begin{figure}[ht!]
+	\centering
 	\includegraphics[width=5.7638in,height=2.2535in]{Analisis22-img/Analisis22-img022.png} 
-	
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - Caso de uso alta
-			políticas de correlación}
-		\par}
-\end{center}
+	\caption{Caso de uso alta políticas de correlación}
+	\label{fig.altacorrelacion}
+\end{figure}
 {\selectlanguage{spanish}
-	En la figura 7 se especifica el caso de uso de alta de políticas de correlación, en este un analista ingresa a RTIR y
+	En la figura \ref{fig.altacorrelacion} se especifica el caso de uso de alta de políticas de correlación, en este un analista ingresa a RTIR y
 	da de alta en el sistema una política de correlación. Dicha política es utilizada para realizar la correlación de la
 	información presente en el sistema. Las políticas son registradas en TAXII App.}
 
 
-\bigskip
+\newpage
 
 \subsubsection{ABM de Servicios TAXII}
 
@@ -514,40 +504,37 @@
 
 \bigskip
 
-\begin{center}
+\begin{figure}[ht!]
+	\centering
 	\includegraphics[width=5.7638in,height=2.3217in]{Analisis22-img/Analisis22-img023.png} 
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ -- Caso de uso alta
-			servicio TAXII}
-		\par}
-\end{center}
+	\caption{Caso de uso alta servicio TAXII}
+	\label{fig.altaserviciotaxii}
+\end{figure}
 {\selectlanguage{spanish}
-	En la figura 8 se especifica el caso de uso de alta de servicios TAXII, en este un analista ingresa a RTIR y da de alta
+	En la figura \ref{fig.altaserviciotaxii} se especifica el caso de uso de alta de servicios TAXII, en este un analista ingresa a RTIR y da de alta
 	en el sistema un servicio TAXII. Por medio de dicho servicio TAXII se realizara el intercambio con otra organización.}
 
 
 \bigskip
-\begin{center}
+\begin{figure}[ht!]
+	\centering
 	\includegraphics[width=5.7634in,height=2.898in]{Analisis22-img/Analisis22-img024.png} 
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - Caso de uso borrar
-			servicio TAXII}
-		\par}
-\end{center}
+	\caption{Caso de uso borrar	servicio TAXII}
+	\label{fig.borradoserviciotaxii}
+\end{figure}
 {\selectlanguage{spanish}
-	En la figura 9 se especifica el caso de uso de borrado de servicios TAXII, en este un analista ingresa a RTIR y lista
+	En la figura \ref{fig.borradoserviciotaxii} se especifica el caso de uso de borrado de servicios TAXII, en este un analista ingresa a RTIR y lista
 	todas las servicios disponibles en el sistema. Luego selecciona el que desea dar de baja.}
 \newpage
-\begin{center}
+\begin{figure}
+	\centering
 	\includegraphics[width=5.7638in,height=2.9366in]{Analisis22-img/Analisis22-img025.png} 
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - \ Caso de uso modificar
-			servicio TAXII}
-		\par}
-\end{center}
+	\caption{Caso de uso modificar servicio TAXII}
+	\label{fig.modificarserviciotaxii}
+\end{figure}
 
 {\selectlanguage{spanish}
-	En la figura 10 se especifica el caso de uso de modificación de servicios TAXII, en este un analista ingresa a RTIR y
+	En la figura \ref{fig.modificarserviciotaxii} se especifica el caso de uso de modificación de servicios TAXII, en este un analista ingresa a RTIR y
 	lista todos los servicios disponibles. Luego selecciona el que será dado de baja.}
 \newpage
 \subsubsection{Alta de información RTIR}
@@ -570,15 +557,14 @@
 	\end{supertabular}
 \end{flushleft}
 
-\begin{center}
+\begin{figure}
+	\centering
 	\includegraphics[width=5.7638in,height=2.0701in]{Analisis22-img/Analisis22-img026.png} 
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - Caso de uso alta de
-			información RTIR}
-		\par}
-\end{center}
+	\caption{Caso de uso alta de información RTIR}
+	\label{fig.altainfortir}
+\end{figure}
 {\selectlanguage{spanish}
-	En la figura 11 se ve el caso de uso de alta de información en RTIR. En este un analista ingresa al sistema e ingresa
+	En la figura \ref{fig.altainfortir} se ve el caso de uso de alta de información en RTIR. En este un analista ingresa al sistema e ingresa
 	nueva información en RTIR. En RTIR se crea un nuevo ticket y en TAXII App se da de alta la información representando y
 	almacenándola de forma estructurada.}
 
@@ -603,14 +589,13 @@
 \end{flushleft}
 
 \bigskip
-\begin{center}
-	{\centering\selectlanguage{spanish}
-		\includegraphics[width=5.4217in,height=1.8965in]{Analisis22-img/Analisis22-img027.png}
-		\foreignlanguage{spanish}{\textbf{Figura
-			}}\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{\textbf{ -
-			Caso de uso subscripción a TAXII Data Feed}}}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=5.4217in,height=1.8965in]{Analisis22-img/Analisis22-img027.png}
+	\caption{Caso de uso subscripción a TAXII Data Feed}
+	\label{fig.subscripciontaxiidatafeed}
 
-\end{center}
+\end{figure}
 
 {\selectlanguage{spanish}
 	En este caso de uso el analista desea subscribirse a uno de los TAXII data feed provistos por otra organización. Para
@@ -635,13 +620,12 @@
 			recepción de información se realiza por medio del Inbox Service de nuestro sistema.}\\\hhline{~-}
 	\end{supertabular}
 \end{flushleft}
-\begin{center}
+\begin{figure}[ht!]
+	\centering
 	\includegraphics[width=5.7638in,height=2.2256in]{Analisis22-img/Analisis22-img028.png} 
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - Caso de uso de recepción
-			de información}
-		\par}
-\end{center}
+	\caption{Caso de uso de recepción de información}
+	\label{fig.recepcioninfo}
+\end{figure}
 
 {\selectlanguage{spanish}
 	En este caso de uso un cliente TAXII en otra organización envía información a TAXII App. Luego la aplicación
@@ -664,18 +648,16 @@
 			realiza por medio del Inbox Service del cliente. El intercambio es iniciado por el sistema.}\\\hhline{~-}
 	\end{supertabular}
 \end{flushleft}
-\begin{center}
-	{\centering  \includegraphics[width=5.7638in,height=3.2764in]{Analisis22-img/Analisis22-img029.png} \par}
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - Caso de uso de envío de
-			información}
-		\par}
-\end{center}
+\begin{figure}[ht!]
+	\centering  \includegraphics[width=5.7638in,height=3.2764in]{Analisis22-img/Analisis22-img029.png}
+	\caption{Caso de uso de envío de información}
+	\label{fig.enviodeinfo}
+\end{figure}
 
 {\selectlanguage{spanish}
 	En este caso de uso TAXII App se comporta como el Actor y desea enviar nueva información a un cliente TAXII. Para ello
 	lo primero que debe hacer es sanitizar la información. Luego envía la información representada en la forma de un
-	mensaje STIX. Esto se ve en la figura 14.}
+	mensaje STIX. Esto se ve en la figura \ref{fig.enviodeinfo}.}
 \newpage
 \subsubsection{Poll de información}
 \begin{flushleft}
@@ -696,15 +678,14 @@
 \end{flushleft}
 
 \bigskip
-\begin{center}
-	{\centering  \includegraphics[width=5.7638in,height=2.0154in]{Analisis22-img/Analisis22-img030.png} \par}
-	{\centering\selectlanguage{english}\bfseries
-		\foreignlanguage{spanish}{Figura }\stepcounter{Figura}{\theFigura}\foreignlanguage{spanish}{ - Caso de uso de poll de
-			información}
-		\par}
-\end{center}
+\begin{figure}
+	\centering  \includegraphics[width=5.7638in,height=2.0154in]{Analisis22-img/Analisis22-img030.png}
+	\caption{Caso de uso de poll de
+		información}
+	\label{fig.pollinfo}
+\end{figure}
 {\selectlanguage{spanish}
-	En la figura 15 se ve el caso de uso de poll de información. En este TAXII App realiza el pedido de información a otro
+	En la figura \ref{fig.pollinfo} se ve el caso de uso de poll de información. En este TAXII App realiza el pedido de información a otro
 	cliente TAXII por medio de mensajes Poll Request. Cuando obtiene la información esta se correlaciona con los datos
 	existentes en el sistema.}
 
