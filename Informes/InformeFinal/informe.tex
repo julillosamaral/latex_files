@@ -9,25 +9,18 @@
 \usepackage{url} 
 \usepackage{hyperref}
 \usepackage{slashbox}
-
+\usepackage[spanish]{translator}
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{pbox}
 \usepackage{hhline}
 \usepackage{titlesec}
-\usepackage{glossaries}
-\makeglossaries
-%\input{./glosario/Glosario}
-\newglossaryentry{computer}
-{
-	name=computer,
-	description={is a programmable machine that receives input,
-		stores and manipulates data, and provides
-		output in a useful format}
-}
 
+\usepackage[nonumberlist, nopostdot]{glossaries}
+\input{./glosario/Glosario}
 
 \renewcommand{\chaptername}{Capítulo}
+\renewcommand{\glossaryname}{Glosario}
 \renewcommand{\abstractname}{Resumen}
 \newcommand\arraybslash{\let\\\@arraycr}
 
@@ -59,9 +52,8 @@
 
 \newpage
 
-%\paragraph{\LARGE Glosario}
-%\input{./glosario/Glosario}
-\printglossary
+\glsaddall
+\printglossaries
 \include{capitulo1}
 \include{capitulo2}
 \include{capitulo3}
