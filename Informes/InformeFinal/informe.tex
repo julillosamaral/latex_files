@@ -3,7 +3,7 @@
 \usepackage{enumitem}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{longtable}
-\usepackage[spanish,english]{babel}
+\usepackage[english,spanish]{babel}
 \usepackage{natbib}
 \usepackage{comment}
 \usepackage{url} 
@@ -15,8 +15,20 @@
 \usepackage{pbox}
 \usepackage{hhline}
 \usepackage{titlesec}
+\usepackage{glossaries}
+\makeglossaries
+%\input{./glosario/Glosario}
+\newglossaryentry{computer}
+{
+	name=computer,
+	description={is a programmable machine that receives input,
+		stores and manipulates data, and provides
+		output in a useful format}
+}
 
 
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\abstractname}{Resumen}
 \newcommand\arraybslash{\let\\\@arraycr}
 
 \newcommand {\makerow}[2]{
@@ -42,18 +54,20 @@
 \include{front}
 \pagestyle{plain}
 \pagenumbering{arabic} 
+\include{resumen}
 \tableofcontents
 
 \newpage
 
-\paragraph{\LARGE Glosario}
-\input{./glosario/Glosario}
-
+%\paragraph{\LARGE Glosario}
+%\input{./glosario/Glosario}
+\printglossary
 \include{capitulo1}
 \include{capitulo2}
 \include{capitulo3}
 \include{capitulo4}
 \include{capitulo5}
+\include{capitulo6}
 \include{conclusiones}
 \nocite{*}
 \bibliographystyle{plain}
