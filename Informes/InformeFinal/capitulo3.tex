@@ -13,21 +13,21 @@
 
 \section{Análisis de requerimientos}
 	Existen distintos problemas que obstaculizan el intercambio de información entre las organizaciones. Dichas
-	problemáticas afectan la reputación, seguridad y la capacidad de trabajo de las organizaciones. 
+	problemáticas afectan la reputación, seguridad y la capacidad de trabajo de las organizaciones. \\
 
 	Las organizaciones pueden intercambiar grandes volúmenes de datos los cuales pueden provenir de diferentes fuentes, cada
 	una de estas fuentes puede utilizar una representación propia para los datos. Esto puede generar problemas para interpretar infromación proveniente de otra organización, y por ello es deseado que las
 	organizaciones utilicen un estándar aceptado por todas. La representación utilizada debería permitir el desarrollo de
 	herramientas que ayuden en la estructuración de los datos de forma de facilitar el trabajo de los
-	analistas.
+	analistas.\\
 
 	Otro de los problemas que interfieren en el intercambio de información es el riesgo a la seguridad y reputación de la
 	organización. La información intercambiada debe pasar por procesos que controlen los datos que se intercambien evitando
-	de esta manera la divulgación de información sensible o privada.
+	de esta manera la divulgación de información sensible o privada.\\
 
 	Estas son algunas de las problemáticas que se pueden identificar referentes al intercambio de información de seguridad.
 	También existen otros problemas, como por ejemplo establecer un criterio referente a políticas organizacionales que
-	ayuden a identificar organizaciones de confianza. Este problema no será analizado en este documento.
+	ayuden a identificar organizaciones de confianza. Este problema no será analizado en este documento.\\
 
 
 \bigskip
@@ -168,6 +168,7 @@
 	seguridad representada por medio del lenguaje STIX y que tiene consideraciones para realizar el intercambio.
 	Posteriormente se menciona a que se debió la utilización de RTIR y se detalla en mayor profundidad la selección de STIX
 	y TAXII.\\
+	\bigskip
 
 	Además se consideraron en menor medida la posibilidad de desarrollar trabajo futuro con dichas herramientas y su
 	aceptación por parte de la comunidad.
@@ -184,11 +185,12 @@
 	\textit{opensource} y contar con una API que permite extender la herramienta de forma sencilla. También es posible
 	desarrollar \textit{plugins} para extender las funcionalidades de la herramienta. RTIR cuenta además con una comunidad
 	de usuarios grande cuya característica principal es el nivel técnico de estos.\\
+	\bigskip
 
 	Distintos CSIRTs han contribuido en el desarrollo de la herramienta, el resultado ha sido una herramienta que posee un
 	\textit{workflow} para el manejo de incidentes de seguridad. Dicho \textit{workflow} facilita el trabajo de los
 	CSIRTs.\\
-
+\bigskip
 	Como se mencionó en el estado del arte, RTIR no cuenta con una representación estructurada de la información ni tampoco
 	con un método automático para compartir información de seguridad. Una integración con TAXII y STIX le permitiría cubrir
 	estas dos falencias.
@@ -386,7 +388,7 @@
 	En la figura \ref{fig.modificacionsanitizacion} se especifica el caso de uso de modificación de políticas de sanitización, en este un analista ingresa a
 	RTIR y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea modificar.
 \newpage
-\subsubsection[ABM de Políticas de Correlación]{\foreignlanguage{spanish}{ABM de Políticas de Correlación}}
+\subsubsection{ABM de Políticas de Correlación}
 \begin{flushleft}
 	\tablefirsthead{}
 	\tablehead{}
@@ -523,6 +525,7 @@
 	\caption{Caso de uso alta de información RTIR}
 	\label{fig.altainfortir}
 \end{figure}
+\bigskip
 	En la figura \ref{fig.altainfortir} se ve el caso de uso de alta de información en RTIR. En este un analista ingresa al sistema e ingresa
 	nueva información en RTIR. En RTIR se crea un nuevo ticket y en TAXII App se da de alta la información representando y
 	almacenándola de forma estructurada.
