@@ -1,0 +1,151 @@
+
+\subsection{HTTP Caching}
+
+EL protocolo HTTP es utilizado en sistemas de información distribuídos, donde la performance puede ser mejorada almacenando en cache las respuestas. La version 1.1 del
+protocolo HTTP incluye un número de elementos destinados a mejorar el almacenamiento de elementos en cache.
+
+El objetivo del \emph{caching} en HTTP/1.1 es eliminar la necesidad de enviar pedidos en algunos escenarios, y también evitar enviar respuestas completas en otros casos. Al evitar enviar algunos pedidos, se reduce el número de \emph{round-trips} requeridos para muchas operaciones (para ello se utiliza un mecanismo de expiración que se explicará más adelante). Por otro lado, al evitar el envío de respuestas completas se reducen los requerimientos de ancho de banda de la red.
+
+Un concepto muy importante que hace posible el uso del cache es el de transparencia. La negociación transparente es una combinación de negociaciones del tipo \emph{server-driven}
+y \emph{agent-driven}. Cuando un cache es suministrado con la lista de representaciones disponibles de las respuestas (como en negociaciones \emph{agent-driven}), y las
+dimensiones de la varianza son completamente comprendidas por el cache, el mismo se vuelve capaz de realizar negociaciones \emph{server-driven} en nombre del servidor original
+para subsiguientes pedidos de ese recurso.
+
+\subsubsection{Correctitud del cache}
+Un cache bien configurado debe responder a un pedido con la respuesta más actual mantenida en el cache, que sea apropiada al pedido recibido. La respuesta debe cumplir
+con una de las siguientes condiciones.
+
+\begin{enumerate}
+  \item Fue comprobada su equivalencia con respecto a la respuesta que el servidor hubiera retornado, revalidando la misma con el servidor. El modelo de validación está definido
+  en la sección 13.3 de \cite{rfc2616}, el cual es explicado más adelante en este documento.
+  \item La respuesta es actual, lo cual implica que cumple con los requerimientos menos restrictivos del cliente, servidor y cache.
+  Si la respuesta almacenada no es lo suficientemente actual según los requisitos tanto del cliente como del servidor, en circunstancias especiales un cache puede retornar
+  la respuesta con el correspondiente encabezado \emph{Warning} definido en la seccion 13.1.2 de \cite{rfc2616}, a menos que la misma este prohibida, por ejemplo por una
+  directiva \emph{``no store''} o \emph{``no-cache''}. Las mismas se encuentran definidas en la sección 14.9.2 de \cite{rfc2616} y serán examinadas más adelante en este
+  documento.
+  \item Es una respuesta apropiada del tipo 304 (Not Modified), 305 (Proxy Redirect), o de error (4xx or 5xx).
+\end{enumerate}
+
+Si un cache recibe una respuesta que normalmente enviaría al cliente (una respuesta completa o con estado 304), y la misma no es actual, el cache debería enviarsela
+al cliente sin agregarle encabezados \emph{Warning}, pero sin removerlos en caso de que se encuentren presentes en la misma. Tampoco debería intentar revalidar una respuesta
+simplemente porque la misma quedo desactualizada en el tránsito, debido a que esto puede ocasionar un loop infinito.
+
+\subsubsection{Warnings}
+
+Siempre que un cache retorne una respuesta que no es actual, debe agregar un encabezado \emph{Warning} a la misma. El encabezado \emph{Warning} y las advertencias son definidas
+en la seccion 14.16 de \cite{rfc2612}. Este encabezado permite a los clientes tomar medidas apropiadas. El uso de \emph{Warnings} en vez de utilizar codigos de estado
+de error es utilizado para distinguir estas respuestas de verdaderos casos de error.
+
+Las \emph{Warnigns} tienen asignados codigos de advertencia de tres digitos. El primero indica si la \emph{Warning} debe o no ser eliminada de una entrada en cache despues de
+una validacion exitosa.
+
+\emph{Warnings} con codigo de estado 1xx describen el estado de actualidad o revalidacion de la respuesta, y por lo tanto deben ser eliminadas despues de una revalidacion
+exitosa. Este tipo de \emph{Warning} pueden ser generadas por una cache solo cuando se intenta validar una entrada de la misma. No deben ser generadas por los clientes.
+Por otro lado las \emph{Warnings} con codigo 2xx describen algun aspecto del cuerpo o de los encabezados de la respuesta que no fue rectificado por una revalidacion y que no
+debe ser eliminado despues de una revalidacion exitosa.
+
+Los caches en su version HTTP/1.0 almacenan todas las respuestas que contengan encabezados \emph{Warning}, sin eliminar los que tengan código en el rango 1xx. \emph{Warnings} en respuestas
+que alcanzan caches de HTTP/1.0 contienen un campo extra (\emph{warning-date}), el cual previene que un receptor HTTP/1.1 malinterprete una \emph{Warning} que se encuentra en
+cache de forma erronea.
+
+\emph{Warnings} tambien contienen un texto de advertencia. El mismo puede estar en cualquier lenguaje natural, basado en los encabezados \emph{Accept} y, puede incluir un
+indicador opcional del tipo de conjunto de caracteres que es utilizado. Multiples \emph{warnings} pueden ser adjuntadas a una respuesta, ya sea por el servidor de origen o
+pir un cache, incluso pueden tener el mismo codigo. Por ejemplo un servidor pueder proveer la misma \emph{Warning} con el texto en diferentes idiomas.
+
+Cuando una respuesta tiene multiples \emph{Warnings} asociadas, puede no ser practico desplegarle todas al usuario. La version 1.1 de HTTP no especifica reglas de prioridad
+estrictas para determinar que \emph{Warnings} seran desplegadas al usuario ni en que orden.
+
+\subsubsection{Mecanismos de \emph{cache-control}}
+
+Los mecanismos basicos de cache en HTTP/1.1 consisten en especificar fechas de expiracion del lado del servidor y validadores, las cuales son directivas implicitas
+para los caches. En algunos casos, un servidor o cliente puede necesitar proveer directivas explicitas a los caches de HTTP.
+Para cumplir con este proposito se utlizan los encabezados \emph{Cache-Control}.
+
+El encabezado \emph{Cache-Control} permite a un cliente o servidor transmitir una variedad de directivas tanto en pedidos como respuestas. Estas directivas tipicamente
+sobreescriben los algoritmos de cache predeterminados. Como regla general, si existe un conflicto entre valores de encabezados, la interpretacion mas restrictiva es
+aplicada. Las directivas de del encabezado \emph{Cache-Control} son descritas en detalle en la seccion 14.9 del \cite{rfc2616}.
+
+\subsubsection{Modelo de expiracion}
+\textbf{Server-Specified Expiration}
+
+HTTP \emph{caching} funciona mejor cuando los caches pueden evitar completamente que se realicen pedidos al servidor de origen. El principal mecansimo para evitar esto, es que el servidor
+de origen provea una fecha de expiracion explicita en el futuro, indicando que una respuesta puede ser utilizada para satisfacer pedidos posteriores. Se espera que los
+servidores asignen fechas de expiracion futuras a las respuestas, con la creencia de que es poco probable que la entidad cambie antes que la fecha de expiracion sea alcanzada.
+Los mecanismos de expiracion aplican solo a respuestas obtenidas de un cache y no a primeras respuestas, las cuales son enviadas de forma inmediata al cliente.
+
+Si un servidor servidor desea forzar que una cache HTTP/1.1 valide cada pedido, sin importar como este configurada debe utilizar la directiva \emph{must-revalidate}.
+Los servidores especifican fechas de expiracion explicitas utilizando el encabezado \emph{Expires} o la directiva \emph{max-age} del encabezado \emph{Cache-Control}.
+
+\textbf{Expiracion heuristica}
+Debido a que los servidores no siempre proveen fechas de expiracion explicitas, los caches tipicamente asignan fechas de expiracion aplicando heuristicas, empleando
+algoritmos que utilizan los valores de otros encabezados (como los del \emph{Last-Modified}) para estimar una fecha de expiracion plausible.
+
+\subsection{Modelo de validacion}
+Cuando un cache tiene una entrada no muy actual que desea usar como respuesta a un pedido de un cliente, primero tiene que comprobar con el servidor de origen
+(o posiblemente con un cache intermedio que contenga una respuesta actual) si la respuesta es valida. Esto se denomina validar la entrada del cache. Como no se quiere tener el overhead
+de retransmitir la respuesta completa en caso de que la respuesta sea valida, y tampoco tener el overhead de un \emph{round-trip} extra en caso de que la entrada sea
+invalida, HTTP/1.1 soporta el uso de pedidos condicionales.
+
+La clave para soportar pedidos condicionales son los denominados validadores de cache. Cuando un servidor genera una respuesta completa, adjunta un validador a la misma,
+el cual es almacenado como parte de la entrada en el cache. Por otro lado cuando un cliente realiza un pedido condicional por un recurso para el cual tiene una entrada
+en su cache, incluye el validador en el pedido.
+
+El servidor luego verifica el validador presente en el pedido con el correspondiente a la entidad, y en caso de coincidir, retorna una respuesta con codigo 304
+y sin cuerpo. En otro caso retorna una respuesta completa. En consecuencia se evita transmitir la respuesta completa si los validadores coniciden y se evita un \emph{round trip}
+extra en caso contrario.
+
+A continuacion se nombran algunos validadores.
+
+\subsubsection{Last-Modified Dates}
+El valor del encabezado \emph{Last-Modified} es utilizado como validador (especificado en el rfc 2616 \cite{rfc2616} sección 14.29). Una entrada de una cache puede ser
+considerada valida si la entidad no ha sido modificada desde el valor contenido en este encabezado.
+
+\subsubsection{Entity Tag}
+El encabezado \emph{ETag} (definido en la seccion 14.19 de \cite{rfc2616}), es un tipo de validador. Permite una validacion mas confiable en situaciones en las cuales es inconveniente almacenar
+fechas de modificacion, donde la resolucion \emph{one-second} de fechas de HTTP no es suficiente o donde el servidor de origen desea evitar ciertas paradojas que pueden surgir por el uso de
+fechas de modificacion.
+
+\subsubsection{Validadores fuertes y debiles}
+Tanto el servidor de origen como los caches comparan dos validadores para decidir si representan la misma entidad, es normal esperar que si una entidad cambia en algun
+sentido, el validador asociador tambien lo haga. Este es el caso de los validadores fuertes.
+Sin embargo, existen casos en los que un servidor prefiere cambiar los validadores solo si existen cambios semanticos significativos, y no cuando cambian aspectos menores
+de una entidad. Un validador que no siempre cambia cuando la entidad asociada lo hace es conocido como un validador debil.
+Se puede ver un validador fuerte como uno que cambia cada vez que cambia un bit de la entidad asociada, mientras que uno debil cambia solo cuando el significado de la
+entidad asociada cambia.
+Un validador es utilizado o bien cuando un cliente genera un pedido e incluye el validador en un encabezado, o bien cuando un servidor compara dos validadores.
+
+Los validadores fuertes son utilizables en cualquier contexto, mientras que los debiles son utilizables en contextos en los cuales no se depende de la exactitud de una entidad.
+Por ejemplo, ambos pueden utilizarse para un pedido condicional de una entidad completa. Sin embargo, solo los validadores fuertes pueden utilizarse en un pedido parcial
+de una entidad, a que de lo contrario el cliente puede terminar con una entidad inconsistente.
+
+La unica funcion que el protocolo HTTP/1.1 define para los validadores es la comparacion. Existen dos funciones para comparar validadores, dependiendo de si el contexto
+de la comparacion permte el uso de validadores debiles o no.
+
+La funcion de comparacion fuerte, considera dos validadores como iguales si ambos son identicos en todo sentido y los dos son validadores fuertes. En cambio, la funcion de
+comparacion debil considera dos validadores como iguales si ambos son identicos, pero uno de los dos es debil.
+
+El comportamiento recomendado por el rfc 2616 \cite{rfc2616} para un servidor HTTP/1.1 es enviar una respuesta con una \emph{entity tag} fuerte (comportamiento por defecto)
+y un encabezado \emph{Last-Modified}. Segun la especificacion un servidor al recibir un pedido condicional que incluye un encabezado \emph{Last-Modified} y una o mas
+\emph{entity tags} como validadores no debe retornar una respuesta con estado 304, a menos que sea consistente con todos los campos de los encabezados en el pedido.
+En el mismo escenario Un \emph{caching proxy} HTTP/1.1, no debe retornar al cliente una respuesta almacenada en su cache local a menos que la misma sea consistente con todos
+los campos de los encabezados condicionales del pedido.
+
+\subsection{Revalidacion de cache}
+Algunas veces un \emph{user-agent} necesitar insistir que un cache revalide una entrada en su cache con el servidor de origen (y no con el siguiente cache que se encuentra
+en el camino entre el y el servidor de origen) o recargar una entrada en su cache con el servidor de origen. Revalidaciones \emph{End-toEnd} pueden ser necesarias si tanto el
+cache como el servidor de origen sobreestiman la fecha de expiracion de la respuesta almacenada en el cache. La recarga puede ser necesaria si la entrada de la cache ha sido
+corrompida por algun motivo.
+
+La revalidacion \emph{End-to-End} puede ser pedida cuando el cliente no tiene una copia local en su cache, en cuyo caso es denominada \emph{unspecified end-to-end revalidation}
+o cuando un cliente tiene una copia local almacenada en su cache, en cuyo caso se denomina \emph{specific end-to-end revalidation}.
+
+El cliente puede especificar tres tipos de acciones utilizando las directivas de \emph{Cache-Control}: \emph{end-to-end reload}, \emph{Specific end-to-end revalidation} y
+\emph{Unspecified end-to-end revalidation}.
+En la accion \emph{End-to-end reload}, el pedido incluye la directiva \emph{no-cache} o por compatibilidad con la version anterior del protocolo \emph{Pragma: no-cache}.
+\emph{Field-names} no deben incluirse con esta directiva en un pedido, y el servidor no debe utilizar una capia en cache para responder a este pedido.
+En cambio \emph{Specific end-to-end revalidation} incluye la directiva \emph{max-age=0}, la cual fuerza que cada cache en el camino entre el cliente y el servidor de origen
+revalide su propia entrada con el siguiente cache o servidor. El pedido inicial incluye un validador condicional con el validador actual del cliente.
+Por ultimo la accion \emph{Unspecified end-to-end revalidation} tambien fuerza a que los caches que se encuentran en el camino entre el cliente y el servidor de origen
+revaliden su entrada con el siguiente cache o servidor. El pedido inicial no incluye un validador condicional, si lo incluye el primer cache en el camino (en caso de existirlo)
+que contenga una entrada para ese recurso en particular.
+

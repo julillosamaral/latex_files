@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{longtable}
+\usepackage[english,spanish]{babel}
+\usepackage{natbib}
+\usepackage{comment}
+\usepackage{url} 
+\usepackage{hyperref}
+\usepackage{slashbox}
+\usepackage[spanish]{translator}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{pbox}
+\usepackage{hhline}
+\usepackage{titlesec}
+
+\usepackage[nonumberlist, nopostdot]{glossaries}
+\input{./glosario/Glosario}
+
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\glossaryname}{Glosario}
+\renewcommand{\abstractname}{Resumen}
+\newcommand\arraybslash{\let\\\@arraycr}
+
+\newcommand {\makerow}[2]{
+   \textbf{#1} & #2 \\ \hline
+}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+%\usepackage[pdftex]{graphicx}
+
+%hyperref no color
+\hypersetup{
+  colorlinks,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=black,%
+  urlcolor=black
+}
+
+  
+\begin{document}
+
+\include{front}
+\pagestyle{plain}
+\pagenumbering{arabic} 
+%\include{resumen}
+\tableofcontents
+
+\newpage
+
+\glsaddall
+\printglossaries
+%\include{capitulo1}
+\include{capitulo2}
+\include{capitulo3}
+\include{capitulo4}
+\include{capitulo5}
+\include{capitulo6}
+%\include{conclusiones}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{biblio}
+\include{back}
+\include{anexo}
+\end{document}

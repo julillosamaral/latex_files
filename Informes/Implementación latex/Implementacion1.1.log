@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.5)  7 AUG 2014 21:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.5)  30 AUG 2014 15:52
 entering extended mode
 **Implementacion1.1.tex
 
-("E:\Proyecto de Grado Julio\Informes\Implementación latex\Implementacion1.1.t
-ex"
+("E:\Proyecto de Grado Julio\informe-git\latex_files\Informes\Implementación l
+atex\Implementacion1.1.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -597,8 +597,8 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \c@Figura=\count109
 \c@Tabla=\count110
 
-("E:\Proyecto de Grado Julio\Informes\Implementación latex\Implementacion1.1.a
-ux")
+("E:\Proyecto de Grado Julio\informe-git\latex_files\Informes\Implementación l
+atex\Implementacion1.1.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
@@ -613,7 +613,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 26.
@@ -657,74 +658,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
-
- []
-
-[2]
-Overfull \hbox (4.4069pt too wide) in paragraph at lines 134--135
+[1] [2]
+Overfull \hbox (4.4069pt too wide) in paragraph at lines 128--129
 \T1/cmr/m/n/10.95 A con-tin-uaci�n se de-scriben lo m�-du-los im-ple-men-ta-dos
  para el fun-cionamiento
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 137--143
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--137
 
  []
 
-<imagenes/RT-TAXII.png, id=24, 204.765pt x 232.61906pt>
+[3] <imagenes/RT-TAXII.png, id=24, 204.765pt x 232.61906pt>
 File: imagenes/RT-TAXII.png Graphic file (type png)
 
 <use imagenes/RT-TAXII.png>
-Package pdftex.def Info: imagenes/RT-TAXII.png used on input line 146.
+Package pdftex.def Info: imagenes/RT-TAXII.png used on input line 140.
 (pdftex.def)             Requested size: 204.76448pt x 232.61848pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--154
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
 
  []
 
-[4 <E:/Proyecto de Grado Julio/Informes/Implementación latex/imagenes/RT-TAXII
-.png>] <imagenes/TAXIIApp.png, id=28, 216.81pt x 261.97874pt>
+[4 <E:/Proyecto de Grado Julio/informe-git/latex_files/Informes/Implementación
+ latex/imagenes/RT-TAXII.png>]
+<imagenes/TAXIIApp.png, id=28, 216.81pt x 261.97874pt>
 File: imagenes/TAXIIApp.png Graphic file (type png)
 
 <use imagenes/TAXIIApp.png>
-Package pdftex.def Info: imagenes/TAXIIApp.png used on input line 164.
+Package pdftex.def Info: imagenes/TAXIIApp.png used on input line 158.
 (pdftex.def)             Requested size: 216.80946pt x 261.9781pt.
- [5] [6 <E:/Proyecto de Grado Julio/Informes/Implementación latex/imagenes/TAX
-IIApp.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 180--182
+ [5 <E:/Proyecto de Grado Julio/informe-git/latex_files/Informes/Implementació
+n latex/imagenes/TAXIIApp.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
 
  []
 
-[7]
+[6] [7]
 Overfull \vbox (72.70003pt too high) has occurred while \output is active []
 
 
 [8]
-Overfull \hbox (54.41452pt too wide) in alignment at lines 252--273
+Overfull \hbox (54.41452pt too wide) in alignment at lines 246--267
  [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 273
+Underfull \vbox (badness 10000) detected at line 267
  []
 
 
-Overfull \hbox (54.41452pt too wide) in alignment at lines 273--289
+Overfull \hbox (54.41452pt too wide) in alignment at lines 267--283
  [] 
  []
 
 
-Overfull \hbox (54.41452pt too wide) in alignment at lines 289--295
+Overfull \hbox (54.41452pt too wide) in alignment at lines 283--289
  [] 
  []
 
 [9] [10]
-("E:\Proyecto de Grado Julio\Informes\Implementación latex\Implementacion1.1.b
-bl"
+("E:\Proyecto de Grado Julio\informe-git\latex_files\Informes\Implementación l
+atex\Implementacion1.1.bbl"
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 5.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Underfull \hbox (badness 1102) in paragraph at lines 12--14
@@ -733,29 +731,29 @@ Underfull \hbox (badness 1102) in paragraph at lines 12--14
  []
 
 ) [11]
-("E:\Proyecto de Grado Julio\Informes\Implementación latex\Implementacion1.1.a
-ux") ) 
+("E:\Proyecto de Grado Julio\informe-git\latex_files\Informes\Implementación l
+atex\Implementacion1.1.aux") ) 
 Here is how much of TeX's memory you used:
  3909 strings out of 493921
- 49063 string characters out of 3144877
- 105184 words of memory out of 3000000
+ 49279 string characters out of 3144877
+ 103184 words of memory out of 3000000
  7124 multiletter control sequences out of 15000+200000
  18747 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,8n,27p,672b,272s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.e
-nc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1095.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1200.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on Implementacion1.1.pdf (12 pages, 266386 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvip
+s/cm-super/cm-super-t1.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/c
+m-super/cm-super-ts1.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+cm-super/sfbx1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-
+super/sfbx1200.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-sup
+er/sfbx1440.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/
+sfrm0600.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfr
+m0800.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm09
+00.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1200.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on Implementacion1.1.pdf (12 pages, 265477 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

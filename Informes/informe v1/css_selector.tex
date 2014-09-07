@@ -1,0 +1,76 @@
+
+\chapter{Selectores de CSS}
+Entender como los navegadores parsean las reglas de estilo y renderizan las páginas web es una tarea importante al momento de mejorar la performance de una página web.
+A medida que los navegadores parsean el documento HTML, construyen una estructura arborescente que representa todos los elementos que van a ser desplegados en la página.
+Una vez completa esta etapa, busca las reglas que aplican a los elementos en diversas hojas de estilo, de acuerdo a las reglas de cascada, herencia y orden de CSS.
+
+En la mayoría de las implementaciones de los navegadores, el motor de CSS busca reglas en las hojas de estilo que aplican a cada elemento del documento, evaluándolas de derecha a izquierda 
+(debido a que el parser que utilizan es \emph{bottom-up}), empezando por el selector de más a la derecha, conocido como \emph{key} y
+moviendose a través del selector hasta encontrar una concordancia o descartando la regla en otro caso.
+
+En base a este sistema, mientras menos reglas tengan que ser evaludas por el motor de estilos, mejor será la performance del mismo. Por lo tanto remover reglas que no aplican es
+un paso importante para mejorar la performance del renderizado, pero aún más importante es optimizar las definiciones de las reglas. Un aspecto clave al optimizar
+las reglas de estilo, es definir reglas para que sean lo mas específicas posible y evitar redundancia en las mismas, para que de esta forma el motor de estilos pueda
+encontrar rápidamente concordancias, evitando perder tiempo evaluando reglas que no aplican.
+
+\section{Tipos de selectores}
+En esta sección se listan los distintos tipos de selectores de CSS ordenados en base al costo en cuanto a la performance de los mismos, comenzando por los que tienen
+menor impacto en la performance al momento de aplicar las reglas.
+
+\subsection{Id}
+Simple y eficiente, este selector aplica al único elemento en el documento HTML cuyo atributo \emph{ID} coincida con el de la regla.
+
+\subsection{Clase}
+Las reglas basadas en clases, se especifican con un punto seguido por el nombre de la clase. Los selectores de clase se aplican a todos los elementos que contengan la clase
+de la regla en su atributo clase.
+
+\subsection{Tipo}
+Los selectores de tipo aplican a todos los elementos de un tipo especifico. La regla \emph{a\{text-decoration: none;\}} remueve el subrayado del texto de todos los
+\emph{anchors} que se encuentren en la página. El uso de estas reglases una forma eficiente de agregar estilos a todos los elementos de un tipo especifico sin tener que
+agregar caracteres extra, como clases a los elementos.
+
+\subsection{Hermano adyacente}
+Este selector consiste en concatenar dos selectores mediante el simbolo +. La regla \emph{h1 + \#toc} aplica al elemento que tiene \emph{toc} como atributo \emph{ID}, cuyo
+hermano previo es un elemento del tipo \emph{h1}.
+
+\subsection{Hijo \emph{child}}
+Este tipo de selector es formado por la combinacion de dos o mas selectores simples mediante el uso del símbolo \emph{\textgreater}. La regla \emph{\#toc \textgreater   li \{font-weight: bold;\}}
+aplica a todos los elementos del tipo \emph{li}, cuyo padre es el elemento con el atributo \emph{ID} igual a toc.
+
+\subsection{Descendiente}
+Estos selectores utilizan un espacio \emph{' '} como combinador. La siguiente regla \emph{\#toc a \{ color: \#444\}}, aplica a todos los elementos del tipo \emph{a} que sean
+descendientes de el elemento cuyo \emph{ID} es igual a toc.
+
+\subsection{Universales}
+Los selectores universales (reglas representadas con un *) aplican a todos los elementos del documento.
+
+\subsection{Atributo}
+Los selectores por atributo aplican basandose en la existencia o valor de los atributos de un elemento. Un ejemplo de esto es la siguiente regla
+\emph{[href='\#index'] \{font-style: italic;\}}.
+
+\subsection{Pseudo-Clase y Pseudo-Elementos}
+Este tipo de selectores son utilizados para aplicar a situaciones en las cuales la información no esta representada en el DOM. Algunas de las \emph{pseudo-classes} más
+utilizadas son :hover, :visited, :first-child, :focus, etc.
+
+\section{Reglas a evitar}
+
+\subsection{No sobrecargar los selectores por Id}
+Debido a que existe un único elemento en la página con un id específico, no es necesario agregar clasificadores extra ya que la única consecuencia que tiene esto es
+retrasar el proceso. Por lo que es recomendable evitar reglas del estilo \emph{div\#toc}.
+
+\subsection{No sobrecargar selectores de clase}
+En vez de clasificar selectores de clase para etiquetas específicas, se recomienda extender el nombre de la clase para que sea específico con el caso de uso que se quiere
+tratar. Por ejemplo, si se tiene una regla de este tipo \emph{li.chapter}, se recomienda cambiarla por \emph{.li-chapter} o mejor aun \emph{.list-chapter}.
+
+\subsection{Reglas especificas}
+La principal causa de la disminución de la eficiencia de la aplicación de los selectores es la existencia de múltiples etiquetas en una regla. Es mejor dividir estos
+selectores en clases y agregarlas a los elementos correspondientes. Por ejemplo, es recomendable cambiar las reglas del tipo \emph{ol li a} por selectores de clases
+del tipo \emph{.list-anchor}.
+
+\subsection{Evitar selectores de descendencia y \emph{child}}
+Los selectores por descendencia son los más costosos de procesar, debido a que por cada elemento que aplica a cada parte de la regla se debe evaluar otro nodo más. En
+vez de estos es mejor utilizar clases asociadas a los elementos de la regla.
+
+\subsection{Utilizar herencia de los atributos}
+Muchas de las reglas de CSS se heredan, es mucho más costoso especificar este tipo de propiedades en cada elemento a tenerlas en un ancestro del mismo del cual
+pueden heredarlas.

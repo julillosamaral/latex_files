@@ -86,7 +86,7 @@ El entorno desarrollado durante la implementación del sistema y desarrollo del 
 Para la implementación de la herramienta se debió utilizar el lenguaje de programación PERL para el desarrollo de un plugin para la herramienta RT.\\
 
 Se utilizó el framework web Django por permitir desarrollar aplicaciones web de forma rápida y con la escritura de poco código. Además busca automatizar parte del desarrollo al basarse en el principio DRY (Don’t Repeat Yourself). Presenta la ventaja de utilizar el patrón de arquitectura MVC (Model View Controller). La ventaja de utilizar este patrón es que divide la aplicación en tres partes interconectadas y da una base inicial con la cual desarrollar el trabajo. A su vez, utilizar un patrón MVC presenta la ventaja de que se tiene experiencia desarrollando aplicaciones utilizando dicho patrón lo cual facilita el trabajo.
-Además de los expresados anteriormente influyó en la utilización de Django la existencia de librerías implementadas en Python para trabajar con STIX y TAXII, así como de una implementación de referencia con la cual se puede testear el desarrollo realizado.\\
+La existencia de librerías implementadas en python para trabajar con STIX y TAXII influyo fuertemente en la decisión de utilizar Django. Otra de las razones fue la existencia de una implementación de referencia con la cual se puede testear el desarrollo realizado.\\
 
 La metodología utilizada fue la de un desarrollo incremental, esto permitió realizar una validación de la arquitectura propuesta. Luego de realizar dicha validación se siguió implementando la herramienta propuesta.
 
@@ -99,12 +99,6 @@ Es una librería para Django que hace simple el construir APIs REST de forma sen
 \subsubsection{LWP}
 Es un conjunto de módulos Perl que proveen una API simple para desarrollar clientes web y desarrollar servidores http. En particular se utilizó el módulo LWP::UserAgent que permite realizar con facilidad pedidos web.
 Con esta librería se realizan los pedidos que se hacen a la componente  libTAXII.
-
-\subsubsection{Celery}
-Celery es un sistema distribuido de código abierto, simple, flexible y confiable para procesar grandes cantidades de mensajes mientras provee operaciones con las herramientas necesarias para mantener dicho sistema. 
-Permite realizar planificación de tareas, estas se pueden ejecutar simultáneamente en un único o varios servidores de trabajo utilizando multiprocesamiento. Estas tareas se pueden ejecutar de forma asincrónica (en un segundo plano) o sincrónicas (se espera hasta que está listo).\\
-
-Se utilizó para realizar de forma asincrónica el intercambio de datos con otras organizaciones. Esto permite que cuando se intercambian grandes cantidades de datos el usuario no tenga que esperar a que estos terminen para continuar con su trabajo.
 
 \subsubsection{libTAXII}
 Es una librería Python para manejar mensajes TAXII e invocar servicios TAXII. Uno de sus objetivos es ser fiel a las especificaciones de TAXII y a las buenas prácticas de Python.
@@ -124,7 +118,7 @@ A su vez cuando se recibe un XML, este se transforma a un objeto Python para ser
 
 \subsubsection{pythonStix}
 Es una librería Python para parsear, manipular y generar contenido STIX. Provee una API para desarrollar y consumir contenido STIX. Los desarrolladores pueden utilizar la API para desarrollar aplicaciones que crean, consumen, traducen o procesen contenido STIX.
-No se utilizó en esta etapa del proyecto pero es necesaria en etapas posteriores del proyecto en las que se deseen correlacionar o sanitizar la información intercambiada. Esto es parte del trabajo futuro a realizar en la herramienta. 
+Se utilizo en taxiiApp para crear paquetes STIX a partir de un cyber observable que ingrese el usuario en RTIR. Además durante los intercambios se obtiene información de los paquetes STIX para lo cual es necesario parsear la información del paquete STIX. 
 
 \subsubsection{YETI}
 YETI es una prueba de concepto de TAXII creado para ayudar a los desarrolladores a implementar y testear sus propias aplicaciones TAXII. A su vez ayuda a aprender más sobre el funcionamiento de TAXII.
