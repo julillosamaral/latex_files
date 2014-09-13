@@ -39,7 +39,7 @@ especificados por TAXII.\\
  
 \begin{figure}[ht!]
   \centering
-    \includegraphics[width=150mm]{./images/TAXIIArchitecture1.png}
+    \includegraphics[scale=0.80]{./images/TAXIIArchitecture1.png}
     \caption{Arquitectura de TAXII \protect\cite{b1}}
 \end{figure}
 
@@ -251,7 +251,7 @@ con un rol bien definido en TAXII.
   transmitir mensajes por la red. El Backend TAXII interactúa con el TMH para 
   convertir su contenido en mensajes TAXII y llevar a cabo actividades basadas 
   en los mensajes TAXII que son recibidos por el TMH.
-  \item \underline{TAXII Backend}: Cubre todas las unidades funcionales distintas al TTA y 
+  \item \underline{Backend TAXII}: Cubre todas las unidades funcionales distintas al TTA y 
   al TMH. Las especificaciones de TAXII no proveen requerimientos sobre como son 
   implementadas las capacidades en un backend más allá de como debe interactuar 
   con el TMH. Las organizaciones o implementadores pueden decidir que 
@@ -389,7 +389,7 @@ tener un campo 'In Response to' en su header.
 
 El cliente TAXII envía un mensaje STIX al inbox server. El inbox server podría 
 descartar el mensaje o pasar el mensaje STIX junto con cualquier información de 
-la entidad autenticada al Back-end TAXII. El cliente TAXII no recibe respuesta 
+la entidad autenticada al Backend TAXII. El cliente TAXII no recibe respuesta 
 del servidor de inbox y no sabrá si el mensaje ha sido aceptado o descartado por 
 el servidor, aunque el protocolo confiable de la capa inferior puede asegurar 
 que el mensaje fue entregado a la TTA del servidor de inbox. El inbox server no 
@@ -416,9 +416,9 @@ información junto a su propia política de control de acceso  para crear una
 lista de servicios a ser retornada. Esto podría ser empaquetado en una 
 respuesta de discovery los cuales podrían ser enviados al cliente TAXII. El 
 cliente TAXII recibe esa respuesta y la pasa la información del servicio a su 
-propio Back-End para ser procesado.
+propio BackEnd para ser procesado.
 
-\subsection{Feed Information Exchange}\ \\
+\subparagraph{Feed Information Exchange}\ \\
 
 En éste intercambio un cliente TAXII pide información sobre fuentes de datos disponibles en 
 un Feed Server. El servidor responde con una lista de fuentes de datos 
@@ -433,18 +433,18 @@ decisiones de control de acceso para realizar la respuesta.\\
 
 El cliente TAXII envía el Feed Information Request al 
 servidor, cuando el servidor recibe la request podría retornar un mensaje de 
-error o pasar la información relevante al TAXII backend. Entre la información 
+error o pasar la información relevante al backend TAXII. Entre la información 
 relevante se podría incluir la identidad. El backend podría utilizar esta 
 información junto con sus políticas de control de acceso para crear una lista de 
 fuentes de datos para ser enviadas al cliente. Esta lista es empaquetada en una 
 Feed Information Response. El cliente recibe este mensaje y pasa el Feed a su 
 propio backend para ser procesado.
 
-\subsection{Subscription Managment Exchange}\ \\
+\subparagraph{Subscription Managment Exchange}\ \\
 
 En este un cliente intenta establecer, borrar, pausar, resumir o modificar una 
 subscripción a un TAXII Data Feed conocido enviando un mensaje subscription 
-managment request al servidor. El servidor pasa la request al TAXII Back-end el 
+managment request al servidor. El servidor pasa la request al Backend TAXII el 
 cual determina la respuesta, la cual es luego enviada al cliente.
 
 \begin{figure}[ht!]
@@ -455,7 +455,7 @@ cual determina la respuesta, la cual es luego enviada al cliente.
 
 El cliente TAXII envía una Manage Feed Subscription Request al servidor. Éste 
 podría retornar un mensaje de error TAXII o pasar la información relevante al 
-TAXII backend. La información relevante podría incluir la identidad, parámetros 
+backend TAXII. La información relevante podría incluir la identidad, parámetros 
 que identifiquen la subscripción a ser modificada o creada, y la acción 
 realizada. El backend TAXII puede usar dicha información junto con sus 
 políticas de control de acceso y las funcionalidades que posea para determinar 
@@ -463,7 +463,7 @@ si la acción está permitida o no. Dependiendo de la respuesta, el servidor
 podría retornar un mensaje de error TAXII o enviar una respuesta Manage Feed 
 Successful Response.
 
-\subsection{Feed Poll Exchange}
+\subparagraph{Feed Poll Exchange}
 
 Es utilizado por un consumidor para pedir contenido de un productor de datos. El 
 TAXII Data Feed content es enviado al consumidor en el mismo intercambio. Esto  
@@ -479,7 +479,7 @@ entrantes.
 
 El cliente consumidor inicia el intercambio enviando un mensaje Poll Request al 
 servidor de Poll del productor. El servidor puede enviar un mensaje de error 
-inmediatamente o pasar la información relevante al TAXII backend. Información 
+inmediatamente o pasar la información relevante al backend TAXII. Información 
 relevante incluye el nombre de la fuente, los parámetros de subscripción, 
 \textit{timestamps} indicando el intervalo de tiempo de la información que pide el 
 consumidor y la identidad del consumidor. El backend TAXII evalúa ésta

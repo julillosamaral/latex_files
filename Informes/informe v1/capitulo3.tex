@@ -191,7 +191,7 @@
 	\textit{workflow} para el manejo de incidentes de seguridad. Dicho \textit{workflow} facilita el trabajo de los
 	CSIRTs.\\
 \bigskip
-	Como se mencionó en el estado del arte, RTIR no cuenta con una representación estructurada de la información ni tampoco
+	Como se mencionó en el capítulo 2, RTIR no cuenta con una representación estructurada de la información ni tampoco
 	con un método automático para compartir información de seguridad. Una integración con TAXII y STIX le permitiría cubrir
 	estas dos falencias.
 
@@ -497,9 +497,9 @@
 \end{figure}
 
 	En la figura \ref{fig.modificarserviciotaxii} se especifica el caso de uso de modificación de servicios TAXII, en este un analista ingresa a RTIR y
-	lista todos los servicios disponibles. Luego selecciona el que será dado de baja.
+	lista todos los servicios disponibles. Luego selecciona el que será modificado.
 \newpage
-\subsubsection{Alta de información RTIR}
+\subsubsection{Alta de información}
 
 \begin{flushleft}
 	\tablefirsthead{}
@@ -513,23 +513,48 @@
 		{Analista}\\
 		{Descripción} &
 		{Este caso de uso comienza cuando el analista desea registrar nueva información en
-			el sistema. Para ello debe ingresar la información deseada al sistema. Es deseado que se pueda dar de alta información
-			referente a cyber observables como por ejemplo IPs, hash de archivos, descripciones de amenazas, etc. El manejo podría
-			realizarse por medio de los incidentes de RTIR.}\\\hhline{~-}
+			el sistema. Es deseado que se pueda dar de alta información
+			referente a cyber observables como por ejemplo IPs, hash de archivos, descripciones de amenazas, etc.}\\\hhline{~-}
 	\end{supertabular}
 \end{flushleft}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=5.7638in,height=2.0701in]{Analisis22-img/Analisis22-img026.png} 
+	\includegraphics[width=5.7638in,height=2.0701in]{Analisis22-img/AltaInfoRTIR.png} 
 	\caption{Caso de uso alta de información RTIR}
 	\label{fig.altainfortir}
 \end{figure}
 \bigskip
-	En la figura \ref{fig.altainfortir} se ve el caso de uso de alta de información en RTIR. En este un analista ingresa al sistema e ingresa
-	nueva información en RTIR. En RTIR se crea un nuevo ticket y en TAXII App se da de alta la información representando y
-	almacenándola de forma estructurada.
+	En la figura \ref{fig.altainfortir} se ve el caso de uso de alta de información en RTIR. En este un analista ingresa al sistema un cyber observable que será dado de alta en el sistema.En TAXII App se da de alta la información representando y
+	almacenándola de forma estructurada por medio de STIX.
 
+
+\newpage
+\subsubsection{Asociación de información}
+
+\begin{flushleft}
+	\tablefirsthead{}
+	\tablehead{}
+	\tabletail{}
+	\tablelasttail{}
+	\begin{supertabular}{m{0.8816598in}|m{4.8740597in}|}
+		\multicolumn{1}{m{0.8816598in}}{{Nombre}} &
+		\multicolumn{1}{m{4.8740597in}}{{Asociación de información}}\\\hline
+		{Actor} &
+		{Analista}\\
+		{Descripción} &
+		{Este caso de uso comienza cuando el analista desea asociar contenido existente en TAXII App a un Ticket de RTIR. La información asociada al caso de RTIR puede ser utilizada durante la resolución de un incidente.}\\\hhline{~-}
+	\end{supertabular}
+\end{flushleft}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=5.7638in,height=2.0701in]{Analisis22-img/AsociacionInformacion.png} 
+	\caption{Caso de uso asociación de información}
+	\label{fig.asocinfortir}
+\end{figure}
+\bigskip
+	En la figura \ref{fig.asocinfortir} se ve el caso de uso de asociación de información. En este un analista asocia un ticket existente en RTIR con información estructurada almacenada en TAXII App. Como se dijo anteriormente dicha información es almacenada utilizando STIX.
 
 \newpage
 \subsubsection{Subscripción a TAXII Data Feed}

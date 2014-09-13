@@ -9,7 +9,7 @@
 \chapter{Diseño}
 \label{capitulo4}
 	En este capítulo se propone una solución que respeta los requerimientos que se especificaron
-		durante el análisis. Además se describe el funcionamiento de la herramienta propuesta identificando los componentes que
+		durante el capítulo anterior. Además se describe el funcionamiento de la herramienta propuesta identificando los componentes que
 		participan en dicho proceso. También se explica la arquitectura de la aplicación con la función de cada una de sus
 		componentes. Finalmente se detalla el modelo de datos creado para la base de datos.
 	
@@ -81,7 +81,7 @@
 	
 	La aplicación TAXII recibe datos de RTIR así como también de organizaciones socias, en un
 		futuro se podría dar la posibilidad de que la aplicación TAXII recibiera datos de sensores que se encuentren en la red
-		de la organización. Luego de que los datos son recibidos y almacenados se correlacionan con los ya existentes. De la
+		de la organización. Luego de que los datos son recibidos y almacenados se correlacionan con los ya existentes en por TAXII App. De la
 		correlación se pueden obtener soluciones a problemas encontrados, información sobre ataques realizados, identificación
 		de atacantes, etc. En caso de que exista información de utilidad se pueden ingresar notas a tickets o relacionar
 		tickets existentes en el RTIR.\\
@@ -96,7 +96,7 @@
 	
 	La aplicación TAXII App es independiente de la aplicación RTIR, siendo posible reemplazar esta
 		última por otra herramienta con funcionalidades similares. Es deseado que la herramienta que pueda reemplazar a RTIR
-		pueda ser extendida de forma de invocar a las funcionalidades desarrolladas en TAXII App y cuente con un método por el
+		pueda ser extendida de forma de invocar a las funcionalidades desarrolladas en TAXII App. Además deberia contar con un método por el
 		cual la TAXII App pueda utilizar la funcionalidades de la herramienta que sustituya a RTIR.
 	
 	\subsection{RTIR}
@@ -122,16 +122,16 @@
 		TAXII App utiliza los componentes TAXIICore, RTIRProxy y TAXIIServices, estos son implementados durante el transcurso
 		del proyecto.
 	
-	\subsection{libTAXII}
+	\subsubsection{libTAXII}
 	Es una librería que provee una representación de objetos de los mensajes TAXII, cuenta además
 		con una serie de métodos para el manejo de dichos mensajes. Provee clientes para http y https. La librería se utiliza
 		para generar los mensajes y dispone métodos para transformarlos a xml, estos xml son utilizados en los intercambios
 		entre cliente y servidor.
 	
-	\subsection{libSTIX}
+	\subsubsection{libSTIX}
 	libSTIX es una librería provista por MITRE para parsear, manipular y generar contenido STIX.
 	
-	\subsection{RTIRProxy}
+	\subsubsection{RTIRProxy}
 	RTIRProxy es la componente de TAXII App encargada de integrarse con RTIR, para ello consume la
 		API REST provista por RTIR para el manejo de tickets. Por ser una API REST la comunicación está encapsulada en el
 		protocolo http. Ésta componente busca que se tenga independencia de RTIR permitiendo el uso de otro sistema en su
@@ -140,7 +140,7 @@
 		es que la interfaz con la cual se comunique TAXIICore se mantenga. Dentro de dichos tipos de integración podría
 		encontrarse otra API REST o web services con SOAP.
 	
-	\subsection{TAXIICore}
+	\subsubsection{TAXIICore}
 	Es necesario que este componente tenga una interfaz de web services REST para realizar la
 		comunicación con el RTIR. En dicha interfaz se deben dar operaciones para realizar el alta de información, obtener
 		información de servicios publicados por contrapartes, enviar y recibir información de seguridad entre contrapartes.\\
@@ -154,20 +154,20 @@
 		políticas definidas por los administradores para que sea sanitizada. Luego de que la información es sanitizada es
 		enviada a TAXIIServices para que sea compartida con las organizaciones socias.
 	
-	\subsection{libSanitizacion}
+	\subsubsection{libSanitizacion}
 	Esta es la componente encargada de realizar la sanitización de la información que se desea
 		intercambiar entre los sistemas. Para realizar dicha sanitización se podrían utilizar librerías ya existentes o implementar una
 		propia. La componente se alimenta de políticas definidas por los administradores para realizar la
 		sanitización.
 	
-	\subsection{libCorrelacion}
+	\subsubsection{libCorrelacion}
 	Es la componente encargada de la correlación de los datos del sistema, dicha correlación se
 		realiza por medio de políticas ingresadas por los administradores del sistema. La componente ayuda a agrupar datos que
 		tengan características similares lo que facilita el trabajo de los analistas y da más valor a la información recibida.
 		Se pueden utilizar distintos métodos para realizar las correlaciones y de ahí se desprende la necesidad de que sea un
 		componente separado del Core del sistema. Los datos correlacionados son los almacenados en TAXII DB.
 	
-	\subsection{TAXIIServices}
+	\subsubsection{TAXIIServices}
 	Esta componente es una implementación de los servicios TAXII como se especifica en [M13] \ y
 		\ [M14]. 
 	

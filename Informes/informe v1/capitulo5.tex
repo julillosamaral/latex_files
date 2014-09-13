@@ -8,7 +8,7 @@ El entorno desarrollado durante la implementación del sistema y desarrollo del 
 
 \begin{itemize}
 	\item Sistemas operativos: Mac OS 10.9.3 (Maverick) y Linux Mint 15
-	\item Sistemas operativos utilizados en el testeo: Linux Mint 15
+	\item Sistemas operativos utilizados en el testeo y caso de estudio: Linux Mint 15
 	\item Lenguajes de desarrollo: Perl y Python (web framework Django)
 	\item Entorno de desarrollo: vim\footnote{Vim es un editor de texto que está diseñado para usarse tanto desde una interfaz de línea de comandos o como una aplicación independiente en una interfaz gráfica de usuario.}  con plugins provistos por spf13\footnote{http://vim.spf13.com/ centraliza un conjunto de plugins para vim.}
 	\item Base de datos: Mysql versión 14.14 distribución 5.5.34
@@ -31,10 +31,10 @@ La metodología utilizada fue la de un desarrollo incremental, esto permitió re
 Durante el transcurso de la implementación se utilizaron distintas librerías Perl y Python para el desarrollo de la herramienta.
 
 \subsubsection{Django Rest Framework}
-Es una librería para Django que hace simple el construir APIs REST de forma sencilla y rápida. La librería se utilizó para implementar la API REST que se consume desde el plugin RT-TAXII.
+Es una librería para Django que hace simple el construir APIs REST de forma sencilla y rápida. La librería se utilizó para implementar la API REST que se consume desde el plugin RT-TAXII, dicho plugin se explicará mas adelante.
 
 \subsubsection{LWP}
-Es un conjunto de módulos Perl que proveen una API simple para desarrollar clientes web y desarrollar servidores http. En particular se utilizó el módulo LWP::UserAgent que permite realizar con facilidad pedidos web.
+LWP se refiere a LibWww-Perl y es un conjunto de módulos Perl que proveen una API simple para desarrollar clientes web y desarrollar servidores http. En particular se utilizó el módulo LWP::UserAgent que permite realizar con facilidad pedidos web.
 Con esta librería se realizan los pedidos que se hacen a la componente  libTAXII.
 
 \subsubsection{libTAXII}
@@ -54,8 +54,9 @@ Esas tres características se utilizaron durante el desarrollo de la herramienta
 A su vez cuando se recibe un XML, este se transforma a un objeto Python para ser procesado, luego del procesamiento se devuelve una respuesta XML por medio del cliente HTTP/HTTPS.
 
 \subsubsection{pythonStix}
-Es una librería Python para parsear, manipular y generar contenido STIX. Provee una API para desarrollar y consumir contenido STIX. Los desarrolladores pueden utilizar la API para desarrollar aplicaciones que crean, consumen, traducen o procesen contenido STIX.
+Es una librería Python que provee una API para parsear, manipular y consumir contenido STIX. Los desarrolladores pueden utilizar la API para desarrollar aplicaciones que crean, consumen, traducen o procesen contenido STIX.
 Se utilizo en taxiiApp para crear paquetes STIX a partir de un cyber observable que ingrese el usuario en RTIR. Además durante los intercambios se obtiene información de los paquetes STIX para lo cual es necesario parsear la información del paquete STIX. 
+
 
 \subsubsection{YETI}
 YETI es una prueba de concepto de TAXII creado para ayudar a los desarrolladores a implementar y testear sus propias aplicaciones TAXII. A su vez ayuda a aprender más sobre el funcionamiento de TAXII.
