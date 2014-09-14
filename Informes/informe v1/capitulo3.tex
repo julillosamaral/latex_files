@@ -26,7 +26,7 @@
 	de esta manera la divulgación de información sensible o privada.\\
 
 	Estas son algunas de las problemáticas que se pueden identificar referentes al intercambio de información de seguridad.
-	También existen otros problemas, como por ejemplo establecer un criterio referente a políticas organizacionales que
+	También existen otros problemas que no serán analizados en este documento, como por ejemplo establecer un criterio referente a políticas organizacionales que
 	ayuden a identificar organizaciones de confianza. Este problema no será analizado en este documento.\\
 
 
@@ -90,8 +90,8 @@
 	positivos o hechos reales. A su vez, permite detectar ataques que pudieran pasar desapercibidos en volúmenes muy
 	grandes de información.\\
 
-	Si bien la información correlacionada es de utilidad para los analistas, es necesario contar con toda la
-	información recibida para poder hacer un análisis de los datos originales por parte de los analistas.
+	Si bien la información correlacionada es de utilidad para los analistas debido a que facilita el analisis de la información. Es necesario contar con toda la
+	información recibida para poder hacer un análisis de los datos originales por parte de los analistas en caso de que sea necesario.
 
 
 \bigskip
@@ -204,14 +204,14 @@
 
 \bigskip
 
-	Además, al ser una herramienta con una profunda inserción en la comunidad, es esperable que sea más fácil la aceptación
+	A su vez, al ser una herramienta con una profunda inserción en la comunidad, es esperable que sea más fácil la aceptación
 	de una extensión basada en TAXII y STIX que la creación de una nueva herramienta a la que los usuarios deberán
 	adaptarse.
 
 
 \bigskip
 
-	Si bien RTIR fue una premisa dentro de los objetivos del proyecto, se evaluaron durante el estudio del arte otras
+	Si bien RTIR fue una premisa dentro de los objetivos del proyecto, se evaluaron durante el estado del arte otras
 	herramientas que pudieran tomar su lugar. De todas formas, del análisis realizado, se eligió RTIR por las razones dadas
 	anteriormente. A pesar de utilizarse RTIR, es deseable que la herramienta desarrollada no sea dependiente de RTIR, esto
 	quiere decir que se pueda utilizar una herramienta con funcionalidades similares en el futuro.
@@ -220,7 +220,7 @@
 
 \bigskip
 
-	Se decidió utilizar STIX para representar la información por la facilidad con la que permite representar información de
+	Se decidió utilizar STIX por la facilidad con la que permite representar información de
 	seguridad de forma estructurada y estándar. Por medio de CybOX se permite describir evidencia en la forma de
 	observables, artefactos y/o comportamientos presentes en un sistema. La representación de forma precisa se debe a la
 	gran gama de objetos distintos que permite describir, entre ellos, el nombre de procesos ejecutándose, hash de archivos
@@ -246,8 +246,8 @@
 \bigskip
 
 	TAXII realiza el intercambio de conjuntos de información de seguridad llamados ``TAXII Data Collections''. Dichas
-	colecciones de datos pueden ser conjuntos ordenados de información (``TAXII Data Feeds'') en los cuales el criterio de
-	ordenación es un \textit{timestamp} o conjuntos desordenados (``TAXII Data Sets''). La información en dichos conjuntos
+	colecciones de datos pueden ser conjuntos ordenados de información (``TAXII Data Feeds''), en los cuales el criterio de
+	ordenación es un \textit{timestamp}, o conjuntos desordenados (``TAXII Data Sets''). La información en dichos conjuntos
 	es representada de forma estructurada utilizando el lenguaje STIX. Durante los intercambios de información es necesario
 	que el cliente pida información de una de las colecciones de las que dispone el productor. Por ello es necesario que se
 	de en el sistema la posibilidad de gestionar las colecciones a las que un cliente se suscribe.
@@ -476,7 +476,7 @@
 	\label{fig.altaserviciotaxii}
 \end{figure}
 	En la figura \ref{fig.altaserviciotaxii} se especifica el caso de uso de alta de servicios TAXII, en este un analista ingresa a RTIR y da de alta
-	en el sistema un servicio TAXII. Por medio de dicho servicio TAXII se realizara el intercambio con otra organización.
+	en el sistema un servicio TAXII, con dichos servicios se realizara el intercambio de información con otra organización.
 
 
 \bigskip

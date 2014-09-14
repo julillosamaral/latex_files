@@ -4,7 +4,7 @@
 En esta sección se presentan las herramientas y metodologías elegidas para realizar la implementación de la herramienta.
 
 \subsection{Entorno de desarrollo}
-El entorno desarrollado durante la implementación del sistema y desarrollo del caso de estudio:
+El entorno desarrollado durante la implementación del sistema y desarrollo del caso de estudio consta de:
 
 \begin{itemize}
 	\item Sistemas operativos: Mac OS 10.9.3 (Maverick) y Linux Mint 15
@@ -20,10 +20,12 @@ El entorno desarrollado durante la implementación del sistema y desarrollo del 
 \end{itemize}
 
 \subsection{Metodología}
-Para la implementación de la herramienta se debió utilizar el lenguaje de programación PERL para el desarrollo de un plugin para la herramienta RT.\\
-	\bigskip
+
 Se utilizó el framework web Django por permitir desarrollar aplicaciones web de forma rápida y con la escritura de poco código. Además busca automatizar parte del desarrollo al basarse en el principio DRY (\textit{Don’t Repeat Yourself}). Presenta la ventaja de utilizar el patrón de arquitectura MVC (\textit{Model View Controller}). La ventaja de utilizar este patrón es que divide la aplicación en tres partes interconectadas y da una base inicial con la cual desarrollar el trabajo. A su vez, utilizar un patrón MVC presenta la ventaja de que se tiene experiencia desarrollando aplicaciones utilizando dicho patrón lo cual facilita el trabajo.
 La existencia de librerías implementadas en python para trabajar con STIX y TAXII influyo fuertemente en la decisión de utilizar Django. Otra de las razones fue la existencia de una implementación de referencia con la cual se puede testear el desarrollo realizado.\\
+	\bigskip
+Además de utilizar Django se utilizó el lenguaje de programación PERL para el desarrollo de un plugin para la herramienta RT.\\
+
 	\bigskip
 La metodología utilizada fue la de un desarrollo incremental, esto permitió realizar una validación de la arquitectura propuesta. Luego de realizar dicha validación se siguió implementando la herramienta propuesta.
 

@@ -1,9 +1,9 @@
 \chapter{Caso de estudio}
 \label{capitulo6}
-Para mostrar el uso de la herramienta se simulo en un ambiente virtualizado la interacción y colaboración entre varios CSIRTs. Mediante esta prueba se realizo el intercambio de cyber observables entre las distintas organizaciones. Dicho intercambio se realizo utilizando los distintos servicios provistos por TAXII.
+Para mostrar el uso de la herramienta se simulo en un ambiente virtualizado la interacción y colaboración entre varios CSIRTs. Mediante esta prueba se realizó el intercambio de cyber observables entre las distintas organizaciones. Dicho intercambio se realizo utilizando los distintos servicios provistos por TAXII.
 
 \section{Escenario del caso de estudio}
-Se desplegaron dos servidores para realizar la prueba de concepto, cada uno de estos servidores tiene instalado Linux Mint 17. En dichos equipos se instaló RTIR junto con TAXIIApp. Además en el servidor correspondiente al CSIRT2 se instalo YETI. Cada uno de esos servidores tiene incluido una base de datos con esquemas correspondientes a cada una de las aplicaciones. En la figura \ref{fig.laboratorio_desplegado} se ve un esquema representando el despliegue realizado.
+Se desplegarón dos servidores para realizar la prueba de concepto, cada uno de estos servidores tiene instalado Linux Mint 17. En dichos equipos se instaló RTIR junto con TAXIIApp. Además en el servidor correspondiente al CSIRT2 se instalo YETI. Cada uno de esos servidores tiene incluido una base de datos con esquemas correspondientes a cada una de las aplicaciones. En la figura \ref{fig.laboratorio_desplegado} se ve un esquema representando el despliegue realizado.
 
 \begin{figure}[h!]
 	\label{fig.laboratorio_desplegado}
@@ -13,6 +13,7 @@ Se desplegaron dos servidores para realizar la prueba de concepto, cada uno de e
 \end{figure}
 
 La tabla que se presenta a continuación indica la información respecto al laboratorio implementado.
+\renewcommand{\tablename}{Tabla}
 
 \begin{table}
 	\begin{center}
@@ -30,7 +31,7 @@ La tabla que se presenta a continuación indica la información respecto al labo
 	\label{tabla_equipos}
 \end{table}
 
-En la tabla \ref{tabla_equipos} se muestra las direcciones ip para cada uno de los equipos utilizados en el caso de estudio. En el CSIRT 1 se tiene instalado RTIR con el \textit{plugin} implementado durante el proyecto para comunicarse con TAXIIApp. También se tiene instalado TAXIIApp para realizar los intercambios de información con el protocolo TAXII. RTIR escucha en el puerto 8080 mientras que TAXIIApp en el 8001.
+En la tabla \ref{tabla_equipos} se muestran las direcciones ip para cada uno de los equipos utilizados en el caso de estudio. En el CSIRT 1 se tiene instalado RTIR con el \textit{plugin} implementado durante el proyecto para comunicarse con TAXIIApp. También se tiene instalado TAXIIApp para realizar los intercambios de información con el protocolo TAXII. RTIR escucha en el puerto 8080 mientras que TAXIIApp en el 8001.
 Dichas aplicaciones se encuentras instaladas también en el CSIRT 2 escuchando en los mismos puertos. A su vez en el CSIRT 2 se encuentra una instalación de YETI. Dicha instalación se encuentra escuchando en el puerto 8080. YETI y TAXIIApp se encuentran corriendo ambas en el mismo equipo para no tener una maquina virtual extra.
 En cada uno de los equipos se encuentra instalada una base de datos Mysql en la que se encuentran los esquemas de base de datos utilizados por cada una de las aplicaciones.
 
