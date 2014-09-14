@@ -33,14 +33,14 @@ La metodología utilizada fue la de un desarrollo incremental, esto permitió re
 Durante el transcurso de la implementación se utilizaron distintas librerías Perl y Python para el desarrollo de la herramienta.
 
 \subsubsection{Django Rest Framework}
-Es una librería para Django que hace simple el construir APIs REST de forma sencilla y rápida. La librería se utilizó para implementar la API REST que se consume desde el plugin RT-TAXII, dicho plugin se explicará mas adelante.
+Django Rest Framework \cite{rest_framework} es una librería para Django que hace simple el construir APIs REST de forma sencilla y rápida. La librería se utilizó para implementar la API REST que se consume desde el plugin RT-TAXII, dicho plugin se explicará mas adelante.
 
 \subsubsection{LWP}
-LWP se refiere a LibWww-Perl y es un conjunto de módulos Perl que proveen una API simple para desarrollar clientes web y desarrollar servidores http. En particular se utilizó el módulo LWP::UserAgent que permite realizar con facilidad pedidos web.
+LWP se refiere a LibWww-Perl \cite{lwp} y es un conjunto de módulos Perl que proveen una API simple para desarrollar clientes web y desarrollar servidores http. En particular se utilizó el módulo LWP::UserAgent que permite realizar con facilidad pedidos web.
 Con esta librería se realizan los pedidos que se hacen a la componente  libTAXII.
 
 \subsubsection{libTAXII}
-Es una librería Python para manejar mensajes TAXII e invocar servicios TAXII. Uno de sus objetivos es ser fiel a las especificaciones de TAXII y a las buenas prácticas de Python.
+libTAXII \cite{libtaxii} es una librería Python para manejar mensajes TAXII e invocar servicios TAXII. Uno de sus objetivos es ser fiel a las especificaciones de TAXII y a las buenas prácticas de Python.
 La librería provee:
 
 \begin{enumerate}
@@ -56,12 +56,12 @@ Esas tres características se utilizaron durante el desarrollo de la herramienta
 A su vez cuando se recibe un XML, este se transforma a un objeto Python para ser procesado, luego del procesamiento se devuelve una respuesta XML por medio del cliente HTTP/HTTPS.
 
 \subsubsection{pythonStix}
-Es una librería Python que provee una API para parsear, manipular y consumir contenido STIX. Los desarrolladores pueden utilizar la API para desarrollar aplicaciones que crean, consumen, traducen o procesen contenido STIX.
+PythonStix \cite{pythonstixgit} es una librería Python que provee una API para parsear, manipular y consumir contenido STIX. Los desarrolladores pueden utilizar la API para desarrollar aplicaciones que crean, consumen, traducen o procesen contenido STIX.
 Se utilizo en taxiiApp para crear paquetes STIX a partir de un cyber observable que ingrese el usuario en RTIR. Además durante los intercambios se obtiene información de los paquetes STIX para lo cual es necesario parsear la información del paquete STIX. 
 
 
 \subsubsection{YETI}
-YETI es una prueba de concepto de TAXII creado para ayudar a los desarrolladores a implementar y testear sus propias aplicaciones TAXII. A su vez ayuda a aprender más sobre el funcionamiento de TAXII.
+YETI \cite{yeti} es una prueba de concepto de TAXII creado para ayudar a los desarrolladores a implementar y testear sus propias aplicaciones TAXII. A su vez ayuda a aprender más sobre el funcionamiento de TAXII.
 Fue utilizada en etapas tempranas del proyecto como referencia y para testear el desarrollo realizado. De esta forma mientras se avanzó en el desarrollo se pudo validar de forma adecuada que se respetara adecuadamente la especificación de TAXII.
 
 \subsection{Módulos desarrollados}
@@ -102,18 +102,18 @@ En la figura \ref{fig.taxii_app} se ven los distintos módulos implementados dur
 
 \paragraph{TAXIICore}\ \\
 TAXII Core es la componente encargada del procesamiento de la información, es invocada por la API Rest y por TAXII Services y actúa dependiendo de la información recibida. Además es la encargada de la comunicación con la base de datos por medio del modelo de datos desarrollado. A su vez se tuvo consideración durante el desarrollo que este componente sería el encargado de dialogar con los módulos de sanitización y correlación de información. 
-En el anexo se pueden ver las entidades creadas para modelar la base de datos así como los métodos implementados para enviar y recibir información del resto de las componentes.
+En el anexo \ref{anexo} se pueden ver las entidades creadas para modelar la base de datos así como los métodos implementados para enviar y recibir información del resto de las componentes.
 
 \paragraph{TAXIIServices}\ \\
 Este módulo es el encargado de la comunicación con otra organización por medio del protocolo TAXII. Se desarrollaron  los distintos métodos necesarios para implementar los servicios TAXII exceptuando el discovery service.
 Se utiliza libTAXII para crear los mensajes a intercambiar y para realizar la invocación a los servicios de otras organizaciones.
 Los mensajes luego de recibidos son pasados a TAXIICore para su procesamiento.
 En caso de que se crearan nuevos servicios o que se quisiera implementar por ejemplo el discovery service esto se realizaría en este módulo.
-En el anexo se pueden ver las firmas de los servicios implementados.
+En el anexo \ref{anexo} se pueden ver las firmas de los servicios implementados.
 
 \paragraph{REST API}\ \\
 La API Rest desarrollada provee las funcionalidades necesarias para que RT-TAXII interactúe con TAXII App. Dentro de dichas interacciones se permite el manejo de cualquiera de los elementos del modelo en TAXIICore. Además se crearon métodos específicos para el uso de TAXII. Se permite el envío y poll de información, obtención de data feeds así como la subscripción a estos.\\
 
 Para la implementación se utilizo la librería auxiliar \textit{Django Rest framework} que simplifica el desarrollo de la API.
 Si bien se implementaron todos los elementos necesarios para realizar la interacción con la base de datos, si existiera un cambio en esta (i.e: se crea una nueva entidad) sería necesario extender esta API para poder realizar la interacción entre los sistemas. A su vez si se crea un nuevo servicio TAXII y se desea proveer una interfaz en RTIR para que los usuarios interactúen con esta sería necesario agregar los métodos necesarios en esta API.
-En el anexo se puede ver la firma de la API desarrollada.
+En el anexo \ref{anexo} se puede ver la firma de la API desarrollada.

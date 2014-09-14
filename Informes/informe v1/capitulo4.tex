@@ -31,7 +31,7 @@
 	
 	Se busca que la herramienta ayude a solucionar algunas de las problemáticas a las que se
 		enfrentan las organizaciones durante el intercambio de información de seguridad. Dichas problemáticas se abordan
-		durante el capítulo de análisis.
+		durante el capítulo \ref{capitulo3}.
 	
 	\section{Componentes del sistema}
 	
@@ -66,7 +66,7 @@
 
 	En la figura \ref{fig.arquitecturasistema} se pueden ver dos bases de datos: TAXII DB y RTIR DB. A su vez se cuenta con dos
 		aplicaciones: RTIR y TAXII App. RTIR es la aplicación para manejo de incidentes desarrollada por la empresa
-		Bestpractial [BP] y elegida para el desarrollo de este proyecto. TAXII App es una aplicación nueva que será
+		Bestpractial \cite{bp} y elegida para el desarrollo de este proyecto. TAXII App es una aplicación nueva que será
 		desarrollada durante el proyecto y se encarga de representar la información de forma estructurada e intercambiar dicha
 		información de seguridad.
     \bigskip
@@ -123,7 +123,7 @@
 		del proyecto.
 	
 	\subsubsection{libTAXII}
-	Es una librería que provee una representación de objetos de los mensajes TAXII, cuenta además
+	libTAXII \cite{libtaxii} es una librería que provee una representación de objetos de los mensajes TAXII, cuenta además
 		con una serie de métodos para el manejo de dichos mensajes. Provee clientes para http y https. La librería se utiliza
 		para generar los mensajes y dispone métodos para transformarlos a xml, estos xml son utilizados en los intercambios
 		entre cliente y servidor.
@@ -134,8 +134,8 @@
 	\subsubsection{RTIRProxy}
 	RTIRProxy es la componente de TAXII App encargada de integrarse con RTIR, para ello consume la
 		API REST provista por RTIR para el manejo de tickets. Por ser una API REST la comunicación está encapsulada en el
-		protocolo http. Ésta componente busca que se tenga independencia de RTIR permitiendo el uso de otro sistema en su
-		lugar. De esta forma se logra es que si otro sistema tiene una API
+		protocolo http. Esta componente busca que se tenga independencia de RTIR permitiendo el uso de otro sistema en su
+		lugar. Lo que se logra es que si otro sistema tiene una API
 		o un método de integración distinto al de RTIR se re implemente esta componente. La única premisa que se debe cumplir
 		es que la interfaz con la cual se comunique TAXIICore se mantenga. Dentro de dichos tipos de integración podría
 		encontrarse otra API REST o web services con SOAP.
@@ -168,8 +168,8 @@
 		componente separado del Core del sistema. Los datos correlacionados son los almacenados en TAXII DB.
 	
 	\subsubsection{TAXIIServices}
-	Esta componente es una implementación de los servicios TAXII como se especifica en [M13] \ y
-		\ [M14]. 
+	Esta componente es una implementación de los servicios TAXII como se especifica en \cite{M13} \ y
+		\ \cite{M14} 
 	
 	TAXIIServices provee los siguientes servicios:
 	
@@ -213,7 +213,7 @@
 	
 	\section{Modelo de datos}
 	El modelo de datos diseñado se adapta a las necesidades de TAXII, dichas necesidades están
-		definidas en \ [M15], además se agrega una tabla para realizar el mapeo entre los elementos de RTIR y los elementos
+		definidas en \ \cite{M15}, además se agrega una tabla para realizar el mapeo entre los elementos de RTIR y los elementos
 		TAXII intercambiados. En la figura \ref{fig.diagramadedatos} se ve el modelo de datos \ y a continuación se explica cada una de sus
 		componentes.
 	
@@ -237,11 +237,11 @@
 		realizado con TAXII.
 	\item \underline{Data Feed Push Method}: Es utilizado para establecer los protocolos que pueden ser
 		utilizados para enviar contenido por medio de una subscripción. Esto se utiliza en un mensaje de tipo
-	\textit{Feed Information Response}. Es definido en [M14].
+	\textit{Feed Information Response}. Es definido en \cite{M14}.
 	\item \underline{Data Feed Poll Information}: Tiene la finalidad de establecer los protocolos soportados y
 		las direcciones de una fuente de información (\textit{Data
 			Feeds}). Es utilizado en los mensajes de \textit{Feed Information
-			Response} como se define en [M14].
+			Response} como se define en \cite{M14}.
 	\item \underline{Data Feed Subscription Method}: Es utilizado para identificar el protocolo y la dirección
 		de un servicio de \textit{Feed Managment} que pueda procesar las
 		subscripciones a fuentes de información TAXII.
