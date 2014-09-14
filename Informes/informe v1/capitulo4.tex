@@ -31,7 +31,7 @@
 	
 	Se busca que la herramienta ayude a solucionar algunas de las problemáticas a las que se
 		enfrentan las organizaciones durante el intercambio de información de seguridad. Dichas problemáticas se abordan
-		durante el capítulo de análisis.
+		durante el capítulo \ref{capitulo3}.
 	
 	\section{Componentes del sistema}
 	
@@ -134,7 +134,7 @@
 	\subsubsection{RTIRProxy}
 	RTIRProxy es la componente de TAXII App encargada de integrarse con RTIR, para ello consume la
 		API REST provista por RTIR para el manejo de tickets. Por ser una API REST la comunicación está encapsulada en el
-		protocolo http. Ésta componente busca que se tenga independencia de RTIR permitiendo el uso de otro sistema en su
+		protocolo http. Esta componente busca que se tenga independencia de RTIR permitiendo el uso de otro sistema en su
 		lugar. Lo que se logra es que si otro sistema tiene una API
 		o un método de integración distinto al de RTIR se re implemente esta componente. La única premisa que se debe cumplir
 		es que la interfaz con la cual se comunique TAXIICore se mantenga. Dentro de dichos tipos de integración podría

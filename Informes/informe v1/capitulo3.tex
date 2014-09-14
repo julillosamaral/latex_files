@@ -6,7 +6,7 @@
 \renewcommand\theTabla{\arabic{Tabla}}
 
 \chapter{Análisis}
-\label{capitulo2}
+\label{capitulo3}
 	
 	A continuación se presentan los aspectos más importantes que se tuvieron en cuenta para el desarrollo del proyecto. Se
 	presentan características deseadas en un sistema de intercambio de información de seguridad entre organizaciones.
@@ -22,8 +22,7 @@
 	analistas.\\
 
 	Otro de los problemas que interfieren en el intercambio de información es el riesgo a la seguridad y reputación de la
-	organización. La información intercambiada debe pasar por procesos que controlen los datos que se intercambien evitando
-	de esta manera la divulgación de información sensible o privada.\\
+	organización, dada por la divulgación de información sensible o privada. Por esto la información intercambiada debe pasar por procesos que controlen los datos que se intercambien evitando dicha problemática.\\
 
 	Estas son algunas de las problemáticas que se pueden identificar referentes al intercambio de información de seguridad.
 	También existen otros problemas, como por ejemplo establecer un criterio referente a políticas organizacionales que
@@ -84,12 +83,9 @@
 	que se encargue de relacionar la información por medio de la aplicación de estrategias. El resultado de la aplicación
 	de estrategias es la agrupación de los datos, dicha agrupación permite a los analistas manejar una menor cantidad de
 	datos y de esta forma simplificar su trabajo. Esto ayuda a bajar el periodo de tiempo entre la detección del problema y
-	su solución.\\
-
-	Con la correlación es posible vincular información generada por distintas fuentes para decidir si se tratan de falsos
-	positivos o hechos reales. A su vez, permite detectar ataques que pudieran pasar desapercibidos en volúmenes muy
-	grandes de información.\\
-
+	su solución. A su vez, permite detectar ataques que pudieran pasar desapercibidos en volúmenes muy
+	grandes de información.	\\
+	
 	Si bien la información correlacionada es de utilidad para los analistas, es necesario contar con toda la
 	información recibida para poder hacer un análisis de los datos originales por parte de los analistas.
 
@@ -165,13 +161,10 @@
 \section{Herramientas}
 	En esta sección se muestran las herramientas utilizadas. STIX fue elegida porque provee una representación estructurada
 	y estándar de la información. Junto con STIX se eligió TAXII el cual ha sido diseñado para intercambiar información de
-	seguridad representada por medio del lenguaje STIX y que tiene consideraciones para realizar el intercambio.
-	Posteriormente se menciona a que se debió la utilización de RTIR y se detalla en mayor profundidad la selección de STIX
-	y TAXII.\\
+	seguridad representada por medio del lenguaje STIX y que tiene consideraciones para realizar el intercambio.\\
 	\bigskip
 
-	Además se consideraron en menor medida la posibilidad de desarrollar trabajo futuro con dichas herramientas y su
-	aceptación por parte de la comunidad.
+	Otra de las razones por las cuales se decidieron utilizar dichas herramientas fueron su aceptación por parte de la comunidad y el trabajo que se puede llegar a desarrollar en base a ellas en un futuro.
 
 
 \bigskip
@@ -191,7 +184,7 @@
 	\textit{workflow} para el manejo de incidentes de seguridad. Dicho \textit{workflow} facilita el trabajo de los
 	CSIRTs.\\
 \bigskip
-	Como se mencionó en el capítulo 2, RTIR no cuenta con una representación estructurada de la información ni tampoco
+	Como se mencionó en el capítulo \ref{capitulo2}, RTIR no cuenta con una representación estructurada de la información ni tampoco
 	con un método automático para compartir información de seguridad. Una integración con TAXII y STIX le permitiría cubrir
 	estas dos falencias.
 
