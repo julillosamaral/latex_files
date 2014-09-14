@@ -3,7 +3,7 @@
 Para mostrar el uso de la herramienta se simulo en un ambiente virtualizado la interacción y colaboración entre varios CSIRTs. Mediante esta prueba se realizó el intercambio de cyber observables entre las distintas organizaciones. Dicho intercambio se realizo utilizando los distintos servicios provistos por TAXII.
 
 \section{Escenario del caso de estudio}
-Se desplegarón dos servidores para realizar la prueba de concepto, cada uno de estos servidores tiene instalado Linux Mint 17. En dichos equipos se instaló RTIR junto con TAXIIApp. Además en el servidor correspondiente al CSIRT2 se instalo YETI. Cada uno de esos servidores tiene incluido una base de datos con esquemas correspondientes a cada una de las aplicaciones. En la figura \ref{fig.laboratorio_desplegado} se ve un esquema representando el despliegue realizado.
+Se utilizaron dos máquinas vistuales para realizar la prueba de concepto, cada una de ellas tiene instalada Linux Mint 17. En dichos equipos se instaló RTIR junto con TAXIIApp. Además en la máquina virtual correspondiente al CSIRT2 se instalo YETI. Cada una de estas máquinas virtuales tiene incluida una base de datos con esquemas correspondientes a cada una de las aplicaciones. En la figura \ref{fig.laboratorio_desplegado} se ve un esquema representando el despliegue realizado.
 
 \begin{figure}[h!]
 	\label{fig.laboratorio_desplegado}
@@ -38,7 +38,7 @@ En cada uno de los equipos se encuentra instalada una base de datos Mysql en la 
 \section{Ejecución del caso de estudio}
 La figura \ref{fig.flujos} siguiente muestra cuales fueron los pasos para realizar el intercambio entre las distintas organizaciones.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.35]{caso-de-estudio/flujos.png}
 	\caption{Flujos realizados por el caso de estudio}
@@ -46,17 +46,18 @@ La figura \ref{fig.flujos} siguiente muestra cuales fueron los pasos para realiz
 \end{figure}
 
 En los pasos 1 a 4 de la figura \ref{fig.flujos} agregamos en el CSIRT 1 los servicios TAXII correspondientes a TAXII App y a YETI, ambos ejecutándose en el CSIRT 2.
-En el caso de TAXII App se agregaron todos los servicios necesarios para realizar el intercambio. Sin embargo, la implementación de YETI solo cuenta con el \textit{inbox service}, \textit{poll service} y \textit{discovery service}, por lo tanto se agregaron \textit{inbox service} y \textit{poll service} como los servicios en YETI. La implementación de TAXII realizada durante el proyecto no implementó el \textit{discovery service} y por ello fue necesario implementar un caso de uso para ingresar los servicios. Es necesario recordar que al realizar la implementación se pueden decidir que servicios se implementan y cuales no, de forma de que no se tiene porque contar con todos ellos. \\
+En el caso de TAXII App se agregaron todos los servicios necesarios para realizar el intercambio. Sin embargo, la implementación de YETI solo cuenta con el \textit{inbox service}, \textit{poll service} y \textit{discovery service}, por lo tanto se agregaron \textit{inbox service} y \textit{poll service} como los servicios en YETI. La implementación de TAXII realizada durante el proyecto no implementó el \textit{discovery service} y por ello fue necesario implementar un caso de uso para ingresar los servicios. \\
+\bigskip
 En la figura \ref{fig.regservicios} observamos el ingreso de los servicios TAXII y en la figura \ref{fig.lstservicios} el listado de los servicios ingresados anteriormente.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{caso-de-estudio/RegistroServicios.png}
 	\caption{Registro de Servicios TAXII}
 	\label{fig.regservicios}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.35]{caso-de-estudio/listadoservicios.png}
 	\caption{Listado de Servicios TAXII}
@@ -68,14 +69,14 @@ En la figura \ref{fig.altacorreo} se ve el ingreso de información, se da de alt
 
 En la figura \ref{fig.lstinfo} se observa información dada de alta en el sistema, también se ve información que fue obtenida por medio del poll service del data feed “default” del CSIRT 2.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{caso-de-estudio/alta.png}
 	\caption{Alta de información de correo electrónico}
 	\label{fig.altacorreo}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.3]{caso-de-estudio/listadoInfo.png}
 	\caption{Listado de información en el sistema}
@@ -85,14 +86,14 @@ En la figura \ref{fig.lstinfo} se observa información dada de alta en el sistem
 Los pasos 8 a 10 se encargan de la obtención de los data feeds en el CSIRT 2 y a su vez se comprueba que los data feeds se hayan obtenido correctamente. Para obtener los data feeds se envía un mensaje desde TAXII App en el CSIRT 1 solicitándolos al CSIRT 2. \\
 La figura \ref{fig.obtremote} muestra la obtención de los data feeds remotos en el CSIRT 2, luego en la figura \ref{fig.lstremotedf} se ve un listado del data feed obtenido. A su vez se ve el data feed de YETI.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{caso-de-estudio/obtremote.png}
 	\caption{Obtención de data feeds remotos}
 	\label{fig.obtremote}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{caso-de-estudio/lstremotedf.png}
 	\caption{Data feeds en otras organizaciones}
@@ -102,7 +103,7 @@ La figura \ref{fig.obtremote} muestra la obtención de los data feeds remotos en
 En el paso 14 se realiza el poll de información, para ello se invoca al poll service en el CSIRT 2, esto devuelve toda la información en el data feed especificado. Luego de realizado este paso, se lista nuevamente la información para ver cuales fueron los datos recibidos.
 En la figura \ref{fig.pollinfo} se ve el polling de información. Previamente se vio el listado de información luego de hacer el poll.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{caso-de-estudio/pollinformacion.png}
 	\caption{Poll de información}
@@ -114,21 +115,21 @@ En el paso 20 se observan los nuevos datos obtenidos luego de que se envíe la i
 
 En las figuras \ref{fig.subfeed} y \ref{fig.subdf} se ve la subscripción a un data feed en otra organización, mientras que en la \ref{fig.relacInfo} se ve el envío de información que se realizará por medio de inbox service como se dijo anteriormente.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{caso-de-estudio/subscriptionfeed.png}
 	\caption{Primer paso de subscripción a data feeds}
 	\label{fig.subfeed}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{caso-de-estudio/subscriptiondf.png}
 	\caption{Segundo paso de subscripción a data feeds}
 	\label{fig.subdf}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{caso-de-estudio/envioInfo.png}
 	\caption{Envio de información}
@@ -139,14 +140,14 @@ En el paso \ref{fig.envioInfo} se crea un nuevo ticket en el RTIR, dicho ticket 
 
 En la figura \ref{fig.lstRelacInfo} se ve la asociación entre tickets del RTIR e información almacenada en TAXIIApp.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{caso-de-estudio/relacInfo.png}
 	\caption{Asociación entre Tickets y Content blocks}
 	\label{fig.relacInfo}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{caso-de-estudio/lstRelacInfo.png}
 	\caption{Listado de asociaciones existentes}

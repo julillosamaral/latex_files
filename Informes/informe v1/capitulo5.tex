@@ -75,7 +75,7 @@ Luego de que el usuario ingresa la información deseada y realiza el envío de l
 Es necesario que se configure la dirección del host en la que se encuentra ejecutando TAXIIApp.
 La estructura de directorios de RT-TAXII es la que se muestra en la figura \ref{fig.rt_taxii}.\\
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics{imagenes/RT-TAXII.png}
 	\caption{Estructura de directorios de plugin RT-TAXII}
@@ -93,13 +93,13 @@ A continuación se describirán los componentes implementados y como estos inter
 También se mencionarán las consideraciones que se deben tener para expandir la herramienta.
 En la figura \ref{fig.taxii_app} se ven los distintos módulos implementados durante el proyecto. 
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics{imagenes/TAXIIApp.png}
 	\caption{Aplicación TAXII implementada junto con sus módulos}
 	\label{fig.taxii_app}
 \end{figure}
-
+\bigskip
 \paragraph{TAXIICore}\ \\
 TAXII Core es la componente encargada del procesamiento de la información, es invocada por la API Rest y por TAXII Services y actúa dependiendo de la información recibida. Además es la encargada de la comunicación con la base de datos por medio del modelo de datos desarrollado. A su vez se tuvo consideración durante el desarrollo que este componente sería el encargado de dialogar con los módulos de sanitización y correlación de información. 
 En el anexo \ref{anexo} se pueden ver las entidades creadas para modelar la base de datos así como los métodos implementados para enviar y recibir información del resto de las componentes.

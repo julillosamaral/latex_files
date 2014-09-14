@@ -133,6 +133,7 @@ por fuera de ellas. Para esto se soportan dos tipos de mensajes:
   organización ofrezca repositorios en los cuales buscar, los cuales podrían ser 
   compatibles con TAXII o STIX.
 \end{itemize}
+\bigskip
 
 \subparagraph{Transferencia}\ \\
 
@@ -197,13 +198,6 @@ describe las especificaciones definidas en TAXII.
  expresadas en los mensajes.
 \end{itemize}
 
-\begin{figure}[ht!]
-  \centering
-    \includegraphics[width=150mm]{./images/TAXIIEspecification.png}
-    \caption{Relación de las especificaciones de TAXII \protect\cite{b1}}
-    \label{fig.taxii_rel_spec}
-\end{figure}
-
 Para dar flexibilidad en el proceso evolutivo de TAXII, se han separado las 
 especificaciones de servicios, de los protocolos de enlace y de los mensajes de 
 enlace. Lo dicho anteriormente es expresado en la figura \ref{fig.taxii_rel_spec}.
@@ -212,6 +206,13 @@ respecto a los protocolos que soportan, TAXII busca no ligarse a un único
 protocolo que excluya a una parte de la comunidad. Cuando se ve que la comunidad 
 expresa interés en un nuevo protocolo o tipo de mensaje, TAXII puede dar soporte 
 para ellos sin cambiar los componentes centrales.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=150mm]{./images/TAXIIEspecification.png}
+	\caption{Relación de las especificaciones de TAXII \protect\cite{b1}}
+	\label{fig.taxii_rel_spec}
+\end{figure}
 
 Dos grupos que usen el mismo protocolo de red y formato de mensajes serán 
 capaces de intercambios de información estructurada de forma automática. Las 
@@ -425,9 +426,9 @@ un Feed Server. El servidor responde con una lista de fuentes de datos
 disponibles. Dicha respuesta es realizada por el backend y en ella se pueden considerar 
 decisiones de control de acceso para realizar la respuesta.\\
 
-\begin{figure}[ht!]
+\begin{figure}[H]
   \centering
-    \includegraphics[width=150mm]{./images/FeedInformationExchange.png}
+    \includegraphics[width=140mm]{./images/FeedInformationExchange.png}
     \caption{Mensajes intercambiados en un Feed Information Exchange \protect\cite{b1}}
 \end{figure}
 
@@ -447,9 +448,9 @@ subscripción a un TAXII Data Feed conocido enviando un mensaje subscription
 managment request al servidor. El servidor pasa la request al Backend TAXII el 
 cual determina la respuesta, la cual es luego enviada al cliente.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
   \centering
-    \includegraphics[width=150mm]{./images/SubscriptionManagmentExchange.png}
+    \includegraphics[width=110mm]{./images/SubscriptionManagmentExchange.png}
     \caption{Mensajes intercambiados en un Subscription Managment Exchange \protect\cite{b1}} 
 \end{figure}
 
@@ -465,15 +466,11 @@ Successful Response.
 
 \subparagraph{Feed Poll Exchange}
 
-Es utilizado por un consumidor para pedir contenido de un productor de datos. El 
-TAXII Data Feed content es enviado al consumidor en el mismo intercambio. Esto  
-permite a un consumidor devolver el Data Feed Content en su propia tabla de 
-tiempo y sin necesidad de utilizar un Inbox Server o aceptar conexiones 
-entrantes.
+Es utilizado por un consumidor para pedir contenido de un productor de datos. El TAXII Data Feed content es enviado al consumidor en el mismo intercambio. Esto permite a un consumidor devolver el Data Feed Content en su propia tabla de tiempo y sin necesidad de utilizar un Inbox Server o aceptar conexiones entrantes.\\
 
-\begin{figure}[ht!]
+\begin{figure}[H]
   \centering
-    \includegraphics[width=150mm]{./images/FeedPollExchange.png}
+    \includegraphics[width=130mm]{./images/FeedPollExchange.png}
     \caption{Mensajes intercambiados en un Feed Poll Exchange \protect\cite{b1}}
 \end{figure}
 

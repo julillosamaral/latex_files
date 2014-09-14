@@ -83,22 +83,11 @@
 	que se encargue de relacionar la información por medio de la aplicación de estrategias. El resultado de la aplicación
 	de estrategias es la agrupación de los datos, dicha agrupación permite a los analistas manejar una menor cantidad de
 	datos y de esta forma simplificar su trabajo. Esto ayuda a bajar el periodo de tiempo entre la detección del problema y
-<<<<<<< HEAD
-	su solución.\\
-
-	Con la correlación es posible vincular información generada por distintas fuentes para decidir si se tratan de falsos
-	positivos o hechos reales. A su vez, permite detectar ataques que pudieran pasar desapercibidos en volúmenes muy
-	grandes de información.\\
-
-	Si bien la información correlacionada es de utilidad para los analistas debido a que facilita el analisis de la información. Es necesario contar con toda la
-	información recibida para poder hacer un análisis de los datos originales por parte de los analistas en caso de que sea necesario.
-=======
 	su solución. A su vez, permite detectar ataques que pudieran pasar desapercibidos en volúmenes muy
 	grandes de información.	\\
 	
 	Si bien la información correlacionada es de utilidad para los analistas, es necesario contar con toda la
 	información recibida para poder hacer un análisis de los datos originales por parte de los analistas.
->>>>>>> 5111f256a21908c8b4e19f527eb76ed1d6cdef31
 
 
 \bigskip
@@ -284,10 +273,8 @@
 	\label{fig.diagramabloques}
 \end{figure}
 
-\bigskip
 
-
-\bigskip
+\newpage
 
 \section{Actores y Casos de Uso}
 \subsection{Actores}
@@ -309,8 +296,6 @@
 	\end{supertabular}
 \end{flushleft}
 
-\bigskip
-\bigskip
 \bigskip
 
 \begin{flushleft}
@@ -360,14 +345,20 @@
 	de sanitización. Dicha política es utilizada para realizar la sanitización de la información intercambiada por la
 	organización. Las políticas son registradas en TAXII App.}
 \bigskip
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.3575in]{Analisis22-img/Analisis22-img017.png} 
 	\caption{Caso de Uso alta políticas de sanitización}
 	\label{fig.altasanitizacion}
 \end{figure}
 
-\begin{figure}[ht!]
+\bigskip
+
+En la figura \ref{fig.borradosanitizacion} se especifica el caso de uso de borrado de políticas de sanitización, en este un analista ingresa a RTIR
+y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea dar de baja para luego
+borrarla.
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.9146in]{Analisis22-img/Analisis22-img018.png} 
 	\caption{Caso de uso borrado políticas de sanitización}
@@ -375,23 +366,17 @@
 \end{figure}
 
 \bigskip
+\bigskip
+En la figura \ref{fig.modificacionsanitizacion} se especifica el caso de uso de modificación de políticas de sanitización, en este un analista ingresa a
+RTIR y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea modificar.
 
-	En la figura \ref{fig.borradosanitizacion} se especifica el caso de uso de borrado de políticas de sanitización, en este un analista ingresa a RTIR
-	y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea dar de baja para luego
-	borrarla.
-
-
-\newpage
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.9256in]{Analisis22-img/Analisis22-img019.png} 
 	\caption{Caso de uso modificación de políticas de sanitización}
 	\label{fig.modificacionsanitizacion}
 \end{figure}
-\bigskip
-	En la figura \ref{fig.modificacionsanitizacion} se especifica el caso de uso de modificación de políticas de sanitización, en este un analista ingresa a
-	RTIR y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea modificar.
-\newpage
+
 \subsubsection{ABM de Políticas de Correlación}
 \begin{flushleft}
 	\tablefirsthead{}
@@ -411,44 +396,41 @@
 \end{flushleft}
 
 \bigskip
-\begin{figure}[ht!]
+	En la figura \ref{fig.borradocorrelacion} se especifica el caso de uso de borrado de políticas de correlación, en este un analista ingresa a RTIR y
+	lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea dar de baja para luego
+	borrarla.
+	
+\bigskip
+\begin{figure}[H]
 	\includegraphics[width=5.7634in,height=2.898in]{Analisis22-img/Analisis22-img020.png}
 	\caption{Caso de uso borrado políticas de correlación} 
 	\label{fig.borradocorrelacion}
 \end{figure}
 
-	En la figura \ref{fig.borradocorrelacion} se especifica el caso de uso de borrado de políticas de correlación, en este un analista ingresa a RTIR y
-	lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea dar de baja para luego
-	borrarla.
-
-
 \bigskip
 
+	En la figura \ref{fig.modificacioncorrelacion} se especifica el caso de uso de modificación de políticas de correlación, en este un analista ingresa a
+	RTIR y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea modificar.
 
-\bigskip
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.9256in]{Analisis22-img/Analisis22-img021.png} 
 	\caption{Caso de uso modificación políticas de correlación}
 	\label{fig.modificacioncorrelacion}
 \end{figure}
-	En la figura \ref{fig.modificacioncorrelacion} se especifica el caso de uso de modificación de políticas de correlación, en este un analista ingresa a
-	RTIR y lista todas las políticas disponibles en el sistema. Luego selecciona la política que desea modificar.
-
 
 \bigskip
-\begin{figure}[ht!]
+
+	En la figura \ref{fig.altacorrelacion} se especifica el caso de uso de alta de políticas de correlación, en este un analista ingresa a RTIR y
+	da de alta en el sistema una política de correlación. Dicha política es utilizada para realizar la correlación de la
+	información presente en el sistema. Las políticas son registradas en TAXII App.
+	
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.2535in]{Analisis22-img/Analisis22-img022.png} 
 	\caption{Caso de uso alta políticas de correlación}
 	\label{fig.altacorrelacion}
 \end{figure}
-	En la figura \ref{fig.altacorrelacion} se especifica el caso de uso de alta de políticas de correlación, en este un analista ingresa a RTIR y
-	da de alta en el sistema una política de correlación. Dicha política es utilizada para realizar la correlación de la
-	información presente en el sistema. Las políticas son registradas en TAXII App.
-
-
-\newpage
 
 \subsubsection{ABM de Servicios TAXII}
 
@@ -472,41 +454,37 @@
 \end{flushleft}
 
 \bigskip
+	En la figura \ref{fig.altaserviciotaxii} se especifica el caso de uso de alta de servicios TAXII, en este un analista ingresa a RTIR y da de alta
+	en el sistema un servicio TAXII, con dichos servicios se realizara el intercambio de información con otra organici�n
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.3217in]{Analisis22-img/Analisis22-img023.png} 
 	\caption{Caso de uso alta servicio TAXII}
 	\label{fig.altaserviciotaxii}
 \end{figure}
-	En la figura \ref{fig.altaserviciotaxii} se especifica el caso de uso de alta de servicios TAXII, en este un analista ingresa a RTIR y da de alta
-<<<<<<< HEAD
-	en el sistema un servicio TAXII, con dichos servicios se realizara el intercambio de información con otra organización.
-=======
-	en el sistema un servicio TAXII. Por medio de dicho servicio se realizara el intercambio con otra organización.
->>>>>>> 5111f256a21908c8b4e19f527eb76ed1d6cdef31
-
 
 \bigskip
-\begin{figure}[ht!]
+
+	En la figura \ref{fig.borradoserviciotaxii} se especifica el caso de uso de borrado de servicios TAXII, en este un analista ingresa a RTIR y lista
+	todas las servicios disponibles en el sistema. Luego selecciona el que desea dar de baja.
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7634in,height=2.898in]{Analisis22-img/Analisis22-img024.png} 
 	\caption{Caso de uso borrar	servicio TAXII}
 	\label{fig.borradoserviciotaxii}
 \end{figure}
-	En la figura \ref{fig.borradoserviciotaxii} se especifica el caso de uso de borrado de servicios TAXII, en este un analista ingresa a RTIR y lista
-	todas las servicios disponibles en el sistema. Luego selecciona el que desea dar de baja.
-\newpage
-\begin{figure}
+
+En la figura \ref{fig.modificarserviciotaxii} se especifica el caso de uso de modificación de servicios TAXII, en este un analista ingresa a RTIR y
+lista todos los servicios disponibles. Luego selecciona el que será modificado.
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.9366in]{Analisis22-img/Analisis22-img025.png} 
 	\caption{Caso de uso modificar servicio TAXII}
 	\label{fig.modificarserviciotaxii}
 \end{figure}
 
-	En la figura \ref{fig.modificarserviciotaxii} se especifica el caso de uso de modificación de servicios TAXII, en este un analista ingresa a RTIR y
-	lista todos los servicios disponibles. Luego selecciona el que será modificado.
-\newpage
 \subsubsection{Alta de información}
 
 \begin{flushleft}
@@ -525,19 +503,17 @@
 			referente a cyber observables como por ejemplo IPs, hash de archivos, descripciones de amenazas, etc.}\\\hhline{~-}
 	\end{supertabular}
 \end{flushleft}
+\bigskip
+En la figura \ref{fig.altainfortir} se ve el caso de uso de alta de información en RTIR. En este un analista ingresa al sistema un cyber observable que será dado de alta en el sistema.En TAXII App se da de alta la información representando y
+almacenándola de forma estructurada por medio de STIX.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.0701in]{Analisis22-img/AltaInfoRTIR.png} 
 	\caption{Caso de uso alta de información RTIR}
 	\label{fig.altainfortir}
 \end{figure}
-\bigskip
-	En la figura \ref{fig.altainfortir} se ve el caso de uso de alta de información en RTIR. En este un analista ingresa al sistema un cyber observable que será dado de alta en el sistema.En TAXII App se da de alta la información representando y
-	almacenándola de forma estructurada por medio de STIX.
 
-
-\newpage
 \subsubsection{Asociación de información}
 
 \begin{flushleft}
@@ -555,16 +531,16 @@
 	\end{supertabular}
 \end{flushleft}
 
-\begin{figure}
+\bigskip
+En la figura \ref{fig.asocinfortir} se ve el caso de uso de asociación de información. En este un analista asocia un ticket existente en RTIR con información estructurada almacenada en TAXII App. Como se dijo anteriormente dicha información es almacenada utilizando STIX.
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.0701in]{Analisis22-img/AsociacionInformacion.png} 
 	\caption{Caso de uso asociación de información}
 	\label{fig.asocinfortir}
 \end{figure}
-\bigskip
-	En la figura \ref{fig.asocinfortir} se ve el caso de uso de asociación de información. En este un analista asocia un ticket existente en RTIR con información estructurada almacenada en TAXII App. Como se dijo anteriormente dicha información es almacenada utilizando STIX.
 
-\newpage
 \subsubsection{Subscripción a TAXII Data Feed}
 \begin{flushleft}
 	\tablefirsthead{}
@@ -584,7 +560,12 @@
 \end{flushleft}
 
 \bigskip
-\begin{figure}[ht!]
+
+En este caso de uso el analista desea subscribirse a uno de los TAXII data feed provistos por otra organización. Para
+ello obtiene un listado de los clientes TAXII con los que se relaciona para luego obtener un listado de los Data Feeds
+disponibles en ese cliente. Finalmente selecciona el TAXII data feed deseado.
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.4217in,height=1.8965in]{Analisis22-img/Analisis22-img027.png}
 	\caption{Caso de uso subscripción a TAXII Data Feed}
@@ -592,11 +573,6 @@
 
 \end{figure}
 
-	En este caso de uso el analista desea subscribirse a uno de los TAXII data feed provistos por otra organización. Para
-	ello obtiene un listado de los clientes TAXII con los que se relaciona para luego obtener un listado de los Data Feeds
-	disponibles en ese cliente. Finalmente selecciona el TAXII data feed deseado.
-
-\newpage
 \subsubsection{Recepción de información}
 \begin{flushleft}
 	\tablefirsthead{}
@@ -614,16 +590,18 @@
 			recepción de información se realiza por medio del Inbox Service de nuestro sistema.}\\\hhline{~-}
 	\end{supertabular}
 \end{flushleft}
-\begin{figure}[ht!]
+
+\bigskip
+	En este caso de uso un cliente TAXII en otra organización envía información a TAXII App. Luego la aplicación
+	correlaciona la nueva información con la ya existente en el sistema.
+	
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=5.7638in,height=2.2256in]{Analisis22-img/Analisis22-img028.png} 
 	\caption{Caso de uso de recepción de información}
 	\label{fig.recepcioninfo}
 \end{figure}
 
-	En este caso de uso un cliente TAXII en otra organización envía información a TAXII App. Luego la aplicación
-	correlaciona la nueva información con la ya existente en el sistema.
-\newpage
 \subsubsection{Envío de información}
 \begin{flushleft}
 	\tablefirsthead{}
@@ -641,16 +619,17 @@
 			realiza por medio del Inbox Service del cliente. El intercambio es iniciado por el sistema.}\\\hhline{~-}
 	\end{supertabular}
 \end{flushleft}
-\begin{figure}[ht!]
+\bigskip
+	En este caso de uso TAXII App se comporta como el Actor y desea enviar nueva información a un cliente TAXII. Para ello
+	lo primero que debe hacer es sanitizar la información. Luego envía la información representada en la forma de un
+	mensaje STIX. Esto se ve en la figura \ref{fig.enviodeinfo}.
+	
+\begin{figure}[H]
 	\centering  \includegraphics[width=5.7638in,height=3.2764in]{Analisis22-img/Analisis22-img029.png}
 	\caption{Caso de uso de envío de información}
 	\label{fig.enviodeinfo}
 \end{figure}
 
-	En este caso de uso TAXII App se comporta como el Actor y desea enviar nueva información a un cliente TAXII. Para ello
-	lo primero que debe hacer es sanitizar la información. Luego envía la información representada en la forma de un
-	mensaje STIX. Esto se ve en la figura \ref{fig.enviodeinfo}.
-\newpage
 \subsubsection{Poll de información}
 \begin{flushleft}
 	\tablefirsthead{}
@@ -670,20 +649,18 @@
 \end{flushleft}
 
 \bigskip
-\begin{figure}
+
+En la figura \ref{fig.pollinfo} se ve el caso de uso de poll de información. En este TAXII App realiza el pedido de información a otro
+cliente TAXII por medio de mensajes Poll Request. Cuando obtiene la información esta se correlaciona con los datos
+existentes en el sistema.
+
+\begin{figure}[H]
 	\centering  \includegraphics[width=5.7638in,height=2.0154in]{Analisis22-img/Analisis22-img030.png}
 	\caption{Caso de uso de poll de
 		información}
 	\label{fig.pollinfo}
 \end{figure}
-	En la figura \ref{fig.pollinfo} se ve el caso de uso de poll de información. En este TAXII App realiza el pedido de información a otro
-	cliente TAXII por medio de mensajes Poll Request. Cuando obtiene la información esta se correlaciona con los datos
-	existentes en el sistema.
-
-
-\bigskip
-
-
+	
 \bigskip
 
 	También se deben considerar los casos de uso provistos por RTIR para el seguimiento y manejo de los incidentes los
