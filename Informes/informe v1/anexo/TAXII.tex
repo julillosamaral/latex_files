@@ -43,7 +43,11 @@ especificados por TAXII.\\
     \caption{Arquitectura de TAXII \protect\cite{b1}}
 \end{figure}
 
-TAXII utiliza protocolos y especificaciones existentes siempre que 
+
+TAXII cubre un amplio número de casos de uso, tecnologías, especificaciones e 
+implementaciones. Los casos de uso son desarrollados de manera secuencial, 
+permitiendo un conjunto inicial de casos de usos que permiten el intercambio de 
+información. TAXII utiliza protocolos y especificaciones existentes siempre que 
 es posible, de esta forma se integra con mecanismos de intercambio de 
 información para reducir los costos de implementación y permitir la adopción 
 rápida por parte de organizaciones ya establecidas y que se encuentran 
@@ -67,7 +71,10 @@ objetivos:
    estándares.
  \end{itemize}
 
-Para representar la información, TAXII utiliza STIX. \\
+Para representar la información, TAXII utiliza STIX. STIX es un 
+lenguaje desarrollado por la comunidad para la especificación, captura, 
+representación y comunicación de información de amenazas cibernéticas de forma 
+estandarizada.\\
 
 Para automatizar el intercambio de información, es necesario especificar como 
 ésta es compartida. Para lograr esto, TAXII define especificaciones técnicas y 
@@ -76,6 +83,91 @@ un conjunto de capacidades necesarias para el transporte exitoso de mensajes.
 Los mensajes TAXII llevan datos de amenazas informáticas transformadas a 
 formato STIX. El conjunto completo de los mensajes incluyen mensajes con datos y 
 de control.\\
+
+TAXII utiliza protocolos y especificaciones existentes siempre que sea posible y 
+los integra con los mecanismos actuales para reducir los costos de 
+implementación y permitir una adopción rápida por parte de las organizaciones ya 
+establecidas y que ya comparten información. TAXII ha sido desarrollado de forma 
+modular para soportar una variedad de mecanismos y formatos de datos para ser 
+intercambiados.
+
+\paragraph{Casos de uso}\ \\
+
+TAXII ha sido desarrollado para soportar casos de uso comunes para el 
+intercambio de información. A continuación se detallan los casos de uso 
+desarrollados.
+
+\subparagraph{Alertas o Advertencias públicas}\ \\
+
+Estas son advertencias al público en general o a varios miembros de CSIRTs, son 
+enviadas a todos los subscriptores. Estas alertas son de una naturaleza muy 
+amplia, por ello no necesitan ser encriptadas o tener autorizaciones especiales. 
+Sin embargo es importante asegurar la autenticidad del emisor. Las entidades u 
+organizaciones deben ser especificadas para identificar la fuente de la alerta.
+
+\subparagraph{Alertas y reportes privados}\ \\
+
+Las alertas privadas son similares a las públicas, la diferencia radica en que 
+la información compartida es sensible y restringida a los socios que 
+comparten datos. Los mecanismos para enviar datos deberían ser similares a los 
+de las alertas públicas. Como las alertas y reportes se suponen sensibles y no 
+para el uso general, es importante que TAXII soporte formas adecuadas de 
+encriptación, autenticación, autorización e identificación de datos. Dependiendo 
+en la naturaleza de las comunicaciones, podría requerirse un manejo explícito de 
+marcas o restricciones.\\
+
+Las alertas son generalmente cortas, teniendo mensajes estándar con indicadores 
+muy específicos o acciones especificadas. Los reportes tienden a ser mas largos 
+y pueden incluir reportes de incidentes, análisis de \textit{malware} o amenazas así como 
+otras observaciones.
+
+\subparagraph{Soporte para Consultas}\ \\
+
+Es común que los analistas busquen información entre sus comunidades así como 
+por fuera de ellas. Para esto se soportan dos tipos de mensajes:
+\begin{itemize}
+  \item \underline{Request For Information} (RFI): es un mensaje simple que se espera sea 
+  manejado de forma manual y que permite que se pida información a otra 
+  organización.
+  \item \underline{Repository Search}: Para este tipo de consulta, es esperado que una 
+  organización ofrezca repositorios en los cuales buscar, los cuales podrían ser 
+  compatibles con TAXII o STIX.
+\end{itemize}
+\bigskip
+
+\subparagraph{Transferencia}\ \\
+
+Varias organizaciones que transfieren información necesitan en algunas 
+instancias agregar miembros. El nuevo miembro necesita obtener los datos del 
+repositorio de alguna organización. Por ello se desea un caso de uso para 
+realizar un intercambio de un gran volumen de datos.
+
+\paragraph{Componentes de TAXII}\ \\
+
+Como se dijo anteriormente, TAXII es un conjunto de especificaciones técnicas y 
+documentación para el intercambio de información. A continuación se enumeran los 
+distintos componentes de TAXII.
+
+\begin{itemize}
+  \item \underline{Especificación de TAXII}: Define la especificación de los componentes y 
+  provee una guía y requerimientos sobre como dichas especificaciones 
+  interactúan en TAXII.
+  \item \underline{Especificación de servicios TAXII}: Define una serie de servicios que 
+  deben ser implementados para ser compatible con TAXII. Describe la información 
+  intercambiada en alto nivel y no se limita  ningún mecanismo de intercambio en 
+  especial.
+  \item \underline{Implementación de servicios}: Se realiza una implementación de los 
+  servicios TAXII para un mecanismo de intercambio. Cada implementación de 
+  servicios provee una guía técnica y requerimientos para implementar la 
+  especificación de los mecanismos de intercambio.
+  \item \underline{Modelo de datos de mensajes}: Se define una estructura para los mensajes 
+  TAXII, incluyendo cabezales, datos del mensaje, control y mensajes de datos. 
+  Los mensajes de datos utilizan STIX como carga de los mensajes TAXII.
+  \item \underline{Implementación de los mensajes de datos}: Es una implementación del 
+  modelo de datos de mensajes, incluyendo la carga STIX. Cada implementación de 
+  mensajes define una guía técnica y requerimientos para utilizar un formato de 
+  mensajes particular para expresar el modelo de datos de mensaje.
+\end{itemize}
 
 \subparagraph{TAXII Toolkit}\ \\
 
@@ -114,6 +206,13 @@ respecto a los protocolos que soportan, TAXII busca no ligarse a un único
 protocolo que excluya a una parte de la comunidad. Cuando se ve que la comunidad 
 expresa interés en un nuevo protocolo o tipo de mensaje, TAXII puede dar soporte 
 para ellos sin cambiar los componentes centrales.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=150mm]{./images/TAXIIEspecification.png}
+	\caption{Relación de las especificaciones de TAXII \protect\cite{b1}}
+	\label{fig.taxii_rel_spec}
+\end{figure}
 
 Dos grupos que usen el mismo protocolo de red y formato de mensajes serán 
 capaces de intercambios de información estructurada de forma automática. Las 
@@ -275,3 +374,122 @@ adicionales antes de transmitir mensajes TAXII o romper un mensaje TAXII en
 múltiples mensajes del protocolo subyacente que son transmitidos 
 independientemente. Los siguientes diagramas representan conceptualmente la 
 secuencia en la cual los mensajes TAXII son transmitidos y como actúan.
+
+\subparagraph{Data Push Exchange}\ \\
+En este intercambio, un mensaje STIX es transmitido desde un cliente a un 
+servidor inbox que está esperando. El mensaje STIX puede ser solicitado o no 
+solicitado. El servidor inbox puede ser capaz de filtrar mensajes según la 
+autenticidad del emisor. Los mensajes enviados en este intercambio no deberían 
+tener un campo 'In Response to' en su header.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[width=150mm]{./images/DataPushExchange.png}
+    \caption{Mensajes intercambiados en un Data Push Exchange \protect\cite{b1}}
+\end{figure}
+
+El cliente TAXII envía un mensaje STIX al inbox server. El inbox server podría 
+descartar el mensaje o pasar el mensaje STIX junto con cualquier información de 
+la entidad autenticada al Backend TAXII. El cliente TAXII no recibe respuesta 
+del servidor de inbox y no sabrá si el mensaje ha sido aceptado o descartado por 
+el servidor, aunque el protocolo confiable de la capa inferior puede asegurar 
+que el mensaje fue entregado a la TTA del servidor de inbox. El inbox server no 
+enviará un mensaje de error TAXII si hay algún problema con el mensaje TAXII.
+
+\subparagraph{Discovery Exchange}\ \\
+
+Un cliente TAXII pide información sobre el servicio TAXII ofrecido por un 
+productor. El discovery server del productor responde con una lista de 
+servicios. Si bien el cliente puede ser informado de la existencia de un 
+servicio, este no necesariamente tendrá acceso inmediato al servicio.\\
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[width=150mm]{./images/DiscoveryExchange.png}
+     \caption{Mensajes intercambiados en un Discovery Exchange \protect\cite{b1}}
+\end{figure}
+
+El cliente TAXII envía un pedido de descubrimiento al servidor. Cuando el 
+servidor recibe el pedido puede retornar un mensaje de error o pasar la 
+información al Backend TAXII. Información relevante incluye la identidad 
+autenticada si ésta fue provista. El Backend TAXII podría utilizar esta 
+información junto a su propia política de control de acceso  para crear una 
+lista de servicios a ser retornada. Esto podría ser empaquetado en una 
+respuesta de discovery los cuales podrían ser enviados al cliente TAXII. El 
+cliente TAXII recibe esa respuesta y la pasa la información del servicio a su 
+propio BackEnd para ser procesado.
+
+\subparagraph{Feed Information Exchange}\ \\
+
+En este intercambio un cliente TAXII pide información sobre fuentes de datos disponibles en 
+un Feed Server. El servidor responde con una lista de fuentes de datos 
+disponibles. Dicha respuesta es realizada por el backend y en ella se pueden considerar 
+decisiones de control de acceso para realizar la respuesta.\\
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=140mm]{./images/FeedInformationExchange.png}
+    \caption{Mensajes intercambiados en un Feed Information Exchange \protect\cite{b1}}
+\end{figure}
+
+El cliente TAXII envía el Feed Information Request al 
+servidor, cuando el servidor recibe la request podría retornar un mensaje de 
+error o pasar la información relevante al backend TAXII. Entre la información 
+relevante se podría incluir la identidad. El backend podría utilizar esta 
+información junto con sus políticas de control de acceso para crear una lista de 
+fuentes de datos para ser enviadas al cliente. Esta lista es empaquetada en una 
+Feed Information Response. El cliente recibe este mensaje y pasa el Feed a su 
+propio backend para ser procesado.
+
+\subparagraph{Subscription Managment Exchange}\ \\
+
+En este un cliente intenta establecer, borrar, pausar, resumir o modificar una 
+subscripción a un TAXII Data Feed conocido enviando un mensaje subscription 
+managment request al servidor. El servidor pasa la request al Backend TAXII el 
+cual determina la respuesta, la cual es luego enviada al cliente.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=110mm]{./images/SubscriptionManagmentExchange.png}
+    \caption{Mensajes intercambiados en un Subscription Managment Exchange \protect\cite{b1}} 
+\end{figure}
+
+El cliente TAXII envía una Manage Feed Subscription Request al servidor. Éste 
+podría retornar un mensaje de error TAXII o pasar la información relevante al 
+backend TAXII. La información relevante podría incluir la identidad, parámetros 
+que identifiquen la subscripción a ser modificada o creada, y la acción 
+realizada. El backend TAXII puede usar dicha información junto con sus 
+políticas de control de acceso y las funcionalidades que posea para determinar 
+si la acción está permitida o no. Dependiendo de la respuesta, el servidor 
+podría retornar un mensaje de error TAXII o enviar una respuesta Manage Feed 
+Successful Response.
+
+\subparagraph{Feed Poll Exchange}
+
+Es utilizado por un consumidor para pedir contenido de un productor de datos. El TAXII Data Feed content es enviado al consumidor en el mismo intercambio. Esto permite a un consumidor devolver el Data Feed Content en su propia tabla de tiempo y sin necesidad de utilizar un Inbox Server o aceptar conexiones entrantes.\\
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=130mm]{./images/FeedPollExchange.png}
+    \caption{Mensajes intercambiados en un Feed Poll Exchange \protect\cite{b1}}
+\end{figure}
+
+El cliente consumidor inicia el intercambio enviando un mensaje Poll Request al 
+servidor de Poll del productor. El servidor puede enviar un mensaje de error 
+inmediatamente o pasar la información relevante al backend TAXII. Información 
+relevante incluye el nombre de la fuente, los parámetros de subscripción, 
+\textit{timestamps} indicando el intervalo de tiempo de la información que pide el 
+consumidor y la identidad del consumidor. El backend TAXII evalúa ésta
+información para determinar la respuesta. Las respuesta posibles:
+\begin{itemize}
+  \item El pedido de información podría ser denegado. En este caso el servidor 
+  de poll crea un error TAXII. 
+  \item Un conjunto de contenido TAXII Data Feed podría ser provisto. En este 
+  caso, el servidor de Poll construirá y enviará un mensaje de Poll Response. 
+  Este mensaje indica el intervalo de tiempo que cubre el TAXII Data Feed que es 
+  transmitido y los cuerpos de mensajes STIX que forman el contenido del TAXII 
+  Data Feed.
+\end{itemize}
+En todos los casos, el cliente TAXII recibe el mensaje apropiado y pasa esta 
+información al Backend TAXII para ser procesado.
+

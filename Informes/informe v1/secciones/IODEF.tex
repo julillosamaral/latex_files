@@ -3,20 +3,15 @@
 \textit{Incident Object Description Exchange Format} (IODEF) define una representación de datos que provee un framework para el 
 intercambio de información entre CSIRTs, dicho tipo de información de seguridad 
 es comúnmente intercambiado entre este tipo de organizaciones. IODEF provee una 
-representación en XML para transportar información de incidentes entre pares en 
-distintos dominios administrativos pero que tienen las responsabilidades 
-operacionales de remediar o analizar y establecer advertencias en un dominio 
-definido. El modelo de datos provisto por IODEF codifica la información 
+representación en XML para transportar información de incidentes entre pares. El modelo de datos provisto por IODEF codifica la información 
 referente a hosts, redes y servicios corriendo en estos sistemas; metodología 
 de ataques y evidencia forense asociada; impacto de la actividad realizada y
 aproximaciones a los trabajos realizados.\\
 
 IODEF debería ser compatible con IDMEF y tener la capacidad de incluir mensajes 
-IDMEF. Los actores principales en IODEF son los CSIRTs y no los IDSs como ocurre 
-en IDMEF. Se puede ver a IODEF como una interfaz orientada a ser utilizada por 
+IDMEF. Los actores principales en IODEF son los CSIRTs. se puede ver a IODEF como una interfaz orientada a ser utilizada por 
 personas, por ello un mensaje IODEF es parseable por una máquina y a su vez 
-leíble por humanos. Los objetos IODEF tienen un tiempo de vida mayor a IDMEF, 
-en éste último los mensajes son utilizados una sola vez. Los mensajes IODEF consideran 
+leíble por humanos. Los mensajes IODEF consideran 
 información referente al manejo de incidentes, almacenamiento de dicha 
 información o estadísticas y análisis.\\
 
@@ -39,65 +34,3 @@ confianza, los procedimientos y las leyes son consideraciones que pueden impedir
 que las organizaciones intercambien información. IODEF no busca evadir dichas 
 consideraciones, sin embargo, las implementaciones operacionales de IODEF deben 
 considerar este contexto.
-
-\paragraph{Modelo de datos de IODEF}\ \\
-
-A la hora de diseñar IODEF se realizaron ciertas consideraciones de diseño:
-\begin{itemize}
-  \item El modelo de datos sirve como formato de transporte, lo que lleva a que 
-  su representación específica no sea óptima para almacenamiento en disco, 
-  ser archivado por plazos largos o procesamiento en memoria.
-  \item Por medio de la implementación no se busca establecer un consenso 
-  respecto a la definición de un incidente, en su lugar se trata de dar un 
-  entendimiento amplio que sea lo suficientemente flexible para abarcar la 
-  mayoría de las operaciones.
-  \item Describir un incidente para todas las definiciones requeriría un modelo 
-  de datos extremadamente complejo. Por ello, IODEF solo busca dar un marco para 
-  transmitir información de incidentes comúnmente intercambiada. Se asegura un 
-  mecanismo que pueda ser extendido para soportar información de la 
-  organización así como técnicas para referenciar información mantenida por 
-  fuera del modelo de datos.
-  \item El dominio de análisis de seguridad no está totalmente estandarizado y 
-  debe basarse en descripciones textuales. IODEF busca conseguir un balance 
-  entre el contenido libre y el procesamiento automático de la información de 
-  incidentes.
-  \item IODEF es una de las representaciones que han sido estandarizadas.
-   El modelo de datos de IDMEF influenció el diseño de IODEF.
-
-\end{itemize}
-
-El modelo de datos de IODEF no introduce problemas de seguridad. Este solo 
-define una representación simple para información de incidentes. Como los datos 
-codificados por IODEF pueden ser considerados sensibles por las partes que los 
-intercambian se deben tomar precauciones para asegurar la confidencialidad 
-durante el intercambio y el subsecuente procesamiento. El primero debe ser 
-resguardado por un formato de mensaje, pero luego se deben tener consideraciones 
-de seguridad en el sistema que procesa los datos, los almacena y archiva la 
-documentación y la información derivada de éstos.\\
-
-El formato de mensajes subyacente y el protocolo utilizado para intercambiar 
-datos provee una garantía de confidencialidad, integridad y autenticidad. El uso 
-de protocolos de seguridad estandarizados es recomendado, por ejemplo 
-IODEF/RID.
-
-\paragraph{Trabajo de MILE}\ \\
-
-\textit{Managed Incident Lightweight Exchange} (MILE) es un grupo de trabajo del IETF que 
-enfoca sus esfuerzos en dos áreas. La primera es el formato de datos y 
-extensiones para representar incidentes y datos de indicadores con IODEF. La segunda área 
-es el protocolo RID.\\
-
-Respecto a IODEF se busca revisar el RFC para incorporar mejoras y extensiones 
-basándose en la experiencia que ha sido obtenida de su utilización. Se busca poder extender IODEF para 
-soportar extensiones específicas necesarias por la industria y permitir utilizar 
-contenido específico. Además MILE busca proveer guías en la implementación y uso 
-de IODEF para ayudar a los implementadores en el desarrollo de sistemas.\\
-
-Respecto a RID se busca definir una aproximación orientada a los recursos que 
-permita a los CSIRTs ser más dinámicos y ágiles a la hora de colaborar. También 
-se busca proveer guías en la implementación y uso de RID. RID podría requerir 
-modificaciones para agregar información de políticas u otros cambios. Con el 
-incremento en la cantidad de implementaciones RID, podría ser necesaria una 
-revisión de su RFC.
-
-

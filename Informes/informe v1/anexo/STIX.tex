@@ -42,6 +42,12 @@ forma defenderse de él.\\
 STIX busca extender los indicadores para permitir el manejo e intercambio de 
 estos de forma más expresiva y con un espectro más amplio de información.\\
 
+Actualmente, el intercambio y manejo de información automática es visto 
+típicamente en líneas de productos, servicios ofrecidos o soluciones específicas 
+de una comunidad. STIX busca permitir el intercambio de información de forma 
+comprensiva, rica, de alta fidelidad entre organizaciones, comunidades, 
+productos y servicios ofrecidos.\\
+
 STIX provee una arquitectura unificada con un conjunto amplio de información 
 para permitir una solución práctica que permita la implementación de distintos 
 casos de uso. El conjunto de información incluye:
@@ -54,6 +60,63 @@ casos de uso. El conjunto de información incluye:
   \item Cursos de acción
   \item Campañas de ataques
   \item Actores de ataques
+\end{itemize}
+
+
+\paragraph{Casos de uso}\ \\
+
+El lenguaje STIX ha sido desarrollado para soportar varios casos de uso involucrados en el 
+manejo de amenazas de seguridad. A continuación se dan descripciones de esos 
+casos de uso.
+\begin{itemize}
+  \item \underline{Análisis de Cyber Amenazas}: Un analista de seguridad estudia información 
+  estructurada y no estructurada referente a actividades de una amenaza 
+  procedentes de varias fuentes. El analista busca entender la naturaleza de las 
+  amenazas más relevantes, identificarlas, y representarlas para poder expresar 
+  y actualizar el conocimiento relevante de la amenaza. La información de la 
+  amenaza incluye acciones realizadas, comportamientos, capacidades, quienes lo 
+  realizaron, etc. De este conocimiento y representación el analista puede 
+  especificar patrones de la amenaza, sugerir acciones a ser realizadas para 
+  responder a sus actividades y/o compartir información con socios de su 
+  confianza.
+  \item \underline{Especificar patrones de amenazas}: Un analista especifica patrones para 
+  representar las características de amenazas junto con su contexto y metadatos 
+  para interpretar, manejar y aplicar el patrón y sus resultados. Esto puede ser 
+  realizado manualmente o con la asistencia de una herramienta automática.
+  \item \underline{Manejo de las actividades de respuesta}: Los encargados de tomar decisiones y el personal de operaciones trabajan 
+  en conjunto para prevenir o detectar actividades que presenten una amenaza y 
+  responder a los incidentes detectados que sean realizados por dichas amenazas. 
+  Las acciones preventivas pueden mitigar vulnerabilidades, debilidades o malas 
+  configuraciones que sean objetivos de exploits. Luego de la detección e 
+  investigación de incidentes específicos, acciones reactivas pueden ser 
+  realizadas. Se pueden desprender tres sub-casos de uso de lo anterior.
+  \begin{itemize}
+    \item \underline{Prevención de amenazas}: Quienes deben tomar las decisiones evalúan 
+    acciones preventivas para las amenazas relevantes que sean identificadas. Además deben crear acciones para mitigar dichas amenazas. El personal de 
+    operaciones implementa las acciones seleccionadas por los tomadores de 
+    decisiones. Dichas medidas preventivas son obtenidas por medio de la 
+    interpretación de los indicadores.
+    \item \underline{Detección de amenazas}: El personal de operaciones aplica mecanismos 
+    (automáticos y manuales) para monitorear y asistir las operaciones con la 
+    finalidad de detectar la ocurrencia de amenazas específicas basándose en la 
+    evidencia histórica, análisis del contexto actual e interpretación de los 
+    indicadores que se presentan. Esta detección se realiza generalmente por 
+    medio de patrones de indicadores.
+    \item \underline{Respuesta a incidentes}: El personal de operaciones responde a amenazas 
+    detectadas, investiga que ha ocurrido o está ocurriendo, trata de 
+    identificar y representar la naturaleza de las amenazas y lleva a cabo 
+    acciones para mitigar sus efectos, también puede aplicar acciones 
+    preventivas. Una vez que los efectos son entendidos, el personal de 
+    operaciones puede implementar acciones acordes para prevenir o llevar a cabo 
+    tareas correctivas.
+  \end{itemize} 
+  \item \underline{Intercambio de información}: Los encargados de tomar las decisiones 
+  establecen políticas respecto a que tipo de información será compartida, 
+  además toma decisiones respecto a con quienes se comparte y como debería ser 
+  manejada basándose en frameworks de confianza de forma de mantener niveles 
+  adecuados de consistencia, contexto y control. Esta política es luego 
+  implementada para compartir los indicadores de amenazas apropiados y otra 
+  información de amenazas.
 \end{itemize}
 
 \paragraph{Principios de desarrollo de STIX}\ \\

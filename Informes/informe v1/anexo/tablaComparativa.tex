@@ -1,0 +1,81 @@
+%  \begin{center}
+%  \begin{longtable}{|1|1|}
+%  \caption{}
+%  
+%  \hline \multicolumn{1}{|c|}{\textbf{STIX}} & \multicolumn{1}{c|}{IODEF} \\ \hline 
+%  \endfirsthead
+%  
+%  \multicolumn{2}{c}%
+%  {{\bfseries \tablename\ \thetable{} -- sigue en la página siguiente}} \\
+%  \hline \multicolumn{1}{|c|}{STIX} &
+%  \multicolumn{1}{c|}{IODEF} \\ \hline 
+%  \endhead
+%  
+%  \hline \multicolumn{2}{|r|}{{Sigue en la página siguiente}} \\ \hline
+%  \endfoot
+%  
+%  \hline \hline
+%  \endlastfoot
+%  \pbox{7cm}{Se representan observables que son propiedades o eventos que se dan durante las operaciones de redes o computadores. Se refiere a información sobre un archivo, una key en la registry, un servicio iniciado, etc. Para su representación se utiliza CyBox. Se da información de eventos en el host y la red por medio de Observables. Se puede considerar información como nombres, hashes, tamaños de archivos. Keys que se cambian en la registry, servicios que se ejecutan o request realizadas a un host (ie: request http)} & \pbox{7cm}{Descripción de eventos particulares del incidente que se dan en un host o red. También se puede tener información de Log de los eventos o acciones significativas realizadas por los involucrados.} \\
+%  \pbox{7cm}{Se representa información de indicadores que afectan a la organización así como nuevos datos conocidos durante la respuesta al incidente. Se dan datos sobre lo que busco realizar un atacante, fuente de la información del incidente y tareas realizadas por los analistas.} & \pbox{7cm}{Se da una descripción textual del incidentes. Se da información de contacto de las partes que participaron del incidente.  Se da información de la razón por la cual se envía el documento y de cuales son las posibilidades que tiene el receptor para divulgar información.} \\
+%   & \pbox{7cm}{Se permite la extensión del modelo para representar datos que no están en éste.} \\
+%  \pbox{7cm}{Se da información sobre socios involucrados.} & \pbox{7cm}{Información de contacto para personas u organizaciones involucradas en el incidente.} \\
+%  \pbox{7cm}{La clase Incidents da representaciones de los tiempos de detección reporte, etc del incidentes.} & \pbox{7cm}{La clases Time dan información sobre el comienzo, fin, detección del incidente.} \\
+%  \pbox{7cm}{Se da una representación del modus operandi del adversario. Esto se realiza por medio de TTP, en estas se busca representar comportamientos específicos que muestra el adversario, recursos que éste tiene como herramientas e infraestructura, información de las victimas, objetivos de exploits, fuentes de la información de los TTP. Se utilizan otros estándares como CVE, CAPEC o MAEC para la representación de los ataques o del malware.} & \pbox{7cm}{Una representación libre de la metodología utilizada por el adversario. Se representan las técnicas utilizadas por el atacante.} \\
+%  \pbox{7cm}{Por medio de la clase incidents se da información de bienes afectados y de la naturaleza del incidente.} & \pbox{7cm}{Repercusiones técnicas y no técnicas del incidente, ie: impacto monetario, de tiempo, etc.} \\
+%  \pbox{7cm}{Las campaigns dan referencia a actividades similares que fueron realizadas.} & \pbox{7cm}{Referencia a actividades similares.} \\
+%  \pbox{7cm}{Representación de campañas, esto son adversarios con una intención. Las campañas consisten de las intenciones del adversario, sus TTP utilizadas en la campaña, los incidentes realizados en la campaña, indicadores asociados a la campaña.} &  \\
+%  \pbox{7cm}{Representaciones de adversarios que tienen ciertas intenciones y han sido observados históricamente. Los adversarios tienen las siguientes características: una representación de identidad, se sospecha de una motivación, una intención de conseguir algo, tienen un historial de TTP, ciertas campaigns son asociadas con un adversario, etc.} &  \\
+%  \pbox{7cm}{Se representan objetivos de exploits, estos se pueden ver como vulnerabilidades en software, sistemas, configuraciones de red que son objetivos para ser explotados por las TTP de un adversario. Se utilizan CVE, OSVBD (entre otras) para la identificación de vulnerabilidades publicas.} & \pbox{7cm}{Se da una clasificación de vulnerabilidades conocidas.} \\
+%  \pbox{7cm}{Se representan medidas que deberían ser realizadas para prevenir o corregir para evitar ser objetivo de exploits.} & \pbox{7cm}{Se dan acciones que debería realizar el receptor.} \\
+%  \pbox{7cm}{Se representan etiquetas para la información que indican restricciones o datos potencialmente sensibles.} &  \\ 
+%  \end{longtable}
+%  \end{center}
+
+
+\begin{center}
+\begin{longtable}{|c|c|c|c|}
+\caption{Comparativa de STIX e IODEF}\\
+\hline
+\textbf{STIX} & \textbf{IODEF}  \\
+\hline
+\endfirsthead
+\multicolumn{4}{c}%
+{\tablename\ \thetable\ -- \textit{Continuación de la página anterior}} \\
+\hline
+\textbf{STIX} & \textbf{IODEF}  \\
+\hline
+\endhead
+\hline \multicolumn{4}{r}{\textit{Continua en la página siguiente}} \\
+\endfoot
+\hline
+\endlastfoot
+  \pbox{7cm}{Se representan observables que son propiedades o eventos que se dan durante las operaciones de redes o computadores. Se refiere a información sobre un archivo, una key en la registry, un servicio iniciado, etc. Para su representación se utiliza CyBox. Se da información de eventos en el host y la red por medio de Observables. Se puede considerar información como nombres, hashes, tamaños de archivos. Keys que se cambian en la registry, servicios que se ejecutan o request realizadas a un host (ie: request http)} & \pbox{7cm}{Descripción de eventos particulares del incidente que se dan en un host o red. También se puede tener información de Log de los eventos o acciones significativas realizadas por los involucrados.} \\  
+  \hline
+  \pbox{7cm}{Se representa información de indicadores que afectan a la organización así como nuevos datos conocidos durante la respuesta al incidente. Se dan datos sobre lo que busco realizar un atacante, fuente de la información del incidente y tareas realizadas por los analistas.} & \pbox{7cm}{Se da una descripción textual del incidentes. Se da información de contacto de las partes que participaron del incidente.  Se da información de la razón por la cual se envía el documento y de cuales son las posibilidades que tiene el receptor para divulgar información.} \\ 
+  \hline \pbox{7cm}{Se permite la extensión del modelo para representar datos que no están en éste.}
+   & \pbox{7cm}{Se permite la extensión del modelo para representar datos que no están en éste.} \\ 
+   \hline
+  \pbox{7cm}{Se da información sobre socios involucrados.} & \pbox{7cm}{Información de contacto para personas u organizaciones involucradas en el incidente.} \\ 
+  \hline
+  \pbox{7cm}{La clase Incidents da representaciones de los tiempos de detección reporte, etc del incidentes.} & \pbox{7cm}{La clases Time dan información sobre el comienzo, fin, detección del incidente.} \\ 
+  \hline
+  \pbox{7cm}{Se da una representación del modus operandi del adversario. Esto se realiza por medio de Tactics Technics and Procedures (TTP), en estas se busca representar comportamientos específicos que muestra el adversario, recursos que éste tiene como herramientas e infraestructura, información de las victimas, objetivos de exploits, fuentes de la información de los TTP. Se utilizan otros estándares como CVE, CAPEC o MAEC para la representación de los ataques o del malware.} & \pbox{7cm}{Una representación libre de la metodología utilizada por el adversario. Se representan las técnicas utilizadas por el atacante.} \\ 
+  \hline
+  \pbox{7cm}{Por medio de la clase incidents se da información de bienes afectados y de la naturaleza del incidente.} & \pbox{7cm}{Repercusiones técnicas y no técnicas del incidente, ie: impacto monetario, de tiempo, etc.} \\ 
+  \hline
+  \pbox{7cm}{Las campaigns dan referencia a actividades similares que fueron realizadas.} & \pbox{7cm}{Referencia a actividades similares.} \\ 
+  \hline
+  \pbox{7cm}{Representación de campañas, esto son adversarios con una intención. Las campañas consisten de las intenciones del adversario, sus TTP utilizadas en la campaña, los incidentes realizados en la campaña, indicadores asociados a la campaña.} &  \\ 
+  \hline
+  \pbox{7cm}{Representaciones de adversarios que tienen ciertas intenciones y han sido observados históricamente. Los adversarios tienen las siguientes características: una representación de identidad, se sospecha de una motivación, una intención de conseguir algo, tienen un historial de TTP, ciertas campaigns son asociadas con un adversario, etc.} &  \\ 
+  \hline
+  \pbox{7cm}{Se representan objetivos de exploits, estos se pueden ver como vulnerabilidades en software, sistemas, configuraciones de red que son objetivos para ser explotados por las TTP de un adversario. Se utilizan CVE, OSVBD (entre otras) para la identificación de vulnerabilidades publicas.} & \pbox{7cm}{Se da una clasificación de vulnerabilidades conocidas.} \\ 
+  \hline
+  \pbox{7cm}{Se representan medidas que deberían ser realizadas para prevenir o corregir para evitar ser objetivo de exploits.} & \pbox{7cm}{Se dan acciones que debería realizar el receptor.} \\ 
+  \hline
+  \pbox{7cm}{Se representan etiquetas para la información que indican restricciones o datos potencialmente sensibles.} &  \\  
+  \hline
+\end{longtable}
+\end{center}
+

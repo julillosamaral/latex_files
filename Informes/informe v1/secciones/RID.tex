@@ -13,92 +13,19 @@ RID ha sido ampliamente utilizando en comunidades de investigación, pero no ha
 sido muy adoptado por otros sectores. Fue desarrollado como un mecanismo de 
 comunicación para facilitar la transferencia de información entre distintos 
 proveedores de servicios de Internet para trazar precisa y eficientemente el 
-flujo de paquetes nocivos a lo largo de la red. RID considera la información que 
-necesitan varias implementaciones para seguir paquetes dentro de una red y los 
-requerimientos de los proveedores de servicios de decidir si se permite trazar 
-el recorrido de un paquete o no.\\
+flujo de paquetes nocivos a lo largo de la red.\\
 
 Los datos en RID son representados como documentos XML utilizando IODEF. De esta 
-forma se simplifica la integración con otros aspectos del manejo de incidentes. 
-Además las ventajas de la representación en XML permite conservar la privacidad 
-y tener un buen nivel de aseguramiento. RID busca proveer un método para 
-comunicar la información relevante entre CSIRTs manteniendo la compatibilidad 
-con varios sistemas de rastreo y respuesta.\\
+forma se simplifica la integración con otros aspectos del manejo de incidentes.\\ 
 
-Los mensajes RID son encapsulados en otros protocolos para el transporte, este 
-procedimiento se define en el RFC 6046. La autenticación, integridad y 
-autorización son el resultado de las capacidades de cada capa y son utilizadas 
-para alcanzar un nivel de aseguramiento adecuado.\\
-
-Los mensajes RID tienen la intención de ser usados en el manejo coordinado de 
-incidentes para localizar la fuente de un ataque y detener o mitigar sus 
-efectos. Los objetivos de los ataques incluyen redes o sistemas que se vieron 
-comprometidos con ataques como denegaciones de servicio u otro tipo de tráfico 
-malicioso en una red. Por medio de RID los CSIRTs tienen la posibilidad de 
-reportar ataques que estén ocurriendo a otros CSIRTs o pedir información a éstos 
-de la detección de ataques.\\
-
-Los sistemas comprometidos pueden ser el resultado de otros incidentes de 
-seguridad como worms, troyanos o virus. El manejar incidentes es una tarea 
-difícil para algunas organizaciones debido al tamaño de su red y la cantidad de 
-recursos disponibles. RID provee el framework necesario para realizar la 
-comunicación entre redes involucradas en el manejo, seguimiento y mitigación de 
-incidentes de seguridad. Distintos tipos de mensajes son necesarios para 
-facilitar el manejo de incidentes. Los mensajes que se incluyen son 
-\textit{Report}, \textit{IncidentQuery}, \textit{TraceRequest}, 
-\textit{RequestAuthorization}, \textit{Result} e \textit{InvestigationRequest}. El 
-mensaje Report es utilizado cuando se ingresa un incidente en un sistema RID y 
-no se deben realizar más acciones. Un mensaje Incident Request es utilizado para 
-pedir información de un incidente en particular. Un mensaje Trace Request es 
-utilizando cuando la fuente del tráfico puede estar oculta. En ese caso, cada 
-proveedor de red que reciba uno de estos mensajes enviará uno a la red anterior 
-en el camino del mensaje para obtener la fuente del tráfico. Los mensajes 
-Request Authorization y Result son utilizados para comunicar el estado y 
-resultado de un mensaje Trace Request o Investigation Request. El mensaje 
-Investigation Request solo considera lo sistemas RID en el camino a la fuente 
-del tráfico.\\
-
-En RID se pueden diseñar topologías que permitan el intercambio de información 
-facilitando la comunicación entre socios. La topología básica para comunicar 
-sistemas RID es la de una comunicación directa. En una organización se pueden 
-establecer y utilizar varias topologías. Una podría fortalecer las relaciones 
-bilaterales entre socios. Los socios podrían reenviar los mensajes RID entre 
-ellos. Este enfoque permite un rastreo iterativo en donde la fuente es 
-desconocida.\\
-
-La comunicación entre los sistemas RID debe ser protegida. RID tiene muchas 
-consideraciones de seguridad incluidas en el diseño del protocolo. Al considerar 
-el transporte de mensajes RID, una red fuera de banda, ya sea física o lógica, 
-puede prevenir ataques externos contra las comunicaciones RID. Se deben utilizar 
+Se deben utilizar 
 conexiones autenticadas y encriptadas entre sistemas RID para proveer 
-confidencialidad, integridad, autenticidad y privacidad de los datos. Las 
-relaciones de confianza son realizadas por socios y establecen relaciones de 
-confianza por medio de infraestructura de PKI.\\
+confidencialidad, integridad, autenticidad y privacidad de los datos. \\
 
-El protocolo de transporte utilizado debe proveer encriptación para dar un nivel 
-de seguridad e integridad adicional, mientras se provee autenticación por medio 
-de certificados. De todas formas los mensajes RID no utilizan únicamente la 
-seguridad provista por el protocolo de transporte.\\
-
-La infraestructura PKI provee la base para la autenticación, autorización, 
-encriptación y firmas digitales necesarias para establecer una relación de 
-confianza entre los miembros de una comunidad RID.\\
-
-Problemas de privacidad pueden ser de preocupación cuando se habla de compartir 
-información y deben ser considerados a la hora de alcanzar la meta de detener o 
-mitigar los efectos de un incidente de seguridad. Para ello hay clases 
-específicas para automatizar las políticas de privacidad.\\
-
-IODEF define un formato de mensaje, no un protocolo de transporte, esto se 
-realiza para permitir a los CSIRTs intercambiar y almacenar los datos de la 
-forma que más le conviene a cada organización. Sin embargo, RID requiere una 
+RID requiere una 
 especificación de un protocolo de transporte para asegurar la interoperabilidad 
 entre las organizaciones socias. El RFC6046 mencionado anteriormente, especifica 
-el transporte de mensajes RID sobre HTTPS/TLS. En esta especificación, cada 
-servidor RID funciona como servidor y cliente. Todos los sistemas RID deben 
-estar preparados para aceptar conexiones HTTP/TLS de cualquier socio con la 
-finalidad de soportar llamadas a respuestas tardías de pedidos que se 
-realizaron.
+el transporte de mensajes RID sobre HTTPS/TLS. 
 
 
 
