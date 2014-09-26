@@ -25,7 +25,7 @@ contexto en el que se encuentran respecto a las nuevas amenazas y además
 compartir la información que ellos elijan con las organizaciones que deseen de 
 forma simple y rápida aprovechando las relaciones y sistemas existentes.\\
 
-En el desarrollo de TAXII se buscó consenso y participación de la comunidad. 
+Al igual que en STIX, en TAXII se buscó consenso y participación de la comunidad. 
 TAXII permite el intercambio de información sobre amenazas de forma eficiente y 
 comprensiva por medio de \emph{automatización} y \emph{articulación} de un 
 modelo detallado de información. Para lograr esto, se utiliza una representación 
@@ -41,6 +41,7 @@ especificados por TAXII.\\
   \centering
     \includegraphics[scale=0.80]{./images/TAXIIArchitecture1.png}
     \caption{Arquitectura de TAXII \protect\cite{b1}}
+    \label{fig.diagramabloques}
 \end{figure}
 
 TAXII utiliza protocolos y especificaciones existentes siempre que 
@@ -55,8 +56,7 @@ objetivos:
  \begin{itemize}
    \item Permitir el intercambio seguro y rápido de información referente a 
    amenazas entre comunidades de defensores de seguridad.
-   \item Lograr un estándar para permitir compartir indicadores entre otros 
-   elementos entre organizaciones.
+   \item Lograr un estándar para permitir compartir indicadores entre organizaciones.
    \item Extender el intercambio de indicadores para permitir intercambios 
    seguros, robustos y de gran volumen que tengan una expresividad mayor a la 
    actual.
@@ -67,14 +67,11 @@ objetivos:
    estándares.
  \end{itemize}
 
-Para representar la información, TAXII utiliza STIX. \\
-
 Para automatizar el intercambio de información, es necesario especificar como 
 ésta es compartida. Para lograr esto, TAXII define especificaciones técnicas y 
 documentación de soporte. En particular, las especificaciones de TAXII definen 
 un conjunto de capacidades necesarias para el transporte exitoso de mensajes. 
-Los mensajes TAXII llevan datos de amenazas informáticas transformadas a 
-formato STIX. El conjunto completo de los mensajes incluyen mensajes con datos y 
+Los mensajes TAXII llevan datos de amenazas informáticas representados por medio de STIX. El conjunto completo de los mensajes incluyen mensajes con datos y 
 de control.\\
 
 \subparagraph{TAXII Toolkit}\ \\
@@ -108,7 +105,7 @@ describe las especificaciones definidas en TAXII.
 
 Para dar flexibilidad en el proceso evolutivo de TAXII, se han separado las 
 especificaciones de servicios, de los protocolos de enlace y de los mensajes de 
-enlace. Lo dicho anteriormente es expresado en la figura \ref{fig.taxii_rel_spec}.
+enlace.
 Debido a que las organizaciones generalmente tienen restricciones 
 respecto a los protocolos que soportan, TAXII busca no ligarse a un único 
 protocolo que excluya a una parte de la comunidad. Cuando se ve que la comunidad 
@@ -164,12 +161,16 @@ con un rol bien definido en TAXII.
   TAXII. Una arquitectura TAXII incluye una TTA, un TMH y un backend TAXII.
   \end{itemize}
 
+Lo expresado anteriormente se puede ver en la figura \ref{fig.unidades_funcionales}.
+
 \begin{figure}[ht!]
   \centering
     \includegraphics[width=150mm]{./images/TAXIIArchitecture.png}
     \caption{Unidades funcionales de TAXII \protect\cite{b1}}
+    \label{fig.unidades_funcionales}
 \end{figure}
 
+\newpage
 \paragraph{Capacidades}\ \\
 
 TAXII provee capacidades específicas para aquellos que desean compartir 
@@ -273,5 +274,45 @@ TAXII y son independientes a los protocolos sobre los cuales viajan los mensajes
  En particular, esos protocolos podrían requerir intercambios de red 
 adicionales antes de transmitir mensajes TAXII o romper un mensaje TAXII en 
 múltiples mensajes del protocolo subyacente que son transmitidos 
-independientemente. Los siguientes diagramas representan conceptualmente la 
-secuencia en la cual los mensajes TAXII son transmitidos y como actúan.
+independientemente.
+
+\subparagraph{Data Push Exchange}\ \\
+En este intercambio, un mensaje STIX es transmitido desde un cliente a un 
+servidor inbox que está esperando. El mensaje STIX puede ser solicitado o no 
+solicitado. El servidor inbox puede ser capaz de filtrar mensajes según la 
+autenticidad del emisor.
+
+\subparagraph{Discovery Exchange}\ \\
+
+Un cliente TAXII pide información sobre el servicio TAXII ofrecido por un 
+productor. El discovery server del productor responde con una lista de 
+servicios. 
+
+El cliente TAXII envía un pedido de descubrimiento al servidor. El Backend TAXII podría utilizar esta 
+información junto a su propia política de control de acceso  para crear una 
+lista de servicios a ser retornada. Estos son empaquetados en una 
+respuesta de discovery la cual es enviada al cliente TAXII. El 
+cliente TAXII recibe esa respuesta y la pasa la información del servicio a su 
+propio BackEnd para ser procesado.
+
+\subparagraph{Feed Information Exchange}\ \\
+
+En este intercambio un cliente TAXII pide información sobre fuentes de datos disponibles en 
+un Feed Server. El servidor responde con una lista de fuentes de datos 
+de las que dispone. Dicha respuesta es realizada por el backend y en ella se pueden considerar decisiones de control de acceso.\\
+
+\subparagraph{Subscription Managment Exchange}\ \\
+
+En este un cliente intenta establecer, borrar, pausar, resumir o modificar una 
+subscripción a un TAXII Data Feed conocido enviando un mensaje subscription 
+managment request al servidor. El servidor pasa la request al Backend TAXII el 
+cual determina la respuesta, la cual es luego enviada al cliente.
+El backend TAXII puede usar dicha información junto con sus 
+políticas de control de acceso y las funcionalidades que posea para determinar 
+si la acción está permitida o no.
+
+\subparagraph{Feed Poll Exchange}
+
+Es utilizado por un consumidor para pedir contenido de un productor de datos. El TAXII Data Feed content es enviado al consumidor en el mismo intercambio.
+El cliente consumidor inicia el 
+El backend TAXII evalua el pedido de información información para determinar la respuesta. La respuesta retorna mensajes STIX con el contenido que pidió el cliente.

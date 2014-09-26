@@ -2,7 +2,7 @@
 
 Structured Threat Information eXpression (STIX) es un lenguaje para la especificación, captura, representación y 
 comunicación de información de seguridad. Lo realiza de manera 
-estructurada para soporteortar un mejor manejo de la información así como para 
+estructurada para soportar un mejor manejo de la información así como para 
 permitir procesos automatizados.\\
 
 Se busca que la información sea representada de forma estructurada, a su vez 
@@ -21,8 +21,8 @@ de los datos de antemano.
 
 La información que se intercambia y utiliza actualmente es atómica, inconsistente 
 y muy limitada en sofisticación y expresividad. Además, el uso de estructuras 
-estandarizadas se enfoca en una porción del problema y la integración no se 
-realiza de forma adecuada entre si o carece de la flexibilidad para hacerlo. 
+estandarizadas se enfoca en una porción del problema. %y la integración no se 
+%realiza de forma adecuada entre si o carece de la flexibilidad para hacerlo. 
 Generalmente, las actividades de intercambio de indicadores son entre humanos, 
 siendo los indicadores desestructurados o semi-estructurados e intercambiados 
 por medio de portales web o encriptados y enviados vía email. Recientemente se 
@@ -30,7 +30,7 @@ ha visto el surgimiento de transferencias entre máquinas, éstas intercambian
 conjuntos de indicadores simples de modelos de ataques bien conocidos.\\
 
 A diferencia de IODEF, STIX provee una lista de elementos para construir 
-indicadores de compromiso y se integra con CAPEC, MAEC o CVE. Además posee 
+indicadores de compromiso y se integra con CyBox, CAPEC, MAEC o CVE. Además posee 
 soporte para tácticas, técnicas y procedimientos del adversario y tareas 
 realizadas por la organización. IODEF fue pensado para compartir información de 
 incidentes y no indicadores de compromiso. STIX permite el intercambio de 
@@ -57,8 +57,7 @@ casos de uso. El conjunto de información incluye:
 \end{itemize}
 
 \paragraph{Principios de desarrollo de STIX}\ \\
-En el enfoque dado a STIX se ha buscado implementar un conjunto de principios 
-para su desarrollo con el consenso de la comunidad. Esos principios son los siguientes:
+Con el consenso de la comunidad, se han definido un conjunto de principios para el desarrollo de STIX. Estos principios son los siguientes:
 \begin{itemize}
   \item \underline{Expresividad}: Con el fin de soportar la diversidad de casos de uso relevantes, STIX apunta a 
 proveer una cobertura expresiva en todos sus casos de uso específicos en lugar 
@@ -66,7 +65,7 @@ de dirigirse específicamente a alguno de ellos.
   \item \underline{Integración en lugar de duplicación}: Cuando STIX abarca conceptos de información estructurada para los cuales ya 
 existen representaciones estandarizadas con el consenso adecuado y que se 
 encuentran disponibles, se busca integrar estas representaciones a la 
-arquitectura STIX en lugar de duplicar esta información innecesariamente.
+arquitectura STIX en lugar de duplicar la información innecesariamente.
 \item \underline{Flexibilidad}: Con el fin de soportar un amplio rango de casos e información variable con 
 varios niveles de fidelidad, se ha diseñado a STIX para ofrecer tanta flexibilidad 
 como sea posible. STIX se adhiere a una política de permitir a los usuarios 
