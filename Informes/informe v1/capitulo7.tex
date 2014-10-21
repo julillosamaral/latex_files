@@ -1,0 +1,42 @@
+\chapter{Conclusiones y trabajo futuro}
+\label{capitulo7}
+
+En este capítulo se presentan las principales conclusiones y dificultades más relevantes del proyecto. Por último, se proponen posibles líneas de trabajo a futuro.
+
+\section{Trabajo Futuro}
+Durante el transcurso del proyecto se identificaron distintas líneas de trabajo futuro sobre las cuales se puede trabajar para mejorar la herramienta. A continuación delineamos algunos de los trabajos que se podrían seguir realizando en el marco de este proyecto.
+\bigskip
+
+Como es posible que se intercambien grandes volúmenes de datos entre organizaciones, es necesario que se diseñe e implemente un método para correlacionar la información intercambiada, de esta forma se agrupan los datos, facilitando de esta forma el trabajo de los analistas. Con dicha información correlacionada se pueden presentar reportes a los analistas resumiendo el contenido existente en el sistema. Durante el diseño y análisis de la herramienta se tuvo en consideración dicha funcionalidad pero no se implementó y no hubo una investigación profunda referente a esto, por lo cual se deja para un trabajo a futuro. 
+De la misma forma se consideró durante el diseño y análisis la sanitización de la información pero tampoco se implementó en el prototipo dicha funcionalidad quedando para un trabajo a futuro.  Dicha funcionalidad permite filtrar datos sensibles que podrían comprometer la imagen o la integridad de las organizaciones.
+\bigskip
+
+Respecto a la implementación realizada, queda planteado realizar una mejor interacción entre RTIR y el \textit{plugin} de forma de extender las funcionalidades ya existentes en RTIR así como agregar algunas nuevas. Entre dichas mejoras se encuentra crear los incidentes y relacionarlos con los cyber observables existentes en TAXII App. Además permitir agregar nuevos cyber observables a incidentes ya existentes. Esto, junto con una interfaz más amigable facilitaría  el trabajo de los analistas.
+\bigskip
+
+Otro de los puntos a mejorar en la implementación del cliente TAXII es el seguimiento de los usuarios u organizaciones con las que se intercambia la información de seguridad y filtrar a que datos pueden acceder los distintos usuarios. De esta forma se podría realizar un modelo RBAC para el acceso a la información.
+\bigskip
+
+\section{Conclusiones}
+
+En los últimos año se ha visto un incremento en la cantidad de equipos conectados a las redes de las organizaciones, a su vez han aumentado los usuarios malintencionados. Estos cuentan cada vez con mejores herramientas y procedimientos mas sofisticados con los cuales realizar ataques. Debido a esto es necesario que las estrategias de defensa se adapten a los nuevos actores y ataques. Para responder a esto, las organizaciones han recurrido al intercambio de información de amenazas con la finalidad de identificar de mejor forma las actividades de sus adversarios con la finalidad de obtener los mejores resultados posibles de sus defensas.\\
+\bigskip
+Durante el estado de arte se vieron diferentes problemas que dificultan el intercambio de información de seguridad entre las organizaciones. Estos van desde problemas que son estrictamente técnicos ha otros que son de índole política. En este punto se decidió centrarse en los problemas que son estrictamente técnicos y se identificaron cuales son los enfoques utilizados en la actualidad para el intercambio de información. Se vio que las  herramientas que son utilizadas actualmente se enfocan en una parte del problema y que en muchos casos el intercambio de información es realizado entre humanos.  \\
+\bigskip
+Durante el transcurso del proyecto se vio el fuerte interés que existe en las organizaciones por llegar a un consenso respecto a estándares utilizados en el intercambio de información de seguridad.  En particular resultaron llamativas las iniciativas de MITRE que cuentan con el apoyo tanto de organizaciones provenientes del sector publico así como del sector privado y las cuales provienen de distintos sectores de la industria.\\   
+\bigskip
+La existencia de estos estándares es fundamental para lograr un buen nivel de automatización. Si bien se puede automatizar sin que un estándar sea apoyado por la comunidad, el esfuerzo que se debe realizar para poder integrar conocimientos es muy grande. Esta integración de conocimientos es clave para fomentar el avance de las herramientas, técnicas y metodologías, que permitan contrarrestar el impacto de los ataques automatizados.\\
+\bigskip
+El esfuerzo encabezado por MITRE busca desarrollar un conjunto de estándares referentes a la caracterización e intercambio de información de seguridad. Intenta proveer lenguajes que permitan facilitar la comunicación de la información de seguridad de forma precisa. Algunos de los lenguajes son CYBOX, STIX, CAPEC, entre otros. Junto con estos esfuerzos utilizados para la representación de la información se encuentra TAXII. TAXII también es un esfuerzo de MITRE que busca estandarizar el intercambio confiable y automático de información. TAXII tiene como finalidad ayudar en el intercambio de información entre las organizaciones que lo deseen utilizando relaciones y sistemas existentes. No se busca que TAXII defina métodos de confianza entre las organizaciones o cualquier aspecto no técnico del intercambio de información de seguridad.\\
+\bigskip
+También durante el estudio del arte se estudio RTIR y algunas otras herramientas que cuentan con características similares. RTIR ha sido una herramienta desarrollada junto con CSIRTs para el manejo de incidentes de seguridad. Permitiendo que se agregue información asociada a estos.\\
+\bigskip
+El estudio del arte no fue una tarea sencilla debido a la amplitud de la temática tratada y por la cantidad de información encontrada. Se tuvo a disposición mucha información de múltiples fuentes. Se vieron temas referentes a la correlación de la información así como de la sanitización de ésta y como estas dos tareas afectan fuertemente el trabajo y la reputación de las organizaciones. A su vez se dio mucha importancia a la representación de información de forma estructurada.\\
+\bigskip
+Luego de terminado el estado del arte se realizo el análisis evaluando los distintos problemas identificados durante el estado del arte. Se identificaron algunos problemas los cuales era de interés para el proyecto. De dichos problemas se identificaron requerimientos que son deseables en una herramienta que intercambia información de seguridad.\\
+\bigskip
+Se realizó el diseño de la herramienta utilizando STIX, TAXII y RTIR y centrándose en el intercambio y la representación de información de forma estructurada. El diseño realizado buscó solucionar los requerimientos planteados en el análisis. De ésta forma, se tuvieron en cuenta durante el diseño problemáticas referentes a la correlación y sanitización de la información que se dejaron planteados como trabajos futuros. La arquitectura planteada busca ser extensible y modular. Permitiendo la interacción con herramientas de gestión de incidentes distintas a RTIR y la extensión de las funcionalidades ya existentes en el sistema.\\
+\bigskip
+Luego de realizado el diseño realizó un prototipo de la herramienta propuesta. Esta intercambia información utilizando el protocolo TAXII y representando la información por medio de STIX. El manejo de la información se realiza desde RTIR dando de alta los datos necesarios para realizar el intercambio. Es necesario destacar la dificultad en la implementación de un \textit{plugin} para RTIR que no fue una tarea sencilla y que se realizó por medio de ingeniería reversa de un \textit{plugin} ya existente. Además se implementó un cliente que implementa el protocolo TAXII para realizar el intercambió que además cuenta con una API REST que puede consumir el \textit{plugin} RTIR.\\
+\bigskip
+Finalmente se ideó un caso de estudio en el que se intercambian cyber observables entre dos organizaciones por medio del protocolo TAXII utilizando los distintos servicios provistos en su especificación.
