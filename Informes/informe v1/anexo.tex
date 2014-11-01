@@ -1,60 +1,62 @@
 \chapter{Anexo}
 \label{anexo}
 
-\section{Estado del Arte}
-\label{anexo.estadodelarte}
+%\section{Estado del Arte}
+%\label{anexo.estadodelarte}
 
-\subsection{Gestión de incidentes}
-\label{anexo.gestiondeincidentes}
-\subsubsection{Herramientas}
-\label{anexo.herramientas}
-\input{./anexo/RTIR}
+%\subsection{Gestión de incidentes}
+%\label{anexo.gestiondeincidentes}
+%\subsubsection{Herramientas}
+%\label{anexo.herramientas}
+%\input{./anexo/RTIR}
 
-\subsection{Representación}
-\label{anexo.representacion}
-\subsubsection{Modelos de datos}
-\label{anexo.modelodedatos}
+%\subsection{Representación}
+%\label{anexo.representacion}
+%\subsubsection{Modelos de datos}
+%\label{anexo.modelodedatos}
 %Aca se podria poner algo de openIOC
 
-\input{./anexo/IDMEF}
-\input{./anexo/IODEF}
+%\input{./anexo/IDMEF}
+%\input{./anexo/IODEF}
 %\input{./anexo/OPENIOC}
-\input{./anexo/STIX}
-\input{./anexo/tablaComparativa}
+%\input{./anexo/STIX}
+%\input{./anexo/tablaComparativa}
 %\subsection{Estándares}
 %\label{estandares}
-\subsection{Intercambio}
-\label{anexo.intercambio}
-\subsubsection{Protocolos}
-\label{anexo.protocolos}
+%\subsection{Intercambio}
+%\label{anexo.intercambio}
+%\subsubsection{Protocolos}
+%\label{anexo.protocolos}
 %En este punto hay que poner algo de cybex, no es un protocolo sino un framework
-\input{./anexo/RID} 
-\input{./anexo/TAXII} 
-\subsubsection{Modelos}
-\label{anexo.modelos}
-\input{./anexo/Modelos} 
+%\input{./anexo/RID} 
+%\input{./anexo/TAXII} 
+%\subsubsection{Modelos}
+%\label{anexo.modelos}
+%\input{./anexo/Modelos} 
 
 \section{Implementación}
+\subsection{Servicios TAXII Implementados}
 	
 	\begin{center}
 		\begin{tabular}{|l|}
 			\hline
-			def inbox\_service(request, inbox\_name): \\
+			def inbox\service(request, inbox\name): \\
 			"""Handles TAXII Inbox Service requests.""" \\ \\
 			
-			def poll\_service(request):\ \\
+			def poll\service(request):\ \\
 			"""Handles TAXII Poll Service requests.""" \\ \\
 			
-			def feed\_managment\_service(request): \\
+			def feed\managment\service(request): \\
 			"""Handles TAXII Feed Managment Service requests.""" \\ \\
 			
-			def subscription\_service(request):\ \\
+			def subscription\service(request):\ \\
 			"""Handles TAXII Subscription Service requests.""" \\
 			\hline
 		\end{tabular}
 	\end{center}\ \\
-	
-	A continuación se muestra la firma de la API desarrollada.
+
+\subsection{API REST implementada}
+
 	\begin{center}
 		\begin{tabular}{|l|}
 			\hline
@@ -118,31 +120,258 @@
 			\#Gets, lists, creates or updates FeedManagementServices\\ \\
 			
 			
-			def get\_remote\_data\_feeds(request):\\
+			def get\remote\data\feeds(request):\\
 			\#Given the id of a TAXII Service we make a FeedInformation request to\\ that service address.\\
 			\#The response is a list of the feed names of the TAXII client and\\ a list of all protocol bindings,\\ content binding and message binding.\\ \\
 			
-			def register\_remote\_data\_feeds(request):\\
+			def register\remote\data\feeds(request):\\
 			\#Given the id of a TAXII service we get the data feeds of the TAXII Client and\\ copy them to the current system.\\ \\
 			
-			def create\_information(request):\\
+			def create\information(request):\\
 			\#When in GET method return all the Content Blocks.\\
 			\#When in POST method, given a content binding id, a title, description and content\\ we create a Content Block.\\ \\
 			
-			def send\_information\_to\_inbox(request):\\
+			def send\information\to\inbox(request):\\
 			\#Given the id of a DataFeed Subscription we get the Data Feeds and send it to\\ send it to the inbox service of the organization of the subscription service.\\ \\
 			
-			def poll\_information(request):\\
+			def poll\information(request):\\
 			\#Given the id of a remote data feed,\\ we get the poll service instances and for each make a poll request.\\ \\
 			
-			def get\_data\_feed\_subscriptions(request):\\
+			def get\data\feed\subscriptions(request):\\
 			\#We get all the date feed subsctiptions and\\ return the id, adress and data feed name of each.\\ \\
 			
-			def subscription\_to\_data\_feed(request):\\
+			def subscription\to\data\feed(request):\\
 			\#Given the id of a TAXII Service and the id of a Data Feed and\\ the service id we make a Manage Feed Subscription request for that Data Feed.\\		
 			
 			\hline
 		\end{longtable}
 	\end{center}
+	\newpage
+
+\subsection{Entidades desarrolladas utilizadas}
 	
+	\begin{center}
+		\begin{longtable}{|l|}
+			\hline
+
+	class ProtocolBindingId():\\
+	    """\\
+	    Represents a protocol binding id, used to establish the exchange protocol\\
+	    supported by a TAXII implementation.\\
+	    Ex:\\
+	    HTTP protocol binding id : "urn:taxii.mitre.org:protocol:http:1.0"\\
+	    HTTPS protocol binding id : "urn:taxii.mitre.org:protocol:https:1.0"\\
+	    """\\
+	    title = CharField(blank=True)\\
+	    description = TextField(blank=True)\\
+	    bindingid = CharField(maxlength=MAXIDLEN)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class ContentBindingId():\\
+	    """\\
+	    Represents a content binding id, used to establish the supported content\\
+	    types for a given TAXII exchange (e.g., Poll, Inbox, etc.).\\
+	    Ex:\\
+	    STIX v1.0 content binding id : "urn:stix.mitre.org:xml:1.0"\\
+	    """\\
+	    title = CharField(blank=True)\\
+	    description = TextField(blank=True)\\
+	    bindingid = CharField(maxlength=MAXIDLEN)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class MessageBindingId():\\
+	    """\\
+	    Represents a message binding id, used to establish the supported syntax\\
+	    for a given TAXII exchange, "e.g., XML".\\
+	    Ex:\\
+	    XML message binding id : "urn:taxii.mitre.org:message:xml:1.0"\\
+	    """\\
+	    title = CharField(blank=True)\\
+	    description = TextField(blank=True)\\
+	    bindingid = CharField(maxlength=MAXIDLEN)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class DataFeedPushMethod():\\
+	    """\\
+	    Used to establish the protocols that can be used to push content via\\
+	    a subscription. This appears in a Feed Information Response message,\\
+	    as defined by the TAXII Services Specification.\\
+	    """\\
+	    title = CharField(blank=True)\\
+	    description = TextField(blank=True)\\
+	    protocolbinding = ForeignKey(ProtocolBindingId)\\
+	    messagebinding = ForeignKey(MessageBindingId)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class DataFeedPollInformation():\\
+	    """\\
+	    Used to establish the supported protocols and address of a Data Feed.\\
+	    This appears in a Feed Information Response message, as defined by the\\
+	    TAXII Services Specification.\\
+	    """\\
+	    title = CharField(blank=True)\\
+	    description = TextField(blank=True)\\
+	    address = URLField()\\
+	    protocolbinding = ForeignKey(ProtocolBindingId)\\
+	    messagebindings = ManyToManyField(MessageBindingId)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class DataFeedSubscriptionMethod():\\
+	    """\\
+	    Used to identify the protocol and address of the TAXII daemon hosting\\
+	    the Feed Management Service that can process subscriptions for a TAXII\\
+	    Data Feed. This appears in a Feed Information Response message, as defined\\
+	    by the TAXII Services Specification.\\
+	    """\\
+	    title = CharField(blank=True)\\
+	    description = TextField(blank=True)\\
+	    address = URLField()\\
+	    protocolbinding = ForeignKey(ProtocolBindingId)\\
+	    messagebindings = ManyToManyField(MessageBindingId)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class ContentBlock():\\
+	    """Represents the content block of a TAXII Poll Response or Inbox message."""\\
+	    title = CharField(blank=True) # not required by TAXII\\
+	    description = TextField(blank=True) # not required by TAXII\\
+	    timestamplabel = DateTimeField(default=lambda:datetime.datetime.now(tzutc()))\\
+	    submittedby = ForeignKey(User, blank=True, null=True)\\
+	    messageid = CharField(blank=True)\\
+	    contentbinding = ForeignKey(ContentBindingId)\\
+	    content = TextField()\\
+	    padding = TextField(blank=True)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class DataFeed():\\
+	    """Represents a TAXII Data Feed"""\\
+	    name = CharField()\\
+	    description = TextField(blank=True)\\
+	    users = ManyToManyField(User, blank=True, null=True)\\
+	    supportedcontentbindings = ManyToManyField(ContentBindingId)\\
+	    pushmethods = ManyToManyField(DataFeedPushMethod)\\
+	    pollserviceinstances = ManyToManyField(DataFeedPollInformation)\\
+	    subscriptionmethods = ManyToManyField(DataFeedSubscriptionMethod, blank=True, null=True)\\
+	    contentblocks = ManyToManyField(ContentBlock, blank=True, null=True)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class DataFeedSubscription():\\
+	    """Represents a Data Feed Subscription. This is not used by TAXII at the moment."""\\
+	    subscriptionid = CharField(unique=True) # uri formatted subscription id\\
+	    user = ForeignKey(User)\\
+	    datafeed = ForeignKey(DataFeed)\\
+	    datafeedmethod = ForeignKey(DataFeedSubscriptionMethod)\\
+	    active = BooleanField(default=True)\\
+	    expires = DateTimeField()\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class Inbox():\\
+	    """\\
+	    Characterizes a TAXII Inbox. Inboxes are the mechanism by which TAXII consumers\\
+	    receive data from TAXII publishers. This Inbox implementation allows an Inbox\\
+	    to be "bound" to zero or more Data Feeds, meaning that data received by an Inbox\\
+	    can populate Data Feeds if a user configures it as such.\\
+	    """\\
+	    name = CharField(unique=True)\\
+	    description = TextField(blank=True)\\
+	    supportedcontentbindings = ManyToManyField(ContentBindingId)\\
+	    supportedmessagebindings = ManyToManyField(MessageBindingId)\\
+	    contentblocks = ManyToManyField(ContentBlock, blank=True, null=True)\\
+	    supportedprotocolbinding = ForeignKey(ProtocolBindingId)\\
+	    datafeeds = ManyToManyField(DataFeed, blank=True, null=True)\\
+	    users = ManyToManyField(User, blank=True, null=True)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class ContentBlockRTIR():\\
+	    """Represents the nexus between the RTIR ticket and the content block."""\\
+	    rtirid = IntegerField(unique=True)\\
+	    contentblock = ForeignKey(ContentBlock)\\
+	\\
+	class RemoteDataFeedPollInformation():\\
+	    """Represents DataFeed Poll Information of remote TAXII clients """\\
+	    title = CharField(blank=True)\\
+	    description = TextField(blank=True)\\
+	    address = URLField()\\
+	    protocolbinding = ForeignKey(ProtocolBindingId)\\
+	    messagebindings = ManyToManyField(MessageBindingId)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class RemoteDataFeed():\\
+	    """Represents DataFeeds of remote TAXII clients """\\
+	    name = CharField(maxlength=MAXTITLELEN)\\
+	    description = TextField(blank=True)\\
+	    supportedcontentbindings = ManyToManyField(ContentBindingId)\\
+	    pushmethods = ManyToManyField(DataFeedPushMethod)\\
+	    pollserviceinstances = ManyToManyField(RemoteDataFeedPollInformation, null=True)\\
+	    subscriptionmethods = ManyToManyField(DataFeedSubscriptionMethod, blank=True, null=True)\\
+	    contentblocks = ManyToManyField(ContentBlock, blank=True, null=True)\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class RemoteInbox():\\
+	    """Represents Inboxes of remote TAXII clients """\\
+	    name = CharField(unique=True) # this will become part of the URL where it can be accessed at\\
+	    description = TextField(blank=True)\\
+	    supportedcontentbindings = ManyToManyField(ContentBindingId)\\
+	    supportedmessagebindings = ManyToManyField(MessageBindingId)\\
+	    supportedprotocolbinding = ForeignKey(ProtocolBindingId)\\
+	    datafeed = ForeignKey(DataFeed, blank=True)\\
+	    address = URLField()\\
+	    datecreated = DateTimeField(autonowadd=True)\\
+	    dateupdated = DateTimeField(autonow=True)\\
+	\\
+	class TAXIIServices():\\
+	    """Represents all TAXII Services available """\\
+	    name = CharField(unique=True)\\
+	    description = TextField(blank=True)\\
+	    inbox = URLField()\\
+	    poll = URLField()\\
+	    feedmanagment = URLField()\\
+	    subscription = URLField()\\
+\\
+
+			
+			\hline
+		\end{longtable}
+	\end{center}
 	
+\subsection{Cyber Obsevables utilizados en el caso de estudio}
+
+	\lstset{
+		 breaklines=true
+	}
+    \lstinputlisting{cybox/CybOX_Artifact_Instance.xml}
+	\lstinputlisting{cybox/CybOX_Artifact_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_CreateFile_Action.xml}
+	\lstinputlisting{cybox/CybOX_Domain_Instance.xml}
+	\lstinputlisting{cybox/CybOX_Domain_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_IPv4Address_Instance.xml}
+	\lstinputlisting{cybox/CybOX_IPv4Address_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_IPv6Address_Instance.xml}
+	\lstinputlisting{cybox/CybOX_IPv6Address_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_Iran-Oil_Dynamic.xml}
+	\lstinputlisting{cybox/CybOX_Network_Connection_HTTP_Instance.xml}
+	\lstinputlisting{cybox/CybOX_Network_Connection_HTTP_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_Network_Connection_Instance.xml}
+	\lstinputlisting{cybox/CybOX_Network_Connection_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_PDF_File_Instance.xml}
+	\lstinputlisting{cybox/CybOX_PDF_File_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_Simple_Email_Instance.xml}
+	\lstinputlisting{cybox/CybOX_Simple_Email_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_Simple_File_Instance.xml}
+	\lstinputlisting{cybox/CybOX_Simple_File_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_Simple_File_Pattern_Regex.xml}
+	\lstinputlisting{cybox/CybOX_URL_Instance.xml}
+	\lstinputlisting{cybox/CybOX_URL_Pattern.xml}
+	\lstinputlisting{cybox/CybOX_X509_Certificate_Instance.xml}
+	\lstinputlisting{cybox/CybOX_X509_Certificate_Pattern.xml}

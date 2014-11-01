@@ -1,6 +1,6 @@
 \chapter{Introducción}
 \label{capitulo1}
-\input{./secciones/Introduccion}
+%\input{./secciones/Introduccion}
 
 \section{Contexto}
 \label{capitulo1:contexto}
@@ -8,9 +8,110 @@ Este proyecto se desarrolla en el contexto de los temas de investigación y trab
 
 \section{Motivación}
 \label{capitulo1:motivacion}
-En los últimos tiempos la sofisticación, velocidad, y el impacto de los ataques referidos a seguridad informática ha crecido. A su vez  los actores que realizan esos ataques  son cada vez más hábiles y persistentes en busca de información específica, como ser credenciales de acceso, información personal, tarjetas de crédito, espionaje industrial, o incluso información de seguridad nacional. En este contexto es necesario contar con  estrategias de defensa, las cuales a su vez necesitan  adaptarse constantemente a los nuevos actores y ataques.\\
+Históricamente, se ha visto un aumento en la sofisticación, velocidad, impacto y 
+cantidad de los ataques informáticos. Por ello es necesario que las estrategias 
+de defensa se adapten a los nuevos actores y ataques. Para responder a esto, las 
+organizaciones han tenido que recurrir al intercambio de información de amenazas 
+con el fin de tener un mejor panorama de las actividades de sus adversarios 
+y así ayudar a administrar sus recursos de forma de obtener el mejor resultado 
+posible de sus defensas. \\
 
-El intercambio de información ha demostrado ser fundamental en la lucha contra las nuevas modalidades de ataque. Hoy en día, un número cada vez mayor de organizaciones comparten  información sobre amenazas para obtener una visión más completa de la actividad del atacante y ayudar a priorizar las defensas propias de la organización.\\
+Las aproximaciones tradicionales de seguridad tienen como objetivo entender y 
+registrar vulnerabilidades, debilidades y configuraciones necesarias pero 
+insuficientes. Para defenderse, las organizaciones tienen estrategias basadas en 
+alertas que buscan bloquear los ataques y arreglar las vulnerabilidades. Si bien dichas estrategias pueden ser efectivas contra algunas 
+amenazas no logran detener ataques avanzados o proveer información sobre las 
+actividades de un atacante luego de que ingresó a la red. Una estrategia más 
+adecuada es basarse en \textbf{\textit{cyber kill-chain}}, en esta estrategia se busca 
+descomponer las fases de un ataque con la finalidad de obtener una mejor 
+comprensión del ataque y el atacante, así como mejorar las posibilidades de 
+defensa.
+
+\begin{figure}[H]
+  \label{fig:kill_chain}
+  \centering
+  \includegraphics[scale=0.55]{./images/killChain.png}
+    \caption{Cyber kill-chain \protect\cite{b1}}
+\end{figure}
+
+Como se ve en la figura~\ref{fig:kill_chain}, los primeros pasos de esta estrategia representan una 
+oportunidad para detectar y mitigar las amenazas de forma proactiva antes de que 
+al adversario realice un acceso no autorizado en los sistemas de la 
+organización. En los pasos posteriores es donde se realiza la detección, 
+respuesta y aseguramiento de los activos más importantes. Al entender al 
+adversario, se puede tener una mejor oportunidad para descubrir sus intenciones 
+y responder al ataque. Entender la amenaza permite la toma de mejores 
+decisiones, dando prioridad a los recursos y así tener una ventaja ante el atacante. 
+El resultado de defensas en base a inteligencia es una mejor opción que las 
+respuestas a los ataques dado que estos ajustan sus operaciones basándose en el 
+éxito o falla de sus intentos. En un modelo como el de la figura~\ref{fig:kill_chain} los intentos 
+del adversario pueden ser reconocidos, logrando que los defensores tengan la 
+posibilidad de ajustar sus tácticas para que al adversario le sea más 
+difícil alcanzar sus objetivos.\\
+
+Compartir información con socios y comunidades de confianza le permite a las 
+organizaciones tener un conjunto de datos relevante para lograr una 
+identificación precisa de la amenaza. Por medio de este intercambio, cada organización 
+puede entender mejor las amenazas, no 
+solo de forma abstracta sino que también con evidencias específicas que 
+indiquen la presencia del atacante. Las tareas de cyber inteligencia permiten 
+anticipar y mitigar las amenazas antes de que sean difíciles de encontrar y 
+erradicar utilizando los métodos tradicionales de detección y respuesta. Con la 
+información recolectada los analistas pueden agrupar patrones de actividades 
+similares, atribuir actividades a ciertos actores, identificar e implementar 
+estrategias para mitigar ataques de forma rápida y anticiparse al lanzamiento de 
+ataques similares en el futuro. Para aprovechar de forma adecuada los beneficios 
+de la cyber inteligencia, las organizaciones deben compartir la información 
+recolectada con socios de su confianza.\\
+
+Por medio del análisis del comportamiento de los adversarios en distintos 
+objetivos y en un período de tiempo adecuado, los defensores son capaces de 
+identificar un conjunto importante de indicadores, tácticas, técnicas y 
+procedimientos. De esta forma se obtiene información de los objetivos y las 
+estrategias lo cual permite al defensor predecir el comportamiento del ataque y 
+generar defensas dinámicas. Dada la forma y complejidad con la cual evolucionan 
+las amenazas, la velocidad con la cual ocurren los eventos y la basta cantidad 
+de datos que se deberían intercambiar, es necesario establecer una forma 
+automática para ayudar a los analistas y tomadores de decisión a llevar a cabo 
+acciones defensivas.\\
+
+Existen múltiples métodos para el intercambio de información y estos juegan un rol 
+importante en los tipos, volúmenes y naturaleza de la información compartida 
+con la comunidad. Algunos de estos medios de intercambio limitan el tipo de 
+contenido que es compartido mientras que otros promueven ciertos tipos de 
+intercambio. Los procesos para compartir información son manuales, llevan mucho 
+tiempo, son repetitivos y en muchos casos requieren que las organizaciones 
+reescriban o traduzcan la información a una amplia variedad de formatos. Otro 
+problema que se presenta cuando se quiere intercambiar información es la 
+utilización de tecnologías y/o formatos propietarios, esto provoca la necesidad 
+de desarrollar scripts y módulos para permitir compartir información por fuera 
+de las comunidades. Para aquellas comunidades con algún grado de automatización, 
+sus modelos son generalmente bajos en prestaciones y usan soluciones 
+propietarias, comerciales o adaptadas a su comunidad.\\
+
+La mayoría de dichos 
+métodos no permiten el consumo de información de amenazas de forma automática, 
+esto hace que rutinariamente las organizaciones deban tomar dicha información y 
+sintetizarla en sus bases de datos locales. Si bien los métodos utilizados en la 
+actualidad han ayudado a mejorar las capacidades defensivas de numerosas 
+organizaciones, éstas no han logrado explotar su máximo potencial.\\
+
+La automatización requiere de información de calidad, esto 
+no puede ser logrado adecuadamente con los distintos productos y sistemas de hoy en 
+día. Para lograr un nivel adecuado de automatización es necesario contar con un 
+estándar el cual tenga representaciones estructuradas de información, de ésta 
+forma se puede lograr un mejor aprovechamiento de los datos sin saber de 
+antemano quien los provee. Dicha información debe ser legible por un humano y 
+parseable por una máquina. Estos requerimientos tienen varias justificaciones, 
+primero que nada, un analista podría realizar un análisis que es inapropiado 
+para ser automatizado o que sea focalizado en tomas de decisiones por parte de 
+personas. También podría ser de interés que un analista tenga conocimiento de la 
+situación actual,  de la fidelidad de las fuentes o de los métodos utilizados 
+para producir la información. Por lo dicho anteriormente, es necesario la 
+existencia de un estándar con una representación estructurada de la información, siendo ésta 
+expresiva, flexible, extensible, automatizable y legible. Además se deben contar 
+con medios para permitir el intercambio seguro y confiable de información entre 
+distintas organizaciones.\\
 
 \section{Objetivos}
 \label{capitulo1:objetivos}
@@ -22,11 +123,9 @@ El documento se organiza de la siguiente forma.
 
 En el Capítulo 2 se presentan conceptos generales de la gestión a incidentes y los mecanismos de intercambio de información para poner en contexto el presente trabajo. En particular se mencionan RTIR, TAXII y STIX.
 
-En el Capítulo 3 se presentan aspectos generales de la performance en aplicaciones web y un conjunto de buenas prácticas para el desarrollo de las mismas.
+En el Capítulo 3 se presentan el análisis de la investigación realizada y se definen requerimientos necesarios en una herramienta de intercambio de información.
 
-El Capítulo 4 presenta el análisis de la solución planteada, mostrando los requrimientos funcionales y no funcionales. También se mencionan las herramientas a utilizar. Por último se detallan los actores y los casos de usos de la solución planteada.
-
-En el Capítulo 5 plantea el diseño de la solución planteada en el capítulo anterior. Se describen los componentes del sistema y los modelos de datos utilizados.
+En el Capítulo 4 plantea el diseño de la solución planteada en el capítulo anterior. Se describen los componentes del sistema, las decisiones de diseño realizadas, la arquitectura del sistema y la interacción entre cada uno de los componentes utilizados.
 
 En el Capítulo 6 se explica la implementación del sistema definido.
 
