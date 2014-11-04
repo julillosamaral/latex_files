@@ -2,6 +2,14 @@
 \label{capitulo6}
 Para mostrar el uso de la herramienta se simulo en un ambiente virtualizado la interacción y colaboración entre varios CSIRTs. Mediante esta prueba se realizó el intercambio de cyber observables entre las distintas organizaciones. Dicho intercambio se realizo utilizando los distintos servicios provistos por TAXII.
 
+\section{Objetivos}
+
+El caso de estudio fue ideado con la finalidad de validar la implementación del protocolo TAXII realizada así como las distintas interacciones entre RTIR y la aplicación TAXII. 
+
+Para realizar la validación de las interacciones entre RTIR y la aplicación TAXII se tuvó como objetivo recorrer cada una de las interfaces implementadas.
+
+La validación del protocolo TAXII se realizó mediante la invocación de cada una de las funcionalidades que implementan el intercambio de información. Dicha invocación se realizó desde la interfaz de RTIR mediante la API REST implementada durante el proyecto. El protocolo implementado se validó de dos maneras, primero mediante dos instancias de la aplicación TAXII implementada y luego por medio de YETI. Como se dijó anteriormente YETI es una implementación de referencia del protocolo TAXII provista por MITRE.
+
 \section{Escenario del caso de estudio}
 Se utilizaron dos máquinas vistuales para realizar la prueba de concepto, cada una de ellas tiene instalada Linux Mint 17. En dichos equipos se instaló RTIR junto con TAXIIApp. Además en la máquina virtual correspondiente al CSIRT2 se instalo YETI. Cada una de estas máquinas virtuales tiene incluida una base de datos con esquemas correspondientes a cada una de las aplicaciones. En la figura \ref{fig.laboratorio_desplegado} se ve un esquema representando el despliegue realizado.
 

@@ -37,16 +37,14 @@
 	
 	\bigskip
 	
-	En esta sección se presenta el sistema diseñado, mostrando en la figura \ref{fig.arquitecturasistema} su arquitectura. El sistema busca darle a las organizaciones la capacidad de intercambiar
-		información de seguridad de forma automática. Se busca integrar a RTIR dicha capacidad utilizando las herramientas
+	En esta sección se presenta el sistema diseñado, mostrando en la figura \ref{fig.arquitecturasistema} su arquitectura. El sistema busca facilitar a las organizaciones el intercambio de información de seguridad. Se busca integrar a RTIR dicha capacidad utilizando las herramientas
 		mencionadas anteriormente.
 	
 	\bigskip
 	
 	Para ello se busca extender RTIR para que el usuario ingrese la información al sistema, con
 		dicha información se crea un ticket en RTIR y a su vez se envía a TAXII App para crear una representación utilizando
-		STIX. El sistema TAXII es un desarrollo nuevo que utiliza librerías provistas por MITRE, estas son utilizadas para
-		representar e intercambiar la información.
+		STIX. La aplicación TAXII App es un desarrollo nuevo que utiliza librerías provistas por MITRE, estas son utilizadas para representar e intercambiar la información.
 	
 	
 	\bigskip
@@ -79,18 +77,13 @@
 	
 	\bigskip
 	
-	La aplicación TAXII recibe datos de RTIR así como también de organizaciones socias, en un
-		futuro se podría dar la posibilidad de que la aplicación TAXII recibiera datos de sensores que se encuentren en la red
-		de la organización. Luego de que los datos son recibidos y almacenados se correlacionan con los ya existentes en por TAXII App. De la
+	La aplicación TAXII App recibe datos de RTIR así como también de organizaciones socias. Luego de que los datos son recibidos y almacenados se correlacionan con los ya existentes en TAXII App. De la
 		correlación se pueden obtener soluciones a problemas encontrados, información sobre ataques realizados, identificación
 		de atacantes, etc. En caso de que exista información de utilidad se pueden ingresar notas a tickets o relacionar
 		tickets existentes en el RTIR.\\
 		\bigskip
-	También se podría compartir información con otras organizaciones para colaborar en la lucha
-		contra amenazas. Para realizar dicho intercambio se representa la información utilizando STIX y luego se intercambia
-		utilizando TAXII. Se utilizan librerías provistas por MITRE para realizar la representación y el intercambio de la
-		información.
-	
+
+	Con el sistema diseñado se permite el intercambio de información de seguridad con otras organizaciones. Para realizar dicho intercambio se representa la información utilizando el lenguaje STIX. Los intercambios son realizados por medio del protocolo TAXII. Para realizar la representación de la información así como el intercambio se utilizaron librerías provistas por MITRE. 
 	
 	\bigskip
 	

@@ -1,0 +1,113 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: informe.aux
+A level-1 auxiliary file: front.aux
+A level-1 auxiliary file: capitulo1.aux
+A level-1 auxiliary file: capitulo2.aux
+A level-1 auxiliary file: capitulo3.aux
+A level-1 auxiliary file: capitulo4.aux
+A level-1 auxiliary file: capitulo5.aux
+A level-1 auxiliary file: capitulo6.aux
+A level-1 auxiliary file: capitulo7.aux
+The style file: plain.bst
+A level-1 auxiliary file: back.aux
+A level-1 auxiliary file: anexo.aux
+Database file #1: biblio.bib
+Repeated entry---line 97 of file biblio.bib
+ : @book{b3
+ :         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 110 of file biblio.bib
+ : @book{RTEssentials
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 153 of file biblio.bib
+ : @book{JBH04
+ :            ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in bp
+Warning--to sort, need author or key in libtaxii
+Warning--to sort, need author or key in rest_framework
+Warning--to sort, need author or key in lwp
+Warning--to sort, need author or key in pythonstixgit
+Warning--to sort, need author or key in yeti
+Warning--to sort, need author or key in mitre
+Too many commas in name 1 of "J. Vincent, R. Spier, D. Rolsky, D. Chamberlain and R. Foley" for entry RTEssentials
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Anthony Rutkowski, Youki Kadobayashi, Inette Furey, Damir Rajnovic, Robert Martin & Takeshi Takahashi" for entry cybex
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Anthony Rutkowski, Youki Kadobayashi, Inette Furey, Damir Rajnovic, Robert Martin & Takeshi Takahashi" for entry cybex
+while executing---line 1049 of file plain.bst
+Warning--to sort, need author or key in Celery
+Warning--to sort, need author or key in Django
+Warning--to sort, need author or key in pythonstixdoc
+Warning--to sort, need author or key in cybox
+Warning--to sort, need author or key in cve
+Warning--to sort, need author or key in spf
+Warning--to sort, need author or key in vim
+Warning--to sort, need author or key in xml
+Warning--to sort, need author or key in json
+Warning--to sort, need author or key in ietf
+Warning--to sort, need author or key in capec
+Warning--to sort, need author or key in cwe
+Warning--to sort, need author or key in secMesu
+Warning--to sort, need author or key in OVAL
+Warning--to sort, need author or key in nist
+Warning--to sort, need author or key in maec
+Warning--to sort, need author or key in scap
+Warning--to sort, need author or key in msm
+Warning--to sort, need author or key in mysql
+Warning--to sort, need author or key in janetRTIR
+Warning--to sort, need author or key in rest
+Warning--to sort, need author or key in apache
+Too many commas in name 1 of "Anthony Rutkowski, Youki Kadobayashi, Inette Furey, Damir Rajnovic, Robert Martin & Takeshi Takahashi" for entry cybex
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Anthony Rutkowski, Youki Kadobayashi, Inette Furey, Damir Rajnovic, Robert Martin & Takeshi Takahashi" for entry cybex
+while executing---line 1090 of file plain.bst
+Warning--empty publisher in cybex
+Warning--empty publisher in lockhead
+Too many commas in name 1 of "J. Vincent, R. Spier, D. Rolsky, D. Chamberlain and R. Foley" for entry RTEssentials
+while executing---line 1090 of file plain.bst
+Warning--empty publisher in AdvancedThreatsCollaboration
+You've used 49 entries,
+            2118 wiz_defined-function locations,
+            664 strings with 7243 characters,
+and the built_in function-call counts, 9164 in all, are:
+= -- 830
+> -- 205
+< -- 0
++ -- 107
+- -- 52
+* -- 337
+:= -- 1297
+add.period$ -- 118
+call.type$ -- 49
+change.case$ -- 153
+chr.to.int$ -- 0
+cite$ -- 81
+duplicate$ -- 443
+empty$ -- 1108
+format.name$ -- 52
+if$ -- 2120
+int.to.chr$ -- 0
+int.to.str$ -- 49
+missing$ -- 40
+newline$ -- 219
+num.names$ -- 40
+pop$ -- 401
+preamble$ -- 1
+purify$ -- 124
+quote$ -- 0
+skip$ -- 357
+stack$ -- 0
+substring$ -- 251
+swap$ -- 49
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 156
+warning$ -- 32
+while$ -- 40
+width$ -- 51
+write$ -- 402
+(There were 9 error messages)

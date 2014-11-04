@@ -1,0 +1,2832 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  3 NOV 2014 17:59
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**informe
+(./informe.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\enitkv@toks@=\toks16
+\labelindent=\skip43
+\enit@outerparindent=\dimen103
+\enit@toks=\toks17
+\enit@inbox=\box26
+\enitdp@description=\count88
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2011/10/22 .dtx Todonotes source and documentation.
+Package: todonotes 2011/10/22
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+\XKV@depth=\count89
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/xkeyval/keyval.tex)))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks20
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box27
+(/usr/local/texlive/2012/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks21
+\pgfkeys@temptoks=\toks22
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks23
+))
+\pgf@x=\dimen106
+\pgf@y=\dimen107
+\pgf@xa=\dimen108
+\pgf@ya=\dimen109
+\pgf@xb=\dimen110
+\pgf@yb=\dimen111
+\pgf@xc=\dimen112
+\pgf@yc=\dimen113
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count91
+\c@pgf@countb=\count92
+\c@pgf@countc=\count93
+\c@pgf@countd=\count94
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count95
+\pgfsyssoftpath@bigbuffer@items=\count96
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen114
+\pgfmath@count=\count97
+\pgfmath@box=\box28
+\pgfmath@toks=\toks24
+\pgfmath@stack@operand=\toks25
+\pgfmath@stack@operation=\toks26
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count98
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen115
+\pgf@picmaxx=\dimen116
+\pgf@picminy=\dimen117
+\pgf@picmaxy=\dimen118
+\pgf@pathminx=\dimen119
+\pgf@pathmaxx=\dimen120
+\pgf@pathminy=\dimen121
+\pgf@pathmaxy=\dimen122
+\pgf@xx=\dimen123
+\pgf@xy=\dimen124
+\pgf@yx=\dimen125
+\pgf@yy=\dimen126
+\pgf@zx=\dimen127
+\pgf@zy=\dimen128
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen129
+\pgf@path@lasty=\dimen130
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen131
+\pgf@shorten@start@additional=\dimen132
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box29
+\pgf@hbox=\box30
+\pgf@layerbox@main=\box31
+\pgf@picture@serial@count=\count99
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen133
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen134
+\pgf@pt@y=\dimen135
+\pgf@pt@temp=\dimen136
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen137
+\pgf@sys@shading@range@num=\count100
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box32
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box33
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen138
+\pgf@nodesepend=\dimen139
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen140
+\pgffor@skip=\dimen141
+\pgffor@stack=\toks27
+\pgffor@toks=\toks28
+))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count101
+\pgfplotmarksize=\dimen142
+)
+\tikz@lastx=\dimen143
+\tikz@lasty=\dimen144
+\tikz@lastxsaved=\dimen145
+\tikz@lastysaved=\dimen146
+\tikzleveldistance=\dimen147
+\tikzsiblingdistance=\dimen148
+\tikz@figbox=\box34
+\tikz@tempbox=\box35
+\tikztreelevel=\count102
+\tikznumberofchildren=\count103
+\tikznumberofcurrentchild=\count104
+\tikz@fig@count=\count105
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count106
+\pgfmatrixcurrentcolumn=\count107
+\pgf@matrix@numberofcolumns=\count108
+)
+\tikz@expandcount=\count109
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count110
+\calc@Bcount=\count111
+\calc@Adimen=\dimen149
+\calc@Bdimen=\dimen150
+\calc@Askip=\skip44
+\calc@Bskip=\skip45
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count112
+\calc@Cskip=\skip46
+)
+\c@@todonotes@numberoftodonotes=\count113
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip47
+\LTright=\skip48
+\LTpre=\skip49
+\LTpost=\skip50
+\LTchunksize=\count114
+\LTcapwidth=\dimen151
+\LT@head=\box36
+\LT@firsthead=\box37
+\LT@foot=\box38
+\LT@lastfoot=\box39
+\LT@cols=\count115
+\LT@rows=\count116
+\c@LT@tables=\count117
+\c@LT@chunks=\count118
+\LT@p@ftn=\toks29
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/08 v3.8m The Babel package
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/english.ldf
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count119
+\U@D=\dimen152
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/spanish.ldf
+Language: spanish.ldf 2011/10/06 v5.0k Spanish support from the babel system
+\es@datefmt=\count120
+\es@quottoks=\toks30
+\es@quotdepth=\count121
+Package babel Info: Making " an active character on input line 496.
+Package babel Info: Making . an active character on input line 599.
+Package babel Info: Making < an active character on input line 644.
+Package babel Info: Making > an active character on input line 644.
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip51
+\bibsep=\skip52
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count122
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
+(/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen153
+\Hy@linkcounter=\count123
+\Hy@pagecounter=\count124
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count125
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4300.
+\c@Hy@tempcnt=\count126
+LaTeX Info: Redefining \url on input line 4653.
+\Fld@menulength=\count127
+\Field@Width=\dimen154
+\Fld@charsize=\dimen155
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
+\Hy@abspage=\count128
+\c@Item=\count129
+\c@Hfootnote=\count130
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
+\Fld@listcount=\count131
+\c@bookmark@seq@number=\count132
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip53
+)
+(./slashbox.sty
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box40
+\@slashboxb=\box41
+\@slashboxc=\box42
+\@slashboxwd=\count133
+\@slashboxht=\count134
+\@slashsepl=\dimen156
+\@slashsepr=\dimen157
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/translator-lang
+uage-mappings.tex))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen158
+\extrarowheight=\dimen159
+\NC@list=\toks31
+\extratabsurround=\skip54
+\backup@length=\skip55
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count135
+\ST@wd=\dimen160
+\ST@rightskip=\skip56
+\ST@leftskip=\skip57
+\ST@parfillskip=\skip58
+\ST@pageleft=\dimen161
+\ST@headht=\dimen162
+\ST@tailht=\dimen163
+\ST@pagesofar=\dimen164
+\ST@pboxht=\dimen165
+\ST@lineht=\dimen166
+\ST@stretchht=\dimen167
+\ST@prevht=\dimen168
+\ST@toadd=\dimen169
+\ST@dimen=\dimen170
+\ST@pbox=\box43
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pbox/pbox.sty
+Package: pbox 2011/12/07 v1.2 Dynamic parboxes
+\pb@xlen=\skip59
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 1994/05/23 v2.03 Table rule package (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box44
+\beforetitleunit=\skip60
+\aftertitleunit=\skip61
+\ttl@plus=\dimen171
+\ttl@minus=\dimen172
+\ttl@toksa=\toks32
+\titlewidth=\dimen173
+\titlewidthlast=\dimen174
+\titlewidthfirst=\dimen175
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count136
+\float@exts=\toks33
+\float@box=\box45
+\@float@everytoks=\toks34
+\@floatcapt=\box46
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2012/05/21 v3.02 (NLCT)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/base/mfirstuc.sty
+Package: mfirstuc 2012/05/21 v1.06 (NLCT)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count137
+)
+\etb@tempcnta=\count138
+)
+\@glsmfirst=\toks35
+\@glsmrest=\toks36
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks37
+\ex@=\dimen176
+)
+\gls@level=\count139
+\@gls@tmpb=\toks38
+\gls@tmplen=\skip62
+\glswrite=\write5
+\glskeylisttok=\toks39
+\glslabeltok=\toks40
+\glsshorttok=\toks41
+\glslongtok=\toks42
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-hypern
+av.sty
+Package: glossary-hypernav 2007/07/04 v1.01 (NLCT)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-list.s
+ty
+Package: glossary-list 2011/03/28 v3.0 (NLCT)
+\glslistdottedwidth=\skip63
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-long.s
+ty
+Package: glossary-long 2011/03/28 v3.0 (NLCT)
+\glsdescwidth=\skip64
+\glspagelistwidth=\skip65
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-super.
+sty
+Package: glossary-super 2011/03/28 v3.0 (NLCT)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-tree.s
+ty
+Package: glossary-tree 2011/03/28 v3.0 (NLCT)
+\glstreeindent=\skip66
+)) (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count140
+\lst@gtempboxa=\box47
+\lst@token=\toks43
+\lst@length=\count141
+\lst@currlwidth=\dimen177
+\lst@column=\count142
+\lst@pos=\count143
+\lst@lostspace=\dimen178
+\lst@width=\dimen179
+\lst@newlines=\count144
+\lst@lineno=\count145
+\lst@maxwidth=\dimen180
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count146
+\lst@skipnumbers=\count147
+\lst@framebox=\box48
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(./glosario/Glosario.tex
+\glo@main@file=\write6
+\openout6 = `informe.glo'.
+
+Package glossaries Info: Writing glossary file informe.glo on input line 1.
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 46.
+ (./informe.aux (./front.aux)
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ (./capitulo1.aux)
+(./capitulo2.aux) (./capitulo3.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+
+
+LaTeX Warning: Label `fig.diagramabloques' multiply defined.
+
+) (./capitulo4.aux) (./capitulo5.aux) (./capitulo6.aux
+
+LaTeX Warning: Label `fig.pollinfo' multiply defined.
+
+) (./capitulo7.aux) (./back.aux) (./anexo.aux))
+\openout1 = `informe.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count148
+\scratchdimen=\dimen181
+\scratchbox=\box49
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen182
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks45
+) ABD: EveryShipout initializing macros
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
+\AtBeginShipoutBox=\box50
+Package hyperref Info: Link coloring ON on input line 49.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count154
+)
+LaTeX Info: Redefining \ref on input line 49.
+LaTeX Info: Redefining \pageref on input line 49.
+LaTeX Info: Redefining \nameref on input line 49.
+
+(./informe.out) (./informe.out)
+\@outlinefile=\write7
+\openout7 = `informe.out'.
+
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/dict/glossaries-dictio
+nary-English.dict
+Dictionary: glossaries-dictionary, Language: English 
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/dict/glossaries-dictio
+nary-Spanish.dict
+Dictionary: glossaries-dictionary, Language: Spanish 
+)
+\c@lstlisting=\count155
+\openout2 = `front.aux'.
+
+ (./front.tex
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <12> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 6.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <24.88> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 6.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <20.74> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 9.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <17.28> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 10.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <14.4> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 18.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 19.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 24.
+[1
+
+\openout5 = `informe.ist'.
+
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+[2
+
+] (./informe.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+LaTeX Info: Redefining \. on input line 45.
+LaTeX Info: Redefining \% on input line 45.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.76 ...{5}Implementaci\IeC {\'o}n}{58}{chapter.5}
+                                                   [1
+
+
+])
+\tf@toc=\write8
+\openout8 = `informe.toc'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.57 \newpage
+              [2]
+No file informe.gls.
+[3]
+\openout2 = `capitulo1.aux'.
+
+ (./capitulo1.tex
+Cap\'{\i }tulo 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--18
+
+ []
+
+<./images/killChain.png, id=274, 565.11125pt x 166.6225pt>
+File: ./images/killChain.png Graphic file (type png)
+
+<use ./images/killChain.png>
+Package pdftex.def Info: ./images/killChain.png used on input line 33.
+(pdftex.def)             Requested size: 310.81215pt x 91.64265pt.
+ [4
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 37--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--77
+
+ []
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
+) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.77 
+      <./images/killChain.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 78--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--115
+
+ []
+
+[6]) [7]
+\openout2 = `capitulo2.aux'.
+
+ (./capitulo2.tex
+Cap\'{\i }tulo 2.
+(./secciones/RTIR.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--9
+
+ []
+
+
+LaTeX Warning: Reference `anexo.herramientas' on page 8 undefined on input line
+ 10.
+
+) (./secciones/IDMEF.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--12
+
+ []
+
+[8
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 13--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
+
+ []
+
+) (./secciones/IODEF.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
+) (./secciones/STIX.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
+
+ []
+
+[11] [12]) (./secciones/tablaComparativa.tex
+Overfull \hbox (33.53854pt too wide) in alignment at lines 37--42
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (33.53854pt too wide) in alignment at lines 42--48
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (33.53854pt too wide) in alignment at lines 48--50
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (33.53854pt too wide) in alignment at lines 50--52
+ [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 71--71
+[]\OT1/cmr/m/n/12 Representaciones de ad-ver-sa-rios que
+ []
+
+
+Overfull \hbox (33.53854pt too wide) in alignment at lines 52--79
+ [] [] [] [] 
+ []
+
+[13] [14]) (./secciones/RID.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--11
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
+
+ []
+
+) (./secciones/TAXII.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--27
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 28--38
+
+ []
+
+<./images/TAXIIArchitecture1.png, id=349, 462.72874pt x 216.81pt>
+File: ./images/TAXIIArchitecture1.png Graphic file (type png)
+
+<use ./images/TAXIIArchitecture1.png>
+Package pdftex.def Info: ./images/TAXIIArchitecture1.png used on input line 42.
+
+(pdftex.def)             Requested size: 370.1835pt x 173.44823pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--52
+
+ []
+
+[17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.57    \item
+              Permitir el intercambio seguro y rápido de información refer...
+ <./images/TAXIIArchitecture1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 70--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--83
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 106--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--132
+
+ []
+
+[19] <./images/TAXIIArchitecture.png, id=368, 566.115pt x 336.25626pt>
+File: ./images/TAXIIArchitecture.png Graphic file (type png)
+
+<use ./images/TAXIIArchitecture.png>
+Package pdftex.def Info: ./images/TAXIIArchitecture.png used on input line 168.
+
+(pdftex.def)             Requested size: 426.79134pt x 253.5102pt.
+
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 168--169
+ [][] 
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--181
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--203
+
+ []
+
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.203 
+       <./images/TAXIIArchitecture.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+
+Overfull \hbox (0.71791pt too wide) in paragraph at lines 219--221
+[]$[]$\OT1/cmr/m/n/12 : Es uti-li-za-do pa-ra re-ci-bir y res-pon-der a men-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--303
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
+
+ []
+
+[24]) (./secciones/Modelos.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--34
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 35--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--60
+
+ []
+
+))
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+[26] [27]
+\openout2 = `capitulo3.aux'.
+
+ (./capitulo3.tex
+\c@Figura=\count156
+\c@Tabla=\count157
+
+Cap\'{\i }tulo 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
+
+ []
+
+[28
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 67--72
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 81--88
+
+ []
+
+[30]
+Overfull \hbox (38.19746pt too wide) in paragraph at lines 110--126
+[]  
+ []
+
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
+LaTeX Info: Redefining \. on input line 129.
+LaTeX Info: Redefining \% on input line 129.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+
+Overfull \hbox (38.19746pt too wide) in paragraph at lines 139--151
+[]  
+ []
+
+[31]
+LaTeX Info: Redefining \. on input line 155.
+LaTeX Info: Redefining \% on input line 155.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
+ [32] [33]
+<Analisis22-img/Analisis22-img016.png, id=447, 1063.975pt x 963.6pt>
+File: Analisis22-img/Analisis22-img016.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img016.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img016.png used on input lin
+e 272.
+(pdftex.def)             Requested size: 265.9931pt x 240.89941pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34]
+Overfull \hbox (38.14705pt too wide) in paragraph at lines 290--298
+[]  
+ []
+
+
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 307--314
+[]  
+ []
+
+[35pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.314 	\end
+           {supertabular} <./Analisis22-img/Analisis22-img016.png>]
+Overfull \hbox (46.97789pt too wide) in paragraph at lines 329--339
+[]  
+ []
+
+<Analisis22-img/Analisis22-img017.png, id=460, 686.565pt x 280.79906pt>
+File: Analisis22-img/Analisis22-img017.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img017.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img017.png used on input lin
+e 351.
+(pdftex.def)             Requested size: 416.5412pt x 170.37454pt.
+
+Overfull \hbox (26.5412pt too wide) in paragraph at lines 351--352
+ [][] 
+ []
+
+<Analisis22-img/Analisis22-img018.png, id=462, 799.48688pt x 404.26031pt>
+File: Analisis22-img/Analisis22-img018.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img018.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img018.png used on input lin
+e 364.
+(pdftex.def)             Requested size: 416.55292pt x 210.6422pt.
+
+Overfull \hbox (26.55292pt too wide) in paragraph at lines 364--365
+ [][] 
+ []
+
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.367 \end{figure}
+                   <./Analisis22-img/Analisis22-img017.png>]
+<Analisis22-img/Analisis22-img019.png, id=472, 794.97pt x 403.5075pt>
+File: Analisis22-img/Analisis22-img019.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img019.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img019.png used on input lin
+e 376.
+(pdftex.def)             Requested size: 416.56491pt x 211.43208pt.
+
+Overfull \hbox (26.56491pt too wide) in paragraph at lines 376--377
+ [][] 
+ []
+
+[37pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.380 
+       <./Analisis22-img/Analisis22-img018.png>]
+Overfull \hbox (46.97789pt too wide) in paragraph at lines 387--397
+[]  
+ []
+
+<Analisis22-img/Analisis22-img020.png, id=480, 804.00375pt x 404.26031pt>
+File: Analisis22-img/Analisis22-img020.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img020.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img020.png used on input lin
+e 406.
+(pdftex.def)             Requested size: 416.51405pt x 209.43933pt.
+
+Overfull \hbox (26.51405pt too wide) in paragraph at lines 406--407
+[][]
+ []
+
+[38pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.410 
+       <./Analisis22-img/Analisis22-img019.png>]
+<Analisis22-img/Analisis22-img021.png, id=489, 794.97pt x 403.5075pt>
+File: Analisis22-img/Analisis22-img021.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img021.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img021.png used on input lin
+e 418.
+(pdftex.def)             Requested size: 416.56491pt x 211.43208pt.
+
+Overfull \hbox (26.56491pt too wide) in paragraph at lines 418--419
+ [][] 
+ []
+
+[39pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.428 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3.6}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.428 
+       <./Analisis22-img/Analisis22-img020.png> <./Analisis22-img/Analisis22-im
+g021.png>]
+<Analisis22-img/Analisis22-img022.png, id=498, 718.18312pt x 280.79906pt>
+File: Analisis22-img/Analisis22-img022.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img022.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img022.png used on input lin
+e 431.
+(pdftex.def)             Requested size: 416.55746pt x 162.85928pt.
+
+Overfull \hbox (26.55746pt too wide) in paragraph at lines 431--432
+ [][] 
+ []
+
+
+Overfull \hbox (46.97789pt too wide) in paragraph at lines 445--455
+[]  
+ []
+
+<Analisis22-img/Analisis22-img023.png, id=500, 697.10437pt x 280.79906pt>
+File: Analisis22-img/Analisis22-img023.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img023.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img023.png used on input lin
+e 463.
+(pdftex.def)             Requested size: 416.5533pt x 167.78662pt.
+
+Overfull \hbox (26.5533pt too wide) in paragraph at lines 463--464
+ [][] 
+ []
+
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.467 
+       <./Analisis22-img/Analisis22-img022.png>]
+<Analisis22-img/Analisis22-img024.png, id=510, 804.00375pt x 404.26031pt>
+File: Analisis22-img/Analisis22-img024.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img024.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img024.png used on input lin
+e 474.
+(pdftex.def)             Requested size: 416.51405pt x 209.43933pt.
+
+Overfull \hbox (26.51405pt too wide) in paragraph at lines 474--475
+ [][] 
+ []
+
+<Analisis22-img/Analisis22-img025.png, id=512, 791.95876pt x 403.5075pt>
+File: Analisis22-img/Analisis22-img025.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img025.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img025.png used on input lin
+e 484.
+(pdftex.def)             Requested size: 416.55797pt x 212.22635pt.
+
+Overfull \hbox (26.55797pt too wide) in paragraph at lines 484--485
+ [][] 
+ []
+
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.488 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3.9}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.488 
+       <./Analisis22-img/Analisis22-img023.png> <./Analisis22-img/Analisis22-im
+g024.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 496--506
+[]  
+ []
+
+<Analisis22-img/AltaInfoRTIR.png, id=523, 846.91406pt x 304.13625pt>
+File: Analisis22-img/AltaInfoRTIR.png Graphic file (type png)
+
+<use Analisis22-img/AltaInfoRTIR.png>
+Package pdftex.def Info: Analisis22-img/AltaInfoRTIR.png used on input line 513
+.
+(pdftex.def)             Requested size: 416.54227pt x 149.60815pt.
+
+Overfull \hbox (26.54227pt too wide) in paragraph at lines 513--514
+ [][] 
+ []
+
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+0}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.517 
+       <./Analisis22-img/Analisis22-img025.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 525--533
+[]  
+ []
+
+<Analisis22-img/AsociacionInformacion.png, id=532, 1108.8928pt x 424.58624pt>
+File: Analisis22-img/AsociacionInformacion.png Graphic file (type png)
+
+<use Analisis22-img/AsociacionInformacion.png>
+Package pdftex.def Info: Analisis22-img/AsociacionInformacion.png used on input
+ line 540.
+(pdftex.def)             Requested size: 416.54443pt x 149.60512pt.
+
+Overfull \hbox (26.54443pt too wide) in paragraph at lines 540--541
+ [][] 
+ []
+
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+1}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.544 
+       <./Analisis22-img/AltaInfoRTIR.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 551--561
+[]  
+ []
+
+<Analisis22-img/Analisis22-img027.png, id=540, 1088.56688pt x 380.92313pt>
+File: Analisis22-img/Analisis22-img027.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img027.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img027.png used on input lin
+e 571.
+(pdftex.def)             Requested size: 391.81734pt x 137.05666pt.
+
+Overfull \hbox (1.81734pt too wide) in paragraph at lines 571--572
+ [][] 
+ []
+
+[44pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+2}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.576 
+       <./Analisis22-img/AsociacionInformacion.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 583--593
+[]  
+ []
+
+<Analisis22-img/Analisis22-img028.png, id=547, 846.16125pt x 326.72063pt>
+File: Analisis22-img/Analisis22-img028.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img028.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img028.png used on input lin
+e 601.
+(pdftex.def)             Requested size: 416.54643pt x 160.8423pt.
+
+Overfull \hbox (26.54643pt too wide) in paragraph at lines 601--602
+ [][] 
+ []
+
+[45pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+3}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.605 
+       <./Analisis22-img/Analisis22-img027.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 612--622
+[]  
+ []
+
+<Analisis22-img/Analisis22-img029.png, id=556, 621.07031pt x 353.06906pt>
+File: Analisis22-img/Analisis22-img029.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img029.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img029.png used on input lin
+e 629.
+(pdftex.def)             Requested size: 416.55087pt x 236.7867pt.
+
+Overfull \hbox (26.55087pt too wide) in paragraph at lines 629--630
+ [][] 
+ []
+
+[46pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+4}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.633 
+       <./Analisis22-img/Analisis22-img028.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 640--650
+[]  
+ []
+
+<Analisis22-img/Analisis22-img030.png, id=566, 861.2175pt x 301.125pt>
+File: Analisis22-img/Analisis22-img030.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img030.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img030.png used on input lin
+e 659.
+(pdftex.def)             Requested size: 416.55984pt x 145.65947pt.
+
+Overfull \hbox (26.55984pt too wide) in paragraph at lines 659--661
+ [][] 
+ []
+
+[47pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+5}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.664 
+       <./Analisis22-img/Analisis22-img029.png>]
+LaTeX Info: Redefining \. on input line 668.
+LaTeX Info: Redefining \% on input line 668.
+) [48pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+.16}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.63 \include{capitulo3}
+                         <./Analisis22-img/Analisis22-img030.png>]
+\openout2 = `capitulo4.aux'.
+
+
+(./capitulo4.tex
+\c@FiguraCap4=\count158
+\c@TablaCap4=\count159
+
+Cap\'{\i }tulo 4.
+[49
+
+
+
+] <Diseno21-img/Diseno21-img003.png, id=587, 1877.0125pt x 1525.7pt>
+File: Diseno21-img/Diseno21-img003.png Graphic file (type png)
+
+<use Diseno21-img/Diseno21-img003.png>
+Package pdftex.def Info: Diseno21-img/Diseno21-img003.png used on input line 55
+.
+(pdftex.def)             Requested size: 416.52414pt x 338.5418pt.
+
+Overfull \hbox (26.52414pt too wide) in paragraph at lines 55--56
+ [][] 
+ []
+
+[50pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.62 ... generales de las componentes del sistema}
+                                                   <./Diseno21-img/Diseno21-img
+003.png>] [51] [52] [53] [54]
+<Diseno21-img/Diseno21-img004.png, id=628, 1423.3175pt x 1311.90125pt>
+File: Diseno21-img/Diseno21-img004.png Graphic file (type png)
+
+<use Diseno21-img/Diseno21-img004.png>
+Package pdftex.def Info: Diseno21-img/Diseno21-img004.png used on input line 21
+2.
+(pdftex.def)             Requested size: 416.53044pt x 383.94476pt.
+
+Overfull \hbox (26.53044pt too wide) in paragraph at lines 212--213
+ [][] 
+ []
+
+[55pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.220 
+       <./Diseno21-img/Diseno21-img004.png>] [56]) [57]
+\openout2 = `capitulo5.aux'.
+
+ (./capitulo5.tex
+Cap\'{\i }tulo 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 13.
+[58
+
+
+
+] [59] [60] <imagenes/RT-TAXII.png, id=688, 204.765pt x 232.61906pt>
+File: imagenes/RT-TAXII.png Graphic file (type png)
+
+<use imagenes/RT-TAXII.png>
+Package pdftex.def Info: imagenes/RT-TAXII.png used on input line 80.
+(pdftex.def)             Requested size: 204.76448pt x 232.61848pt.
+ [61pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+1}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.87 ...ra realizar la presentación al usuario.\\
+                                                   <./imagenes/RT-TAXII.png>]
+<imagenes/TAXIIApp.png, id=696, 216.81pt x 261.97874pt>
+File: imagenes/TAXIIApp.png Graphic file (type png)
+
+<use imagenes/TAXIIApp.png>
+Package pdftex.def Info: imagenes/TAXIIApp.png used on input line 98.
+(pdftex.def)             Requested size: 216.80946pt x 261.9781pt.
+ [62pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+2}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.106 
+       <./imagenes/TAXIIApp.png>]) [63]
+\openout2 = `capitulo6.aux'.
+
+ (./capitulo6.tex
+Cap\'{\i }tulo 6.
+[64
+
+
+
+]
+<caso-de-estudio/laboratorioDesplegado.png, id=719, 1001.7425pt x 287.0725pt>
+File: caso-de-estudio/laboratorioDesplegado.png Graphic file (type png)
+
+<use caso-de-estudio/laboratorioDesplegado.png>
+Package pdftex.def Info: caso-de-estudio/laboratorioDesplegado.png used on inpu
+t line 19.
+(pdftex.def)             Requested size: 400.6899pt x 114.82695pt.
+
+Overfull \hbox (10.6899pt too wide) in paragraph at lines 19--20
+ [][] 
+ []
+
+[65pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}
+) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.45 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.6
+.1}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.45 
+      <./caso-de-estudio/laboratorioDesplegado.png>]
+<caso-de-estudio/flujos.png, id=730, 1133.23375pt x 1126.2075pt>
+File: caso-de-estudio/flujos.png Graphic file (type png)
+
+<use caso-de-estudio/flujos.png>
+Package pdftex.def Info: caso-de-estudio/flujos.png used on input line 51.
+(pdftex.def)             Requested size: 396.63776pt x 394.17854pt.
+
+Overfull \hbox (6.63776pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
+
+[66pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.57 ...aso de uso para ingresar los servicios. \\
+                                                   <./caso-de-estudio/flujos.pn
+g>]
+<caso-de-estudio/RegistroServicios.png, id=740, 1050.92625pt x 312.16624pt>
+File: caso-de-estudio/RegistroServicios.png Graphic file (type png)
+
+<use caso-de-estudio/RegistroServicios.png>
+Package pdftex.def Info: caso-de-estudio/RegistroServicios.png used on input li
+ne 63.
+(pdftex.def)             Requested size: 420.36307pt x 124.86427pt.
+
+Overfull \hbox (30.36307pt too wide) in paragraph at lines 63--64
+ [][] 
+ []
+
+<caso-de-estudio/listadoservicios.png, id=741, 1250.6725pt x 355.3275pt>
+File: caso-de-estudio/listadoservicios.png Graphic file (type png)
+
+<use caso-de-estudio/listadoservicios.png>
+Package pdftex.def Info: caso-de-estudio/listadoservicios.png used on input lin
+e 70.
+(pdftex.def)             Requested size: 437.74194pt x 124.36647pt.
+
+Overfull \hbox (47.74194pt too wide) in paragraph at lines 70--71
+ [][] 
+ []
+
+[67pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.77 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.6
+.4}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.77 
+      <./caso-de-estudio/RegistroServicios.png> <./caso-de-estudio/listadoservi
+cios.png>] <caso-de-estudio/alta.png, id=752, 769.87625pt x 718.685pt>
+File: caso-de-estudio/alta.png Graphic file (type png)
+
+<use caso-de-estudio/alta.png>
+Package pdftex.def Info: caso-de-estudio/alta.png used on input line 82.
+(pdftex.def)             Requested size: 461.92932pt x 431.21432pt.
+
+Overfull \hbox (71.92932pt too wide) in paragraph at lines 82--83
+ [][] 
+ []
+
+[68] <caso-de-estudio/listadoInfo.png, id=760, 1043.9pt x 437.635pt>
+File: caso-de-estudio/listadoInfo.png Graphic file (type png)
+
+<use caso-de-estudio/listadoInfo.png>
+Package pdftex.def Info: caso-de-estudio/listadoInfo.png used on input line 89.
+
+(pdftex.def)             Requested size: 313.17241pt x 131.2915pt.
+ [69pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+5}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.93 
+      <./caso-de-estudio/alta.png>]
+<caso-de-estudio/obtremote.png, id=767, 594.22pt x 204.765pt>
+File: caso-de-estudio/obtremote.png Graphic file (type png)
+
+<use caso-de-estudio/obtremote.png>
+Package pdftex.def Info: caso-de-estudio/obtremote.png used on input line 99.
+(pdftex.def)             Requested size: 297.10927pt x 102.38223pt.
+
+<caso-de-estudio/lstremotedf.png, id=768, 973.6375pt x 268.00125pt>
+File: caso-de-estudio/lstremotedf.png Graphic file (type png)
+
+<use caso-de-estudio/lstremotedf.png>
+Package pdftex.def Info: caso-de-estudio/lstremotedf.png used on input line 106
+.
+(pdftex.def)             Requested size: 389.44809pt x 107.1986pt.
+ [70pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+6}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.113 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6.7}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.113 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6.8}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.113 
+       <./caso-de-estudio/listadoInfo.png> <./caso-de-estudio/obtremote.png> <.
+/caso-de-estudio/lstremotedf.png>]
+<caso-de-estudio/pollinformacion.png, id=776, 576.1525pt x 203.76125pt>
+File: caso-de-estudio/pollinformacion.png Graphic file (type png)
+
+<use caso-de-estudio/pollinformacion.png>
+Package pdftex.def Info: caso-de-estudio/pollinformacion.png used on input line
+ 116.
+(pdftex.def)             Requested size: 230.45691pt x 81.50305pt.
+
+<caso-de-estudio/subscriptionfeed.png, id=780, 570.13pt x 191.71625pt>
+File: caso-de-estudio/subscriptionfeed.png Graphic file (type png)
+
+<use caso-de-estudio/subscriptionfeed.png>
+Package pdftex.def Info: caso-de-estudio/subscriptionfeed.png used on input lin
+e 128.
+(pdftex.def)             Requested size: 228.04796pt x 76.68513pt.
+
+<caso-de-estudio/subscriptiondf.png, id=781, 604.2575pt x 303.1325pt>
+File: caso-de-estudio/subscriptiondf.png Graphic file (type png)
+
+<use caso-de-estudio/subscriptiondf.png>
+Package pdftex.def Info: caso-de-estudio/subscriptiondf.png used on input line 
+135.
+(pdftex.def)             Requested size: 241.69872pt x 121.25084pt.
+ [71pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+9}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.139 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6.10}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.139 
+       <./caso-de-estudio/pollinformacion.png> <./caso-de-estudio/subscriptionf
+eed.png>] <caso-de-estudio/envioInfo.png, id=790, 587.19376pt x 198.7425pt>
+File: caso-de-estudio/envioInfo.png Graphic file (type png)
+
+<use caso-de-estudio/envioInfo.png>
+Package pdftex.def Info: caso-de-estudio/envioInfo.png used on input line 142.
+(pdftex.def)             Requested size: 234.87334pt x 79.49557pt.
+
+<caso-de-estudio/relacInfo.png, id=793, 547.04375pt x 221.82875pt>
+File: caso-de-estudio/relacInfo.png Graphic file (type png)
+
+<use caso-de-estudio/relacInfo.png>
+Package pdftex.def Info: caso-de-estudio/relacInfo.png used on input line 153.
+(pdftex.def)             Requested size: 218.81361pt x 88.72992pt.
+
+<caso-de-estudio/lstRelacInfo.png, id=794, 993.7125pt x 227.85126pt>
+File: caso-de-estudio/lstRelacInfo.png Graphic file (type png)
+
+<use caso-de-estudio/lstRelacInfo.png>
+Package pdftex.def Info: caso-de-estudio/lstRelacInfo.png used on input line 16
+0.
+(pdftex.def)             Requested size: 397.47795pt x 91.13889pt.
+
+Overfull \hbox (7.47795pt too wide) in paragraph at lines 160--161
+ [][] 
+ []
+
+[72pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1
+1}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.164 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6.12}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.164 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6.13}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.164 
+       <./caso-de-estudio/subscriptiondf.png> <./caso-de-estudio/envioInfo.png>
+ <./caso-de-estudio/relacInfo.png>]) [73pdfTeX warning (ext4): destination with
+ the same identifier (name{figure.6.14}) has been already used, duplicate ignor
+ed
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.66 \include{capitulo6}
+                         <./caso-de-estudio/lstRelacInfo.png>]
+\openout2 = `capitulo7.aux'.
+
+ (./capitulo7.tex
+Cap\'{\i }tulo 7.
+[74
+
+
+
+] [75] [76]) [77] (./informe.bbl [78
+
+
+]
+./informe.bbl:121: Misplaced alignment tab character &.
+l.121 Inette Furey Damir Rajnovic Robert Martin &
+                                                  Takeshi~Takahashi
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[79]) [80]
+\openout2 = `back.aux'.
+
+ (./back.tex (./informe.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+ [81
+
+
+
+
+])
+\tf@lof=\write9
+\openout9 = `informe.lof'.
+
+) [82]
+\openout2 = `anexo.aux'.
+
+ (./anexo.tex
+Cap\'{\i }tulo 8.
+./anexo.tex:43: Undefined control sequence.
+l.43 			def inbox\service
+                         (request, inbox\name): \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:43: Undefined control sequence.
+l.43 			def inbox\service(request, inbox\name
+                                             ): \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:46: Undefined control sequence.
+l.46 			def poll\service
+                        (request):\ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:49: Undefined control sequence.
+l.49 			def feed\managment
+                          \service(request): \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:49: Undefined control sequence.
+l.49 			def feed\managment\service
+                                  (request): \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:52: Undefined control sequence.
+l.52 			def subscription\service
+                                (request):\ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[83
+
+
+
+] [84]
+./anexo.tex:123: Undefined control sequence.
+l.123 			def get\remote
+                       \data\feeds(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:123: Undefined control sequence.
+l.123 			def get\remote\data
+                            \feeds(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:123: Undefined control sequence.
+l.123 			def get\remote\data\feeds
+                                  (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \vbox (badness 10000) detected at line 125
+ []
+
+./anexo.tex:127: Undefined control sequence.
+l.127 			def register\remote
+                            \data\feeds(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:127: Undefined control sequence.
+l.127 			def register\remote\data
+                                 \feeds(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:127: Undefined control sequence.
+l.127 			def register\remote\data\feeds
+                                       (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:130: Undefined control sequence.
+l.130 			def create\information
+                               (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:134: Undefined control sequence.
+l.134 			def send\information
+                             \to\inbox(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:134: Missing $ inserted.
+<inserted text> 
+                $
+l.134 			def send\information\to
+                                \inbox(request):\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./anexo.tex:134: Undefined control sequence.
+l.134 			def send\information\to\inbox
+                                      (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:135: Missing $ inserted.
+<inserted text> 
+                $
+l.135 			\#
+           Given the id of a DataFeed Subscription we get the Data Feeds and...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./anexo.tex:137: Undefined control sequence.
+l.137 			def poll\information
+                             (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:140: Undefined control sequence.
+l.140 			def get\data
+                     \feed\subscriptions(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:140: Undefined control sequence.
+l.140 			def get\data\feed
+                          \subscriptions(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:140: Undefined control sequence.
+l.140 			def get\data\feed\subscriptions
+                                        (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:143: Missing $ inserted.
+<inserted text> 
+                $
+l.143 			def subscription\to
+                            \data\feed(request):\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./anexo.tex:143: Undefined control sequence.
+l.143 			def subscription\to\data
+                                 \feed(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:143: Undefined control sequence.
+l.143 			def subscription\to\data\feed
+                                      (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./anexo.tex:144: Missing $ inserted.
+<inserted text> 
+                $
+l.144 			\#
+           Given the id of a TAXII Service and the id of a Data Feed and\\ t...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[85] [86]
+Overfull \hbox (50.57481pt too wide) in alignment at lines 154--177
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 177
+ []
+
+
+Overfull \hbox (50.57481pt too wide) in alignment at lines 177--197
+ [] 
+ []
+
+
+Overfull \hbox (50.57481pt too wide) in alignment at lines 197--217
+ [] 
+ []
+
+[87]
+Overfull \hbox (50.57481pt too wide) in alignment at lines 217--237
+ [] 
+ []
+
+./anexo.tex:241: You can't use `macro parameter character #' in restricted hori
+zontal mode.
+l.241 	    title = CharField(blank=True) #
+                                           not required by TAXII\\
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./anexo.tex:242: You can't use `macro parameter character #' in restricted hori
+zontal mode.
+l.242 	    description = TextField(blank=True) #
+                                                 not required by TAXII\\
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (50.57481pt too wide) in alignment at lines 237--257
+ [] 
+ []
+
+[88]
+./anexo.tex:267: You can't use `macro parameter character #' in restricted hori
+zontal mode.
+l.267 ...subscriptionid = CharField(unique=True) #
+                                                   uri formatted subscriptio...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (50.57481pt too wide) in alignment at lines 257--277
+ [] 
+ []
+
+
+Overfull \hbox (50.57481pt too wide) in alignment at lines 277--297
+ [] 
+ []
+
+[89]
+Overfull \hbox (50.57481pt too wide) in alignment at lines 297--317
+ [] 
+ []
+
+./anexo.tex:323: You can't use `macro parameter character #' in restricted hori
+zontal mode.
+l.323 	    name = CharField(unique=True) #
+                                           this will become part of the URL ...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (50.57481pt too wide) in alignment at lines 317--337
+ [] 
+ []
+
+[90]
+Overfull \hbox (50.57481pt too wide) in alignment at lines 337--345
+ [] 
+ []
+
+[91]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 353.
+ (./cybox/CybOX_Artifact_Instance.xml
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 1.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
+
+./cybox/CybOX_Artifact_Instance.xml:12: Dimension too large.
+\lsthk@InitVarsEOL ->\ifdim \lst@currlwidth 
+                                            >\lst@maxwidth \global \lst@maxw...
+l.12 ...wVsb2NhbAAAAQAB</ArtifactObj:Raw_Artifact>
+                                                  
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+./cybox/CybOX_Artifact_Instance.xml:12: Dimension too large.
+<recently read> \lst@currlwidth 
+                                
+l.12 ...wVsb2NhbAAAAQAB</ArtifactObj:Raw_Artifact>
+                                                  
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+
+Overfull \hbox (740.01129pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (3590.04028pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (374.00757pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (1622.02026pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (470.00854pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (686.01074pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (1916.02325pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (512.00897pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (518.00903pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (2354.02771pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (1388.01788pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (302.00684pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (482.00867pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (494.00879pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (410.00793pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (332.00714pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (908.013pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (3842.04285pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (7292.07794pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (470.00854pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+[92]) (./cybox/CybOX_Artifact_Pattern.xml [93])
+(./cybox/CybOX_CreateFile_Action.xml
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
+ [94]
+Overfull \hbox (56.00433pt too wide) in paragraph at lines 16--17
+[][] 
+ []
+
+) (./cybox/CybOX_Domain_Instance.xml) (./cybox/CybOX_Domain_Pattern.xml
+[95]) (./cybox/CybOX_IPv4Address_Instance.xml)
+(./cybox/CybOX_IPv4Address_Pattern.xml [96])
+(./cybox/CybOX_IPv6Address_Instance.xml) (./cybox/CybOX_IPv6Address_Pattern.xml
+[97]) (./cybox/CybOX_Iran-Oil_Dynamic.xml [98]
+Overfull \hbox (20.00397pt too wide) in paragraph at lines 27--28
+[][] 
+ []
+
+[99] [100]
+Overfull \hbox (62.0044pt too wide) in paragraph at lines 86--87
+[][] 
+ []
+
+[101] [102]
+Overfull \hbox (20.00397pt too wide) in paragraph at lines 121--122
+[][] 
+ []
+
+[103]
+Overfull \hbox (14.0039pt too wide) in paragraph at lines 161--162
+[][] 
+ []
+
+[104]
+Overfull \hbox (62.0044pt too wide) in paragraph at lines 179--180
+[][] 
+ []
+
+[105] [106] [107] [108] [109] [110] [111] [112] [113] [114])
+(./cybox/CybOX_Network_Connection_HTTP_Instance.xml [115] [116])
+(./cybox/CybOX_Network_Connection_HTTP_Pattern.xml [117] [118])
+(./cybox/CybOX_Network_Connection_Instance.xml [119])
+(./cybox/CybOX_Network_Connection_Pattern.xml [120])
+(./cybox/CybOX_PDF_File_Instance.xml [121] [122] [123])
+(./cybox/CybOX_PDF_File_Pattern.xml [124])
+(./cybox/CybOX_Simple_Email_Instance.xml [125])
+(./cybox/CybOX_Simple_Email_Pattern.xml [126])
+(./cybox/CybOX_Simple_File_Instance.xml [127]
+Overfull \hbox (20.00397pt too wide) in paragraph at lines 13--14
+[][] 
+ []
+
+
+Overfull \hbox (110.00488pt too wide) in paragraph at lines 13--14
+[][] 
+ []
+
+
+Overfull \hbox (20.00397pt too wide) in paragraph at lines 13--14
+[][] 
+ []
+
+) (./cybox/CybOX_Simple_File_Pattern.xml [128])
+(./cybox/CybOX_Simple_File_Pattern_Regex.xml) (./cybox/CybOX_URL_Instance.xml
+[129]) (./cybox/CybOX_URL_Pattern.xml)
+(./cybox/CybOX_X509_Certificate_Instance.xml [130] [131])
+(./cybox/CybOX_X509_Certificate_Pattern.xml [132])) [133]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 73.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 73.
+ (./informe.aux
+(./front.aux)
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ (./capitulo1.aux) (./capitulo2.aux) (./capitulo3.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+)
+(./capitulo4.aux) (./capitulo5.aux) (./capitulo6.aux) (./capitulo7.aux)
+(./back.aux) (./anexo.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 73.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 73.
+Package rerunfilecheck Info: File `informe.out' has not changed.
+(rerunfilecheck)             Checksum: 929EE3AABF8FF40F033B812D31BC9914;3192.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 73.
+ ) 
+Here is how much of TeX's memory you used:
+ 21607 strings out of 493488
+ 369391 string characters out of 3141326
+ 720795 words of memory out of 3000000
+ 22993 multiletter control sequences out of 15000+200000
+ 12453 words of font info for 43 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 63i,12n,57p,5954b,1761s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
+/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on informe.pdf (135 pages, 1712058 bytes).
+PDF statistics:
+ 2495 PDF objects out of 2984 (max. 8388607)
+ 2262 compressed objects within 23 object streams
+ 1318 named destinations out of 1440 (max. 500000)
+ 582 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,226 @@
+\begin{thebibliography}{10}
+
+\bibitem{apache}
+Apache software foundation.
+\newblock \url{http://www.apache.org/}.
+
+\bibitem{bp}
+Bp.
+\newblock \url{www.bestpractical.com}.
+
+\bibitem{janetRTIR}
+A brief introduction to rtir.
+\newblock
+  \url{http://www.slideshare.net/obrajesse/a-brief-introduction-to-rtir-presentation}.
+
+\bibitem{secMesu}
+Building security in us.
+\newblock \url{https://buildsecurityin.us-cert.gov/}.
+
+\bibitem{capec}
+Capec.
+\newblock \url{http://capec.mitre.org/}.
+
+\bibitem{Celery}
+Celery.
+\newblock \url{http://www.celeryproject.org/}.
+
+\bibitem{cve}
+Cve mitre.
+\newblock \url{https://cve.mitre.org/}.
+
+\bibitem{cwe}
+Cwe.
+\newblock \url{http://cwe.mitre.org/}.
+
+\bibitem{cybox}
+Cybox.
+\newblock \url{https://cybox.mitre.org/language/version2.1/#CYBOX%20samples}.
+
+\bibitem{Django}
+Django.
+\newblock \url{https://www.djangoproject.com/}.
+
+\bibitem{pythonstixdoc}
+Documentation of pythonstix.
+\newblock \url{http://stix.readthedocs.org/en/latest/}.
+
+\bibitem{pythonstixgit}
+Git of pythonstix.
+\newblock \url{https://github.com/STIXProject/python-stix}.
+
+\bibitem{ietf}
+Internet engineering task force.
+\newblock \url{https://www.ietf.org/}.
+
+\bibitem{json}
+Json.
+\newblock \url{http://json.org/}.
+
+\bibitem{libtaxii}
+libtaxii.
+\newblock \url{https://github.com/TAXIIProject/libtaxii}.
+
+\bibitem{lwp}
+Lwp.
+\newblock \url{http://search.cpan.org/~mschilli/libwww-perl/lib/LWP.pm}.
+
+\bibitem{maec}
+Maec.
+\newblock \url{http://maec.mitre.org/}.
+
+\bibitem{msm}
+Making security measurable.
+\newblock \url{http://makingsecuritymeasurable.mitre.org/}.
+
+\bibitem{mitre}
+Mitre.
+\newblock \url{http://www.mitre.org/}.
+
+\bibitem{mysql}
+Mysql.
+\newblock \url{http://www.mysql.com}.
+
+\bibitem{nist}
+Nist.
+\newblock \url{http://nvd.nist.gov/cpe.cfm}.
+
+\bibitem{OVAL}
+Oval.
+\newblock \url{http://oval.mitre.org/}.
+
+\bibitem{rest}
+Rest.
+\newblock \url{http://predic8.com/rest-webservices.htm}.
+
+\bibitem{rest_framework}
+Rest framework.
+\newblock \url{http://www.django-rest-framework.org/}.
+
+\bibitem{scap}
+Scap.
+\newblock \url{http://scap.nist.gov/}.
+
+\bibitem{spf}
+Spf.
+\newblock \url{http://vim.spf13.com/}.
+
+\bibitem{vim}
+Vim.
+\newblock \url{http://www.vim.org/}.
+
+\bibitem{xml}
+Xml.
+\newblock \url{http://www.w3.org/XML/}.
+
+\bibitem{yeti}
+Yeti.
+\newblock \url{https://github.com/TAXIIProject/yeti}.
+
+\bibitem{cybex}
+Inette Furey Damir Rajnovic Robert Martin & Takeshi~Takahashi
+  Anthony~Rutkowski, Youki~Kadobayashi.
+\newblock {\em CYBEX - The Cybersecurity Information Exchange Framework}.
+\newblock 2010.
+
+\bibitem{b3}
+Mitre Corporation.
+\newblock {\em Active Defense Strategy for Cyber}.
+\newblock Mitre Corporation, 2012.
+
+\bibitem{b1}
+Mitre Corporation.
+\newblock {\em Cyber Information-Sharing Models: An Overview}.
+\newblock Mitre Corporation, 2012.
+
+\bibitem{b2}
+Mitre Corporation.
+\newblock {\em A New Cyber Defense Playbook}.
+\newblock Mitre Corporation, 2012.
+
+\bibitem{stix}
+Mitre Corporation.
+\newblock {\em STIX Whitepaper}.
+\newblock Mitre Corporation, 2012.
+
+\bibitem{M13}
+Mitre Corporation.
+\newblock {\em The TAXII HTTP Protocol Binding Specification}.
+\newblock Mitre Corporation, 2013.
+
+\bibitem{M12}
+Mitre Corporation.
+\newblock {\em The TAXII HTTP Protocol Binding Specification}.
+\newblock Mitre Corporation, 2013.
+
+\bibitem{M14}
+Mitre Corporation.
+\newblock {\em The TAXII Services Specification}.
+\newblock Mitre Corporation, 2013.
+
+\bibitem{M15}
+Mitre Corporation.
+\newblock {\em The TAXII XML Message Binding Specification}.
+\newblock Mitre Corporation, 2013.
+
+\bibitem{hidmef}
+Antonio~Montes Cristine~Hoepers, Nandamudi L.~Vijaykumar.
+\newblock {\em HIDEF: a Data Exchange Format for Information Collected in
+  Honeypots and Honeynets}.
+\newblock InfoComp - VOLUME 7 - NUMBER 1, 2008.
+
+\bibitem{lockhead}
+M.J.~Cloppert E.M.~Hutchins and R.M~Amin PH.D.
+\newblock {\em Intelligence-Driven Computer Network Defense Informed by
+  Analysis of Adversary Campaigns and Intrusion Kill Chains}.
+\newblock 2005.
+
+\bibitem{idmef}
+D.~Curry H.~Debar and B.~Feinstein.
+\newblock {\em RFC 4765 - IDMEF}.
+\newblock IETF, 2007.
+
+\bibitem{taxii}
+M.~Richard J.~Connolly, M.~Davidson and C.~Skorupka.
+\newblock {\em TAXII Whitepaper}.
+\newblock Mitre Corporation, 2012.
+
+\bibitem{RTEssentials}
+D.~Rolsky D.~Chamberlain J.~Vincent, R.~Spier and R.~Foley.
+\newblock {\em RT Essentials}.
+\newblock A. Randal and T. Apandy, 2005.
+
+\bibitem{JBH04}
+Sven~Henkel Marko~Jahnke, Michael~Bussmann.
+\newblock {\em Components for Cooperative Intrusion Detection in Dynamic
+  Coalition Enviroments}.
+\newblock RTO IST Symposium on Adaptive Defence in Unclassified Networks, 2004.
+
+\bibitem{JBH4}
+Sven~Henkel Marko~Jahnke, Michael~Bussmann.
+\newblock {\em Components for Cooperative Intrusion Detection in Dynamic
+  Coalition Enviroments}.
+\newblock RTO IST Symposium on Adaptive Defence in Unclassified Networks, 2004.
+
+\bibitem{rid1}
+K.~Moriarty and B.~Trammell.
+\newblock {\em RFC 6546 - RID Messages}.
+\newblock IETF, 2010.
+
+\bibitem{iodef}
+J.~Meijer R.~Danyliw and Y.~Demchenko.
+\newblock {\em RFC 5070 - IODEF}.
+\newblock IETF, 2007.
+
+\bibitem{AdvancedThreatsCollaboration}
+Julio Saráchaga.
+\newblock {\em Estado del arte para advanced threats, information sharing and
+  collaboration}.
+\newblock 2013.
+
+\bibitem{rid}
+B.~Trammell.
+\newblock {\em RFC 6546 - Transport of RID messages over HTTP/TLS}.
+\newblock IETF, 2012.
+
+\end{thebibliography}
