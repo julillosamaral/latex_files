@@ -1,50 +1,49 @@
 \select@language {spanish}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Cyber kill-chain \cite {b1}}}{5}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Cyber kill-chain \cite {b1}}}{7}{figure.1.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Arquitectura de TAXII \cite {b1}}}{17}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Unidades funcionales de TAXII \cite {b1}}}{21}{figure.2.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Arquitectura de TAXII \cite {b1}}}{19}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Unidades funcionales de TAXII \cite {b1}}}{23}{figure.2.2}
 \addvspace {10\p@ }
 \select@language {english}
 \select@language {spanish}
 \select@language {english}
 \select@language {spanish}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de Bloques del sistema}}{35}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Caso de Uso alta pol\IeC {\'\i }ticas de sanitizaci\IeC {\'o}n}}{36}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Caso de uso borrado pol\IeC {\'\i }ticas de sanitizaci\IeC {\'o}n}}{37}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Caso de uso modificaci\IeC {\'o}n de pol\IeC {\'\i }ticas de sanitizaci\IeC {\'o}n}}{38}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Caso de uso borrado pol\IeC {\'\i }ticas de correlaci\IeC {\'o}n}}{39}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Caso de uso modificaci\IeC {\'o}n pol\IeC {\'\i }ticas de correlaci\IeC {\'o}n}}{39}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Caso de uso alta pol\IeC {\'\i }ticas de correlaci\IeC {\'o}n}}{40}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Caso de uso alta servicio TAXII}}{41}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Caso de uso borrar servicio TAXII}}{41}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Caso de uso modificar servicio TAXII}}{42}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Caso de uso alta de informaci\IeC {\'o}n RTIR}}{43}{figure.3.11}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Caso de uso asociaci\IeC {\'o}n de informaci\IeC {\'o}n}}{44}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Caso de uso subscripci\IeC {\'o}n a TAXII Data Feed}}{45}{figure.3.13}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Caso de uso de recepci\IeC {\'o}n de informaci\IeC {\'o}n}}{46}{figure.3.14}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Caso de uso de env\IeC {\'\i }o de informaci\IeC {\'o}n}}{47}{figure.3.15}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Caso de uso de poll de informaci\IeC {\'o}n}}{48}{figure.3.16}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de Bloques del sistema}}{37}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Caso de Uso alta pol\IeC {\'\i }ticas de sanitizaci\IeC {\'o}n}}{38}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Caso de uso borrado pol\IeC {\'\i }ticas de sanitizaci\IeC {\'o}n}}{39}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Caso de uso modificaci\IeC {\'o}n de pol\IeC {\'\i }ticas de sanitizaci\IeC {\'o}n}}{40}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Caso de uso borrado pol\IeC {\'\i }ticas de correlaci\IeC {\'o}n}}{41}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Caso de uso modificaci\IeC {\'o}n pol\IeC {\'\i }ticas de correlaci\IeC {\'o}n}}{41}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Caso de uso alta pol\IeC {\'\i }ticas de correlaci\IeC {\'o}n}}{42}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Caso de uso alta servicio TAXII}}{43}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Caso de uso borrar servicio TAXII}}{43}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Caso de uso modificar servicio TAXII}}{44}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Caso de uso alta de informaci\IeC {\'o}n RTIR}}{45}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Caso de uso asociaci\IeC {\'o}n de informaci\IeC {\'o}n}}{46}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Caso de uso subscripci\IeC {\'o}n a TAXII Data Feed}}{47}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Caso de uso de recepci\IeC {\'o}n de informaci\IeC {\'o}n}}{48}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Caso de uso de env\IeC {\'\i }o de informaci\IeC {\'o}n}}{49}{figure.3.15}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Caso de uso de poll de informaci\IeC {\'o}n}}{50}{figure.3.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Arquitecture del sistema}}{50}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama de datos}}{55}{figure.4.2}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Arquitecture del sistema}}{52}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama de datos}}{57}{figure.4.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Estructura de directorios de plugin RT-TAXII}}{61}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Aplicaci\IeC {\'o}n TAXII implementada junto con sus m\IeC {\'o}dulos}}{62}{figure.5.2}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Estructura de directorios de plugin RT-TAXII}}{63}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Aplicaci\IeC {\'o}n TAXII implementada junto con sus m\IeC {\'o}dulos}}{64}{figure.5.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Despliegue realizado para el caso de estudio}}{65}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Flujos realizados por el caso de estudio}}{66}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Registro de Servicios TAXII}}{67}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Listado de Servicios TAXII}}{67}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Alta de informaci\IeC {\'o}n de correo electr\IeC {\'o}nico}}{69}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Listado de informaci\IeC {\'o}n en el sistema}}{70}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Obtenci\IeC {\'o}n de data feeds remotos}}{70}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Data feeds en otras organizaciones}}{70}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Poll de informaci\IeC {\'o}n}}{71}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Primer paso de subscripci\IeC {\'o}n a data feeds}}{71}{figure.6.10}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Segundo paso de subscripci\IeC {\'o}n a data feeds}}{72}{figure.6.11}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Envio de informaci\IeC {\'o}n}}{72}{figure.6.12}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Asociaci\IeC {\'o}n entre Tickets y Content blocks}}{72}{figure.6.13}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Listado de asociaciones existentes}}{73}{figure.6.14}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Despliegue realizado para el caso de estudio}}{67}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Flujos realizados por el caso de estudio}}{68}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Registro de Servicios TAXII}}{69}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Listado de Servicios TAXII}}{69}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Alta de informaci\IeC {\'o}n de correo electr\IeC {\'o}nico}}{71}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Listado de informaci\IeC {\'o}n en el sistema}}{72}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Obtenci\IeC {\'o}n de data feeds remotos}}{72}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Data feeds en otras organizaciones}}{72}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Poll de informaci\IeC {\'o}n}}{73}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Primer paso de subscripci\IeC {\'o}n a data feeds}}{73}{figure.6.10}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Segundo paso de subscripci\IeC {\'o}n a data feeds}}{74}{figure.6.11}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Envio de informaci\IeC {\'o}n}}{74}{figure.6.12}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Asociaci\IeC {\'o}n entre Tickets y Content blocks}}{74}{figure.6.13}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Listado de asociaciones existentes}}{75}{figure.6.14}
 \addvspace {10\p@ }
