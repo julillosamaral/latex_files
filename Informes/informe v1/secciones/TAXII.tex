@@ -1,4 +1,4 @@
-\subsubsection{TAXII}
+\subsection{TAXII}
 
 El objetivo que plantea \textit{Trusted Automated eXchange of Indicator Information} (TAXII) es extender la capacidad de compartir indicadores, 
 siendo dichos intercambios robustos, seguros y de gran volumen de datos. A su 
@@ -74,7 +74,7 @@ un conjunto de capacidades necesarias para el transporte exitoso de mensajes.
 Los mensajes TAXII llevan datos de amenazas informáticas representados por medio de STIX. El conjunto completo de los mensajes incluyen mensajes con datos y 
 de control.\\
 
-\subparagraph{TAXII Toolkit}\ \\
+\subsubsection{TAXII Toolkit}\ \\
 
 Es provisto para soportar la adopción de TAXII y asistir en el desarrollo de 
 capacidades compatibles. El \textit{toolkit} provee una colección de implementaciones de 
@@ -122,7 +122,7 @@ capaces de comunicarse directamente, pero como están utilizando mensajes y
 servicios en el núcleo de las comunicaciones de sus comunidades significa que es 
 posible establecer caminos para que ocurra la interacción.
 
-\subparagraph{Especificación de Servicios}\ \\
+\subsubsection{Especificación de Servicios}\ \\
 
 Esta especificación provee normativas respecto a los servicios, mensajes e 
 intercambios de mensajes en TAXII. No provee detalles respecto a como los 
@@ -171,7 +171,7 @@ Lo expresado anteriormente se puede ver en la figura \ref{fig.unidades_funcional
 \end{figure}
 
 \newpage
-\paragraph{Capacidades}\ \\
+\subsubsection{Capacidades}\ \\
 
 TAXII provee capacidades específicas para aquellos que desean compartir 
 información de amenazas cibernéticas. Las capacidades TAXII son el nivel más 
@@ -209,14 +209,14 @@ cooperación lo cual esta por fuera del objetivo de TAXII. Sin embargo, permite
 el intercambio de información respecto a las capacidades que un productor 
 soporta y cuales son los mecanismos que utiliza para hacerlo.
 
-\paragraph{Servicios TAXII}\ \\
+\subsubsection{Servicios TAXII}\ \\
 
 Los servicios TAXII representan un conjunto de mecanismos necesarios para 
 soportar capacidades TAXII. Una implementación TAXII pudiera implementar alguno, 
 todos o incluso ninguno de los servicios definidos.
 TAXII define los siguientes servicios:
 \begin{itemize}
-  \item \underline{Servicio de descubrimiento}: Es utilizado para recibir y responder a 
+  \item \underline{Discovery Service}: Es utilizado para recibir y responder a 
   mensajes que requieren información sobre los servicios ofrecidos.
   \item \underline{Feed Managment Service}: Es utilizado para recibir o responder a mensajes 
   utilizados para el manejo de subscripciones a TAXII Data Feed.
@@ -229,7 +229,7 @@ TAXII define los siguientes servicios:
 
 A continuación se describen los distintos servicios.
 
-\subparagraph{Discovery Service}\ \\
+\paragraph{Discovery Service}\ \\
 
 Es un mecanismo para comunicar información referente al uso de servicios TAXII y 
 a su disponibilidad. Para un pedido al servicio, se retorna una lista de los 
@@ -241,7 +241,7 @@ varios factores para determinar cuales servicios revelar ante una petición,
 incluyendo, pero no limitado a la entidad del cliente TAXII.
 El servicio de descubrimiento debe soportar "Discovery Message Exchange".
 
-\subparagraph{Feed Managment Service}\ \\
+\paragraph{Feed Managment Service}\ \\
 
 Es el mecanismo con el cual un consumidor pide información referente a TAXII 
 Data Feeds, pidiendo subscripciones a estos, o modificando las existentes. Este 
@@ -252,13 +252,13 @@ iniciados por un productor o en respuesta directa a un pedido del consumidor al
 servicio de poll.
 Dicho servicio debe implementar soporte para \textit{subscription managment exchange} y podría implementar soporte de \textit{feed information exchange}.
 
-\subparagraph{Inbox service}\ \\
+\paragraph{Inbox service}\ \\
 Este servicio es el mecanismo con el cual un consumidor acepta los mensajes en 
 un intercambio iniciado por el productor. Un consumidor puede implementarlo 
 para recibir datos del TAXII Data Feed.
 El servicio de inbox debe implementar soporte para \textit{Data Push Exchange}.
 
-\subparagraph{Poll service}\ \\
+\paragraph{Poll service}\ \\
 Es provisto por un productor para permitir pedidos al TAXII Data Feed iniciados 
 por  el consumidor. Un consumidor contacta a este servicio explícitamente 
 pidiendo el contenido del TAXII Data Feed. Los productores podrían ofrecer Data 
@@ -266,7 +266,7 @@ Feeds combinando envíos al Inbox service del consumidor o por medio de pedidos
 al servicio de poll del productor.
 Una implementación de este servicio debe dar soporte a \textit{Data Poll Exchange}.
 
-\paragraph{Intercambio de mensajes TAXII}\ \\
+\subsubsection{Intercambio de mensajes TAXII}\ \\
 
 Esta sección describe los mensajes intercambiados que son necesarios para soportar 
 los servicios definidos antes. Estos intercambios solo consideran mensajes 
@@ -276,13 +276,13 @@ adicionales antes de transmitir mensajes TAXII o romper un mensaje TAXII en
 múltiples mensajes del protocolo subyacente que son transmitidos 
 independientemente.
 
-\subparagraph{Data Push Exchange}\ \\
+\paragraph{Data Push Exchange}\ \\
 En este intercambio, un mensaje STIX es transmitido desde un cliente a un 
 servidor inbox que está esperando. El mensaje STIX puede ser solicitado o no 
 solicitado. El servidor inbox puede ser capaz de filtrar mensajes según la 
 autenticidad del emisor.
 
-\subparagraph{Discovery Exchange}\ \\
+\paragraph{Discovery Exchange}\ \\
 
 Un cliente TAXII pide información sobre el servicio TAXII ofrecido por un 
 productor. El discovery server del productor responde con una lista de 
@@ -295,13 +295,13 @@ respuesta de discovery la cual es enviada al cliente TAXII. El
 cliente TAXII recibe esa respuesta y la pasa la información del servicio a su 
 propio BackEnd para ser procesado.
 
-\subparagraph{Feed Information Exchange}\ \\
+\paragraph{Feed Information Exchange}\ \\
 
 En este intercambio un cliente TAXII pide información sobre fuentes de datos disponibles en 
 un Feed Server. El servidor responde con una lista de fuentes de datos 
 de las que dispone. Dicha respuesta es realizada por el backend y en ella se pueden considerar decisiones de control de acceso.\\
 
-\subparagraph{Subscription Managment Exchange}\ \\
+\paragraph{Subscription Managment Exchange}\ \\
 
 En este un cliente intenta establecer, borrar, pausar, resumir o modificar una 
 subscripción a un TAXII Data Feed conocido enviando un mensaje subscription 
@@ -311,8 +311,7 @@ El backend TAXII puede usar dicha información junto con sus
 políticas de control de acceso y las funcionalidades que posea para determinar 
 si la acción está permitida o no.
 
-\subparagraph{Feed Poll Exchange}
+\paragraph{Feed Poll Exchange}
 
 Es utilizado por un consumidor para pedir contenido de un productor de datos. El TAXII Data Feed content es enviado al consumidor en el mismo intercambio.
-El cliente consumidor inicia el 
-El backend TAXII evalua el pedido de información información para determinar la respuesta. La respuesta retorna mensajes STIX con el contenido que pidió el cliente.
+El cliente consumidor inicia el backend TAXII y evalua el pedido de información para determinar la respuesta. La respuesta retorna mensajes STIX con el contenido que pidió el cliente.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.5)  8 NOV 2014 17:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.5)  8 NOV 2014 19:03
 entering extended mode
 **informe.tex
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.tex"
@@ -1177,7 +1177,7 @@ eX warning (ext4): destination with the same identifier (name{page.1}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 ...{5}Implementaci\IeC {\'o}n}{60}{chapter.5}
+l.63 ...ne {4.3.2}TAXII App}{55}{subsection.4.3.2}
                                                    [1
 
 
@@ -1189,9 +1189,27 @@ been already used, duplicate ignored
                    \relax 
 l.58 \newpage
               [2]
-No file informe.gls.
-[3] ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo0.te
-x"
+("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.gls"
+Overfull \hbox (0.81442pt too wide) in paragraph at lines 5--5
+[]\OT1/cmr/m/n/12 Es una co-lec-cion de compu-tado-ras com-pro-me-ti-das (lla-
+ma-das compu-
+ []
+
+
+Overfull \hbox (13.81548pt too wide) in paragraph at lines 16--16
+[]\OT1/cmr/m/n/12 Es cual-quier in-for-ma-cion re-pre-sen-ta-ble en STIX.
+ []
+
+
+Overfull \hbox (6.37703pt too wide) in paragraph at lines 21--21
+[]\OT1/cmr/m/n/12 Una se-cuen-cia de-fi-ni-da de men-sa-jes TA-
+ []
+
+[3
+
+
+]) [4]
+("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo0.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
@@ -1226,14 +1244,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[4
+[5
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-) [5]
+) [6]
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo1.tex"
 Cap\'{\i }tulo 1.
 
@@ -1241,13 +1259,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--18
 
  []
 
-<./images/killChain.png, id=251, 565.11125pt x 166.6225pt>
+<./images/killChain.png, id=286, 565.11125pt x 166.6225pt>
 File: ./images/killChain.png Graphic file (type png)
 
 <use ./images/killChain.png>
 Package pdftex.def Info: ./images/killChain.png used on input line 32.
 (pdftex.def)             Requested size: 310.81215pt x 91.64265pt.
- [6
+ [7
 
 
 
@@ -1266,7 +1284,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--77
 
  []
 
-[7pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
 ) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -1288,7 +1306,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--115
 
  []
 
-[8]) [9]
+[9]) [10]
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo2.tex"
 Cap\'{\i }tulo 2.
 
@@ -1305,7 +1323,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
  []
 
-[10
+[11
 
 
 
@@ -1326,7 +1344,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
 
-[11]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
@@ -1348,7 +1366,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--13
 
  []
 
-[12]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
@@ -1368,7 +1386,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-[13] [14])
+[14] [15])
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\tablaC
 omparativa.tex"
 Overfull \hbox (33.53854pt too wide) in alignment at lines 37--42
@@ -1400,7 +1418,7 @@ Overfull \hbox (33.53854pt too wide) in alignment at lines 52--79
  [] [] [] [] 
  []
 
-[15] [16])
+[16] [17])
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\RID.te
 x"
 Underfull \hbox (badness 10000) in paragraph at lines 3--11
@@ -1412,12 +1430,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
@@ -1439,12 +1457,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--27
 
  []
 
-
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 28--38
 
  []
 
-[18] <./images/TAXIIArchitecture1.png, id=327, 462.72874pt x 216.81pt>
+<./images/TAXIIArchitecture1.png, id=363, 462.72874pt x 216.81pt>
 File: ./images/TAXIIArchitecture1.png Graphic file (type png)
 
 <use ./images/TAXIIArchitecture1.png>
@@ -1456,13 +1474,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--52
 
  []
 
-[19pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.63    \item S
-               oportar un amplio número de casos de uso y prácticas comune...
+l.57    \item P
+               ermitir el intercambio seguro y rápido de información refer...
  <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/images/TAXIIArch
 itecture1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 70--76
@@ -1479,7 +1497,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--83
 
  []
 
-[20]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 106--114
 
  []
@@ -1494,7 +1512,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--132
 
  []
 
-[21] <./images/TAXIIArchitecture.png, id=345, 566.115pt x 336.25626pt>
+[22] <./images/TAXIIArchitecture.png, id=381, 566.115pt x 336.25626pt>
 File: ./images/TAXIIArchitecture.png Graphic file (type png)
 
 <use ./images/TAXIIArchitecture.png>
@@ -1506,7 +1524,7 @@ Overfull \hbox (36.79134pt too wide) in paragraph at lines 168--169
  [][] 
  []
 
-[22]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
@@ -1526,7 +1544,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--203
 
  []
 
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -1538,27 +1556,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
-
-Overfull \hbox (0.71791pt too wide) in paragraph at lines 219--221
-[]$[]$\OT1/cmr/m/n/12 : Es uti-li-za-do pa-ra re-ci-bir y res-pon-der a men-
- []
-
-
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
-[24]
+
 Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
-
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
-[25]
+
 Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
@@ -1578,14 +1591,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
-[26])
+[27])
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\Modelo
 s.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 11--21
 
  []
 
-
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 22--26
 
  []
@@ -1595,7 +1608,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--34
 
  []
 
-[27]
+
 Underfull \hbox (badness 10000) in paragraph at lines 35--40
 
  []
@@ -1610,12 +1623,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--60
 
  []
 
-))
+[29]))
 Underfull \hbox (badness 10000) in paragraph at lines 61--66
 
  []
 
-[28] [29]
+[30]
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo3.tex"
 \c@Figura=\count187
 \c@Tabla=\count188
@@ -1641,7 +1654,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
 
-[30
+[31
 
 
 
@@ -1650,12 +1663,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--72
 
  []
 
-[31]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 81--88
 
  []
 
-[32]
+[33]
 Overfull \hbox (38.19746pt too wide) in paragraph at lines 110--126
 []  
  []
@@ -1665,363 +1678,363 @@ Overfull \hbox (38.19746pt too wide) in paragraph at lines 139--151
 []  
  []
 
-[33] [34] [35]
-<Analisis22-img/Analisis22-img016.png, id=424, 1063.975pt x 963.6pt>
+[34] [35] [36]
+<Analisis22-img/Analisis22-img016.png, id=460, 1063.975pt x 963.6pt>
 File: Analisis22-img/Analisis22-img016.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img016.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img016.png used on input lin
-e 272.
+e 270.
 (pdftex.def)             Requested size: 265.9931pt x 240.89941pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36]
-Overfull \hbox (38.14705pt too wide) in paragraph at lines 290--298
+[37]
+Overfull \hbox (38.14705pt too wide) in paragraph at lines 289--297
 []  
  []
 
 
-Overfull \hbox (38.14595pt too wide) in paragraph at lines 307--314
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 306--313
 []  
  []
 
-[37pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+[38pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.314 	\end
+l.313 	\end
            {supertabular} <E:/Proyecto de Grado Julio/inform-git-v1/Informes/in
 forme v1/Analisis22-img/Analisis22-img016.png>]
-Overfull \hbox (46.97789pt too wide) in paragraph at lines 329--339
+Overfull \hbox (46.97789pt too wide) in paragraph at lines 328--338
 []  
  []
 
-<Analisis22-img/Analisis22-img017.png, id=436, 686.565pt x 280.79906pt>
+<Analisis22-img/Analisis22-img017.png, id=472, 686.565pt x 280.79906pt>
 File: Analisis22-img/Analisis22-img017.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img017.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img017.png used on input lin
-e 351.
+e 350.
 (pdftex.def)             Requested size: 416.5412pt x 170.37454pt.
 
-Overfull \hbox (26.5412pt too wide) in paragraph at lines 351--352
+Overfull \hbox (26.5412pt too wide) in paragraph at lines 350--351
  [][] 
  []
 
-<Analisis22-img/Analisis22-img018.png, id=438, 799.48688pt x 404.26031pt>
+<Analisis22-img/Analisis22-img018.png, id=474, 799.48688pt x 404.26031pt>
 File: Analisis22-img/Analisis22-img018.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img018.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img018.png used on input lin
-e 364.
+e 363.
 (pdftex.def)             Requested size: 416.55292pt x 210.6422pt.
 
-Overfull \hbox (26.55292pt too wide) in paragraph at lines 364--365
+Overfull \hbox (26.55292pt too wide) in paragraph at lines 363--364
  [][] 
  []
 
-[38pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
+[39pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.367 \end{figure}
+l.366 \end{figure}
                    <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v
 1/Analisis22-img/Analisis22-img017.png>]
-<Analisis22-img/Analisis22-img019.png, id=448, 794.97pt x 403.5075pt>
+<Analisis22-img/Analisis22-img019.png, id=484, 794.97pt x 403.5075pt>
 File: Analisis22-img/Analisis22-img019.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img019.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img019.png used on input lin
-e 376.
+e 375.
 (pdftex.def)             Requested size: 416.56491pt x 211.43208pt.
 
-Overfull \hbox (26.56491pt too wide) in paragraph at lines 376--377
+Overfull \hbox (26.56491pt too wide) in paragraph at lines 375--376
  [][] 
  []
 
-[39pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.380 
+l.379 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
 -img/Analisis22-img018.png>]
-Overfull \hbox (46.97789pt too wide) in paragraph at lines 387--397
+Overfull \hbox (46.97789pt too wide) in paragraph at lines 386--396
 []  
  []
 
-<Analisis22-img/Analisis22-img020.png, id=456, 804.00375pt x 404.26031pt>
+<Analisis22-img/Analisis22-img020.png, id=492, 804.00375pt x 404.26031pt>
 File: Analisis22-img/Analisis22-img020.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img020.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img020.png used on input lin
-e 406.
+e 405.
 (pdftex.def)             Requested size: 416.51405pt x 209.43933pt.
 
-Overfull \hbox (26.51405pt too wide) in paragraph at lines 406--407
+Overfull \hbox (26.51405pt too wide) in paragraph at lines 405--406
 [][]
  []
 
-[40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.410 
+l.409 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
 -img/Analisis22-img019.png>]
-<Analisis22-img/Analisis22-img021.png, id=465, 794.97pt x 403.5075pt>
+<Analisis22-img/Analisis22-img021.png, id=502, 794.97pt x 403.5075pt>
 File: Analisis22-img/Analisis22-img021.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img021.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img021.png used on input lin
-e 418.
+e 417.
 (pdftex.def)             Requested size: 416.56491pt x 211.43208pt.
 
-Overfull \hbox (26.56491pt too wide) in paragraph at lines 418--419
+Overfull \hbox (26.56491pt too wide) in paragraph at lines 417--418
  [][] 
  []
 
-[41pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.428 
+l.427 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3.6}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.428 
+l.427 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
 -img/Analisis22-img020.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/
 informe v1/Analisis22-img/Analisis22-img021.png>]
-<Analisis22-img/Analisis22-img022.png, id=475, 718.18312pt x 280.79906pt>
+<Analisis22-img/Analisis22-img022.png, id=511, 718.18312pt x 280.79906pt>
 File: Analisis22-img/Analisis22-img022.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img022.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img022.png used on input lin
-e 431.
+e 430.
 (pdftex.def)             Requested size: 416.55746pt x 162.85928pt.
 
-Overfull \hbox (26.55746pt too wide) in paragraph at lines 431--432
+Overfull \hbox (26.55746pt too wide) in paragraph at lines 430--431
  [][] 
  []
 
 
-Overfull \hbox (46.97789pt too wide) in paragraph at lines 445--455
+Overfull \hbox (46.97789pt too wide) in paragraph at lines 444--454
 []  
  []
 
-<Analisis22-img/Analisis22-img023.png, id=477, 697.10437pt x 280.79906pt>
+<Analisis22-img/Analisis22-img023.png, id=513, 697.10437pt x 280.79906pt>
 File: Analisis22-img/Analisis22-img023.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img023.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img023.png used on input lin
-e 463.
+e 462.
 (pdftex.def)             Requested size: 416.5533pt x 167.78662pt.
 
-Overfull \hbox (26.5533pt too wide) in paragraph at lines 463--464
+Overfull \hbox (26.5533pt too wide) in paragraph at lines 462--463
  [][] 
  []
 
-[42pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.467 
+l.466 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
 -img/Analisis22-img022.png>]
-<Analisis22-img/Analisis22-img024.png, id=487, 804.00375pt x 404.26031pt>
+<Analisis22-img/Analisis22-img024.png, id=523, 804.00375pt x 404.26031pt>
 File: Analisis22-img/Analisis22-img024.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img024.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img024.png used on input lin
-e 474.
+e 473.
 (pdftex.def)             Requested size: 416.51405pt x 209.43933pt.
 
-Overfull \hbox (26.51405pt too wide) in paragraph at lines 474--475
+Overfull \hbox (26.51405pt too wide) in paragraph at lines 473--474
  [][] 
  []
 
-<Analisis22-img/Analisis22-img025.png, id=489, 791.95876pt x 403.5075pt>
+<Analisis22-img/Analisis22-img025.png, id=525, 791.95876pt x 403.5075pt>
 File: Analisis22-img/Analisis22-img025.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img025.png>
 Package pdftex.def Info: Analisis22-img/Analisis22-img025.png used on input lin
-e 484.
+e 483.
 (pdftex.def)             Requested size: 416.55797pt x 212.22635pt.
 
-Overfull \hbox (26.55797pt too wide) in paragraph at lines 484--485
+Overfull \hbox (26.55797pt too wide) in paragraph at lines 483--484
  [][] 
  []
 
-[43pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
+[44pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.488 
+l.487 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3.9}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.488 
+l.487 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
 -img/Analisis22-img023.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/
 informe v1/Analisis22-img/Analisis22-img024.png>]
-Overfull \hbox (38.14595pt too wide) in paragraph at lines 496--506
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 495--505
 []  
  []
 
-<Analisis22-img/AltaInfoRTIR.png, id=499, 846.91406pt x 304.13625pt>
+<Analisis22-img/AltaInfoRTIR.png, id=535, 846.91406pt x 304.13625pt>
 File: Analisis22-img/AltaInfoRTIR.png Graphic file (type png)
 
 <use Analisis22-img/AltaInfoRTIR.png>
-Package pdftex.def Info: Analisis22-img/AltaInfoRTIR.png used on input line 513
+Package pdftex.def Info: Analisis22-img/AltaInfoRTIR.png used on input line 512
 .
 (pdftex.def)             Requested size: 416.54227pt x 149.60815pt.
 
-Overfull \hbox (26.54227pt too wide) in paragraph at lines 513--514
- [][] 
- []
-
-[44pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-0}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.517 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img025.png>]
-Overfull \hbox (38.14595pt too wide) in paragraph at lines 525--533
-[]  
- []
-
-<Analisis22-img/AsociacionInformacion.png, id=508, 1108.8928pt x 424.58624pt>
-File: Analisis22-img/AsociacionInformacion.png Graphic file (type png)
-
-<use Analisis22-img/AsociacionInformacion.png>
-Package pdftex.def Info: Analisis22-img/AsociacionInformacion.png used on input
- line 540.
-(pdftex.def)             Requested size: 416.54443pt x 149.60512pt.
-
-Overfull \hbox (26.54443pt too wide) in paragraph at lines 540--541
+Overfull \hbox (26.54227pt too wide) in paragraph at lines 512--513
  [][] 
  []
 
 [45pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-1}) has been already used, duplicate ignored
+0}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.544 
+l.516 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/AltaInfoRTIR.png>]
-Overfull \hbox (38.14595pt too wide) in paragraph at lines 551--561
+-img/Analisis22-img025.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 524--532
 []  
  []
 
-<Analisis22-img/Analisis22-img027.png, id=516, 1088.56688pt x 380.92313pt>
-File: Analisis22-img/Analisis22-img027.png Graphic file (type png)
+<Analisis22-img/AsociacionInformacion.png, id=544, 1108.8928pt x 424.58624pt>
+File: Analisis22-img/AsociacionInformacion.png Graphic file (type png)
 
-<use Analisis22-img/Analisis22-img027.png>
-Package pdftex.def Info: Analisis22-img/Analisis22-img027.png used on input lin
-e 571.
-(pdftex.def)             Requested size: 391.81734pt x 137.05666pt.
+<use Analisis22-img/AsociacionInformacion.png>
+Package pdftex.def Info: Analisis22-img/AsociacionInformacion.png used on input
+ line 539.
+(pdftex.def)             Requested size: 416.54443pt x 149.60512pt.
 
-Overfull \hbox (1.81734pt too wide) in paragraph at lines 571--572
+Overfull \hbox (26.54443pt too wide) in paragraph at lines 539--540
  [][] 
  []
 
 [46pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-2}) has been already used, duplicate ignored
+1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.576 
+l.543 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/AsociacionInformacion.png>]
-Overfull \hbox (38.14595pt too wide) in paragraph at lines 583--593
+-img/AltaInfoRTIR.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 550--560
 []  
  []
 
-<Analisis22-img/Analisis22-img028.png, id=523, 846.16125pt x 326.72063pt>
-File: Analisis22-img/Analisis22-img028.png Graphic file (type png)
+<Analisis22-img/Analisis22-img027.png, id=552, 1088.56688pt x 380.92313pt>
+File: Analisis22-img/Analisis22-img027.png Graphic file (type png)
 
-<use Analisis22-img/Analisis22-img028.png>
-Package pdftex.def Info: Analisis22-img/Analisis22-img028.png used on input lin
-e 601.
-(pdftex.def)             Requested size: 416.54643pt x 160.8423pt.
+<use Analisis22-img/Analisis22-img027.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img027.png used on input lin
+e 570.
+(pdftex.def)             Requested size: 391.81734pt x 137.05666pt.
 
-Overfull \hbox (26.54643pt too wide) in paragraph at lines 601--602
+Overfull \hbox (1.81734pt too wide) in paragraph at lines 570--571
  [][] 
  []
 
 [47pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-3}) has been already used, duplicate ignored
+2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.605 
+l.575 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img027.png>]
-Overfull \hbox (38.14595pt too wide) in paragraph at lines 612--622
+-img/AsociacionInformacion.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 582--592
 []  
  []
 
-<Analisis22-img/Analisis22-img029.png, id=533, 621.07031pt x 353.06906pt>
-File: Analisis22-img/Analisis22-img029.png Graphic file (type png)
+<Analisis22-img/Analisis22-img028.png, id=560, 846.16125pt x 326.72063pt>
+File: Analisis22-img/Analisis22-img028.png Graphic file (type png)
 
-<use Analisis22-img/Analisis22-img029.png>
-Package pdftex.def Info: Analisis22-img/Analisis22-img029.png used on input lin
-e 629.
-(pdftex.def)             Requested size: 416.55087pt x 236.7867pt.
+<use Analisis22-img/Analisis22-img028.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img028.png used on input lin
+e 600.
+(pdftex.def)             Requested size: 416.54643pt x 160.8423pt.
 
-Overfull \hbox (26.55087pt too wide) in paragraph at lines 629--630
+Overfull \hbox (26.54643pt too wide) in paragraph at lines 600--601
  [][] 
  []
 
 [48pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-4}) has been already used, duplicate ignored
+3}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.633 
+l.604 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img028.png>]
-Overfull \hbox (38.14595pt too wide) in paragraph at lines 640--650
+-img/Analisis22-img027.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 611--621
 []  
  []
 
-<Analisis22-img/Analisis22-img030.png, id=543, 861.2175pt x 301.125pt>
-File: Analisis22-img/Analisis22-img030.png Graphic file (type png)
+<Analisis22-img/Analisis22-img029.png, id=569, 621.07031pt x 353.06906pt>
+File: Analisis22-img/Analisis22-img029.png Graphic file (type png)
 
-<use Analisis22-img/Analisis22-img030.png>
-Package pdftex.def Info: Analisis22-img/Analisis22-img030.png used on input lin
-e 659.
-(pdftex.def)             Requested size: 416.55984pt x 145.65947pt.
+<use Analisis22-img/Analisis22-img029.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img029.png used on input lin
+e 628.
+(pdftex.def)             Requested size: 416.55087pt x 236.7867pt.
 
-Overfull \hbox (26.55984pt too wide) in paragraph at lines 659--661
+Overfull \hbox (26.55087pt too wide) in paragraph at lines 628--629
  [][] 
  []
 
 [49pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+4}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.632 
+       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
+-img/Analisis22-img028.png>]
+Overfull \hbox (38.14595pt too wide) in paragraph at lines 639--649
+[]  
+ []
+
+<Analisis22-img/Analisis22-img030.png, id=579, 861.2175pt x 301.125pt>
+File: Analisis22-img/Analisis22-img030.png Graphic file (type png)
+
+<use Analisis22-img/Analisis22-img030.png>
+Package pdftex.def Info: Analisis22-img/Analisis22-img030.png used on input lin
+e 658.
+(pdftex.def)             Requested size: 416.55984pt x 145.65947pt.
+
+Overfull \hbox (26.55984pt too wide) in paragraph at lines 658--660
+ [][] 
+ []
+
+[50pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 5}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.664 
+l.663 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img029.png>]) [50pdfTeX warning (ext4): destination with the sa
+-img/Analisis22-img029.png>]) [51pdfTeX warning (ext4): destination with the sa
 me identifier (name{figure.3.16}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -2034,11 +2047,11 @@ orme v1/Analisis22-img/Analisis22-img030.png>]
 \c@TablaCap4=\count190
 
 Cap\'{\i }tulo 4.
-[51
+[52
 
 
 
-] <Diseno21-img/Diseno21-img003.png, id=563, 1877.0125pt x 1525.7pt>
+] <Diseno21-img/Diseno21-img003.png, id=599, 1877.0125pt x 1525.7pt>
 File: Diseno21-img/Diseno21-img003.png Graphic file (type png)
 
 <use Diseno21-img/Diseno21-img003.png>
@@ -2050,16 +2063,16 @@ Overfull \hbox (26.52414pt too wide) in paragraph at lines 54--55
  [][] 
  []
 
-[52pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+[53pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.61 ... generales de las componentes del sistema}
                                                    <E:/Proyecto de Grado Julio/
-inform-git-v1/Informes/informe v1/Diseno21-img/Diseno21-img003.png>] [53]
-[54] [55] [56]
-<Diseno21-img/Diseno21-img004.png, id=603, 1423.3175pt x 1311.90125pt>
+inform-git-v1/Informes/informe v1/Diseno21-img/Diseno21-img003.png>] [54]
+[55] [56] [57]
+<Diseno21-img/Diseno21-img004.png, id=639, 1423.3175pt x 1311.90125pt>
 File: Diseno21-img/Diseno21-img004.png Graphic file (type png)
 
 <use Diseno21-img/Diseno21-img004.png>
@@ -2071,27 +2084,27 @@ Overfull \hbox (26.53044pt too wide) in paragraph at lines 211--212
  [][] 
  []
 
-[57pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
+[58pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.219 
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Diseno21-i
-mg/Diseno21-img004.png>] [58]) [59]
+mg/Diseno21-img004.png>] [59]) [60]
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo5.tex"
 Cap\'{\i }tulo 5.
-[60
+[61
 
 
 
-] [61] [62] <imagenes/RT-TAXII.png, id=663, 204.765pt x 232.61906pt>
+] [62] [63] <imagenes/RT-TAXII.png, id=699, 204.765pt x 232.61906pt>
 File: imagenes/RT-TAXII.png Graphic file (type png)
 
 <use imagenes/RT-TAXII.png>
 Package pdftex.def Info: imagenes/RT-TAXII.png used on input line 80.
 (pdftex.def)             Requested size: 204.76448pt x 232.61848pt.
- [63pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [64pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -2099,7 +2112,7 @@ Package pdftex.def Info: imagenes/RT-TAXII.png used on input line 80.
 l.87 ...ra realizar la presentación al usuario.\\
                                                    <E:/Proyecto de Grado Julio/
 inform-git-v1/Informes/informe v1/imagenes/RT-TAXII.png>]
-<imagenes/TAXIIApp.png, id=671, 216.81pt x 261.97874pt>
+<imagenes/TAXIIApp.png, id=707, 216.81pt x 261.97874pt>
 File: imagenes/TAXIIApp.png Graphic file (type png)
 
 <use imagenes/TAXIIApp.png>
@@ -2107,9 +2120,9 @@ Package pdftex.def Info: imagenes/TAXIIApp.png used on input line 98.
 (pdftex.def)             Requested size: 216.80946pt x 261.9781pt.
 
 
-LaTeX Warning: Reference `anexo' on page 64 undefined on input line 105.
+LaTeX Warning: Reference `anexo' on page 65 undefined on input line 105.
 
-[64pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
+[65pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -2118,20 +2131,20 @@ l.106
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/imagenes/T
 AXIIApp.png>]
 
-LaTeX Warning: Reference `anexo' on page 65 undefined on input line 112.
+LaTeX Warning: Reference `anexo' on page 66 undefined on input line 112.
 
 
-LaTeX Warning: Reference `anexo' on page 65 undefined on input line 119.
+LaTeX Warning: Reference `anexo' on page 66 undefined on input line 119.
 
-) [65]
+) [66]
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo6.tex"
 Cap\'{\i }tulo 6.
-[66
+[67
 
 
 
 ]
-<caso-de-estudio/laboratorioDesplegado.png, id=691, 1001.7425pt x 287.0725pt>
+<caso-de-estudio/laboratorioDesplegado.png, id=727, 1001.7425pt x 287.0725pt>
 File: caso-de-estudio/laboratorioDesplegado.png Graphic file (type png)
 
 <use caso-de-estudio/laboratorioDesplegado.png>
@@ -2143,7 +2156,7 @@ Overfull \hbox (10.6899pt too wide) in paragraph at lines 19--20
  [][] 
  []
 
-[67pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}
+[68pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}
 ) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -2157,7 +2170,7 @@ l.45
 l.45 
       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-est
 udio/laboratorioDesplegado.png>]
-<caso-de-estudio/flujos.png, id=701, 1133.23375pt x 1126.2075pt>
+<caso-de-estudio/flujos.png, id=737, 1133.23375pt x 1126.2075pt>
 File: caso-de-estudio/flujos.png Graphic file (type png)
 
 <use caso-de-estudio/flujos.png>
@@ -2168,7 +2181,7 @@ Overfull \hbox (6.63776pt too wide) in paragraph at lines 51--52
  [][] 
  []
 
-[68pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2
+[69pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -2176,7 +2189,7 @@ Overfull \hbox (6.63776pt too wide) in paragraph at lines 51--52
 l.57 ...aso de uso para ingresar los servicios. \\
                                                    <E:/Proyecto de Grado Julio/
 inform-git-v1/Informes/informe v1/caso-de-estudio/flujos.png>]
-<caso-de-estudio/RegistroServicios.png, id=711, 1050.92625pt x 312.16624pt>
+<caso-de-estudio/RegistroServicios.png, id=747, 1050.92625pt x 312.16624pt>
 File: caso-de-estudio/RegistroServicios.png Graphic file (type png)
 
 <use caso-de-estudio/RegistroServicios.png>
@@ -2188,7 +2201,7 @@ Overfull \hbox (30.36307pt too wide) in paragraph at lines 63--64
  [][] 
  []
 
-<caso-de-estudio/listadoservicios.png, id=712, 1250.6725pt x 355.3275pt>
+<caso-de-estudio/listadoservicios.png, id=748, 1250.6725pt x 355.3275pt>
 File: caso-de-estudio/listadoservicios.png Graphic file (type png)
 
 <use caso-de-estudio/listadoservicios.png>
@@ -2200,7 +2213,7 @@ Overfull \hbox (47.74194pt too wide) in paragraph at lines 70--71
  [][] 
  []
 
-[69pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3
+[70pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -2215,7 +2228,7 @@ l.77
       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-est
 udio/RegistroServicios.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/
 informe v1/caso-de-estudio/listadoservicios.png>]
-<caso-de-estudio/alta.png, id=723, 769.87625pt x 718.685pt>
+<caso-de-estudio/alta.png, id=759, 769.87625pt x 718.685pt>
 File: caso-de-estudio/alta.png Graphic file (type png)
 
 <use caso-de-estudio/alta.png>
@@ -2226,35 +2239,35 @@ Overfull \hbox (71.92932pt too wide) in paragraph at lines 82--83
  [][] 
  []
 
-[70] <caso-de-estudio/listadoInfo.png, id=731, 1043.9pt x 437.635pt>
+[71] <caso-de-estudio/listadoInfo.png, id=768, 1043.9pt x 437.635pt>
 File: caso-de-estudio/listadoInfo.png Graphic file (type png)
 
 <use caso-de-estudio/listadoInfo.png>
 Package pdftex.def Info: caso-de-estudio/listadoInfo.png used on input line 89.
 
 (pdftex.def)             Requested size: 313.17241pt x 131.2915pt.
- [71pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [72pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 5}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.93 
       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-est
-udio/alta.png>] <caso-de-estudio/obtremote.png, id=739, 594.22pt x 204.765pt>
+udio/alta.png>] <caso-de-estudio/obtremote.png, id=775, 594.22pt x 204.765pt>
 File: caso-de-estudio/obtremote.png Graphic file (type png)
 
 <use caso-de-estudio/obtremote.png>
 Package pdftex.def Info: caso-de-estudio/obtremote.png used on input line 99.
 (pdftex.def)             Requested size: 297.10927pt x 102.38223pt.
 
-<caso-de-estudio/lstremotedf.png, id=740, 973.6375pt x 268.00125pt>
+<caso-de-estudio/lstremotedf.png, id=776, 973.6375pt x 268.00125pt>
 File: caso-de-estudio/lstremotedf.png Graphic file (type png)
 
 <use caso-de-estudio/lstremotedf.png>
 Package pdftex.def Info: caso-de-estudio/lstremotedf.png used on input line 106
 .
 (pdftex.def)             Requested size: 389.44809pt x 107.1986pt.
- [72pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [73pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 6}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -2276,7 +2289,7 @@ l.113
 tudio/listadoInfo.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/infor
 me v1/caso-de-estudio/obtremote.png> <E:/Proyecto de Grado Julio/inform-git-v1/
 Informes/informe v1/caso-de-estudio/lstremotedf.png>]
-<caso-de-estudio/pollinformacion.png, id=748, 576.1525pt x 203.76125pt>
+<caso-de-estudio/pollinformacion.png, id=784, 576.1525pt x 203.76125pt>
 File: caso-de-estudio/pollinformacion.png Graphic file (type png)
 
 <use caso-de-estudio/pollinformacion.png>
@@ -2284,7 +2297,7 @@ Package pdftex.def Info: caso-de-estudio/pollinformacion.png used on input line
  116.
 (pdftex.def)             Requested size: 230.45691pt x 81.50305pt.
 
-<caso-de-estudio/subscriptionfeed.png, id=752, 570.13pt x 191.71625pt>
+<caso-de-estudio/subscriptionfeed.png, id=788, 570.13pt x 191.71625pt>
 File: caso-de-estudio/subscriptionfeed.png Graphic file (type png)
 
 <use caso-de-estudio/subscriptionfeed.png>
@@ -2292,14 +2305,14 @@ Package pdftex.def Info: caso-de-estudio/subscriptionfeed.png used on input lin
 e 128.
 (pdftex.def)             Requested size: 228.04796pt x 76.68513pt.
 
-<caso-de-estudio/subscriptiondf.png, id=753, 604.2575pt x 303.1325pt>
+<caso-de-estudio/subscriptiondf.png, id=789, 604.2575pt x 303.1325pt>
 File: caso-de-estudio/subscriptiondf.png Graphic file (type png)
 
 <use caso-de-estudio/subscriptiondf.png>
 Package pdftex.def Info: caso-de-estudio/subscriptiondf.png used on input line 
 135.
 (pdftex.def)             Requested size: 241.69872pt x 121.25084pt.
- [73pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [74pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 9}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -2314,21 +2327,21 @@ l.139
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-es
 tudio/pollinformacion.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/i
 nforme v1/caso-de-estudio/subscriptionfeed.png>]
-<caso-de-estudio/envioInfo.png, id=761, 587.19376pt x 198.7425pt>
+<caso-de-estudio/envioInfo.png, id=797, 587.19376pt x 198.7425pt>
 File: caso-de-estudio/envioInfo.png Graphic file (type png)
 
 <use caso-de-estudio/envioInfo.png>
 Package pdftex.def Info: caso-de-estudio/envioInfo.png used on input line 142.
 (pdftex.def)             Requested size: 234.87334pt x 79.49557pt.
 
-<caso-de-estudio/relacInfo.png, id=764, 547.04375pt x 221.82875pt>
+<caso-de-estudio/relacInfo.png, id=800, 547.04375pt x 221.82875pt>
 File: caso-de-estudio/relacInfo.png Graphic file (type png)
 
 <use caso-de-estudio/relacInfo.png>
 Package pdftex.def Info: caso-de-estudio/relacInfo.png used on input line 153.
 (pdftex.def)             Requested size: 218.81361pt x 88.72992pt.
 
-<caso-de-estudio/lstRelacInfo.png, id=765, 993.7125pt x 227.85126pt>
+<caso-de-estudio/lstRelacInfo.png, id=801, 993.7125pt x 227.85126pt>
 File: caso-de-estudio/lstRelacInfo.png Graphic file (type png)
 
 <use caso-de-estudio/lstRelacInfo.png>
@@ -2340,7 +2353,7 @@ Overfull \hbox (7.47795pt too wide) in paragraph at lines 160--161
  [][] 
  []
 
-[74pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1
+[75pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1
 1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -2361,7 +2374,7 @@ l.164
        <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-es
 tudio/subscriptiondf.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/in
 forme v1/caso-de-estudio/envioInfo.png> <E:/Proyecto de Grado Julio/inform-git-
-v1/Informes/informe v1/caso-de-estudio/relacInfo.png>]) [75pdfTeX warning (ext4
+v1/Informes/informe v1/caso-de-estudio/relacInfo.png>]) [76pdfTeX warning (ext4
 ): destination with the same identifier (name{figure.6.14}) has been already us
 ed, duplicate ignored
 
@@ -2372,26 +2385,26 @@ l.70 \include{capitulo6}
 orme v1/caso-de-estudio/lstRelacInfo.png>]
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo7.tex"
 Cap\'{\i }tulo 7.
-[76
+[77
 
 
 
-] [77] [78]) [79]
+] [78] [79]) [80]
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.bbl"
-[80
+[81
 
 
-] [81]) [82]
+] [82]) [83]
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\back.tex"
 ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.lof"
-[83
+[84
 
 
 
 
 ])
 \tf@lof=\write9
-) [84]
+) [85]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
 
@@ -2409,7 +2422,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 23CED39B840DAE6E8CCEC4F487EC7DE1;2780.
+(rerunfilecheck)             Checksum: 42EF5012DDCE86A3270C231384B3AE15;3003.
 
 
 LaTeX Warning: There were undefined references.
@@ -2420,10 +2433,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
  ) 
 Here is how much of TeX's memory you used:
- 22263 strings out of 493921
- 383408 string characters out of 3144877
- 520428 words of memory out of 3000000
- 24692 multiletter control sequences out of 15000+200000
+ 22275 strings out of 493921
+ 383693 string characters out of 3144877
+ 520350 words of memory out of 3000000
+ 24689 multiletter control sequences out of 15000+200000
  13581 words of font info for 48 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  63i,12n,57p,1714b,605s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2439,9 +2452,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informe.pdf (86 pages, 1604137 bytes).
+Output written on informe.pdf (87 pages, 1617106 bytes).
 PDF statistics:
- 1028 PDF objects out of 1200 (max. 8388607)
- 275 named destinations out of 1000 (max. 500000)
- 534 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1062 PDF objects out of 1200 (max. 8388607)
+ 288 named destinations out of 1000 (max. 500000)
+ 558 words of extra memory for PDF output out of 10000 (max. 10000000)
 
