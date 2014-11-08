@@ -133,7 +133,7 @@
 \pdfstringdefDisableCommands{
    \let\\\space
 }
-\newcommand*{\tillittle}[1]{\def\til{#1}}
+%\newcommand*{\tillittle}[1]{\def\til{#1}}
 \newcommand*{\finglittle}[1]{\def\fu{#1}}
 \newcommand*{\supgustun}[1]{\def\gustun{#1}}
 \newcommand*{\supmarcelor}[1]{\def\marcelor{#1}}
@@ -147,8 +147,8 @@
 \newcommand*{\UNIVNAME}[1]{\def\UDELAR{#1}}
 \newcommand*{\faculty}[1]{\def\fing{#1}}
 \newcommand*{\FACULTY}[1]{\def\FING{#1}}
-\newcommand*{\client}[1]{\def\tilsor{#1}}
-\newcommand*{\CLIENT}[1]{\def\TILSOR{#1}}
+%\newcommand*{\client}[1]{\def\tilsor{#1}}
+%\newcommand*{\CLIENT}[1]{\def\TILSOR{#1}}
 \newcommand*{\subject}[1]{\def\subjectname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
 
@@ -190,15 +190,15 @@
                 {FACULTAD DE INGENIERÍA}} % Your university's name in capitals - this is currently used in the abstract page
                 {FACULTAD DE INGENIERÍA}}
 %-------------------------------------------------
-\client{\texorpdfstring{\href{http://www.tilsor.com.uy} % Your university's URL
-                {Tilsor S.A.}} % Your university's name - this is currently used in the title page
-                {Tilsor S.A.}}
+%\client{\texorpdfstring{\href{http://www.tilsor.com.uy} % Your university's URL
+ %               {Tilsor S.A.}} % Your university's name - this is currently used in the title page
+  %              {Tilsor S.A.}}
 %-------------------------------------------------   
-\CLIENT{\texorpdfstring{\href{http://www.tilsor.edu.uy} % Your university's URL
-                {TILSOR S.A.}} % Your university's name in capitals - this is currently used in the abstract page
-                {TILSOR S.A.}}
+%\CLIENT{\texorpdfstring{\href{http://www.tilsor.edu.uy} % Your university's URL
+ %               {TILSOR S.A.}} % Your university's name in capitals - this is currently used in the abstract page
+  %              {TILSOR S.A.}}
 %-------------------------------------------------
-\tillittle{Tilsor S.A.}
+%\tillittle{Tilsor S.A.}
 \finglittle{Fing - UdelaR} 
 
 % The default title page, this is not used in this www.latextemplates.com version            

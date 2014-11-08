@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: informe.aux
 A level-1 auxiliary file: front.aux
+A level-1 auxiliary file: capitulo0.aux
 A level-1 auxiliary file: capitulo1.aux
 A level-1 auxiliary file: capitulo2.aux
 A level-1 auxiliary file: capitulo3.aux
@@ -71,7 +72,7 @@ while executing---line 1090 of file plain.bst
 Warning--empty publisher in AdvancedThreatsCollaboration
 You've used 49 entries,
             2118 wiz_defined-function locations,
-            664 strings with 7243 characters,
+            665 strings with 7256 characters,
 and the built_in function-call counts, 9164 in all, are:
 = -- 830
 > -- 205
