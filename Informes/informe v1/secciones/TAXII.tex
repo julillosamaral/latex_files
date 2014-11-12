@@ -1,38 +1,34 @@
 \subsection{TAXII}
 
-El objetivo que plantea \textit{Trusted Automated eXchange of Indicator Information} (TAXII) es extender la capacidad de compartir indicadores, 
+\textit{Trusted Automated eXchange of Indicator Information} (TAXII) es un conjunto de especificaciones técnicas y de documentación para permitir el intercambio de información procesable entre organizaciones.
+Tiene como objetivo extender la capacidad de compartir indicadores, 
 siendo dichos intercambios robustos, seguros y de gran volumen de datos. A su 
 vez, los datos intercambiados deberían ser mas expresivos que en la actualidad.\\
 
 Con TAXII no se busca crear una comunidad para compartir, sino que se le da a 
 las organizaciones una herramienta que facilite el intercambio entre ellas. 
-TAXII mejora las deficiencias existentes dando especificaciones abiertas y 
-comunes para transportar los mensajes con información. También se provee un 
+TAXII mejora las deficiencias existentes en el intercambio de información de seguridad, esto lo hace dando especificaciones abiertas y comunes para realizar dicho intercambio. También se provee un 
 conjunto de capacidades como encriptación, autenticación, direccionamiento, 
 alertas y pedidos entre sistemas.\\
 
-TAXII es un conjunto de especificaciones técnicas y de documentación para 
-permitir el intercambio de información procesable entre organizaciones. Para 
-realizar dichos intercambios, se definen protocolos y formatos de datos que 
+Para realizar los intercambios de información se definen protocolos y formatos de datos que 
 permiten intercambiar información de forma segura. Ha sido diseñado para permitir la
 interoperabilidad de diferentes soluciones en lugar de ligarse a una tecnología o producto en particular.
 Además, se busca incentivar a los proveedores de tecnología a incorporar soporte para las especificaciones
 de TAXII en sus productos. La información intercambiada 
-ayuda a detectar, prevenir y mitigar amenazas informáticas en tiempo real. Es 
-importante recalcar que no se buscan definir acuerdos para el intercambio de 
-información o gobierno. En su lugar, permite a las organizaciones mejorar el 
+ayuda a detectar, prevenir y mitigar amenazas informáticas en tiempo real. 
+
+Es importante recalcar que en TAXII no se buscan definir los aspectos no técnicos del intercambio de información, un ejemplo de esto es los acuerdos de confianza que se dan entre las organizaciones. En su lugar, permite a las organizaciones mejorar el 
 contexto en el que se encuentran respecto a las nuevas amenazas y además 
 compartir la información que ellos elijan con las organizaciones que deseen de 
 forma simple y rápida aprovechando las relaciones y sistemas existentes.\\
 
-Al igual que en STIX, en TAXII se buscó consenso y participación de la comunidad. 
+Durante el desarrollo de STIX y TAXII, MITRE buscó consenso y participación de la comunidad. 
 TAXII permite el intercambio de información sobre amenazas de forma eficiente y 
 comprensiva por medio de \emph{automatización} y \emph{articulación} de un 
 modelo detallado de información. Para lograr esto, se utiliza una representación 
 estándar de información de amenazas y un framework para soportar el intercambio 
-de datos. El modelo permite el envío y recepción de un conjunto amplio de 
-información de seguridad para soportar las necesidades referentes al intercambio 
-de información. Se le da la libertad a los proveedores de determinar como sus 
+de datos. La representación por medio de STIX permite la representación de un conjunto amplio de información de seguridad. Se le da la libertad a los proveedores de determinar como sus 
 productos producen, consumen o toman ventaja de los flujos de información 
 especificados por TAXII.\\
 
@@ -45,10 +41,7 @@ especificados por TAXII.\\
 \end{figure}
 
 TAXII utiliza protocolos y especificaciones existentes siempre que 
-es posible, de esta forma se integra con mecanismos de intercambio de 
-información para reducir los costos de implementación y permitir la adopción 
-rápida por parte de organizaciones ya establecidas y que se encuentran 
-intercambiando información.\\
+es posible, por ejemplo, durante la primera especificación se utilizaron los protocolos HTTP/HTTPS para el intercambio de información entre organizaciones. Esto ayuda a reducir costos de impementación y facilita la adopción de TAXII por parte de organizaciones ya establecidas.\\
 
 Las motivaciones para tener una mejor solución que permita intercambiar 
 información lleva a que en el diseño de TAXII se hayan planteado los siguientes 
@@ -62,7 +55,7 @@ objetivos:
    actual.
    \item Soportar un amplio número de casos de uso y prácticas comunes a las 
    comunidades.
-   \item Tomar los estándares existentes que sean adecuados.
+   \item Siempre que existan estándares adecuados que solucionen una parte del problema, TAXII propone que estos sean utilizados.
    \item Llegar a una adopción por parte de organizaciones internacionales de 
    estándares.
  \end{itemize}
@@ -110,7 +103,7 @@ Debido a que las organizaciones generalmente tienen restricciones
 respecto a los protocolos que soportan, TAXII busca no ligarse a un único 
 protocolo que excluya a una parte de la comunidad. Cuando se ve que la comunidad 
 expresa interés en un nuevo protocolo o tipo de mensaje, TAXII puede dar soporte 
-para ellos sin cambiar los componentes centrales.\\
+a los nuevos protocolos o tipos de mensajes sin cambiar los componentes centrales.\\
 
 Dos grupos que usen el mismo protocolo de red y formato de mensajes serán 
 capaces de intercambios de información estructurada de forma automática. Las 
@@ -130,14 +123,17 @@ mensajes son transportados, dejando eso a la especificación de los protocolos d
 enlace. Se da información respecto a los datos presentes en los mensajes TAXII y 
 no a como los mensajes son expresados.\\
 
+Una unidad funcional es una componente de TAXII con un rol bien definido dentro del protocolo. 
 Las unidades funcionales de TAXII representan conjuntos discretos de actividades 
-requeridas para soportar TAXII. Una unidad funcional representa algún componente 
-con un rol bien definido en TAXII.
+requeridas para soportar TAXII.
 
 \begin{itemize}
+  \item \underline{Arquitectura TAXII}: Cubre los aspectos de las unidades funcionales de la 
+  infraestructura de productor o consumidor que provee o utiliza servicios 
+  TAXII. Una arquitectura TAXII incluye una TTA, un TMH y un backend TAXII, cada una de estas componentes será descripta a continuación.
   \item \underline{TAXII Transfer Agent} (TTA): Es una unidad funcional conectada a la red 
   que envía o recibe mensajes TAXII. Una TTA interactúa con otras TTAs por medio 
-  de la red y maneja los requerimientos de una o más de las especificaciones de 
+  de la red y maneja los requerimientos de las distintas especificaciones de 
   los protocolos de enlace. Una TTA provee un mensaje TAXII a un \textit{TAXII Message 
   Handler} permitiendo que éste último sea independiente del protocolo de red 
   utilizado. De la misma forma, el TTA puede ser independiente del contenido de 
@@ -150,15 +146,11 @@ con un rol bien definido en TAXII.
   transmitir mensajes por la red. El Backend TAXII interactúa con el TMH para 
   convertir su contenido en mensajes TAXII y llevar a cabo actividades basadas 
   en los mensajes TAXII que son recibidos por el TMH.
-  \item \underline{Backend TAXII}: Cubre todas las unidades funcionales distintas al TTA y 
-  al TMH. Las especificaciones de TAXII no proveen requerimientos sobre como son 
+  \item \underline{Backend TAXII}: Las especificaciones de TAXII no proveen requerimientos sobre como son 
   implementadas las capacidades en un backend más allá de como debe interactuar 
   con el TMH. Las organizaciones o implementadores pueden decidir que 
   capacidades implementar según los servicios TAXII que deseen soportar o según 
   como quieran dar ese soporte.
-  \item \underline{Arquitectura TAXII}: Cubre los aspectos de las unidades funcionales de la 
-  infraestructura de productor o consumidor que provee o utiliza servicios 
-  TAXII. Una arquitectura TAXII incluye una TTA, un TMH y un backend TAXII.
   \end{itemize}
 
 Lo expresado anteriormente se puede ver en la figura \ref{fig.unidades_funcionales}.
@@ -198,73 +190,16 @@ medio de las organizaciones productoras de los datos en lugar de por los datos
 en si. Toda la información provista por un productor debe estar organizada en 
 grupos llamados "TAXII Data Feeds". Cada elemento en un TAXII data feed es 
 etiquetado utilizando \textit{timestamps}. El productor tiene total dominio sobre como el 
-contenido se mapea en TAXII data feeds y en el significado de los \textit{timestamps}. La 
-capacidad de \textit{pull messaging} está atada a entender el contenido del productor.\\
+contenido se mapea en TAXII data feeds y en el significado de los \textit{timestamps}.\\
 
-Para facilitar las comunicaciones automatizadas, TAXII soporta capacidades para 
-descubrir los servicios específicos que ofrece un servidor o grupo de 
+La capacidad de \textit{\textbf{Pull messaging}} busca facilitar las comunicaciones automatizadas. Dicha capacidad permite 
+descubrir los servicios TAXII ofrecidos por un servidor o grupo de 
 servidores, así como los protocolos o mensajes que este servidor ofrece. Esto no 
 quita la necesidad de que personas estén involucradas para establecer acuerdos de 
 cooperación lo cual esta por fuera del objetivo de TAXII. Sin embargo, permite 
 el intercambio de información respecto a las capacidades que un productor 
 soporta y cuales son los mecanismos que utiliza para hacerlo.
 
-\subsubsection{Servicios TAXII}\ \\
-
-Los servicios TAXII representan un conjunto de mecanismos necesarios para 
-soportar capacidades TAXII. Una implementación TAXII pudiera implementar alguno, 
-todos o incluso ninguno de los servicios definidos.
-TAXII define los siguientes servicios:
-\begin{itemize}
-  \item \underline{Discovery Service}: Es utilizado para recibir y responder a 
-  mensajes que requieren información sobre los servicios ofrecidos.
-  \item \underline{Feed Managment Service}: Es utilizado para recibir o responder a mensajes 
-  utilizados para el manejo de subscripciones a TAXII Data Feed.
-  \item \underline{Inbox Service}: Es utilizado para recibir información de amenazas 
-  cibernéticas por medio de intercambios iniciados por el productor en intervalos 
-  dictados por este.
-  \item \underline{Poll Service}: Es utilizado para recibir y responder a mensajes de pedido 
-  a el TAXII Data Feed iniciados por el consumidor.
-\end{itemize}
-
-A continuación se describen los distintos servicios.
-
-\paragraph{Discovery Service}\ \\
-
-Es un mecanismo para comunicar información referente al uso de servicios TAXII y 
-a su disponibilidad. Para un pedido al servicio, se retorna una lista de los 
-servicios TAXII y como estos pueden ser invocados. Un solo servicio de 
-descubrimiento puede reportar servicios TAXII en diferentes equipos finales o 
-incluso en múltiples organizaciones, los propietarios del servicio pueden 
-definir su alcance a gusto. Un servicio de descubrimiento puede utilizar 
-varios factores para determinar cuales servicios revelar ante una petición, 
-incluyendo, pero no limitado a la entidad del cliente TAXII.
-El servicio de descubrimiento debe soportar "Discovery Message Exchange".
-
-\paragraph{Feed Managment Service}\ \\
-
-Es el mecanismo con el cual un consumidor pide información referente a TAXII 
-Data Feeds, pidiendo subscripciones a estos, o modificando las existentes. Este 
-servicio facilita el intercambio de mensajes para manejar las subscripciones. 
-No se entrega contenido de los TAXII Data Feed, en su lugar se envía 
-contenido del TAXII Data Feed al servicio de Inbox de un consumidor en intercambios 
-iniciados por un productor o en respuesta directa a un pedido del consumidor al 
-servicio de poll.
-Dicho servicio debe implementar soporte para \textit{subscription managment exchange} y podría implementar soporte de \textit{feed information exchange}.
-
-\paragraph{Inbox service}\ \\
-Este servicio es el mecanismo con el cual un consumidor acepta los mensajes en 
-un intercambio iniciado por el productor. Un consumidor puede implementarlo 
-para recibir datos del TAXII Data Feed.
-El servicio de inbox debe implementar soporte para \textit{Data Push Exchange}.
-
-\paragraph{Poll service}\ \\
-Es provisto por un productor para permitir pedidos al TAXII Data Feed iniciados 
-por  el consumidor. Un consumidor contacta a este servicio explícitamente 
-pidiendo el contenido del TAXII Data Feed. Los productores podrían ofrecer Data 
-Feeds combinando envíos al Inbox service del consumidor o por medio de pedidos 
-al servicio de poll del productor.
-Una implementación de este servicio debe dar soporte a \textit{Data Poll Exchange}.
 
 \subsubsection{Intercambio de mensajes TAXII}\ \\
 
@@ -303,7 +238,7 @@ de las que dispone. Dicha respuesta es realizada por el backend y en ella se pue
 
 \paragraph{Subscription Managment Exchange}\ \\
 
-En este un cliente intenta establecer, borrar, pausar, resumir o modificar una 
+En este intercambio un cliente intenta establecer, borrar, pausar, resumir o modificar una 
 subscripción a un TAXII Data Feed conocido enviando un mensaje subscription 
 managment request al servidor. El servidor pasa la request al Backend TAXII el 
 cual determina la respuesta, la cual es luego enviada al cliente.
@@ -313,5 +248,63 @@ si la acción está permitida o no.
 
 \paragraph{Feed Poll Exchange}
 
-Es utilizado por un consumidor para pedir contenido de un productor de datos. El TAXII Data Feed content es enviado al consumidor en el mismo intercambio.
+Es el intercambio utilizado por un consumidor para pedir contenido de un productor de datos. El TAXII Data Feed content es enviado al consumidor en el mismo intercambio.
 El cliente consumidor inicia el backend TAXII y evalua el pedido de información para determinar la respuesta. La respuesta retorna mensajes STIX con el contenido que pidió el cliente.
+
+\subsubsection{Servicios TAXII}\ \\
+
+Los servicios TAXII representan un conjunto de mecanismos necesarios para 
+soportar capacidades TAXII. Una implementación TAXII pudiera implementar alguno, 
+todos o incluso ninguno de los servicios definidos.
+TAXII define los siguientes servicios:
+\begin{itemize}
+  \item \underline{Discovery Service}: Es utilizado para recibir y responder a 
+  mensajes que requieren información sobre los servicios ofrecidos.
+  \item \underline{Feed Managment Service}: Es utilizado para recibir o responder a mensajes 
+  utilizados para el manejo de subscripciones a TAXII Data Feed.
+  \item \underline{Inbox Service}: Es utilizado para recibir información de amenazas 
+  cibernéticas por medio de intercambios iniciados por el productor en intervalos 
+  dictados por este.
+  \item \underline{Poll Service}: Es utilizado para recibir y responder a mensajes de pedido 
+  a el TAXII Data Feed iniciados por el consumidor.
+\end{itemize}
+
+A continuación se describen los distintos servicios.
+
+\paragraph{Discovery Service}\ \\
+
+Es un mecanismo para comunicar información referente al uso de servicios TAXII y 
+a su disponibilidad. Para un pedido al servicio, se retorna una lista de los 
+servicios TAXII y como estos pueden ser invocados. Un solo servicio de 
+descubrimiento puede reportar servicios TAXII en diferentes equipos finales o 
+incluso en múltiples organizaciones, los propietarios del servicio pueden 
+definir su alcance a gusto. Un servicio de descubrimiento puede utilizar 
+varios factores para determinar cuales servicios revelar ante una petición, 
+incluyendo, pero no limitado a la entidad del cliente TAXII.
+El servicio de descubrimiento debe soportar \textit{Discovery Message Exchange}.
+
+\paragraph{Feed Managment Service}\ \\
+
+Es el mecanismo con el cual un consumidor pide información referente a TAXII 
+Data Feeds, pidiendo subscripciones a estos, o modificando las existentes. Este 
+servicio facilita el intercambio de mensajes para manejar las subscripciones. 
+No se entrega contenido de los TAXII Data Feed, en su lugar se envía 
+contenido del TAXII Data Feed al servicio de Inbox de un consumidor en intercambios 
+iniciados por un productor o en respuesta directa a un pedido del consumidor al 
+servicio de poll.
+Dicho servicio debe implementar soporte para \textit{subscription managment exchange} y podría implementar soporte de \textit{feed information exchange}.
+
+\paragraph{Inbox service}\ \\
+Este servicio es el mecanismo con el cual un consumidor acepta los mensajes en 
+un intercambio iniciado por el productor. Un consumidor puede implementarlo 
+para recibir datos del TAXII Data Feed.
+El servicio de inbox debe implementar soporte para \textit{Data Push Exchange}.
+
+\paragraph{Poll service}\ \\
+Es provisto por un productor para permitir pedidos al TAXII Data Feed iniciados 
+por  el consumidor. Un consumidor contacta a este servicio explícitamente 
+pidiendo el contenido del TAXII Data Feed. Los productores podrían ofrecer Data 
+Feeds combinando envíos al Inbox service del consumidor o por medio de pedidos 
+al servicio de poll del productor.
+Una implementación de este servicio debe dar soporte a \textit{Data Poll Exchange}.
+

@@ -3,20 +3,6 @@
 
 En este capítulo se presentan las principales conclusiones y dificultades más relevantes del proyecto. Por último, se proponen posibles líneas de trabajo a futuro.
 
-\section{Trabajo Futuro}
-Durante el transcurso del proyecto se identificaron distintas líneas de trabajo futuro sobre las cuales se puede trabajar para mejorar la herramienta. A continuación delineamos algunos de los trabajos que se podrían seguir realizando en el marco de este proyecto.
-\bigskip
-
-Como es posible que se intercambien grandes volúmenes de datos entre organizaciones, es necesario que se diseñe e implemente un método para correlacionar la información intercambiada, de esta forma se agrupan los datos, facilitando de esta forma el trabajo de los analistas. Con dicha información correlacionada se pueden presentar reportes a los analistas resumiendo el contenido existente en el sistema. Durante el diseño y análisis de la herramienta se tuvo en consideración dicha funcionalidad pero no se implementó y no hubo una investigación profunda referente a esto, por lo cual se deja para un trabajo a futuro. 
-De la misma forma se consideró durante el diseño y análisis la sanitización de la información pero tampoco se implementó en el prototipo dicha funcionalidad quedando para un trabajo a futuro.  Dicha funcionalidad permite filtrar datos sensibles que podrían comprometer la imagen o la integridad de las organizaciones.
-\bigskip
-
-Respecto a la implementación realizada, queda planteado realizar una mejor interacción entre RTIR y el \textit{plugin} de forma de extender las funcionalidades ya existentes en RTIR así como agregar algunas nuevas. Entre dichas mejoras se encuentra crear los incidentes y relacionarlos con los cyber observables existentes en TAXII App. Además permitir agregar nuevos cyber observables a incidentes ya existentes. Esto, junto con una interfaz más amigable facilitaría  el trabajo de los analistas.
-\bigskip
-
-Otro de los puntos a mejorar en la implementación del cliente TAXII es el seguimiento de los usuarios u organizaciones con las que se intercambia la información de seguridad y filtrar a que datos pueden acceder los distintos usuarios. De esta forma se podría realizar un modelo RBAC para el acceso a la información.
-\bigskip
-
 \section{Conclusiones}
 
 En los últimos años se ha visto un incremento en la cantidad de equipos conectados a las redes de las organizaciones, a su vez han aumentado los usuarios malintencionados. Estos cuentan cada vez con mejores herramientas y procedimientos mas sofisticados con los cuales realizar ataques. Debido a esto es necesario que las estrategias de defensa se adapten a los nuevos actores y ataques. Para responder a esto, las organizaciones han recurrido al intercambio de información de amenazas con la finalidad de identificar de mejor forma las actividades de sus adversarios con la finalidad de obtener los mejores resultados posibles de sus defensas.\\
@@ -40,3 +26,20 @@ Se realizó el diseño de la herramienta utilizando STIX, TAXII y RTIR y centrá
 Luego de realizado el diseño se realizó un prototipo de la herramienta propuesta. Esta intercambia información utilizando el protocolo TAXII y representando la información por medio de STIX. El manejo de la información se realiza desde RTIR dando de alta los datos necesarios para realizar el intercambio. Es necesario destacar la dificultad en la implementación de un \textit{plugin} para RTIR que no fue una tarea sencilla y que se realizó por medio de ingeniería reversa de un \textit{plugin} ya existente. Además se implementó un cliente que implementa el protocolo TAXII para realizar el intercambió que además cuenta con una API REST que puede consumir el \textit{plugin} RTIR.\\
 \bigskip
 Finalmente se ideó un caso de estudio en el que se intercambian cyber observables entre dos organizaciones por medio del protocolo TAXII utilizando los distintos servicios provistos en su especificación.
+
+\section{Trabajo Futuro}
+Durante el transcurso del proyecto se identificaron distintas líneas de trabajo futuro sobre las cuales se puede trabajar para mejorar la herramienta. A continuación delineamos algunos de los trabajos que se podrían seguir realizando en el marco de este proyecto.
+\bigskip
+
+Como es posible que se intercambien grandes volúmenes de datos entre organizaciones, es necesario que se diseñe e implemente un método para correlacionar la información intercambiada, de esta forma se agrupan los datos, facilitando de esta forma el trabajo de los analistas. Con dicha información correlacionada se pueden presentar reportes a los analistas resumiendo el contenido existente en el sistema. Durante el diseño y análisis de la herramienta se tuvo en consideración dicha funcionalidad pero no se implementó y no hubo una investigación profunda referente a esto, por lo cual se deja para un trabajo a futuro. 
+De la misma forma se consideró durante el diseño y análisis la sanitización de la información pero tampoco se implementó en el prototipo dicha funcionalidad quedando para un trabajo a futuro.  Dicha funcionalidad permite filtrar datos sensibles que podrían comprometer la imagen o la integridad de las organizaciones.
+\bigskip
+
+Respecto a la implementación realizada, queda planteado realizar una mejor interacción entre RTIR y el \textit{plugin} de forma de extender las funcionalidades ya existentes en RTIR así como agregar algunas nuevas. Entre dichas mejoras se encuentra la mejora de la experiencia de usuario al usar RTIR junto con TAXII App, sería deseable que al momento de que un analista cree un ticket dentro de RTIR, este ya pueda ser asociado a información perteneciente a TAXII App. Además es deseado permitir agregar nuevos cyber observables a incidentes ya existentes. Esto, facilitaría el trabajo de los analistas.
+
+\bigskip
+
+Otro de los puntos a mejorar en la implementación del cliente TAXII es el seguimiento de los usuarios u organizaciones con las que se intercambia la información de seguridad y filtrar a que datos pueden acceder los distintos usuarios. De esta forma se podría realizar un modelo RBAC para el acceso a la información.
+\bigskip
+
+Sería interesante probar el sistema en un ambiente real, con grandes cantidades de datos.

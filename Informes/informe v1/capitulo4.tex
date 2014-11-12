@@ -11,7 +11,7 @@
 	En este capítulo se propone una solución que respeta los requerimientos que se especificaron
 		durante el capítulo anterior. Además se describe el funcionamiento de la herramienta propuesta identificando los componentes que
 		participan en dicho proceso. También se explica la arquitectura de la aplicación con la función de cada una de sus
-		componentes. Finalmente se detalla el modelo de datos creado para la base de datos.
+		componentes y que componente soluciona cada uno de los requerimientos especificados en el análisis. Finalmente se detalla el modelo de datos creado para la base de datos.
 	
 	\section{Contexto para el uso del sistema} 
 	Por medio del sistema propuesto es posible ingresar información de seguridad, correlacionarla
@@ -22,8 +22,7 @@
 	
 	El sistema ha sido diseñado para que sea utilizado por grupos de seguridad. Se busca que
 		dichos grupos puedan compartir información de incidentes de seguridad representada con el lenguaje STIX y que sea
-		distribuida utilizando TAXII. El diseño y desarrollo de STIX y TAXII ha sido realizado por MITRE con el apoyo de la
-		comunidad. El intercambio de información da a las organizaciones la posibilidad de identificar adecuadamente las
+		distribuida utilizando TAXII. El intercambio de información da a las organizaciones la posibilidad de identificar adecuadamente las
 		amenazas dando evidencias específicas de su existencia.
 	
 	
@@ -81,9 +80,6 @@
 		correlación se pueden obtener soluciones a problemas encontrados, información sobre ataques realizados, identificación
 		de atacantes, etc. En caso de que exista información de utilidad se pueden ingresar notas a tickets o relacionar
 		tickets existentes en el RTIR.\\
-		\bigskip
-
-	Con el sistema diseñado se permite el intercambio de información de seguridad con otras organizaciones. Para realizar dicho intercambio se representa la información utilizando el lenguaje STIX. Los intercambios son realizados por medio del protocolo TAXII. Para realizar la representación de la información así como el intercambio se utilizaron librerías provistas por MITRE. 
 	
 	\bigskip
 	
@@ -95,7 +91,7 @@
 	\subsection{RTIR}
 	Este componente presenta las funcionalidades originales de la herramienta RTIR con un agregado
 		específico implementado para este proyecto. RTIR es el componente de la aplicación encargado de realizar el manejo de
-		los incidentes. Se agrega una extensión que permite invocar una API REST en la aplicación TAXII.
+		los incidentes. Se agrega una extensión que permite invocar una API REST en la aplicación TAXII. Es la interfaz con la cual los usuarios interactuan con las funcionalidades de TAXII App y con la cual llevan a cabo los distintos casos de uso.
 	\bigskip
 	
 	RTIR cuenta con su propia base de datos, RTIR DB, a la cual solo accede la componente RTIR, que no será modificada para la realización de este proyecto.
@@ -122,7 +118,7 @@
 		entre cliente y servidor.
 	
 	\subsubsection{libSTIX}
-	libSTIX es una librería provista por MITRE para parsear, manipular y generar contenido STIX.
+	libSTIX \cite{pythonstixgit} es una librería provista por MITRE para parsear, manipular y generar contenido STIX.
 	
 	\subsubsection{RTIRProxy}
 	RTIRProxy es la componente de TAXII App encargada de integrarse con RTIR, para ello consume la
@@ -151,7 +147,9 @@
 	Esta es la componente encargada de realizar la sanitización de la información que se desea
 		intercambiar entre los sistemas. Para realizar dicha sanitización se podrían utilizar librerías ya existentes o implementar una
 		propia. La componente se alimenta de políticas definidas por los administradores para realizar la
-		sanitización.
+		sanitización. 
+
+		Durante el análisis se definió el caso de uso ABM de Políticas de Sanitización con el cual se dan de alta las políticas utilizadas por esta componente. La componente resuelve el requerimiento funcional que dice: "Se debe dar la posibilidad de sanitizar la información intercambiada por medio de políticas definidas por el administrador".
 	
 	\subsubsection{libCorrelacion}
 	Es la componente encargada de la correlación de los datos del sistema, dicha correlación se
@@ -159,6 +157,8 @@
 		tengan características similares lo que facilita el trabajo de los analistas y da más valor a la información recibida.
 		Se pueden utilizar distintos métodos para realizar las correlaciones y de ahí se desprende la necesidad de que sea un
 		componente separado del Core del sistema. Los datos correlacionados son los almacenados en TAXII DB.
+
+		Durante el análisis se definió el caso de uso ABM de Políticas de Correlación con el cual se dan de alta las políticas utilizadas por esta componente. La componente resuelve el requerimiento funcional que dice: "Es deseable contar con un módulo para correlacionar la información de los incidentes que sea configurable por el administrador".
 	
 	\subsubsection{TAXIIServices}
 	Esta componente es una implementación de los servicios TAXII como se especifica en \cite{M13} \ y
@@ -181,6 +181,7 @@
 		intercambio de documentos STIX recibidos de libSanitizacion. Los mensajes que son recibidos de otros socios son pasados
 		a la componente TAXIICore para que sea almacenada y luego correlacionada con datos existentes.
 	
+	La componente implementa un módelo peert-to-peer de intecambio de información de seguridad. Utiliza para el intercambio los servicios TAXII dados de alta por medio del caso de uso ABM de Servicios TAXII. Es la componente encargada de dar soporte a los casos de uso Poll de Información, Envío de información y Recepción de Información usados para el intercambio de información de seguridad entre las organizaciones. Además, es el encargado de intercambiar los mensajes necesarios para llevar a cabo del caso de uso Subscripción de Información.
 	
 	\bigskip
 	

@@ -117,3 +117,16 @@ La API Rest desarrollada provee las funcionalidades necesarias para que RT-TAXII
 Para la implementación se utilizo la librería auxiliar \textit{Django Rest framework} que simplifica el desarrollo de la API.
 Si bien se implementaron todos los elementos necesarios para realizar la interacción con la base de datos, si existiera un cambio en esta (i.e: se crea una nueva entidad) sería necesario extender esta API para poder realizar la interacción entre los sistemas. A su vez si se crea un nuevo servicio TAXII y se desea proveer una interfaz en RTIR para que los usuarios interactúen con esta sería necesario agregar los métodos necesarios en esta API.
 En el anexo \ref{anexo} se puede ver la firma de la API desarrollada.
+
+
+\subsection{Alcance}
+
+Durante el proyecto se pusó foco en el intercambio de información de seguridad de forma estructurada, por ello se recortó el alcance respecto eliminando algunas funcionalidades que se mencionaron durante el analisis del problema. Dichas funcionalidades quedan planteadas como trabajo futuro para el proyecto.
+
+El no desarrollo de un modulo de correlación se debió al tiempo que llevaria realizar una investigación en profundiad enfocada en correlación de investigación de seguridad. Al no poseer un módulo de correlación de información perdió sentido el tener un caso de uso para realizar el alta, baja y modificación de políticas de correlación.
+
+Tampoco se implementó el modulo de sanitización de información, debido a que también hubiera llevado mucho tiempo investigar e implementar un modulo de sanitización de información de seguridad. Como en el caso del modulo de correlación también perdieron sentido los casos de uso de alta, baja y modificación de politicas de sanitización.
+
+No se implementó el discovery service del protocolo TAXII debido a que ingresando manualmente los servicios TAXII se obtiene el mismo resultado. En caso de que se implementara seria necesario agregar un caso de uso para dar de alta una nueva URL para organización. Es necesario recordar que no es necesario implementar todos los servicios TAXII especificados.
+
+No se integró el sistema de gestión de usuarios que tiene Django, esto es necesario para tener un seguimiento de los usuarios u organizaciones con las que se intercambia información.
