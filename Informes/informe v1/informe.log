@@ -1,21 +1,24 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.5)  19 NOV 2014 20:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  17 NOV 2014 16:38
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **informe.tex
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.tex"
+(./informe.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -31,19 +34,19 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -193,7 +196,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -224,7 +227,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -248,7 +251,7 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enitkv@toks@=\toks16
 \labelindent=\skip43
@@ -257,38 +260,38 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box26
 \enitdp@description=\count88
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\todonotes\todonotes.sty"
-Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
-Package: todonotes 2012/07/25
+(/usr/local/texlive/2012/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2011/10/22 .dtx Todonotes source and documentation.
+Package: todonotes 2011/10/22
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
-Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks18
 \XKV@tempa@toks=\toks19
 \XKV@depth=\count89
-File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\keyval.tex")))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/xkeyval/keyval.tex)))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count90
@@ -303,52 +306,49 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
-x"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
 \pgfutil@everybye=\toks20
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
-"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box27
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
 ))
 Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
-"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
-"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks21
 \pgfkeys@temptoks=\toks22
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
-ode.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
 \pgfkeys@tmptoks=\toks23
 ))
 \pgf@x=\dimen106
@@ -366,37 +366,35 @@ ode.tex"
 \c@pgf@countc=\count93
 \c@pgf@countd=\count94
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.d
-ef"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
 File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-p
-df.def"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
 File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
-code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
 \pgfsyssoftpath@smallbuffer@items=\count95
 \pgfsyssoftpath@bigbuffer@items=\count96
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
-code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
-"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
-"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen114
 \pgfmath@count=\count97
 \pgfmath@box=\box28
@@ -404,27 +402,27 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 \pgfmath@stack@operand=\toks25
 \pgfmath@stack@operation=\toks26
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
-tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
-.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigo
-nometric.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.rando
-m.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.compa
-rison.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.
-code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round
-.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.
-code.tex")))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)))
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count98
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
-de.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
 \pgf@picminx=\dimen115
 \pgf@picmaxx=\dimen116
@@ -441,117 +439,116 @@ File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
 \pgf@zx=\dimen127
 \pgf@zy=\dimen128
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
-ruct.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
 \pgf@path@lastx=\dimen129
 \pgf@path@lasty=\dimen130
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
-.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
 \pgf@shorten@end@additional=\dimen131
 \pgf@shorten@start@additional=\dimen132
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
-de.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box29
 \pgf@hbox=\box30
 \pgf@layerbox@main=\box31
 \pgf@picture@serial@count=\count99
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
-ate.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
 \pgflinewidth=\dimen133
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
-ations.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
 \pgf@pt@x=\dimen134
 \pgf@pt@y=\dimen135
 \pgf@pt@temp=\dimen136
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
-e.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.c
-ode.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathproce
-ssing.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
 File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
-de.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
 File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
-e.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
 \pgf@max=\dimen137
 \pgf@sys@shading@range@num=\count100
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
-e.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
-code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
 File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
 \pgfexternal@startupbox=\box32
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
-de.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
 File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretranspare
-ncy.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
 File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.
-code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
 File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
-e.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
 File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
 \pgfnodeparttextbox=\box33
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
-tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
 File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
--0-65.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen138
 \pgf@nodesepend=\dimen139
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
--1-18.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
-)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.te
-x"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
 \pgffor@iter=\dimen140
 \pgffor@skip=\dimen141
 \pgffor@stack=\toks27
 \pgffor@toks=\toks28
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
-e.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
 Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
-dlers.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count101
 \pgfplotmarksize=\dimen142
@@ -569,8 +566,8 @@ File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \tikznumberofcurrentchild=\count104
 \tikz@fig@count=\count105
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
-e.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 \pgfmatrixcurrentrow=\count106
 \pgfmatrixcurrentcolumn=\count107
@@ -578,15 +575,15 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 )
 \tikz@expandcount=\count109
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
-s\tikzlibrarytopaths.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
-s\tikzlibrarypositioning.code.tex"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count110
 \calc@Bcount=\count111
@@ -601,7 +598,7 @@ LaTeX Info: Redefining \addtolength on input line 77.
 )
 \c@@todonotes@numberoftodonotes=\count113
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip47
 \LTright=\skip48
@@ -619,19 +616,13 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count118
 \LT@p@ftn=\toks29
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2008/07/08 v3.8m The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/english.ldf
 Language: english 2005/03/30 v3.3o English support from the babel system
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count119
 \U@D=\dimen152
@@ -640,41 +631,41 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
-Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+(/usr/local/texlive/2012/texmf-dist/tex/generic/babel/spanish.ldf
+Language: spanish.ldf 2011/10/06 v5.0k Spanish support from the babel system
 \es@datefmt=\count120
 \es@quottoks=\toks30
 \es@quotdepth=\count121
-Package babel Info: Making " an active character on input line 492.
-Package babel Info: Making . an active character on input line 585.
-Package babel Info: Making < an active character on input line 630.
-Package babel Info: Making > an active character on input line 630.
+Package babel Info: Making " an active character on input line 496.
+Package babel Info: Making . an active character on input line 599.
+Package babel Info: Making < an active character on input line 644.
+Package babel Info: Making > an active character on input line 644.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip51
 \bibsep=\skip52
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count122
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\comment\comment.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write4
 
 Excluding comment 'comment')
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -705,7 +696,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -713,51 +704,47 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen153
 \Hy@linkcounter=\count123
 \Hy@pagecounter=\count124
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count125
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
+Package hyperref Info: Bookmarks ON on input line 4300.
 \c@Hy@tempcnt=\count126
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen154
+LaTeX Info: Redefining \url on input line 4653.
 \Fld@menulength=\count127
-\Field@Width=\dimen155
-\Fld@charsize=\dimen156
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring OFF on input line 6315.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
+\Field@Width=\dimen154
+\Fld@charsize=\dimen155
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
 \Hy@abspage=\count128
 \c@Item=\count129
 \c@Hfootnote=\count130
@@ -765,81 +752,80 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+(/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
 \Fld@listcount=\count131
 \c@bookmark@seq@number=\count132
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip53
 )
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\slashbox.sty"
+(./slashbox.sty
 slashbox style by K.Yasuoka, May 1993.
 \@slashboxa=\box40
 \@slashboxb=\box41
 \@slashboxc=\box42
 \@slashboxwd=\count133
 \@slashboxht=\count134
-\@slashsepl=\dimen157
-\@slashsepr=\dimen158
+\@slashsepl=\dimen156
+\@slashsepr=\dimen157
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\translator\translator
-.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/translator.sty
 Package: translator 2010/06/12 ver 1.10
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\translator\translator
--language-mappings.tex"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/translator-lang
+uage-mappings.tex))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen159
-\extrarowheight=\dimen160
+\col@sep=\dimen158
+\extrarowheight=\dimen159
 \NC@list=\toks31
 \extratabsurround=\skip54
 \backup@length=\skip55
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \c@tracingst=\count135
-\ST@wd=\dimen161
+\ST@wd=\dimen160
 \ST@rightskip=\skip56
 \ST@leftskip=\skip57
 \ST@parfillskip=\skip58
-\ST@pageleft=\dimen162
-\ST@headht=\dimen163
-\ST@tailht=\dimen164
-\ST@pagesofar=\dimen165
-\ST@pboxht=\dimen166
-\ST@lineht=\dimen167
-\ST@stretchht=\dimen168
-\ST@prevht=\dimen169
-\ST@toadd=\dimen170
-\ST@dimen=\dimen171
+\ST@pageleft=\dimen161
+\ST@headht=\dimen162
+\ST@tailht=\dimen163
+\ST@pagesofar=\dimen164
+\ST@pboxht=\dimen165
+\ST@lineht=\dimen166
+\ST@stretchht=\dimen167
+\ST@prevht=\dimen168
+\ST@toadd=\dimen169
+\ST@dimen=\dimen170
 \ST@pbox=\box43
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pbox\pbox.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pbox/pbox.sty
 Package: pbox 2011/12/07 v1.2 Dynamic parboxes
 \pb@xlen=\skip59
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\hhline.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/hhline.sty
 Package: hhline 1994/05/23 v2.03 Table rule package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box44
 \beforetitleunit=\skip60
 \aftertitleunit=\skip61
-\ttl@plus=\dimen172
-\ttl@minus=\dimen173
+\ttl@plus=\dimen171
+\ttl@minus=\dimen172
 \ttl@toksa=\toks32
-\titlewidth=\dimen174
-\titlewidthlast=\dimen175
-\titlewidthfirst=\dimen176
+\titlewidth=\dimen173
+\titlewidthlast=\dimen174
+\titlewidthfirst=\dimen175
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count136
 \float@exts=\toks33
@@ -847,16 +833,16 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks34
 \@floatcapt=\box46
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\glossaries.sty"
-Package: glossaries 2014/01/20 v4.03 (NLCT)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2012/05/21 v3.02 (NLCT)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\mfirstuc.sty"
-Package: mfirstuc 2013/11/04 v1.08 (NLCT)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/base/mfirstuc.sty
+Package: mfirstuc 2012/05/21 v1.06 (NLCT)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\misc\etex.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \et@xins=\count137
 )
@@ -865,285 +851,152 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \@glsmfirst=\toks35
 \@glsmrest=\toks36
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
-Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xfor\xfor.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/xfor/xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\datatool\datatool-base.sty"
-Package: datatool-base 2013/09/06 v2.18 (NLCT)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip62
-
-For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks37
-\ex@=\dimen177
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen178
+\ex@=\dimen176
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 1999/12/14 v2.01 operator names
-)
-\inf@bad=\count139
-LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count140
-\leftroot@=\count141
-LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count142
-\DOTSCASE@=\count143
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
-\big@size=\dimen179
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count144
-\c@MaxMatrixCols=\count145
-\dotsspace@=\muskip11
-\c@parentequation=\count146
-\dspbrk@lvl=\count147
-\tag@help=\toks38
-\row@=\count148
-\column@=\count149
-\maxfields@=\count150
-\andhelp@=\toks39
-\eqnshift@=\dimen180
-\alignsep@=\dimen181
-\tagshift@=\dimen182
-\tagwidth@=\dimen183
-\totwidth@=\dimen184
-\lineht@=\dimen185
-\@envbody=\toks40
-\multlinegap=\skip63
-\multlinetaggap=\skip64
-\mathdisplay@stack=\toks41
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\substr\substr.sty"
-Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count151
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\datatool\datatool-fp.sty"
-Package: datatool-fp 2013/08/29 v2.17 (NLCT)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp.sty"
-Package: fp 1995/04/02
-
-`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
-Package: defpattern 1994/10/12
-\actioncount=\count152
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
-Package: fp-basic 1996/05/13
-\FP@xs=\count153
-\FP@xia=\count154
-\FP@xib=\count155
-\FP@xfa=\count156
-\FP@xfb=\count157
-\FP@rega=\count158
-\FP@regb=\count159
-\FP@regs=\count160
-\FP@times=\count161
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
-Package: fp-addons 1995/03/15
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-snap.sty"
-Package: fp-snap 1995/04/05
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-exp.sty"
-Package: fp-exp 1995/04/03
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-trigo.sty"
-Package: fp-trigo 1995/04/14
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-pas.sty"
-Package: fp-pas 1994/08/29
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
-Package: fp-random 1995/02/23
-\FPseed=\count162
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
-Package: fp-eqn 1995/04/03
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-upn.sty"
-Package: fp-upn 1996/10/21
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
-Package: fp-eval 1995/04/03
-)))
-\@dtl@toks=\toks42
-\@dtl@tmpcount=\count163
-\dtl@tmplength=\skip65
-\dtl@sortresult=\count164
-\@dtl@numgrpsepcount=\count165
-\@dtl@datatype=\count166
-\dtl@codeA=\count167
-\dtl@codeB=\count168
-\@dtl@foreach@level=\count169
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\base\glossaries-compat
-ible-307.sty"
-Package: glossaries-compatible-307 2013/11/14 v4.0 (NLCT)
-)
-\gls@level=\count170
-\@gls@tmpb=\toks43
-\gls@tmplen=\skip66
+\gls@level=\count139
+\@gls@tmpb=\toks38
+\gls@tmplen=\skip62
 \glswrite=\write5
-\glskeylisttok=\toks44
-\glslabeltok=\toks45
-\glsshorttok=\toks46
-\glslongtok=\toks47
+\glskeylisttok=\toks39
+\glslabeltok=\toks40
+\glsshorttok=\toks41
+\glslongtok=\toks42
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypern
-av.sty"
-Package: glossary-hypernav 2013/11/14 v4.0 (NLCT)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-hypern
+av.sty
+Package: glossary-hypernav 2007/07/04 v1.01 (NLCT)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.s
-ty"
-Package: glossary-list 2013/11/14 v4.0 (NLCT)
-\glslistdottedwidth=\skip67
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-list.s
+ty
+Package: glossary-list 2011/03/28 v3.0 (NLCT)
+\glslistdottedwidth=\skip63
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.s
-ty"
-Package: glossary-long 2013/11/14 v4.0 (NLCT)
-\glsdescwidth=\skip68
-\glspagelistwidth=\skip69
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-long.s
+ty
+Package: glossary-long 2011/03/28 v3.0 (NLCT)
+\glsdescwidth=\skip64
+\glspagelistwidth=\skip65
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.
-sty"
-Package: glossary-super 2013/11/14 v4.0 (NLCT)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-super.
+sty
+Package: glossary-super 2011/03/28 v3.0 (NLCT)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.s
-ty"
-Package: glossary-tree 2013/11/14 v4.0 (NLCT)
-\glstreeindent=\skip70
-)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count171
-\lst@gtempboxa=\box49
-\lst@token=\toks48
-\lst@length=\count172
-\lst@currlwidth=\dimen186
-\lst@column=\count173
-\lst@pos=\count174
-\lst@lostspace=\dimen187
-\lst@width=\dimen188
-\lst@newlines=\count175
-\lst@lineno=\count176
-\lst@maxwidth=\dimen189
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-tree.s
+ty
+Package: glossary-tree 2011/03/28 v3.0 (NLCT)
+\glstreeindent=\skip66
+)) (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count140
+\lst@gtempboxa=\box47
+\lst@token=\toks43
+\lst@length=\count141
+\lst@currlwidth=\dimen177
+\lst@column=\count142
+\lst@pos=\count143
+\lst@lostspace=\dimen178
+\lst@width=\dimen179
+\lst@newlines=\count144
+\lst@lineno=\count145
+\lst@maxwidth=\dimen180
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-\c@lstnumber=\count177
-\lst@skipnumbers=\count178
-\lst@framebox=\box50
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count146
+\lst@skipnumbers=\count147
+\lst@framebox=\box48
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2013/08/26 1.5b listings configuration
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
-Package: listings 2013/08/26 1.5b (Carsten Heinz)
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
 \@input{glosario/Glosario.aux}
+\openout2 = `glosario/Glosario.aux'.
 
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\glosario/Glosari
-o.tex"
+(./glosario/Glosario.tex
 \glo@main@file=\write6
+\openout6 = `informe.glo'.
+
 Package glossaries Info: Writing glossary file informe.glo on input line 1.
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 47.
+ (./informe.aux (./front.aux)
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+ (./capitulo0.aux)
+(./capitulo1.aux) (./capitulo2.aux) (./capitulo3.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
 
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.aux"
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\front.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo0.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo1.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo2.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo3.aux"
 
 LaTeX Warning: Label `fig.diagramabloques' multiply defined.
 
-) ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo4.aux"
-) ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo5.aux"
-) ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo6.aux"
+) (./capitulo4.aux) (./capitulo5.aux) (./capitulo6.aux
 
 LaTeX Warning: Label `fig.pollinfo' multiply defined.
 
-) ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo7.aux"
-) ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\back.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+) (./capitulo7.aux) (./back.aux) (./anexo.aux))
+\openout1 = `informe.aux'.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count179
-\scratchdimen=\dimen190
-\scratchbox=\box51
-\nofMPsegments=\count180
-\nofMParguments=\count181
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count182
-\MPscratchDim=\dimen191
-\MPnumerator=\count183
-\makeMPintoPDFobject=\count184
-\everyMPtoPDFconversion=\toks50
+\scratchcounter=\count148
+\scratchdimen=\dimen181
+\scratchbox=\box49
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen182
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks45
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring ON on input line 50.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count185
+\c@section@level=\count154
 )
 LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
 
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.out")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.out")
+(./informe.out) (./informe.out)
 \@outlinefile=\write7
+\openout7 = `informe.out'.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\dict\glossaries-dictio
-nary-English.dict"
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/dict/glossaries-dictio
+nary-English.dict
 Dictionary: glossaries-dictionary, Language: English 
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\dict\glossaries-dictio
-nary-Spanish.dict"
+(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/dict/glossaries-dictio
+nary-Spanish.dict
 Dictionary: glossaries-dictionary, Language: Spanish 
 )
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.glsdefs"
-)
-\c@lstlisting=\count186
- ("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\front.tex"
+\c@lstlisting=\count155
+\openout2 = `front.aux'.
+
+ (./front.tex
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <12> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 7.
@@ -1171,14 +1024,22 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <14.4> not available
 [1
 
 
+\openout5 = `informe.ist'.
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]) [2
 
-]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.toc"pdfT
-eX warning (ext4): destination with the same identifier (name{page.1}) has been
- already used, duplicate ignored
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+[2
+
+] (./informe.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.62 ...ne {4.3.2}TAXII App}{56}{subsection.4.3.2}
@@ -1187,21 +1048,22 @@ l.62 ...ne {4.3.2}TAXII App}{56}{subsection.4.3.2}
 
 ])
 \tf@toc=\write8
+\openout8 = `informe.toc'.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.58 \newpage
-              [2]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.gls"
+              [2] (./informe.gls
 Overfull \hbox (0.81442pt too wide) in paragraph at lines 5--5
-[]\OT1/cmr/m/n/12 Es una co-lec-cion de compu-tado-ras com-pro-me-ti-das (lla-
-ma-das compu-
+[]\OT1/cmr/m/n/12 Es una co-lec-ci^^Son de compu-tado-ras com-pro-me-ti-das (ll
+a-ma-das compu-
  []
 
 
 Overfull \hbox (13.81548pt too wide) in paragraph at lines 16--16
-[]\OT1/cmr/m/n/12 Es cual-quier in-for-ma-cion re-pre-sen-ta-ble en STIX.
+[]\OT1/cmr/m/n/12 Es cual-quier in-for-ma-ci^^Son re-pre-sen-ta-ble en STIX.
  []
 
 
@@ -1213,7 +1075,9 @@ Overfull \hbox (6.37703pt too wide) in paragraph at lines 21--21
 
 
 ]) [4]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo0.tex"
+\openout2 = `capitulo0.aux'.
+
+ (./capitulo0.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
@@ -1256,14 +1120,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 ) [6]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo1.tex"
+\openout2 = `capitulo1.aux'.
+
+ (./capitulo1.tex
 Cap\'{\i }tulo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--18
 
  []
 
-<./images/killChain.png, id=291, 565.11125pt x 166.6225pt>
+<./images/killChain.png, id=323, 565.11125pt x 166.6225pt>
 File: ./images/killChain.png Graphic file (type png)
 
 <use ./images/killChain.png>
@@ -1294,8 +1160,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--77
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.77 
-      <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/images/kill
-Chain.png>]
+      <./images/killChain.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 78--91
 
  []
@@ -1311,11 +1176,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--115
  []
 
 [9]) [10]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo2.tex"
-Cap\'{\i }tulo 2.
+\openout2 = `capitulo2.aux'.
 
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\RTIR.t
-ex"
+ (./capitulo2.tex
+Cap\'{\i }tulo 2.
+(./secciones/RTIR.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--9
 
  []
@@ -1324,9 +1189,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--9
 
 
 
-]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\IDMEF.
-tex"
+] (./secciones/IDMEF.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
  []
@@ -1341,9 +1204,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
-)
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\IODEF.
-tex"
+) (./secciones/IODEF.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
@@ -1358,9 +1219,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
  []
 
-)
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\STIX.t
-ex"
+) (./secciones/STIX.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
@@ -1385,9 +1244,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[14] [15])
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\tablaC
-omparativa.tex"
+[14] [15]) (./secciones/tablaComparativa.tex
 Overfull \hbox (74.39128pt too wide) in alignment at lines 37--42
  [] [] [] [] 
  []
@@ -1409,12 +1266,12 @@ Overfull \hbox (74.39128pt too wide) in alignment at lines 50--52
 
 
 Underfull \hbox (badness 3449) in paragraph at lines 53--53
-[]\OT1/cmr/m/n/12 Informacion re-
+[]\OT1/cmr/m/n/12 Informaci^^Son re-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 56--56
-[]\OT1/cmr/m/n/12 Representacion
+[]\OT1/cmr/m/n/12 Representaci^^Son
  []
 
 
@@ -1424,12 +1281,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--56
 
 
 Underfull \hbox (badness 7704) in paragraph at lines 65--65
-[]\OT1/cmr/m/n/12 Informacion de
+[]\OT1/cmr/m/n/12 Informaci^^Son de
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 71--71
-[]\OT1/cmr/m/n/12 Representacion
+[]\OT1/cmr/m/n/12 Representaci^^Son
  []
 
 
@@ -1459,14 +1316,16 @@ Underfull \hbox (badness 3601) in paragraph at lines 74--74
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 75--75
-[]\OT1/cmr/m/n/12 Repercusiones tecni-cas y no
+[]\OT1/cmr/m/n/12 Repercusiones t^^Secni-cas y no
  []
 
 
 Underfull \hbox (badness 2057) in paragraph at lines 75--75
-\OT1/cmr/m/n/12 tecni-cas del in-ci-den-te, ie: im-
+\OT1/cmr/m/n/12 t^^Secni-cas del in-ci-den-te, ie: im-
  []
 
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
 
 Underfull \hbox (badness 8132) in paragraph at lines 75--75
 \OT1/cmr/m/n/12 pac-to mo-ne-ta-rio, de tiem-po,
@@ -1474,7 +1333,7 @@ Underfull \hbox (badness 8132) in paragraph at lines 75--75
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
-[]\OT1/cmr/m/n/12 Representacion
+[]\OT1/cmr/m/n/12 Representaci^^Son
  []
 
 
@@ -1484,17 +1343,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--80
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 83--83
-[]\OT1/cmr/m/n/12 Representacion
+[]\OT1/cmr/m/n/12 Representaci^^Son
  []
 
 
 Underfull \hbox (badness 2302) in paragraph at lines 84--84
-\OT1/cmr/m/n/12 han si-do ob-ser-va-dos histori-ca-
+\OT1/cmr/m/n/12 han si-do ob-ser-va-dos hist^^Sori-ca-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]\OT1/cmr/m/n/12 Representacion
+[]\OT1/cmr/m/n/12 Representaci^^Son
  []
 
 
@@ -1512,9 +1371,7 @@ Overfull \hbox (74.39128pt too wide) in alignment at lines 52--95
  [] [] [] [] 
  []
 
-[16] [17] [18])
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\RID.te
-x"
+[16] [17] [18]) (./secciones/RID.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
@@ -1534,9 +1391,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
-)
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\TAXII.
-tex"
+) (./secciones/TAXII.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
@@ -1556,7 +1411,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--34
 
  []
 
-<./images/TAXIIArchitecture1.png, id=372, 462.72874pt x 216.81pt>
+<./images/TAXIIArchitecture1.png, id=405, 462.72874pt x 216.81pt>
 File: ./images/TAXIIArchitecture1.png Graphic file (type png)
 
 <use ./images/TAXIIArchitecture1.png>
@@ -1574,8 +1429,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.45 
-      <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/images/TAXI
-IArchitecture1.png>]
+      <./images/TAXIIArchitecture1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 63--69
 
  []
@@ -1605,7 +1459,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--125
 
  []
 
-[24] <./images/TAXIIArchitecture.png, id=395, 566.115pt x 336.25626pt>
+[24] <./images/TAXIIArchitecture.png, id=428, 566.115pt x 336.25626pt>
 File: ./images/TAXIIArchitecture.png Graphic file (type png)
 
 <use ./images/TAXIIArchitecture.png>
@@ -1623,8 +1477,7 @@ Overfull \hbox (36.79134pt too wide) in paragraph at lines 160--161
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.165 \newpage
-               <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/im
-ages/TAXIIArchitecture.png>]
+               <./images/TAXIIArchitecture.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
@@ -1684,9 +1537,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
-)
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\secciones\Modelo
-s.tex" [29]
+) (./secciones/Modelos.tex [29]
 Underfull \hbox (badness 10000) in paragraph at lines 11--21
 
  []
@@ -1722,9 +1573,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--66
  []
 
 [31]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo3.tex"
-\c@Figura=\count187
-\c@Tabla=\count188
+\openout2 = `capitulo3.aux'.
+
+ (./capitulo3.tex
+\c@Figura=\count156
+\c@Tabla=\count157
 
 Cap\'{\i }tulo 3.
 
@@ -1766,12 +1619,24 @@ Overfull \hbox (38.19746pt too wide) in paragraph at lines 110--126
 []  
  []
 
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
+LaTeX Info: Redefining \. on input line 129.
+LaTeX Info: Redefining \% on input line 129.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
 [35]
 Overfull \hbox (38.19746pt too wide) in paragraph at lines 140--154
 []  
  []
 
-[36] [37] <Analisis22-img/Analisis22-img016.png, id=469, 1063.975pt x 963.6pt>
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
+LaTeX Info: Redefining \. on input line 158.
+LaTeX Info: Redefining \% on input line 158.
+[36] [37] <Analisis22-img/Analisis22-img016.png, id=503, 1063.975pt x 963.6pt>
 File: Analisis22-img/Analisis22-img016.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img016.png>
@@ -1798,13 +1663,12 @@ Overfull \hbox (38.14595pt too wide) in paragraph at lines 307--314
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.314 	\end
-           {supertabular} <E:/Proyecto de Grado Julio/inform-git-v1/Informes/in
-forme v1/Analisis22-img/Analisis22-img016.png>]
+           {supertabular} <./Analisis22-img/Analisis22-img016.png>]
 Overfull \hbox (46.97789pt too wide) in paragraph at lines 329--339
 []  
  []
 
-<Analisis22-img/Analisis22-img017.png, id=481, 686.565pt x 280.79906pt>
+<Analisis22-img/Analisis22-img017.png, id=515, 686.565pt x 280.79906pt>
 File: Analisis22-img/Analisis22-img017.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img017.png>
@@ -1816,7 +1680,7 @@ Overfull \hbox (26.5412pt too wide) in paragraph at lines 351--352
  [][] 
  []
 
-<Analisis22-img/Analisis22-img018.png, id=483, 799.48688pt x 404.26031pt>
+<Analisis22-img/Analisis22-img018.png, id=517, 799.48688pt x 404.26031pt>
 File: Analisis22-img/Analisis22-img018.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img018.png>
@@ -1834,9 +1698,8 @@ Overfull \hbox (26.55292pt too wide) in paragraph at lines 364--365
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.367 \end{figure}
-                   <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v
-1/Analisis22-img/Analisis22-img017.png>]
-<Analisis22-img/Analisis22-img019.png, id=493, 794.97pt x 403.5075pt>
+                   <./Analisis22-img/Analisis22-img017.png>]
+<Analisis22-img/Analisis22-img019.png, id=527, 794.97pt x 403.5075pt>
 File: Analisis22-img/Analisis22-img019.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img019.png>
@@ -1854,13 +1717,12 @@ Overfull \hbox (26.56491pt too wide) in paragraph at lines 376--377
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.380 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img018.png>]
+       <./Analisis22-img/Analisis22-img018.png>]
 Overfull \hbox (46.97789pt too wide) in paragraph at lines 387--397
 []  
  []
 
-<Analisis22-img/Analisis22-img020.png, id=502, 804.00375pt x 404.26031pt>
+<Analisis22-img/Analisis22-img020.png, id=536, 804.00375pt x 404.26031pt>
 File: Analisis22-img/Analisis22-img020.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img020.png>
@@ -1878,9 +1740,8 @@ Overfull \hbox (26.51405pt too wide) in paragraph at lines 406--407
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.410 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img019.png>]
-<Analisis22-img/Analisis22-img021.png, id=511, 794.97pt x 403.5075pt>
+       <./Analisis22-img/Analisis22-img019.png>]
+<Analisis22-img/Analisis22-img021.png, id=545, 794.97pt x 403.5075pt>
 File: Analisis22-img/Analisis22-img021.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img021.png>
@@ -1904,10 +1765,9 @@ l.428
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.428 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img020.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/
-informe v1/Analisis22-img/Analisis22-img021.png>]
-<Analisis22-img/Analisis22-img022.png, id=520, 718.18312pt x 280.79906pt>
+       <./Analisis22-img/Analisis22-img020.png> <./Analisis22-img/Analisis22-im
+g021.png>]
+<Analisis22-img/Analisis22-img022.png, id=554, 718.18312pt x 280.79906pt>
 File: Analisis22-img/Analisis22-img022.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img022.png>
@@ -1924,7 +1784,7 @@ Overfull \hbox (46.97789pt too wide) in paragraph at lines 445--455
 []  
  []
 
-<Analisis22-img/Analisis22-img023.png, id=522, 697.10437pt x 280.79906pt>
+<Analisis22-img/Analisis22-img023.png, id=556, 697.10437pt x 280.79906pt>
 File: Analisis22-img/Analisis22-img023.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img023.png>
@@ -1942,9 +1802,8 @@ Overfull \hbox (26.5533pt too wide) in paragraph at lines 463--464
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.467 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img022.png>]
-<Analisis22-img/Analisis22-img024.png, id=532, 804.00375pt x 404.26031pt>
+       <./Analisis22-img/Analisis22-img022.png>]
+<Analisis22-img/Analisis22-img024.png, id=566, 804.00375pt x 404.26031pt>
 File: Analisis22-img/Analisis22-img024.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img024.png>
@@ -1956,7 +1815,7 @@ Overfull \hbox (26.51405pt too wide) in paragraph at lines 474--475
  [][] 
  []
 
-<Analisis22-img/Analisis22-img025.png, id=534, 791.95876pt x 403.5075pt>
+<Analisis22-img/Analisis22-img025.png, id=568, 791.95876pt x 403.5075pt>
 File: Analisis22-img/Analisis22-img025.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img025.png>
@@ -1980,14 +1839,13 @@ l.488
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.488 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img023.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/
-informe v1/Analisis22-img/Analisis22-img024.png>]
+       <./Analisis22-img/Analisis22-img023.png> <./Analisis22-img/Analisis22-im
+g024.png>]
 Overfull \hbox (38.14595pt too wide) in paragraph at lines 496--506
 []  
  []
 
-<Analisis22-img/AltaInfoRTIR.png, id=544, 846.91406pt x 304.13625pt>
+<Analisis22-img/AltaInfoRTIR.png, id=578, 846.91406pt x 304.13625pt>
 File: Analisis22-img/AltaInfoRTIR.png Graphic file (type png)
 
 <use Analisis22-img/AltaInfoRTIR.png>
@@ -2005,13 +1863,12 @@ Overfull \hbox (26.54227pt too wide) in paragraph at lines 513--514
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.517 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img025.png>]
+       <./Analisis22-img/Analisis22-img025.png>]
 Overfull \hbox (38.14595pt too wide) in paragraph at lines 525--533
 []  
  []
 
-<Analisis22-img/AsociacionInformacion.png, id=553, 1108.8928pt x 424.58624pt>
+<Analisis22-img/AsociacionInformacion.png, id=588, 1108.8928pt x 424.58624pt>
 File: Analisis22-img/AsociacionInformacion.png Graphic file (type png)
 
 <use Analisis22-img/AsociacionInformacion.png>
@@ -2029,13 +1886,12 @@ Overfull \hbox (26.54443pt too wide) in paragraph at lines 540--541
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.544 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/AltaInfoRTIR.png>]
+       <./Analisis22-img/AltaInfoRTIR.png>]
 Overfull \hbox (38.14595pt too wide) in paragraph at lines 551--561
 []  
  []
 
-<Analisis22-img/Analisis22-img027.png, id=562, 1088.56688pt x 380.92313pt>
+<Analisis22-img/Analisis22-img027.png, id=597, 1088.56688pt x 380.92313pt>
 File: Analisis22-img/Analisis22-img027.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img027.png>
@@ -2053,13 +1909,12 @@ Overfull \hbox (1.81734pt too wide) in paragraph at lines 571--572
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.576 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/AsociacionInformacion.png>]
+       <./Analisis22-img/AsociacionInformacion.png>]
 Overfull \hbox (38.14595pt too wide) in paragraph at lines 583--593
 []  
  []
 
-<Analisis22-img/Analisis22-img028.png, id=569, 846.16125pt x 326.72063pt>
+<Analisis22-img/Analisis22-img028.png, id=604, 846.16125pt x 326.72063pt>
 File: Analisis22-img/Analisis22-img028.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img028.png>
@@ -2077,13 +1932,12 @@ Overfull \hbox (26.54643pt too wide) in paragraph at lines 601--602
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.605 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img027.png>]
+       <./Analisis22-img/Analisis22-img027.png>]
 Overfull \hbox (38.14595pt too wide) in paragraph at lines 612--622
 []  
  []
 
-<Analisis22-img/Analisis22-img029.png, id=578, 621.07031pt x 353.06906pt>
+<Analisis22-img/Analisis22-img029.png, id=613, 621.07031pt x 353.06906pt>
 File: Analisis22-img/Analisis22-img029.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img029.png>
@@ -2101,13 +1955,12 @@ Overfull \hbox (26.55087pt too wide) in paragraph at lines 629--630
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.633 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img028.png>]
+       <./Analisis22-img/Analisis22-img028.png>]
 Overfull \hbox (38.14595pt too wide) in paragraph at lines 640--650
 []  
  []
 
-<Analisis22-img/Analisis22-img030.png, id=588, 861.2175pt x 301.125pt>
+<Analisis22-img/Analisis22-img030.png, id=623, 861.2175pt x 301.125pt>
 File: Analisis22-img/Analisis22-img030.png Graphic file (type png)
 
 <use Analisis22-img/Analisis22-img030.png>
@@ -2125,9 +1978,11 @@ Overfull \hbox (26.55984pt too wide) in paragraph at lines 659--661
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.664 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Analisis22
--img/Analisis22-img029.png>]) [52pdfTeX warning (ext4): destination with the sa
-me identifier (name{figure.3.16}) has been already used, duplicate ignored
+       <./Analisis22-img/Analisis22-img029.png>]
+LaTeX Info: Redefining \. on input line 668.
+LaTeX Info: Redefining \% on input line 668.
+) [52pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+.16}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
@@ -2138,12 +1993,17 @@ orme v1/Analisis22-img/Analisis22-img030.png>]
 \c@FiguraCap4=\count189
 \c@TablaCap4=\count190
 
+
+(./capitulo4.tex
+\c@FiguraCap4=\count158
+\c@TablaCap4=\count159
+
 Cap\'{\i }tulo 4.
 [53
 
 
 
-] <Diseno21-img/Diseno21-img003.png, id=609, 1877.0125pt x 1525.7pt>
+] <Diseno21-img/Diseno21-img003.png, id=644, 1877.0125pt x 1525.7pt>
 File: Diseno21-img/Diseno21-img003.png Graphic file (type png)
 
 <use Diseno21-img/Diseno21-img003.png>
@@ -2161,10 +2021,9 @@ Overfull \hbox (26.52414pt too wide) in paragraph at lines 53--54
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.60 ... generales de las componentes del sistema}
-                                                   <E:/Proyecto de Grado Julio/
-inform-git-v1/Informes/informe v1/Diseno21-img/Diseno21-img003.png>] [55]
-[56] [57] [58]
-<Diseno21-img/Diseno21-img004.png, id=651, 1423.3175pt x 1311.90125pt>
+                                                   <./Diseno21-img/Diseno21-img
+003.png>] [55] [56] [57] [58]
+<Diseno21-img/Diseno21-img004.png, id=686, 1423.3175pt x 1311.90125pt>
 File: Diseno21-img/Diseno21-img004.png Graphic file (type png)
 
 <use Diseno21-img/Diseno21-img004.png>
@@ -2183,15 +2042,20 @@ e.4.2}) has been already used, duplicate ignored
                                                   
 l.228 		\item \underline
                         {Content Binding}: Es utilizado para establecer el t...
- <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/Diseno21-img/Dis
-eno21-img004.png>]) [61]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo5.tex"
+ <./Diseno21-img/Diseno21-img004.png>]) [61]
+\openout2 = `capitulo5.aux'.
+
+ (./capitulo5.tex
 Cap\'{\i }tulo 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 13.
 [62
 
 
 
-] [63] [64] <imagenes/RT-TAXII.png, id=710, 204.765pt x 232.61906pt>
+] [63] [64] <imagenes/RT-TAXII.png, id=746, 204.765pt x 232.61906pt>
 File: imagenes/RT-TAXII.png Graphic file (type png)
 
 <use imagenes/RT-TAXII.png>
@@ -2203,41 +2067,30 @@ Package pdftex.def Info: imagenes/RT-TAXII.png used on input line 80.
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.87 ...ra realizar la presentación al usuario.\\
-                                                   <E:/Proyecto de Grado Julio/
-inform-git-v1/Informes/informe v1/imagenes/RT-TAXII.png>]
-<imagenes/TAXIIApp.png, id=719, 216.81pt x 261.97874pt>
+                                                   <./imagenes/RT-TAXII.png>]
+<imagenes/TAXIIApp.png, id=755, 216.81pt x 261.97874pt>
 File: imagenes/TAXIIApp.png Graphic file (type png)
 
 <use imagenes/TAXIIApp.png>
 Package pdftex.def Info: imagenes/TAXIIApp.png used on input line 98.
 (pdftex.def)             Requested size: 216.80946pt x 261.9781pt.
-
-
-LaTeX Warning: Reference `anexo' on page 66 undefined on input line 105.
-
-[66pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
-}) has been already used, duplicate ignored
+ [66pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.106 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/imagenes/T
-AXIIApp.png>]
+       <./imagenes/TAXIIApp.png>] [67]) [68]
+\openout2 = `capitulo6.aux'.
 
-LaTeX Warning: Reference `anexo' on page 67 undefined on input line 112.
-
-
-LaTeX Warning: Reference `anexo' on page 67 undefined on input line 119.
-
-[67]) [68]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo6.tex"
+ (./capitulo6.tex
 Cap\'{\i }tulo 6.
 [69
 
 
 
 ]
-<caso-de-estudio/laboratorioDesplegado.png, id=742, 1001.7425pt x 287.0725pt>
+<caso-de-estudio/laboratorioDesplegado.png, id=781, 1001.7425pt x 287.0725pt>
 File: caso-de-estudio/laboratorioDesplegado.png Graphic file (type png)
 
 <use caso-de-estudio/laboratorioDesplegado.png>
@@ -2261,15 +2114,14 @@ l.45
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.45 
-      <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-est
-udio/laboratorioDesplegado.png>]
-<flujos/flujo1-4.png, id=751, 427.5975pt x 353.32pt>
+      <./caso-de-estudio/laboratorioDesplegado.png>]
+<flujos/flujo1-4.png, id=790, 427.5975pt x 353.32pt>
 File: flujos/flujo1-4.png Graphic file (type png)
  <use flujos/flujo1-4.png>
 Package pdftex.def Info: flujos/flujo1-4.png used on input line 52.
 (pdftex.def)             Requested size: 256.56047pt x 211.99364pt.
 
-<caso-de-estudio/RegistroServicios.png, id=755, 1050.92625pt x 312.16624pt>
+<caso-de-estudio/RegistroServicios.png, id=794, 1050.92625pt x 312.16624pt>
 File: caso-de-estudio/RegistroServicios.png Graphic file (type png)
 
 <use caso-de-estudio/RegistroServicios.png>
@@ -2287,9 +2139,8 @@ Overfull \hbox (30.36307pt too wide) in paragraph at lines 64--65
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.68 
-      <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/flujos/fluj
-o1-4.png>]
-<caso-de-estudio/listadoservicios.png, id=765, 1250.6725pt x 355.3275pt>
+      <./flujos/flujo1-4.png>]
+<caso-de-estudio/listadoservicios.png, id=804, 1250.6725pt x 355.3275pt>
 File: caso-de-estudio/listadoservicios.png Graphic file (type png)
 
 <use caso-de-estudio/listadoservicios.png>
@@ -2301,7 +2152,7 @@ Overfull \hbox (47.74194pt too wide) in paragraph at lines 71--72
  [][] 
  []
 
-<flujos/flujo5-7.png, id=766, 419.5675pt x 326.21875pt>
+<flujos/flujo5-7.png, id=805, 419.5675pt x 326.21875pt>
 File: flujos/flujo5-7.png Graphic file (type png)
 
 <use flujos/flujo5-7.png>
@@ -2319,10 +2170,8 @@ l.83
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.83 
-      <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-est
-udio/RegistroServicios.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/
-informe v1/caso-de-estudio/listadoservicios.png>]
-<caso-de-estudio/alta.png, id=775, 769.87625pt x 718.685pt>
+      <./caso-de-estudio/RegistroServicios.png> <./caso-de-estudio/listadoservi
+cios.png>] <caso-de-estudio/alta.png, id=814, 769.87625pt x 718.685pt>
 File: caso-de-estudio/alta.png Graphic file (type png)
 
 <use caso-de-estudio/alta.png>
@@ -2339,8 +2188,8 @@ Overfull \hbox (71.92932pt too wide) in paragraph at lines 92--93
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.96 
-      <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/flujos/fluj
-o5-7.png>] <caso-de-estudio/listadoInfo.png, id=785, 1043.9pt x 437.635pt>
+      <./flujos/flujo5-7.png>]
+<caso-de-estudio/listadoInfo.png, id=824, 1043.9pt x 437.635pt>
 File: caso-de-estudio/listadoInfo.png Graphic file (type png)
 
 <use caso-de-estudio/listadoInfo.png>
@@ -2353,8 +2202,8 @@ Package pdftex.def Info: caso-de-estudio/listadoInfo.png used on input line 99.
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.103 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-es
-tudio/alta.png>] <flujos/flujo8-10.png, id=790, 677.53125pt x 405.515pt>
+       <./caso-de-estudio/alta.png>]
+<flujos/flujo8-10.png, id=829, 677.53125pt x 405.515pt>
 File: flujos/flujo8-10.png Graphic file (type png)
 
 <use flujos/flujo8-10.png>
@@ -2365,7 +2214,7 @@ Overfull \hbox (16.52188pt too wide) in paragraph at lines 106--107
  [][] 
  []
 
-<caso-de-estudio/obtremote.png, id=794, 594.22pt x 204.765pt>
+<caso-de-estudio/obtremote.png, id=833, 594.22pt x 204.765pt>
 File: caso-de-estudio/obtremote.png Graphic file (type png)
 
 <use caso-de-estudio/obtremote.png>
@@ -2383,10 +2232,8 @@ l.120
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.120 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-es
-tudio/listadoInfo.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/infor
-me v1/flujos/flujo8-10.png>]
-<caso-de-estudio/lstremotedf.png, id=803, 973.6375pt x 268.00125pt>
+       <./caso-de-estudio/listadoInfo.png> <./flujos/flujo8-10.png>]
+<caso-de-estudio/lstremotedf.png, id=842, 973.6375pt x 268.00125pt>
 File: caso-de-estudio/lstremotedf.png Graphic file (type png)
 
 <use caso-de-estudio/lstremotedf.png>
@@ -2394,7 +2241,7 @@ Package pdftex.def Info: caso-de-estudio/lstremotedf.png used on input line 123
 .
 (pdftex.def)             Requested size: 389.44809pt x 107.1986pt.
 
-<flujos/flujo15-15.png, id=804, 642.4pt x 280.04625pt>
+<flujos/flujo15-15.png, id=843, 642.4pt x 280.04625pt>
 File: flujos/flujo15-15.png Graphic file (type png)
 
 <use flujos/flujo15-15.png>
@@ -2418,11 +2265,9 @@ l.137
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.137 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-es
-tudio/obtremote.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe
- v1/caso-de-estudio/lstremotedf.png> <E:/Proyecto de Grado Julio/inform-git-v1/
-Informes/informe v1/flujos/flujo15-15.png>]
-<caso-de-estudio/pollinformacion.png, id=813, 576.1525pt x 203.76125pt>
+       <./caso-de-estudio/obtremote.png> <./caso-de-estudio/lstremotedf.png> <.
+/flujos/flujo15-15.png>]
+<caso-de-estudio/pollinformacion.png, id=852, 576.1525pt x 203.76125pt>
 File: caso-de-estudio/pollinformacion.png Graphic file (type png)
 
 <use caso-de-estudio/pollinformacion.png>
@@ -2430,14 +2275,14 @@ Package pdftex.def Info: caso-de-estudio/pollinformacion.png used on input line
  140.
 (pdftex.def)             Requested size: 230.45691pt x 81.50305pt.
 
-<flujos/flujo16-20.png, id=814, 961.5925pt x 389.455pt>
+<flujos/flujo16-20.png, id=853, 961.5925pt x 389.455pt>
 File: flujos/flujo16-20.png Graphic file (type png)
 
 <use flujos/flujo16-20.png>
 Package pdftex.def Info: flujos/flujo16-20.png used on input line 147.
 (pdftex.def)             Requested size: 384.63019pt x 155.77924pt.
 
-<caso-de-estudio/subscriptionfeed.png, id=819, 570.13pt x 191.71625pt>
+<caso-de-estudio/subscriptionfeed.png, id=858, 570.13pt x 191.71625pt>
 File: caso-de-estudio/subscriptionfeed.png Graphic file (type png)
 
 <use caso-de-estudio/subscriptionfeed.png>
@@ -2456,10 +2301,8 @@ l.163
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.163 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-es
-tudio/pollinformacion.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/i
-nforme v1/flujos/flujo16-20.png>]
-<caso-de-estudio/subscriptiondf.png, id=830, 604.2575pt x 303.1325pt>
+       <./caso-de-estudio/pollinformacion.png> <./flujos/flujo16-20.png>]
+<caso-de-estudio/subscriptiondf.png, id=870, 604.2575pt x 303.1325pt>
 File: caso-de-estudio/subscriptiondf.png Graphic file (type png)
 
 <use caso-de-estudio/subscriptiondf.png>
@@ -2467,14 +2310,14 @@ Package pdftex.def Info: caso-de-estudio/subscriptiondf.png used on input line
 166.
 (pdftex.def)             Requested size: 241.69872pt x 121.25084pt.
 
-<caso-de-estudio/envioInfo.png, id=831, 587.19376pt x 198.7425pt>
+<caso-de-estudio/envioInfo.png, id=871, 587.19376pt x 198.7425pt>
 File: caso-de-estudio/envioInfo.png Graphic file (type png)
 
 <use caso-de-estudio/envioInfo.png>
 Package pdftex.def Info: caso-de-estudio/envioInfo.png used on input line 173.
 (pdftex.def)             Requested size: 234.87334pt x 79.49557pt.
 
-<flujos/flujo21-22.png, id=832, 426.59375pt x 312.16624pt>
+<flujos/flujo21-22.png, id=872, 426.59375pt x 312.16624pt>
 File: flujos/flujo21-22.png Graphic file (type png)
 
 <use flujos/flujo21-22.png>
@@ -2498,22 +2341,20 @@ l.184
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.184 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso-de-es
-tudio/subscriptionfeed.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/
-informe v1/caso-de-estudio/subscriptiondf.png> <E:/Proyecto de Grado Julio/info
-rm-git-v1/Informes/informe v1/caso-de-estudio/envioInfo.png>]
+       <./caso-de-estudio/subscriptionfeed.png> <./caso-de-estudio/subscription
+df.png> <./caso-de-estudio/envioInfo.png>]
 
 LaTeX Warning: Reference `fig.flijos2122' on page 79 undefined on input line 18
 5.
 
-<caso-de-estudio/relacInfo.png, id=840, 547.04375pt x 221.82875pt>
+<caso-de-estudio/relacInfo.png, id=880, 547.04375pt x 221.82875pt>
 File: caso-de-estudio/relacInfo.png Graphic file (type png)
 
 <use caso-de-estudio/relacInfo.png>
 Package pdftex.def Info: caso-de-estudio/relacInfo.png used on input line 191.
 (pdftex.def)             Requested size: 218.81361pt x 88.72992pt.
 
-<caso-de-estudio/lstRelacInfo.png, id=841, 993.7125pt x 227.85126pt>
+<caso-de-estudio/lstRelacInfo.png, id=881, 993.7125pt x 227.85126pt>
 File: caso-de-estudio/lstRelacInfo.png Graphic file (type png)
 
 <use caso-de-estudio/lstRelacInfo.png>
@@ -2537,10 +2378,8 @@ l.202
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.202 
-       <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/flujos/flu
-jo21-22.png> <E:/Proyecto de Grado Julio/inform-git-v1/Informes/informe v1/caso
--de-estudio/relacInfo.png>]
-<flujos/flujo23-24.png, id=849, 745.78625pt x 286.06876pt>
+       <./flujos/flujo21-22.png> <./caso-de-estudio/relacInfo.png>]
+<flujos/flujo23-24.png, id=889, 745.78625pt x 286.06876pt>
 File: flujos/flujo23-24.png Graphic file (type png)
 
 <use flujos/flujo23-24.png>
@@ -2567,17 +2406,278 @@ Cap\'{\i }tulo 7.
 
 
 
-] [82] [83]) [84]
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.bbl"
-Underfull \hbox (badness 4096) in paragraph at lines 14--18
-$\OT1/cmtt/m/n/12 a-[]brief-[]introduction-[]to-[]rtir-[]presentation$[][]\OT1/
-cmr/m/n/12 .  []Ulti-mo ac-ce-so:
+] [82] [83]) [84] (./informe.bbl [85
+
+
+]
+! Misplaced alignment tab character &.
+l.121 Inette Furey Damir Rajnovic Robert Martin &
+                                                  Takeshi~Takahashi
+? q
+OK, entering \batchmode...
+ [86]) [87]
+\openout2 = `back.aux'.
+
+ (./back.tex (./informe.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+ [88
+
+
+
+
+])
+\tf@lof=\write9
+\openout9 = `informe.lof'.
+
+) [89]
+\openout2 = `anexo.aux'.
+
+ (./anexo.tex
+Cap\'{\i }tulo 8.
+! Undefined control sequence.
+l.43 			def inbox\service
+                         (request, inbox\name): \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.43 			def inbox\service(request, inbox\name
+                                             ): \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.46 			def poll\service
+                        (request):\ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 			def feed\managment
+                          \service(request): \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 			def feed\managment\service
+                                  (request): \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.52 			def subscription\service
+                                (request):\ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+ [90
+
+
+
+] [91]
+! Undefined control sequence.
+l.123 			def get\remote
+                       \data\feeds(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.123 			def get\remote\data
+                            \feeds(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.123 			def get\remote\data\feeds
+                                  (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \vbox (badness 10000) detected at line 125
  []
 
+! Undefined control sequence.
+l.127 			def register\remote
+                            \data\feeds(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Underfull \hbox (badness 5578) in paragraph at lines 50--53
-[]\OT1/cmr/m/n/12 Django.  [][]$\OT1/cmtt/m/n/12 https : / / www . djangoprojec
-t . com/$[][]\OT1/cmr/m/n/12 .  []Ulti-mo ac-ce-so:
+! Undefined control sequence.
+l.127 			def register\remote\data
+                                 \feeds(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.127 			def register\remote\data\feeds
+                                       (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.130 			def create\information
+                               (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.134 			def send\information
+                             \to\inbox(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.134 			def send\information\to
+                                \inbox(request):\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.134 			def send\information\to\inbox
+                                      (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.135 			\#
+           Given the id of a DataFeed Subscription we get the Data Feeds and...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+l.137 			def poll\information
+                             (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.140 			def get\data
+                     \feed\subscriptions(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.140 			def get\data\feed
+                          \subscriptions(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.140 			def get\data\feed\subscriptions
+                                        (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.143 			def subscription\to
+                            \data\feed(request):\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.143 			def subscription\to\data
+                                 \feed(request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.143 			def subscription\to\data\feed
+                                      (request):\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.144 			\#
+           Given the id of a TAXII Service and the id of a Data Feed and\\ t...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+ [92] [93]
+Overfull \hbox (50.57481pt too wide) in alignment at lines 154--177
+ [] 
  []
 
 [85
@@ -2595,30 +2695,284 @@ Project / yeti$[][]\OT1/cmr/m/n/12 .  []Ulti-mo ac-ce-so:
 [89
 
 
+ [94]
+Overfull \hbox (50.57481pt too wide) in alignment at lines 217--237
+ [] 
+ []
+
+! You can't use `macro parameter character #' in restricted horizontal mode.
+l.241 	    title = CharField(blank=True) #
+                                           not required by TAXII\\
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in restricted horizontal mode.
+l.242 	    description = TextField(blank=True) #
+                                                 not required by TAXII\\
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-])
-\tf@lof=\write9
-) [90]
+Overfull \hbox (50.57481pt too wide) in alignment at lines 237--257
+ [] 
+ []
+
+ [95]
+! You can't use `macro parameter character #' in restricted horizontal mode.
+l.267 ...subscriptionid = CharField(unique=True) #
+                                                   uri formatted subscriptio...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (50.57481pt too wide) in alignment at lines 257--277
+ [] 
+ []
+
+
+Overfull \hbox (50.57481pt too wide) in alignment at lines 277--297
+ [] 
+ []
+
+ [96]
+Overfull \hbox (50.57481pt too wide) in alignment at lines 297--317
+ [] 
+ []
+
+! You can't use `macro parameter character #' in restricted horizontal mode.
+l.323 	    name = CharField(unique=True) #
+                                           this will become part of the URL ...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (50.57481pt too wide) in alignment at lines 317--337
+ [] 
+ []
+
+ [97]
+Overfull \hbox (50.57481pt too wide) in alignment at lines 337--345
+ [] 
+ []
+
+ [98]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 353.
+ (./cybox/CybOX_Artifact_Instance.xml
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 1.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
+! Dimension too large.
+\lsthk@InitVarsEOL ->\ifdim \lst@currlwidth 
+                                            >\lst@maxwidth \global \lst@maxw...
+l.12 ...wVsb2NhbAAAAQAB</ArtifactObj:Raw_Artifact>
+                                                  
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+! Dimension too large.
+<recently read> \lst@currlwidth 
+                                
+l.12 ...wVsb2NhbAAAAQAB</ArtifactObj:Raw_Artifact>
+                                                  
+I can't work with sizes bigger than about 19 feet.
+Continue and I'll use the largest value I can.
+
+
+Overfull \hbox (740.01129pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (3590.04028pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (374.00757pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (1622.02026pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (470.00854pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (686.01074pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (1916.02325pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (512.00897pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (518.00903pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (2354.02771pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (1388.01788pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (302.00684pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (482.00867pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (494.00879pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (410.00793pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (332.00714pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (908.013pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (3842.04285pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (7292.07794pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+
+Overfull \hbox (470.00854pt too wide) in paragraph at lines 12--13
+[][] 
+ []
+
+ [99]) (./cybox/CybOX_Artifact_Pattern.xml [100]) (./cybox/CybOX_CreateFile_Act
+ion.xml
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
+ [101]
+Overfull \hbox (56.00433pt too wide) in paragraph at lines 16--17
+[][] 
+ []
+
+) (./cybox/CybOX_Domain_Instance.xml) (./cybox/CybOX_Domain_Pattern.xml [102]) 
+(./cybox/CybOX_IPv4Address_Instance.xml) (./cybox/CybOX_IPv4Address_Pattern.xml
+ [103]) (./cybox/CybOX_IPv6Address_Instance.xml) (./cybox/CybOX_IPv6Address_Pat
+tern.xml [104]) (./cybox/CybOX_Iran-Oil_Dynamic.xml [105]
+Overfull \hbox (20.00397pt too wide) in paragraph at lines 27--28
+[][] 
+ []
+
+ [106] [107]
+Overfull \hbox (62.0044pt too wide) in paragraph at lines 86--87
+[][] 
+ []
+
+ [108] [109]
+Overfull \hbox (20.00397pt too wide) in paragraph at lines 121--122
+[][] 
+ []
+
+ [110]
+Overfull \hbox (14.0039pt too wide) in paragraph at lines 161--162
+[][] 
+ []
+
+ [111]
+Overfull \hbox (62.0044pt too wide) in paragraph at lines 179--180
+[][] 
+ []
+
+ [112] [113] [114] [115] [116] [117] [118] [119] [120] [121]) (./cybox/CybOX_Ne
+twork_Connection_HTTP_Instance.xml [122] [123]) (./cybox/CybOX_Network_Connecti
+on_HTTP_Pattern.xml [124] [125]) (./cybox/CybOX_Network_Connection_Instance.xml
+ [126]) (./cybox/CybOX_Network_Connection_Pattern.xml [127]) (./cybox/CybOX_PDF
+_File_Instance.xml [128] [129] [130]) (./cybox/CybOX_PDF_File_Pattern.xml [131]
+) (./cybox/CybOX_Simple_Email_Instance.xml [132]) (./cybox/CybOX_Simple_Email_P
+attern.xml [133]) (./cybox/CybOX_Simple_File_Instance.xml [134]
+Overfull \hbox (20.00397pt too wide) in paragraph at lines 13--14
+[][] 
+ []
+
+
+Overfull \hbox (110.00488pt too wide) in paragraph at lines 13--14
+[][] 
+ []
+
+
+Overfull \hbox (20.00397pt too wide) in paragraph at lines 13--14
+[][] 
+ []
+
+) (./cybox/CybOX_Simple_File_Pattern.xml [135]) (./cybox/CybOX_Simple_File_Patt
+ern_Regex.xml) (./cybox/CybOX_URL_Instance.xml [136]) (./cybox/CybOX_URL_Patter
+n.xml) (./cybox/CybOX_X509_Certificate_Instance.xml [137] [138]) (./cybox/CybOX
+_X509_Certificate_Pattern.xml [139])) [140]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
-
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\informe.aux"
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\front.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo0.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo1.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo2.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo3.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo4.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo5.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo6.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\capitulo7.aux")
-("E:\Proyecto de Grado Julio\inform-git-v1\Informes\informe v1\back.aux"))
+ (./informe.aux (./front.aux)
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+ (./capitulo0.aux) (./capitulo1.aux) (./capitulo2.aux) (./capitulo3.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+) (./capitulo4.aux) (./capitulo5.aux) (./capitulo6.aux) (./capitulo7.aux) (./ba
+ck.aux) (./anexo.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 993B0EC67B2F0CDF3C553AFDABB321A6;3065.
-
+(rerunfilecheck)             Checksum: 3951A7AE7052A39EB75EBCDB57527CCB;3473.
 
 LaTeX Warning: There were undefined references.
 
@@ -2628,29 +2982,32 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
  ) 
 Here is how much of TeX's memory you used:
- 22326 strings out of 493921
- 384592 string characters out of 3144877
- 526713 words of memory out of 3000000
- 24722 multiletter control sequences out of 15000+200000
- 13581 words of font info for 48 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 63i,12n,57p,1714b,658s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informe.pdf (92 pages, 1694152 bytes).
+ 21677 strings out of 493488
+ 370544 string characters out of 3141326
+ 721553 words of memory out of 3000000
+ 23022 multiletter control sequences out of 15000+200000
+ 12453 words of font info for 43 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 63i,12n,57p,5958b,1761s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
+local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on informe.pdf (142 pages, 1771162 bytes).
 PDF statistics:
- 1123 PDF objects out of 1200 (max. 8388607)
- 299 named destinations out of 1000 (max. 500000)
- 596 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2596 PDF objects out of 2984 (max. 8388607)
+ 2342 compressed objects within 24 object streams
+ 1343 named destinations out of 1440 (max. 500000)
+ 644 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -115,7 +115,17 @@ distintas organizaciones.\\
 
 \section{Objetivos}
 \label{capitulo1:objetivos}
-Este proyecto tiene como objetivo principal profundizar en el estudio de los mecanismos para intercambiar información entre dos entidades (en particular equipos/centros de repuesta a incidentes) de forma segura, utilizando para ésto protocolos estándares, por ejemplo haciendo implementaciones que utilicen  los protocolos STIX y TAXII. Asimismo, se pretende que dicha herramienta sea aplicada al menos en algún caso de estudio.
+Este proyecto tiene como objetivo principal profundizar en el estudio de los mecanismos para intercambiar información entre dos entidades (en particular equipos/centros de repuesta a incidentes) de forma segura, utilizando para ésto protocolos estándares, por ejemplo haciendo implementaciones que utilicen los protocolos STIX y TAXII. Asimismo, se pretende que dicha herramienta sea aplicada al menos en algún caso de estudio.
+
+
+\section{Contribución del proyecto}
+\label{capitulo1:contribucion}
+
+Durante el proyecto se realizó una investigación profunda referente al intercambio de información entre organizaciones. De dicha investigación surgieron los requerimientos buscados en una herramienta que intercambié información de seguridad entre organizaciones. Si bien existen algunos esfuerzos para realizar el intercambio de información, ninguno permite el intercambio de información con las caracteristicas con las que cuentan STIX y TAXII.
+
+Se ideó una herramienta que permite a las organizaciones intercambiar información de seguridad. Se buscó que el desarrollo realizado se integre RTIR debido a que es una herramienta importante en la operativa de los CSIRTs. Como resultado de dicha integración se le provee a RTIR de una representación estructurada de la información y le da la posibilidad a esta herramienta de intercambiar dicha información con otras herramientas en otras organizaciones siempre y cuando estas utilicen el protocolo TAXII.
+
+Es importante destacar que el foco estuvo en la arquitectura y diseño de la herramienta. Se buscó que su diseño fuera extensible para permitir que este proyecto ayude a desarrollar otras herramientas en el futuro. Durante el diseño y arquitectura se tuvieron en consideración la correlación y sanitización de la información, aunque las componentes que solucionan dichos problemas no fueron implementadas durante el proyecto.
 
 \section{Organización del documento}
 \label{capitulo1:organizacion}
