@@ -1,18 +1,8 @@
 {\huge \bfseries Resumen \\[0.4cm]}
 
-Durante el estado del arte se estudió que el intercambio de información da a las organizaciones una ventaja respecto a sus atacantes. Se vio que dicho intercambio ayuda a mejorar la asignación de los recursos de forma de obtener el mejor resultado posible de sus defensas. \\
+Durante el estado del arte se estudió que el intercambio de información da a las organizaciones una ventaja respecto a sus atacantes. Se vio que dicho intercambio ayuda a mejorar la asignación de los recursos de forma de obtener el mejor resultado posible de sus defensas. De dicho estudio surgieron los requerimientos buscados en una herramienta de intercambio de información de seguridad. \\
 
-Si bien el intercambio de información ayuda a las organizaciones a defenderse, trae aparejado algunos problemas. Dichos problemas fueron estudiados durante el estado del arte, y no son únicamente técnicos sino que también estan referidos a políticas organizacionales referentes al intercambio de información y a la confianza en otras organizaciones. Durante el proyecto se abarcaron los problemas técnicos. Dentro de estos problemas se encuentra la correlación, sanitización, representación e intercambio de información, centrandonos principalmente en la representación y el intercambio de información de seguridad. \\
-
-Durante el estado del arte también se evaluaron distintas herramientas para el manejo de información de seguridad como RTIR, se vio que RTIR no cuenta con métodos para el intercambio de información ni tampoco con una representación estructurada de la información. \\
-
-Viendo las limitaciones de RTIR, se evaluarón protocolos para el intercambio de información de seguridad como TAXII y RID y lenguajes para la representación de información de forma estructurada como STIX e IODEF. \\
-
-En la etapa de análisis se determinaron las funcionalidades que son deseadas en una herramienta de intercambio de información de seguridad. Se buscó proveer funcionalidades para correlacionar la información que llegue al sistema de modo de facilitar el trabajo de los analistas. También se idearon funcionalidades para sanitizar la información que se envía a otras organizaciones de forma que datos sensibles para la organización no sean intercambiados. Además se definieron requerimientos para realizar el alta, modificación y borrado de información. \\
-
-De dicho análisis también se concluyó la ventaja en la utilización de TAXII, STIX y RTIR. Cada una de estas componentes ayuda a solucionar una parte del problema. STIX es utilizado para la representación de la información de seguridad, TAXII para el intercambio de dicha información. Se buscó integrar dichas herramientas a RTIR. \\
-
-Durante el diseño se buscó plantear una solución a los requerimientos obtenidos durante el análisis del sistema. Se buscó que el prototipo desarrollado fuera extensible de forma de poder agregar nuevas funcionalidades al sistema. Además se buscó mantener la independencia con RTIR de forma que esta componente pueda ser reemplazada con otra herramienta de gestión de incidentes. \\
-
-En la prueba de concepto se simuló el intercambio de información entre dos organizaciones. Dicho intercambió buscó validar el protocolo implementado por medio del prototipo implementado y por medio de YETI, una aplicación de referencia provista por MITRE.
+Existen varias iniciativas que apuntan a automatizar dicho intercambio de información, en particular MITRE \cite{mitre} ha propuesto el lenguaje denominado STIX con el objetivo de contar con un estándar que pueda ser utilizado para la normalización y representación  de amenazas en forma estructurada. El lenguaje STIX provee construcciones que permiten representar  toda la gama de información potencial relacionada con amenazas cibernéticas y se ha puesto especial esfuerzo en lograr que el mismo sea totalmente expresivo, flexible, extensible, automatizable, y tan legible como sea posible.\\
+ 
+Durante el proyecto se utilizó el protocolo TAXII para intercambiar información de seguridad, dicha información es representada por medio del lenguaje STIX mencionado anteriormente. La herramienta diseñada integra STIX y TAXII con \textit{Request Tracker  for Incident Response} (RTIR) proporcionandole una representación estructurada de la información y un método de intercambio de información de seguridad.
 
